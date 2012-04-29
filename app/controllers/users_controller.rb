@@ -27,6 +27,7 @@ class UsersController < ApplicationController
     end
     @user = User.new(params[:user])
     if @user.save
+      sign_in @user
       flash[:success] = "Welcome to The Rhode Project!"
       UserMailer.new_user_notice(@user).deliver
       redirect_to @user
