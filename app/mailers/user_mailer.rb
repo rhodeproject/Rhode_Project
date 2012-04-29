@@ -12,7 +12,7 @@ class UserMailer < ActionMailer::Base
 
     @micropost = micropost
     @users.each do |u|
-      mail(:bcc => u.email, :subject => "New Post")
+      mail(:to => u.email, :subject => "New Post")
     end
   end
 end
