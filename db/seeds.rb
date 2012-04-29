@@ -6,7 +6,3 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-@user = User.find_by_name("_admin")
-@user.admin = TRUE
-@user.save
-
