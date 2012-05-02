@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120427222827) do
+ActiveRecord::Schema.define(:version => 20120502015753) do
 
   create_table "forums", :force => true do |t|
     t.string   "name"
@@ -30,11 +30,11 @@ ActiveRecord::Schema.define(:version => 20120427222827) do
   add_index "microposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
 
   create_table "posts", :force => true do |t|
-    t.string   "content"
-    t.integer  "poster_id"
+    t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "topic_id"
+    t.integer  "user_id"
   end
 
   create_table "relationships", :force => true do |t|
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(:version => 20120427222827) do
     t.datetime "last_post_at"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.integer  "forum_id"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

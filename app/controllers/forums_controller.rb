@@ -1,5 +1,8 @@
 class ForumsController < ApplicationController
   #before_filter :admin_user, only: [:destroy, :new]
+  before_filter :signed_in_user
+  before_filter :correct_user, only: [:edit, :update]
+  before_filter :admin_user, only: :destroy
 
 
   def index

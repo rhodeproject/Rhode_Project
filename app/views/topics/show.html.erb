@@ -1,0 +1,29 @@
+<% provide(:title) %>
+<div class="page-header">
+  <h2>
+    <%= @topic.name %>
+  </h2>
+</div>
+<table class="table table-condensed table-bordered table-striped">
+  <tr>
+    <th width="70%">Post</th>
+    <th width="15%">Posted By</th>
+    <th width="15%">Last Post</th>
+    <th></th>
+  </tr>
+  <% for post in @topic.posts %>
+
+      <tr>
+        <td><h4><div style="word-wrap: break-word"><%= post.content %></div></h4></td>
+        <td class="right"><%= post.user.name %></td>
+        <td><%= distance_of_time_in_words_to_now @topic.last_post_at %> ago</td>
+      </tr>
+
+  <% end %>
+</table>
+<%= link_to "Reply","#{new_post_path}?topic=#{@topic.id}",class: "btn btn-mini btn-primary"%>
+<% if current_user.admin? %>
+    <p>
+      <%= link_to "Delete", @topic, :confirm => 'Are you sure?', :method => :delete %> |
+    </p>
+<% end %>
