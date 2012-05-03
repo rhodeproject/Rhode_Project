@@ -4,11 +4,11 @@
     <h1>Forums</h1>
 </div>
 <table class="table table-condensed table-bordered table-striped">
-<tr>
+<thead>
     <th width="70%">Forum</th>
     <th width="30%">Last Post</th>
     <th></th>
-  </tr>
+  </thead>
   <% for forum in @forums %>
       <tr>
         <td><h4><%= link_to h(forum.name), forum_path(forum.id) %></h4>

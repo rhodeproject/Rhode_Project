@@ -9,11 +9,11 @@
 
       </div>
         <table class="table table-condensed table-bordered table-striped">
-          <tr>
+          <thead>
             <th width="60%">Topic Title</th>
             <th width="10%">Replies</th>
             <th width="30%">Last Post</th>
-          </tr>
+          </thead>
           <% for topic in @forum.topics %>
               <tr>
                 <td><%= link_to h(topic.name), topic_path(topic.id) %>

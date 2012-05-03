@@ -5,18 +5,24 @@
   </h2>
 </div>
 <table class="table table-condensed table-bordered table-striped">
-  <tr>
-    <th width="70%">Post</th>
-    <th width="15%">Posted By</th>
-    <th width="15%">Last Post</th>
+  <thead>
+
+    <th width="70%">
+      Posted By: <%= @topic.user.name%><br>
+      Original Post: <%= @topic.created_at.to_date %><br>
+      Last Updated: <%= distance_of_time_in_words_to_now @topic.last_post_at %><br>
+      Topic: <%= @topic.name %>
+    </th>
+    <th width="15%">Reply By</th>
+    <th width="15%">Replied At</th>
     <th></th>
-  </tr>
+  </thead>
   <% for post in @topic.posts %>
 
       <tr>
         <td><h4><div style="word-wrap: break-word"><%= post.content %></div></h4></td>
         <td class="right"><%= post.user.name %></td>
-        <td><%= distance_of_time_in_words_to_now @topic.last_post_at %> ago</td>
+        <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
       </tr>
 
   <% end %>
