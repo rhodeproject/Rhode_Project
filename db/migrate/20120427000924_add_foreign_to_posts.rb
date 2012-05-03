@@ -3,3 +3,4 @@ class AddForeignToPosts < ActiveRecord::Migration
     add_column :posts, :topic_id, :integer
   end
 end
+
