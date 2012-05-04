@@ -7,24 +7,25 @@
 <table class="table table-condensed table-bordered table-striped">
   <thead>
 
-  <th width="70%">
-    <%= gravatar_for @topic.user, size: 5 %>
-    Posted By: <%= @topic.user.name%><br>
+  <th width="60%">
+    <%= gravatar_for(@topic.user, size: 5) %>
+    Posted By: <%= link_to(@topic.user.name, users_path)%><br>
     Original Post: <%= @topic.created_at.to_date %><br>
     Last Updated: <%= distance_of_time_in_words_to_now @topic.last_post_at %><br>
     Topic: <%= @topic.name %>
   </th>
-  <th width="15%">Post</th>
-  <th width="15%">Posted at</th>
+  <th width="20%">Post</th>
+  <th width="20%">Posted at</th>
   <th></th>
   </thead>
   <% for post in @topic.posts %>
 
       <tr>
-        <td><h4><div style="word-wrap: break-word"><%= post.content %></div></h4></td>
+        <td><h4><div style="word-wrap: break-word"><p><%= post.content %></p></div></h4></td>
         <td class="right">
-          <%= post.user.name %>
-          <%= gravatar_for @topic.user, size: 1 %>
+          <%= gravatar_for(post.user, size: 5) %>
+          Posted By: <%= link_to(@topic.user.name, users_path)%><br>
+          Original Post: <%= @topic.created_at.to_date %><br>
         </td>
         <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
       </tr>

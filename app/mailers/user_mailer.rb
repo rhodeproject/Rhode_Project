@@ -10,6 +10,8 @@ class UserMailer < ActionMailer::Base
     @user = user
     @users = User.all
 
+
+
     @micropost = micropost
     @users.each do |u|
       mail(:to => u.email, :subject => "New Post")
