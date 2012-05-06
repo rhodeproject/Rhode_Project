@@ -1,6 +1,6 @@
 class SitemapController < ApplicationController
   def index
-    @posts = Post.all(:select => "title, id, updated_at", :order => "updated_at DESC", :limit => 50000)
+    @micrposts = Post.all
 
     respond_to do |format|
       format.xml { render :layout => false }
