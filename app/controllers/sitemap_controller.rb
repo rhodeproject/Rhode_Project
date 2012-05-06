@@ -5,5 +5,10 @@ class SitemapController < ApplicationController
     respond_to do |format|
       format.xml { render :layout => false }
     end
+
+    @forums = Forum.all
+    respond_to do |format|
+      format.xml {render  :layout => false}
+    end
   end
 end

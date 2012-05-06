@@ -4,7 +4,15 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     xml.url do
       xml.loc post_url(post)
       xml.lastmod post.updated_at.to_date
-      xml.changefreq "monthly"
+      xml.changefreq "daily"
+      xml.priority "0.5"
+    end
+  end
+  for forum in @forums do
+    xml.url do
+      xml.loc post_url(post)
+      xml.lastmod post.updated_at.to_date
+      xml.changefreq "daily"
       xml.priority "0.5"
     end
   end
