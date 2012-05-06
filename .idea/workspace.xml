@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sitemap_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sitemap_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sitemap/index.xml.builder" afterPath="$PROJECT_DIR$/app/views/sitemap/index.xml.builder" />
     </list>
     <ignored path="Rhode_Project.iws" />
@@ -60,19 +62,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sitemap_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sitemap_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/sitemap_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="42" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+            <state line="6" column="7" selection-start="162" selection-end="162" vertical-scroll-proportion="0.2372093">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.xml.builder" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.xml.builder" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/sitemap/index.xml.builder">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="28" selection-start="356" selection-end="356" vertical-scroll-proportion="0.4744186">
+            <state line="9" column="5" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,8 +107,8 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/newrelic.yml" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/sitemap_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/sitemap/index.xml.builder" />
+        <option value="$PROJECT_DIR$/app/controllers/sitemap_controller.rb" />
       </list>
     </option>
   </component>
@@ -717,16 +719,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sitemap_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/sitemap/index.xml.builder">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="42" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+        <state line="9" column="5" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sitemap/index.xml.builder">
+    <entry file="file://$PROJECT_DIR$/app/controllers/sitemap_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="356" selection-end="356" vertical-scroll-proportion="0.4744186">
+        <state line="6" column="7" selection-start="162" selection-end="162" vertical-scroll-proportion="0.2372093">
           <folding />
         </state>
       </provider>
