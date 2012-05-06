@@ -1,6 +1,6 @@
 class SitemapController < ApplicationController
   def index
-    @micrposts = Post.all
+    @posts = Post.all
 
     respond_to do |format|
       format.xml { render :layout => false }
