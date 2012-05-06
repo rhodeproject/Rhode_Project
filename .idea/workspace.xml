@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sitemap_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sitemap_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sitemap/index.xml.builder" afterPath="$PROJECT_DIR$/app/views/sitemap/index.xml.builder" />
     </list>
     <ignored path="Rhode_Project.iws" />
@@ -74,7 +72,7 @@
       <file leaf-file-name="index.xml.builder" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/sitemap/index.xml.builder">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="7" selection-start="460" selection-end="460" vertical-scroll-proportion="0.63255817">
+            <state line="12" column="28" selection-start="356" selection-end="356" vertical-scroll-proportion="0.4744186">
               <folding />
             </state>
           </provider>
@@ -728,7 +726,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sitemap/index.xml.builder">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="7" selection-start="460" selection-end="460" vertical-scroll-proportion="0.63255817">
+        <state line="12" column="28" selection-start="356" selection-end="356" vertical-scroll-proportion="0.4744186">
           <folding />
         </state>
       </provider>
