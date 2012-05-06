@@ -21,4 +21,5 @@ RhodeProject::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/newforum', to: 'forums#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+  match 'sitemap',  to: 'sitemap#index', via: :get
 end
