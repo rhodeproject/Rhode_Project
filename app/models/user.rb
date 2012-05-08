@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   has_many :followed_users, through:  :relationships, source: :followed
   has_many :posts
   has_many :topics
+  has_and_belongs_to_many :forums
 
   #reverse relationship
   has_many :reverse_relationships, foreign_key: "followed_id",
