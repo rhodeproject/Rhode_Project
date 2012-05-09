@@ -6,12 +6,16 @@ class UserMailer < ActionMailer::Base
     mail(:to => "mhatch73@gmail.com", :subject => "Another User")
   end
 
+  def post_forum_notice(forum,email,post)
+    @content = post.content
+    @poster = post.user
+    @forum = forum
+    mail(:to => email, :subject => "New Post to #{forum.name}")
+  end
+
   def post_notice(user, micropost)
     @user = user
     @users = User.all
-
-
-
     @micropost = micropost
     @users.each do |u|
       mail(:to => u.email, :subject => "New Post")

@@ -17,6 +17,11 @@ class PostsController < ApplicationController
       @topic = Topic.find(@post.topic_id)
       @topic.update_attributes(:last_poster_id => current_user.id, :last_post_at => Time.now)
       flash[:success] = "Successfully created post."
+      forum = @topic.forum
+      forum.users.each do |user|
+        UserMailer.post_forum_notice(@topic.forum,user.email,@post).deliver
+      end
+
       redirect_to "/topics/#{@post.topic_id}"
     end
   end
