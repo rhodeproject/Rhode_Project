@@ -24,7 +24,7 @@
         <td><h4><div style="word-wrap: break-word"><p><%= post.content %></p></div></h4></td>
         <td class="right">
           <%= gravatar_for(post.user, size: 55) %>
-          Posted By: <%= link_to(@topic.user.name, users_path)%><br>
+          Posted By: <%= link_to(post.user.name, users_path)%><br>
           Original Post: <%= @topic.created_at.to_date %><br>
         </td>
         <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
