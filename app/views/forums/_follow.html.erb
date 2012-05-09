@@ -1,6 +1,14 @@
 <hr>
-<%= form_for @forum do |f| %>
-    <%= f.submit "Send me e-mail updates", class: "btn btn-mini btn-primary" %>
+<% if user_added_to_forum? %>
+    <%= form_for @forum do |f| %>
+        Receive E-Mail updates for <%= @forum.name %> <br>
+        <%= f.submit "Stop E-Mails!", class: "btn btn-mini btn-primary" %>
+    <% end %>
+<% else %>
+    <%= form_for @forum do |f| %>
+        Receive E-Mail updates for <%= @forum.name %> <br>
+        <%= f.submit "E-Mail Me!", class: "btn btn-mini btn-primary" %>
+    <% end %>
 <% end %>
 
 

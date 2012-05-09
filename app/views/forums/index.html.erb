@@ -32,7 +32,9 @@
   <% end %>
 </table>
 
-<p><%= link_to "New Forum", new_forum_path %></p>
+<% if current_user.id == 1 %>
+    <p><%= link_to "New Forum", new_forum_path %></p>
+<% end %>
 
 
 

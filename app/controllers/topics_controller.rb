@@ -22,10 +22,14 @@ class TopicsController < ApplicationController
       if @topic.save
         @post = current_user.posts.build(:content => params[:post][:content],:topic_id => @topic.id)
         if @post.save
+          forum = @topic.forum
+          forum.users.each do |user|
+            UserMailer.post_forum_notice(@topic.forum,user.email,@post).deliver
+          end
             flash[:success] = "Successfully created topic."
             redirect_to "/forums/#{@topic.forum_id}"
-          else
-            render :action => 'new'
+        else
+          render :action => 'new'
         end
     else
       render :action => 'new'
