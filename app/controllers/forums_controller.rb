@@ -8,17 +8,17 @@ class ForumsController < ApplicationController
   end
 
   def update
-    if params[:commit] == "E-Mail Me!"
+    if params[:commit] == "email updates"
       @forum = Forum.find(params[:id])
       add_user_to_forum
     else
-      if params[:commit] == "Stop E-Mails!"
+      if params[:commit] == "stop updates"
         @forum = Forum.find(params[:id])
         remove_user_from_forum
-        flash[:success] = "you will no longer receive email updates for #{@forum.name} forum"
+        #flash[:warning] = "you will no longer receive email updates for #{@forum.name} forum"
       end
     end
-    redirect_to @forum
+    redirect_to "/forums"
   end
 
   def destroy
@@ -63,7 +63,7 @@ class ForumsController < ApplicationController
   def remove_user_from_forum
     @forum = Forum.find(params[:id])
     if @forum.users.delete(current_user)
-      flash[:success] = "You will no longer receive email updates for the #{@forum.name} forum"
+      flash[:warning] = "You will no longer receive email updates for the #{@forum.name} forum"
     end
   end
 

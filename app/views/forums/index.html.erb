@@ -23,7 +23,11 @@
           <% end %>
         </td>
         <td>
-           <%= link_to "View Posts", forum_path(forum.id),class: "btn btn-mini btn-primary" %>
+            <% if user_added_to_forum?(forum) %>
+                <%= render 'remove_from_email' %>
+            <% else %>
+                <%= render 'add_to_email' %>
+            <% end %>
         </td>
         <% if current_user.admin? %>
         <td><%= link_to "Destroy", forum, :confirm => 'Are you sure?', :method => :delete %></td>
