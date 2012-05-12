@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/forums/_add_to_email.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/forums/_remove_from_email.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/forums_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/forums_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/forums_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/forums_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/_follow.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/_follow.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/index.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/show.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/topics/show.html.erb" afterPath="$PROJECT_DIR$/app/views/topics/show.html.erb" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,26 +29,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/forums/index.html.erb">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/topics/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="19" selection-start="1003" selection-end="1003" vertical-scroll-proportion="-2.6153846">
+            <state line="31" column="42" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forums_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/forums_controller.rb">
+      <file leaf-file-name="posts_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="41" selection-start="390" selection-end="390" vertical-scroll-proportion="0.33170733">
+            <state line="55" column="72" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -58,37 +56,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <file leaf-file-name="sessions_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="49" selection-start="443" selection-end="452" vertical-scroll-proportion="-6.5384617">
+            <state line="41" column="5" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_remove_from_email.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/forums/_remove_from_email.html.erb">
+      <file leaf-file-name="users_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/users_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="30" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_add_to_email.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/forums/_add_to_email.html.erb">
+      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="31" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+            <state line="3" column="28" selection-start="166" selection-end="192" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forums_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/forums_helper.rb">
+      <file leaf-file-name="forums_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/forums_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="32" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
+            <state line="14" column="41" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,16 +95,25 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="111" selection-start="1247" selection-end="1247" vertical-scroll-proportion="-10.461538">
+            <state line="26" column="51" selection-start="1090" selection-end="1095" vertical-scroll-proportion="-17.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_follow.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/forums/_follow.html.erb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/forums/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="35" selection-end="153" vertical-scroll-proportion="-2.6153846">
+            <state line="36" column="77" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.5956873">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_add_to_email.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/forums/_add_to_email.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="67" selection-start="71" selection-end="97" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,22 +132,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/_follow.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20120508030507_add_index_to_forums_users.rb" />
         <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/user_mailer/post_forum_notice.text.erb" />
         <option value="$PROJECT_DIR$/app/helpers/users_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/shared/_user_info.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/topics/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/topics_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/forums/_follow.html.erb" />
-        <option value="$PROJECT_DIR$/app/helpers/forums_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/forums/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/forums/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forums/_add_to_email.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forums/_remove_from_email.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/forums_controller.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/forums_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/forums/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/topics/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/helpers/sessions_helper.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/forums/index.html.erb" />
       </list>
     </option>
   </component>
@@ -250,50 +257,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -769,60 +732,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/users/show_follow.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/users_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="44" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_user_info.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="41" selection-start="83" selection-end="83" vertical-scroll-proportion="0.042079207" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/topics_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="10" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="77" selection-start="583" selection-end="722" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/topics/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="66" selection-start="776" selection-end="776" vertical-scroll-proportion="0.45868465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/forums/_follow.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="35" selection-end="153" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forums/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="19" selection-start="1003" selection-end="1003" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="111" selection-start="1247" selection-end="1247" vertical-scroll-proportion="-10.461538">
+        <state line="4" column="13" selection-start="35" selection-end="153" vertical-scroll-proportion="0.16831683">
           <folding />
         </state>
       </provider>
@@ -836,35 +753,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="49" selection-start="443" selection-end="452" vertical-scroll-proportion="-6.5384617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/forums_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="32" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forums/_add_to_email.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="31" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+        <state line="10" column="49" selection-start="443" selection-end="452" vertical-scroll-proportion="0.44270834">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/forums/_remove_from_email.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="30" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+        <state line="1" column="30" selection-start="60" selection-end="60" vertical-scroll-proportion="0.039534885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/forums_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/topics/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="42" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forums/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="51" selection-start="1090" selection-end="1095" vertical-scroll-proportion="-17.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/forums_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="41" selection-start="390" selection-end="390" vertical-scroll-proportion="0.33170733">
+        <state line="14" column="41" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/users_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="5" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="28" selection-start="166" selection-end="192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="72" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forums/_add_to_email.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="67" selection-start="71" selection-end="97" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forums/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="77" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.5956873">
           <folding />
         </state>
       </provider>

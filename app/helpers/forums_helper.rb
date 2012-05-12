@@ -8,4 +8,6 @@ module ForumsHelper
   def latest_poster(user)
     @user = User.find(user)
   end
+
+
 end

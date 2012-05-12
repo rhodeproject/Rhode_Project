@@ -29,15 +29,12 @@
                 <%= render 'add_to_email' %>
             <% end %>
         </td>
-        <% if current_user.admin? %>
-        <td><%= link_to "Destroy", forum, :confirm => 'Are you sure?', :method => :delete %></td>
-        <% end %>
       </tr>
   <% end %>
 </table>
 
 <% if current_user.id == 1 %>
-    <p><%= link_to "New Forum", new_forum_path %></p>
+    <p><%= link_to "New Forum", new_forum_path, class: "btn btn-mini btn-info" %></p>
 <% end %>
 
 
