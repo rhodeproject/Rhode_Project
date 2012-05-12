@@ -28,7 +28,7 @@
           Original Post: <%= @topic.created_at.to_date %><br>
         </td>
         <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
-        <% if current_user.admin? || current_user.id == 1 %>
+        <% if current_user.admin? || current_user.id == 1 || current_user == post.user%>
             <td><%= link_to "Delete", post, class: "btn btn-mini btn-danger", :confirm => 'Are you sure?', :method => :delete %></td>
         <% end %>
       </tr>
