@@ -1,10 +1,27 @@
 class TopicsController < ApplicationController
   before_filter :signed_in_user
-  before_filter :correct_user, only: [:edit, :update]
+  before_filter :correct_user, only: [:edit]
   before_filter :admin_user, only: :destroy
 
   def new
       @topic = Topic.new
+  end
+
+  def update
+    @topic = Topic.find(params[:id])
+    post = @topic.posts.build(:content => params[:post][:content])
+    post.user_id = current_user.id
+    if post.save
+      flash[:success] = "post added"
+      forum = @topic.forum
+      forum.users.each do |user|
+        UserMailer.post_forum_notice(@topic.forum,user.email,post).deliver
+      end
+      redirect_back_or "/topics/#{params[:id]}"
+    else
+      redirect_back_or forums_path
+      flash[:warning] = "there was an issue adding the post"
+    end
   end
 
   def destroy

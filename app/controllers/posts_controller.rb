@@ -21,8 +21,7 @@ class PostsController < ApplicationController
       forum.users.each do |user|
         UserMailer.post_forum_notice(@topic.forum,user.email,@post).deliver
       end
-
-      redirect_to "/topics/#{@post.topic_id}"
+      redirect_to "/topics/#{@topic.id}"
     end
   end
 
