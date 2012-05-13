@@ -7,6 +7,13 @@ class TopicsController < ApplicationController
       @topic = Topic.new
   end
 
+  def destroy
+    @remove = Topic.find(params[:id])
+    @remove.destroy
+    flash[:warning] = "Topic #{@remove.name} removed!"
+    redirect_to forum_path
+  end
+
   def show
     @topic = Topic.find(params[:id])
     #@topics = Post.find_all_by_topic_id(params[:id])
@@ -37,3 +44,9 @@ class TopicsController < ApplicationController
   end
 end
 
+private
+
+def admin_user
+  redirect_to(root_path) unless current_user.admin?
+  flash[:warning] = "You can't delete post" unless current_user.admin?
+end
