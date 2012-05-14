@@ -9,6 +9,7 @@ gem 'bootstrap-will_paginate', '0.0.5'
 gem 'mail', '2.4.4'
 gem 'faker', '1.0.1'
 gem 'newrelic_rpm'
+gem 'kaminari'
 
 # Gems used only for assets and not required
 # in production environments by default.
