@@ -8,7 +8,7 @@ class UserMailer < ActionMailer::Base
 
   def post_forum_notice(forum,email,post)
     @content = post.content
-    @poster = post.user
+    @post = post
     @forum = forum
     mail(:to => email, :subject => "New Post to #{forum.name}")
   end
