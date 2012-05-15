@@ -10,6 +10,7 @@ gem 'mail', '2.4.4'
 gem 'faker', '1.0.1'
 gem 'newrelic_rpm'
 gem 'kaminari'
+gem 'redcarpet'
 
 # Gems used only for assets and not required
 # in production environments by default.
