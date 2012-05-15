@@ -1,6 +1,8 @@
 
 Forum: <%= @forum.name %>
 Post Topic: <%= @post.topic.name %>
-Posted By: <%= @post.user.name %>
-Content: <%= @content %>
+Posted By: <%= @post.user.name%>
+Original Poster: <%= @post.topic.user.name %>
+
+<%= @content %>
 

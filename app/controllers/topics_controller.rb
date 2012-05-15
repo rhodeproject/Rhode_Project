@@ -9,10 +9,11 @@ class TopicsController < ApplicationController
 
   def update
     @topic = Topic.find(params[:id])
+    @topic.update_attributes(:last_poster_id => current_user.id, :last_post_at => Time.now)
     post = @topic.posts.build(:content => params[:post][:content])
     post.user_id = current_user.id
     if post.save
-      flash[:success] = "post added"
+      flash[:success] = "Post Added to #{@topic.name}"
       forum = @topic.forum
       forum.users.each do |user|
         UserMailer.post_forum_notice(@topic.forum,user.email,post).deliver
