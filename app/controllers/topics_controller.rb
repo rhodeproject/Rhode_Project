@@ -16,7 +16,7 @@ class TopicsController < ApplicationController
       flash[:success] = "Post Added to #{@topic.name}"
       forum = @topic.forum
       forum.users.each do |user|
-        UserMailer.post_forum_notice(@topic.forum,user.email,post).deliver
+        UserMailer.delay.post_forum_notice(@topic.forum,user.email,post)
       end
       redirect_back_or "/topics/#{params[:id]}"
     else

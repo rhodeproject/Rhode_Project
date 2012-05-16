@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_filter :signed_in_user
   before_filter :admin_user, only: [:edit, :update, :destroy]
 
-
   def new
     @post = Post.new
   end
@@ -19,7 +18,7 @@ class PostsController < ApplicationController
       flash[:success] = "Successfully created post."
       forum = @topic.forum
       forum.users.each do |user|
-        UserMailer.post_forum_notice(@topic.forum,user.email,@post).deliver
+        UserMailer.delay.post_forum_notice(@topic.forum,user.email,@post)
       end
       redirect_to "/topics/#{@topic.id}"
     end
