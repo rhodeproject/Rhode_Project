@@ -10,6 +10,12 @@ class UserMailer < ActionMailer::Base
     @content = post.content
     @post = post
     @forum = forum
+    if Rails.env.development?
+      rootpath = "localhost:3000/"
+    else
+      rootpath = "https://www.rhodeproject.com/"
+    end
+    @link = "#{rootpath}topics/#{post.topic_id}"
     mail(:to => email, :subject => "New Post to #{forum.name}")
   end
 
