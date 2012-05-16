@@ -50,7 +50,7 @@ class TopicsController < ApplicationController
         if @post.save
           forum = @topic.forum
           forum.users.each do |user|
-            UserMailer.post_forum_notice(@topic.forum,user.email,@post).deliver
+            UserMailer.delay.post_forum_notice(@topic.forum,user.email,@post)
           end
             flash[:success] = "Successfully created topic."
             redirect_to "/forums/#{@topic.forum_id}"
