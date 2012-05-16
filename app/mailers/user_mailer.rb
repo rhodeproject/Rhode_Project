@@ -3,7 +3,8 @@ class UserMailer < ActionMailer::Base
 
   def new_user_notice(user)
     @user = user
-    mail(:to => "mhatch73@gmail.com", :subject => "Another User")
+    @count = User.count
+    mail(:to => "mhatch73@gmail.com", :subject => "Another User -- #{@user.name}")
   end
 
   def post_forum_notice(forum,email,post)

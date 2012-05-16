@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to The Rhode Project!"
-      UserMailer.new_user_notice(@user).deliver
+      UserMailer.delay.new_user_notice(@user)
       redirect_to @user
     else
       render 'new'
