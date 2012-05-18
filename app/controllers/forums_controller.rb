@@ -30,6 +30,7 @@ class ForumsController < ApplicationController
 
   def show
     @forum = Forum.find(params[:id])
+    @topics = @forum.topics.order('updated_at DESC')
   end
 
   def new

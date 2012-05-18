@@ -14,7 +14,7 @@
             <th width="10%">Replies</th>
             <th width="30%">Last Post</th>
           </thead>
-          <% for topic in @forum.topics %>
+          <% @topics.each do |topic| %>
               <tr>
                 <td><%= link_to h(topic.name), topic_path(topic.id) %>
                 <td><%= topic.posts.count - 1 %></td>

@@ -19,7 +19,7 @@
   <th></th>
   </thead>
 
-  <% for post in @topic.posts %>
+  <% @posts.each do |post| %>
 
       <tr>
         <td><h4><div style="word-wrap: break-word"><p><%= markdown.render(post.content).html_safe %></p></div></h4></td>

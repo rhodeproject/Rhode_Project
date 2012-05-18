@@ -34,6 +34,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
+    @posts = @topic.posts.order('created_at ASC')
     #@topics = Topic.paginate(page: params[:page])
     #@topics = Post.find_all_by_topic_id(params[:id])
   end
