@@ -5,6 +5,5 @@ class Forum < ActiveRecord::Base
 
   def most_recent_post
     topic = Topic.first(:order => 'last_post_at DESC', :conditions => ['forum_id = ?', self.id])
-
   end
 end
