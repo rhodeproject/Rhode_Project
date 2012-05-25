@@ -2,5 +2,11 @@
     <ol class="microposts">
       <%= render partial: 'shared/feed_item', collection: @feed_items %>
     </ol>
-    <%= will_paginate @feed_items %>
+
+      <%= will_paginate @feed_items,
+            :style => 'font-size: small',
+            :next_label => ">>",
+            :previous_label => "<<"%>
+
+
 <% end %>

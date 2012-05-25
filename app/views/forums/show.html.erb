@@ -30,7 +30,10 @@
               </tr>
           <% end %>
         </table>
-      <%= will_paginate @topics %>
+      <%= will_paginate @topics,
+          :style => 'font-size: small',
+          :next_label => ">>",
+          :previous_label => "<<"%>
 
         <%= link_to "Create New Topic", "/topics/new?forum=#{@forum.id}", class: "btn btn-large btn-primary" %>
       </div>

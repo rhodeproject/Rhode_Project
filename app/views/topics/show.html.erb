@@ -36,7 +36,10 @@
 
   <% end %>
 </table>
- <%= will_paginate @posts %>
+ <%= will_paginate @posts,
+           :style => 'font-size: small',
+           :next_label => ">>",
+           :previous_label => "<<" %>
 <%= render 'shared/reply_post' %>
 
 
