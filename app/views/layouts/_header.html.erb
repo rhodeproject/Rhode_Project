@@ -11,11 +11,11 @@
               <li><%= link_to "Forums", "/forums"%></li>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
+                  <i class="icon-user"></i>
                   <%= current_user.name %> <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><i class="icon-user"></i><%= link_to "Profile", current_user %></li>
+                  <li><%= link_to "Profile", current_user %></li>
                   <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                   <li class="divider"></li>
                   <li>
