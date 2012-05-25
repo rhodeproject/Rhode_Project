@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
     </list>
     <ignored path="Rhode_Project.iws" />
@@ -64,7 +63,7 @@
       <file leaf-file-name="_header.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="85" selection-start="801" selection-end="801" vertical-scroll-proportion="0.6568182">
+            <state line="17" column="47" selection-start="763" selection-end="763" vertical-scroll-proportion="0.6568182">
               <folding />
             </state>
           </provider>
@@ -749,7 +748,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="85" selection-start="801" selection-end="801" vertical-scroll-proportion="0.6568182">
+        <state line="17" column="47" selection-start="763" selection-end="763" vertical-scroll-proportion="0.6568182">
           <folding />
         </state>
       </provider>
