@@ -8,8 +8,6 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(params[:micropost])
     if @micropost.save
       flash[:success] = "Post created"
-
-      UserMailer.post_notice(current_user, @micropost).deliver
       redirect_to root_path
     else
       @feed_items = []
