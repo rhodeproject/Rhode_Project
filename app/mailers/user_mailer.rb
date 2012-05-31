@@ -20,6 +20,18 @@ class UserMailer < ActionMailer::Base
     mail(:to => email, :subject => "New Post to #{forum.name}")
   end
 
+  def password_reset(user)
+    @user = user
+    address = @user.email
+    subject = "Password reset request for #{@user.name}"
+    if Rails.env.development?
+      url = "http://localhost:3000"
+    else
+      url = "https://www.rhodeproject.com"
+    end
+    mail(:to => address, :subject => subject)
+  end
+
   def post_notice(user, micropost)
     @user = user
     @users = User.all

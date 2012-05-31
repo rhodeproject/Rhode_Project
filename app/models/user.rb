@@ -52,6 +52,16 @@ class User < ActiveRecord::Base
   #scopes
   scope :admin, where(admin: true)
 
+  #methods
+  def send_password_reset
+    #generate_token(:reset_token)
+    self.update_attribute('reset_token', generate_token)
+    self.update_attribute('password_reset_sent_at', Time.zone.now)
+    #self.reset_token = SecureRandom.urlsafe_base64
+    #self.password_reset_sent_at = Time.zone.now
+    #save!
+    UserMailer.password_reset(self).deliver
+  end
 
   def feed
     Micropost.from_users_followed_by(self)
@@ -72,5 +82,9 @@ class User < ActiveRecord::Base
   private
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
+    end
+
+    def generate_token
+      SecureRandom.urlsafe_base64
     end
 end
