@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Rhode_Project.iml" afterPath="$PROJECT_DIR$/.idea/Rhode_Project.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/topics/show.html.erb" afterPath="$PROJECT_DIR$/app/views/topics/show.html.erb" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/topics/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="35" selection-start="128" selection-end="128" vertical-scroll-proportion="-0.65384614">
+            <state line="24" column="106" selection-start="694" selection-end="694" vertical-scroll-proportion="0.29238328">
               <folding />
             </state>
           </provider>
@@ -72,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="197" selection-end="197" vertical-scroll-proportion="0.32380953">
+            <state line="8" column="24" selection-start="197" selection-end="197" vertical-scroll-proportion="-5.230769">
               <folding />
             </state>
           </provider>
@@ -93,7 +91,7 @@
       <file leaf-file-name="_micropost.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/microposts/_micropost.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="32" selection-start="103" selection-end="120" vertical-scroll-proportion="-1.9615384">
+            <state line="10" column="35" selection-start="401" selection-end="401" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
@@ -132,11 +130,11 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forums/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forums/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/topics/show.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/views/shared/_reply_post.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/topics/show.html.erb" />
       </list>
     </option>
   </component>
@@ -255,7 +253,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="microposts" />
+              <option name="myItemId" value="topics" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -745,13 +743,6 @@
         <state line="30" column="2" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.76609445" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/topics/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="128" selection-end="128" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_reply_post.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="57" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" />
@@ -784,9 +775,9 @@
         <state line="31" column="45" selection-start="811" selection-end="850" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/microposts/_micropost.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="32" selection-start="103" selection-end="120" vertical-scroll-proportion="-1.9615384">
+        <state line="8" column="24" selection-start="197" selection-end="197" vertical-scroll-proportion="-5.230769">
           <folding />
         </state>
       </provider>
@@ -798,9 +789,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/microposts/_micropost.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="197" selection-end="197" vertical-scroll-proportion="0.32380953">
+        <state line="10" column="35" selection-start="401" selection-end="401" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/topics/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="106" selection-start="694" selection-end="694" vertical-scroll-proportion="0.29238328">
           <folding />
         </state>
       </provider>

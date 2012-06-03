@@ -22,7 +22,7 @@
   <% @posts.each do |post| %>
 
       <tr>
-        <td><h4><div style="word-wrap: break-word"><p><%= markdown.render(post.content).html_safe %></p></div></h4></td>
+        <td><div style="word-wrap: break-word"><p><%= markdown.render(post.content).html_safe %></p></div></td>
         <td class="right">
           <%= gravatar_for(post.user, size: 55) %>
           Posted By: <%= link_to(post.user.name, users_path)%><br>
