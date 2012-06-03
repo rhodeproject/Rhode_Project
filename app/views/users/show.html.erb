@@ -6,7 +6,12 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-
+      <div class=" well user-stats">
+          <ul>
+              <li>Joined <%= time_ago_in_words(@user.created_at) %> ago</li>
+              <li>Posted <%= @user.posts.count %> times</li>
+          </ul>
+      </div>
     </section>
   </aside>
   <div class="span8">
