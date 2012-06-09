@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.where(:club_id => current_user.club_id)#.find_by_club_id(current_user.club_id).paginate(page: params[:page])
   end
 
   def new

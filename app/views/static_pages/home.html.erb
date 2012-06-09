@@ -5,14 +5,16 @@
     <section>
       <%= render 'shared/user_info' %>
     </section>
-    <section>
+    <!--<section>
       <%= render 'shared/stats' %>
-    </section>
+    </section> -->
+    <% if current_user.admin? %>
     <section>
       <%= render 'shared/micropost_form' %>
     </section>
+    <% end %>
     <section>
-      <h3>status posts</h3>
+      <h3>Admin Notices</h3>
       <%= render 'shared/feed' %>
     </section>
 

@@ -10,7 +10,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation
+  attr_accessible :email, :name, :password, :password_confirmation, :club_id
   has_secure_password
 
   #Data Relationships
@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   has_many :followed_users, through:  :relationships, source: :followed
   has_many :posts
   has_many :topics
+  belongs_to :club
   has_and_belongs_to_many :forums
 
   #reverse relationship

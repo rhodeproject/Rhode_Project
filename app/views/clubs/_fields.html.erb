@@ -1,0 +1,25 @@
+
+
+<h2>Club Information</h2>
+<%= f.label :name, "Club Name" %>
+<%= f.text_field :name %>
+
+<%= f.label :sub_domain, "Short Name" %>
+<%= f.text_field :sub_domain %>
+
+<h2>Administrator Information</h2>
+<%= f.fields_for :user do |cf| %>
+    <%= cf.label :name %>
+    <%= cf.text_field :name %>
+
+    <%= cf.label :email %>
+    <%= cf.text_field :email %>
+
+    <%= cf.label :password %>
+    <%= cf.password_field :password %>
+
+    <%= cf.label :password_confirmation, "Confirmation" %>
+    <%= cf.password_field :password_confirmation %>
+<% end %>
+
+
