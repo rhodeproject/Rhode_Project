@@ -33,7 +33,7 @@
   <% end %>
 </table>
 
-<% if current_user.id == 1 %>
+<% if current_user.admin? %>
     <p><%= link_to "New Forum", new_forum_path, class: "btn btn-mini btn-info" %></p>
 <% end %>
 

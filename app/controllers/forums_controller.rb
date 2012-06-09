@@ -4,7 +4,7 @@ class ForumsController < ApplicationController
   before_filter :admin_user, only: :destroy
 
   def index
-    @forums = Forum.all
+    @forums = Forum.where(:club_id => current_user.club_id)
   end
 
   def update
@@ -38,13 +38,18 @@ class ForumsController < ApplicationController
   end
 
   def create
-    @forum = Forum.new(params[:forum])
-    if @forum.save
-      flash[:success] = "New forum created!"
-      redirect_to forums_path
+    if current_user.admin?
+      @forum = Forum.new(params[:forum])
+      @forum.update_attribute('club_id',current_user.club_id)
+      if @forum.save
+        flash[:success] = "New forum created!"
+        redirect_to forums_path
+      else
+        @forum = []
+        flash[:warning] = "Failed to Create forum"
+      end
     else
-      @forum = []
-      flash[:warning] = "Failed to Create forum"
+      flash[:warning] = "You must be ann admin to create a new Forum"
     end
   end
 
