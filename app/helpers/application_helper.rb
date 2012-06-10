@@ -1,7 +1,12 @@
 module ApplicationHelper
   #Returns the full title on a per-page  basis
   def full_title(page_title)
-    base_title = "The Rhode Project"
+    if signed_in?
+      base_title = current_user.club.name
+    else
+      base_title = "The Rhode Project"
+    end
+
     if page_title.empty?
       base_title
     else
