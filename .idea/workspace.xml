@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="Rhode_Project.iws" />
@@ -28,7 +27,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="43" selection-start="123" selection-end="123" vertical-scroll-proportion="0.16">
+            <state line="5" column="42" selection-start="182" selection-end="182" vertical-scroll-proportion="0.2">
               <folding />
             </state>
           </provider>
@@ -801,7 +800,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="43" selection-start="123" selection-end="123" vertical-scroll-proportion="0.16">
+        <state line="5" column="42" selection-start="182" selection-end="182" vertical-scroll-proportion="0.2">
           <folding />
         </state>
       </provider>
