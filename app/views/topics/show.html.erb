@@ -29,9 +29,14 @@
           Original Post: <%= @topic.created_at.to_date %><br>
         </td>
         <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
-        <% if current_user.admin? || current_user.id == 1 || current_user == post.user%>
-            <td><%= link_to "Delete", post, class: "btn btn-mini btn-danger", :confirm => 'Are you sure?', :method => :delete %></td>
-        <% end %>
+        <td>
+            <% if post.user == current_user && post.created_at < 15.minutes.ago %>
+                <%= link_to "Edit", post, class: "btn btn-mini btn-primary", :method => :update%>
+            <% end %>
+            <% if current_user.admin?%>
+                <%= link_to "Delete", post, class: "btn btn-mini btn-primary", :confirm => 'Are you sure?', :method => :delete %>
+            <% end %>
+        </td>
       </tr>
 
   <% end %>
