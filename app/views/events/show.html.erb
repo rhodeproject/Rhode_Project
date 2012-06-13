@@ -1,5 +1,16 @@
 <% provide(:title, 'Event')%>
+<h1><%= @event.name %> Event Details</h1>
+<table class="table table-condensed table-striped">
+  <thead>
+    <th>Event Name</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+  </thead>
+  <tr>
+    <td><%= @event.name %></td>
+    <td><%= @event.start_at %></td>
+    <td><%= @event.end_at %></td>
+  </tr>
+</table>
 
-<%= @event.name %>
-<%= @event.start_at %>
-<% @event.end_at %>
+
