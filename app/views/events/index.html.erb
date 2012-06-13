@@ -1,0 +1,16 @@
+<%= provide(:title, 'Events') %>
+
+<table class="table table-condensed table-striped">
+  <thead>
+  <th>Event</th>
+  <th>Start</th>
+  <th>End</th>
+  </thead>
+  <% @events.each do |event|%>
+      <tr>
+        <td><%= render event %></td>
+        <td><%= event.start_at %></td>
+        <td><%= event.end_at %></td>
+      </tr>
+  <% end %>
+</table>
