@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120613000118) do
+ActiveRecord::Schema.define(:version => 20120615013642) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,12 @@ ActiveRecord::Schema.define(:version => 20120613000118) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.text     "welcome_message"
+    t.string   "heading1"
+    t.string   "heading2"
+    t.string   "heading3"
+    t.text     "message1"
+    t.text     "message2"
+    t.text     "message3"
   end
 
   create_table "delayed_jobs", :force => true do |t|
@@ -39,12 +45,14 @@ ActiveRecord::Schema.define(:version => 20120613000118) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
-    t.datetime "start_at"
-    t.datetime "end_at"
-    t.boolean  "all_day",    :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "all_day",     :default => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.integer  "club_id"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
   end
 
   create_table "forums", :force => true do |t|

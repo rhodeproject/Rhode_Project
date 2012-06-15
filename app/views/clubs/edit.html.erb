@@ -1,0 +1,29 @@
+<%= provide(:title, 'Add Club') %>
+<div class="row">
+  <div class="span6 offset3">
+<%= form_for (@club) do |f| %>
+    <%= f.label :sub_domain, "Custom URL"%>
+    <%= f.text_field :sub_domain %>
+
+    <%= f.label :heading1 %>
+    <%= f.text_field :heading1 %>
+
+    <%=  f.label :message1 %>
+    <%=  f.text_area :message1 %>
+
+    <%= f.label :heading2 %>
+    <%= f.text_field :heading2 %>
+
+    <%=  f.label :message2 %>
+    <%=  f.text_area :message2 %>
+
+    <%= f.label :heading3 %>
+    <%= f.text_field :heading3 %>
+
+    <%=  f.label :message3 %>
+    <%=  f.text_area :message3 %>
+
+    <%= f.submit "Customize Club", class: "btn btn-large btn-primary" %>
+<% end %>
+</div>
+</div>

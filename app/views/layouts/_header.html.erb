@@ -27,6 +27,16 @@
                   </li>
                 </ul>
               </li>
+              <% if current_user.admin? %>
+              <li id="fat-menu" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Admin <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><%= link_to "Edit Club", edit_club_path(current_user.club_id) %></li>
+                </ul>
+              </li>
+              <% end %>
           <% else %>
               <li><%= link_to "Sign in", signin_path %></li>
           <% end %>

@@ -16,8 +16,8 @@ RhodeProject::Application.routes.draw do
   resources :topics
   resources :posts
   resources :password_resets
-  resources :clubs, only: [:create, :show, :index]
-  resources :events, only: [:create, :show, :destroy]
+  resources :clubs
+  resources :events
 
   root to: 'static_pages#home'
   match '/signup',  to: 'users#new'
