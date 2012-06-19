@@ -11,5 +11,7 @@ class Club < ActiveRecord::Base
   has_many :forums
   has_many :events
 
+  validates :name, presence: true, length:{maximum: 50}
+
   accepts_nested_attributes_for :users
 end

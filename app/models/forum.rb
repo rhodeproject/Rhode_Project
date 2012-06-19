@@ -4,6 +4,8 @@ class Forum < ActiveRecord::Base
   has_and_belongs_to_many :users
   belongs_to :club
 
+  validates :name, presence: true
+
   def most_recent_post
     topic = Topic.first(:order => 'last_post_at DESC', :conditions => ['forum_id = ?', self.id])
   end

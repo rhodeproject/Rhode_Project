@@ -1,9 +1,16 @@
 class Event < ActiveRecord::Base
-  attr_accessible :name, :starts_at, :ends_at, :title, :all_day, :description
-  belongs_to :club
+  attr_accessible :starts_at, :ends_at, :title, :all_day, :description
 
+  #associations
+  belongs_to :club
   has_event_calendar
 
+  #validations
+
+  validates :title, presence: true
+
+
+  #scopes
   scope :before, lambda {|end_time| {:conditions => ["ends_at < ?", Event.format_date(end_time)] }}
   scope :after, lambda {|start_time| {:conditions => ["starts_at > ?", Event.format_date(start_time)] }}
 
@@ -20,7 +27,6 @@ class Event < ActiveRecord::Base
         :recurring => false,
         :url => Rails.application.routes.url_helpers.event_path(id)
     }
-
   end
 
   def self.format_date(date_time)

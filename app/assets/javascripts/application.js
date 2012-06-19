@@ -14,10 +14,53 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require fullcalendar
+//= require jquery-ui-timepicker-addon
 //= require bootstrap
 //= require_tree .
 
 $(document).ready(function() {
+
+    //Date Picker for new events
+    $('#event_starts_at').datetimepicker({
+        onClose: function(dateText, inst){
+            var endDateTextBox = $('#event_ends_at');
+            if (endDateTextBox.val() != '') {
+                var testStartDate = new Date(dateText);
+                var testEndDate = new Date(endDateTextBox.val());
+                if (testStartDate > testEndDate)
+                    endDateTextBox.val(dateText);
+            }
+            else {
+                endDateTextBox.val(dateText);
+            }
+        },
+        onSelect: function (selectedDateTime){
+            var start = $(this).datetimepicker('getDate');
+            $('#event_ends_at').datetimepicker('option', 'minDate', new Date(start.getTime()));
+        },
+        ampm: true,
+        timeFormat: 'hh:mm:ss TT',
+        dateFormat: 'yy-mm-dd',
+        stepMinute: 15
+        });
+    $('#event_ends_at').datetimepicker({
+        onClose: function(dateTime, inst) {
+            var startDateTextBox = $('#event_starts_at');
+            if (startDateTextBox.val() != '') {
+                var testStartDate = new Date(startDateTextBox.val());
+                var testEndDate = new Date(dateText);
+                if (testStartDate > testEndDate)
+                    startDateTextBox.val(dateText);
+            }
+            else {
+                startDateTextBox.val(dateText);
+            }
+        },
+        ampm: true,
+        dateFormat: 'yy-mm-dd',
+        timeFormat: 'hh:mm:ss TT',
+        stepMinute: 15
+    });
 
     var date = new Date();
     var d = date.getDate();
@@ -25,14 +68,17 @@ $(document).ready(function() {
     var y = date.getFullYear();
 
     $('#calendar').fullCalendar({
-        editable: true,
+        editable: false,
+        theme: true,
         header: {
             left: 'prev,next today',
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
         },
+        weekMode: 'liquid',
         defaultView: 'month',
         height: 500,
+        firstHour: 5,
         slotMinutes: 15,
 
         loading: function(bool){
@@ -45,7 +91,8 @@ $(document).ready(function() {
         // a future calendar might have many sources.
         eventSources: [{
             url: '/events',
-            color: 'yellow',
+            eventColor: '#378006',
+            color: 'green',
             textColor: 'black',
             ignoreTimezone: false
         }],
@@ -66,7 +113,7 @@ $(document).ready(function() {
         // http://arshaw.com/fullcalendar/docs/mouse/eventClick/
         eventClick: function(event, jsEvent, view){
             // would like a lightbox here.
-        },
+        }
     });
 });
 
@@ -75,10 +122,10 @@ function updateEvent(the_event) {
         "/events/" + the_event.id,
         { event: { title: the_event.title,
             starts_at: "" + the_event.starts_at,
-            ends_at: "" + the_event.ends_at
-            //description: the_event.description
+            ends_at: "" + the_event.ends_at,
+            description: the_event.description
         }
-        },
-        function (reponse) { alert('successfully updated task.'); }
+    },
+        function (response) { alert('successfully updated task.'); }
     );
 };
