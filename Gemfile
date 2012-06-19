@@ -13,7 +13,6 @@ gem 'kaminari'
 gem 'redcarpet'
 gem 'delayed_job_active_record'
 gem 'jquery-rails'
-gem 'event-calendar', :require => 'event_calendar'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

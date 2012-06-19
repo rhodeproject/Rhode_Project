@@ -2,59 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\clubs.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\events.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\forums.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\password_resets.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\posts.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\sessions.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\static_pages.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\topics.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\users.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\RP_Drop_Shadow-01445ebe5a87c1e5e05432bf7ff609d3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\RP_Drop_Shadow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\Thumbs-496dcdeb8548206ceaebf16f04566385.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-9fc7c2250a97bf87e0bbf556b12931ef.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-9fc7c2250a97bf87e0bbf556b12931ef.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-c16232e21fb7921b943d9ed8a3f55f59.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-c16232e21fb7921b943d9ed8a3f55f59.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-0e7ff93d8f48fe1f5f762e4312e78da7.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-white-ef3d5b8d6a297804352b4a46fdb5466d.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\manifest.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rails-be8732dac73d845ac5b142c8fb5f9fb0.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rails.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-9197b171b796b669b9c93ab5d6b1199b.xcf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-a12a96209c8d132a6cf1f7a9e03e0d99.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE.xcf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE_blur-8aa7a1a03c2d2ae15ff88cfc6583136f.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE_blur.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine.JPG" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Rhode_Project.iml" afterPath="$PROJECT_DIR$/.idea/Rhode_Project.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/club.rb" afterPath="$PROJECT_DIR$/app/models/club.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event.rb" afterPath="$PROJECT_DIR$/app/models/event.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/forum.rb" afterPath="$PROJECT_DIR$/app/models/forum.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/post.rb" afterPath="$PROJECT_DIR$/app/models/post.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/topic.rb" afterPath="$PROJECT_DIR$/app/models/topic.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calendar/index.html.erb" afterPath="$PROJECT_DIR$/app/views/calendar/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/events/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/events/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/new.html.erb" afterPath="$PROJECT_DIR$/app/views/events/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/new.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/topics/new.html.erb" afterPath="$PROJECT_DIR$/app/views/topics/new.html.erb" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,13 +47,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="21" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.2553648">
+            <state line="42" column="21" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="35" selection-start="414" selection-end="414" vertical-scroll-proportion="0.19906323">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="63" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,7 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/calendar/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/club.rb" />
         <option value="$PROJECT_DIR$/app/models/forum.rb" />
@@ -132,10 +100,11 @@
         <option value="$PROJECT_DIR$/app/views/events/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/events/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css" />
         <option value="$PROJECT_DIR$/app/models/event.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -240,42 +209,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -317,46 +250,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -748,15 +641,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_micropost_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1339266836343" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -817,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="75" selection-start="613" selection-end="613" vertical-scroll-proportion="-5.8846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="66" selection-start="1974" selection-end="1979" vertical-scroll-proportion="0.33254156">
@@ -861,12 +738,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="63" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="21" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.2553648">
+        <state line="42" column="21" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="35" selection-start="414" selection-end="414" vertical-scroll-proportion="0.19906323">
+          <folding />
         </state>
       </provider>
     </entry>
