@@ -19,6 +19,8 @@ RhodeProject::Application.routes.draw do
   resources :clubs
   resources :events
 
+  match '', to: 'clubs#show', contraints: lambda {|r| r.subdomain.present? && r.subdomain != 'www'}
+
   root to: 'static_pages#home'
   match '/signup',  to: 'users#new'
   match '/help',    to: 'static_pages#help'

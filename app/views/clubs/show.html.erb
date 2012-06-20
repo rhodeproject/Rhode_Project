@@ -1,2 +1,37 @@
-<h1>Clubs#show</h1>
-<p>Find me in app/views/clubs/show.html.erb</p>
+<% if signed_in? %>
+
+    <div class="row">
+      <aside class="span3">
+        <section>
+          <%= render 'shared/user_info' %>
+        </section>
+        <!--<section>
+      <%= render 'shared/stats' %>
+    </section> -->
+        <% if current_user.admin? %>
+            <section>
+              <%= render 'shared/micropost_form' %>
+            </section>
+        <% end %>
+        <section>
+          <h3>Admin Notices</h3>
+          <%= render 'shared/feed' %>
+        </section>
+
+      </aside>
+      <div class="span9">
+        <img src="/assets/rp_Banner_triNE_blur.png"/>
+        <%= render 'shared/message' %>
+      </div>
+    </div>
+
+<% else %>
+    <div class="span12 offset1">
+      <img src="/assets/rp_Banner_triNE_blur.png"/>
+    </div>
+    <div class="span12">
+      <%= render 'shared/message' %>
+    </div>
+
+
+<% end %>
