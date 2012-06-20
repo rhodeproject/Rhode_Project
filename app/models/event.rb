@@ -3,7 +3,6 @@ class Event < ActiveRecord::Base
 
   #associations
   belongs_to :club
-  has_event_calendar
 
   #validations
 
