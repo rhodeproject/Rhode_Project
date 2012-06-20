@@ -13,4 +13,8 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+
+  def club_url(subdomain)
+    Club.find_by_subdomain(subdomain)
+  end
 end
