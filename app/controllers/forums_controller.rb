@@ -22,19 +22,32 @@ class ForumsController < ApplicationController
   end
 
   def destroy
-    @remove =  Forum.find(params[:id])
-    @remove.destroy
-    flash[:success] = "Forum #{@remove.name} removed."
-    redirect_to forums_path
+    if current_user.admin?
+      @remove =  Forum.find(params[:id])
+      @remove.destroy
+      flash[:success] = "Forum #{@remove.name} removed."
+      redirect_to forums_path
+    else
+      flash[:warning] = "You do not have rights to remove this forum"
+      redirect_to '/forums'
+    end
   end
 
   def show
     @forum = Forum.find(params[:id])
+    if current_user.club_id != @forum.club_id
+      flash[:warning] = "You do not have access to this forum"
+      redirect_to "/forums"
+    end
     @topics = @forum.topics.paginate(page: params[:page], :per_page => 10).order('updated_at DESC')
   end
 
   def new
-    @forum = Forum.new
+    if current_user.admin?
+      @forum = Forum.new
+    else
+      redirect '/forums'
+    end
   end
 
   def create

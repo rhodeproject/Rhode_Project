@@ -43,17 +43,29 @@ class ClubsController < ApplicationController
   end
 
   def edit
-    @club = Club.find(params[:id])
+    if current_user.admin?
+      @club = Club.find(params[:id])
+    else
+      flash[:warning] = "You do not have rights to edit this club"
+      redirect_to root_path
+    end
 
   end
 
   def update
-    @club = Club.find(params[:id])
-    if @club.update_attributes(params[:club])
-      flash[:success] = "Changes to #{@club.name} have been saved!"
-      redirect_to root_path
+    if current_user.admin?
+      @club = Club.find(params[:id])
+      if @club.update_attributes(params[:club])
+        flash[:success] = "Changes to #{@club.name} have been saved!"
+        redirect_to root_path
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      flash[:warning] = "You do not have rights to edit this club"
+      redirect_to root_path
     end
+
   end
+
 end

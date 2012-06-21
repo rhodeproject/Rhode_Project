@@ -22,11 +22,15 @@ class EventsController < ApplicationController
   # GET /events/1.xml
   def show
     @event = Event.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @event }
-      format.js { render :json => @event.to_json }
+    if @event.club_id == current_user.club_id
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @event }
+        format.js { render :json => @event.to_json }
+      end
+    else
+      flash[:warning] = "You are not able to view this event"
+      redirect_to '/calendar'
     end
   end
 
@@ -72,28 +76,41 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
 
-    respond_to do |format|
-      if @event.update_attributes(params[:event])
-        format.html { redirect_to(@event, :notice => 'Event was successfully updated.') }
-        format.xml  { head :ok }
-        format.js { head :ok}
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
-        format.js  { render :js => @event.errors, :status => :unprocessable_entity }
+    if current_user.club_id == @event.club_id
+      respond_to do |format|
+        if @event.update_attributes(params[:event])
+          format.html { redirect_to(@event, :notice => 'Event was successfully updated.') }
+          format.xml  { head :ok }
+          format.js { head :ok}
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
+          format.js  { render :js => @event.errors, :status => :unprocessable_entity }
+        end
       end
+    else
+      flash[:warning] = "you are not able to update this event"
+      redirect_to '/calendar'
     end
+
   end
 
   # DELETE /events/1
   # DELETE /events/1.xml
   def destroy
     @event = Event.find(params[:id])
-    @event.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(events_url) }
-      format.xml  { head :ok }
+    if current_user.club_id == @event.club_id
+      @event.destroy
+
+      respond_to do |format|
+        format.html { redirect_to(events_url) }
+        format.xml  { head :ok }
+      end
+    else
+      flash[:warning] = "You are not able to delete this event"
+      redirect_to '/calendar'
     end
+
   end
 end

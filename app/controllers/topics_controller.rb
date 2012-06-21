@@ -34,9 +34,13 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
-    @posts = @topic.posts.paginate(page: params[:page], :per_page => 10).order('created_at ASC')
-    #@topics = Topic.paginate(page: params[:page])
-    #@topics = Post.find_all_by_topic_id(params[:id])
+    if current_user.club_id == @topic.forum.club_id
+      @posts = @topic.posts.paginate(page: params[:page], :per_page => 10).order('created_at ASC')
+    else
+      flash[:warning] = "You can't view this topic"
+      redirect_to '/forums'
+    end
+
   end
 
   def create

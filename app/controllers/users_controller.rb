@@ -5,7 +5,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page], :per_page => 5)
+    if current_user.club_id == @user.club_id
+      @microposts = @user.microposts.paginate(page: params[:page], :per_page => 5)
+    else
+      flash[:warning] = "you cannot view this user"
+      redirect_to '/users'
+    end
   end
 
   def index
@@ -55,11 +60,15 @@ class UsersController < ApplicationController
       flash[:success] = "You cannot remove yourself"
       redirect_to users_path
     else
-      @remove.destroy  unless @remove == current_user
-      flash[:success] = "User #{@remove.name} removed."
-      redirect_to users_path
+      if current_user.admin?
+        @remove.destroy  unless @remove == current_user
+        flash[:success] = "User #{@remove.name} removed."
+        redirect_to users_path
+      else
+        flash[:warning] = "you cannot remove this user"
+        redirect_to '/users'
+      end
     end
-
   end
 
   def following
