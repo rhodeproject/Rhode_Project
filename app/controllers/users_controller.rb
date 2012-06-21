@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.where(:club_id => current_user.club_id)#.find_by_club_id(current_user.club_id).paginate(page: params[:page])
+    @users = User.where(:club_id => current_user.club_id)
   end
 
   def new
@@ -31,6 +31,8 @@ class UsersController < ApplicationController
       redirect_to root_path
     end
     @user = User.new(params[:user])
+    club = Club.find_by_sub_domain(request.subdomain)
+    @user.club_id = club.id
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to The Rhode Project!"
