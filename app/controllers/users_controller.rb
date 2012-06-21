@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     @user.club_id = club.id
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to The Rhode Project!"
+      flash[:success] = "Welcome to #{club.name}!"
       UserMailer.delay.new_user_notice(@user)
       redirect_to @user
     else
