@@ -30,7 +30,7 @@
         </td>
         <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
         <td>
-            <% if post.user == current_user && post.created_at < 15.minutes.ago %>
+            <% if post.user == current_user && post.created_at > 15.minutes.ago %>
                 <%= link_to "Edit", "/posts/#{post.id}/edit", class: "btn btn-mini btn-primary", :method => :get %>
             <% end %>
             <% if current_user.admin?%>
