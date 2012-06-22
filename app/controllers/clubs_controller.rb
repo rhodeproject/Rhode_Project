@@ -1,4 +1,5 @@
 class ClubsController < ApplicationController
+
   def new
     @club = Club.new
   end
@@ -67,5 +68,6 @@ class ClubsController < ApplicationController
     end
 
   end
+
 
 end

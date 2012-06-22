@@ -1,13 +1,14 @@
 class PostsController < ApplicationController
   before_filter :signed_in_user
-  before_filter :admin_user, only: [:edit, :update, :destroy]
+  before_filter :admin_user, only: [:destroy]
+  before_filter :correct_user, only: [:edit, :update]
 
   def new
     @post = Post.new
   end
 
-  def create
 
+  def create
     @post = Post.new(:content => params[:post][:content])
     @post.topic_id = params[:post][:topic_id]
     @post.user_id = current_user.id
@@ -24,11 +25,15 @@ class PostsController < ApplicationController
     end
   end
 
+
+  def edit
+      @post = Post.find(params[:id])
+  end
+
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(params[:post])
-      @topic = Topic.find(@post.topic_id)
-      @topic.update_attributes(:last_poster_id => current_user.id, :last_post_at => Time.now)
+    @post.update_attributes(params[:post])
+    if @post.save
       flash[:success] = "Successfully updated post."
       redirect_to @post.topic
     else

@@ -12,6 +12,9 @@ class Club < ActiveRecord::Base
   has_many :events
 
   validates :name, presence: true, length:{maximum: 50}
+  validates :sub_domain, uniqueness: {case_sensitive: false}
+
+  before_save { |club| club.sub_domain = sub_domain.downcase}
 
   accepts_nested_attributes_for :users
 end

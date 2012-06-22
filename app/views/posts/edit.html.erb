@@ -1,7 +1,12 @@
 <% provide(:title, "Edit Post") %>
 
-<%= form_for @post, :url => {:action => "update"} do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
-    <%= f.label :content %>
-    <%= f.textarea :content %>
-<% end %>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for (@post) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :content %>
+        <%= f.text_area :content %>
+        <%= f.submit "Update Post", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
