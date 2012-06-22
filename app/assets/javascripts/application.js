@@ -94,7 +94,7 @@ $(document).ready(function() {
             eventColor: '#378006',
             color: 'green',
             textColor: 'black',
-            ignoreTimezone: false
+            ignoreTimezone: true
         }],
 
         timeFormat: 'h:mm t{ - h:mm t} ',

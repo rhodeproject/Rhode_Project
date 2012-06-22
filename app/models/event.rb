@@ -31,4 +31,6 @@ class Event < ActiveRecord::Base
   def self.format_date(date_time)
     Time.at(date_time.to_i).to_formatted_s(:db)
   end
+
+
 end

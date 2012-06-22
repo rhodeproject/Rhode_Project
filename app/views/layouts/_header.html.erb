@@ -4,7 +4,7 @@
       <% if signed_in? %>
         <%= link_to current_user.club.name, root_path, id: "logo" %>
       <% else %>
-        <%= link_to "The Rhode Project", root_path, id: "logo" %>
+        <%= link_to club_url(request.subdomain).name, root_path, id: "logo" %>
       <% end %>
       <nav>
         <ul class="nav pull-right">
