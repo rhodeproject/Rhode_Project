@@ -6,7 +6,7 @@ class RelationshipsController < ApplicationController
     current_user.follow!(@user)
     #redirect_to @user
     respond_to do |format|
-      format.html { redirect_to @user }
+      format.html { redirect_to @user, :only_path => true }
       format.js
     end
   end
@@ -16,7 +16,7 @@ class RelationshipsController < ApplicationController
     current_user.unfollow!(@user)
     #redirect_to @user
     respond_to do |format|
-      format.html { redirect_to @user }
+      format.html { redirect_to @user,:only_path => true }
       format.js
     end
   end

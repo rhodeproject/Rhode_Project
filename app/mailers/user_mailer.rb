@@ -12,9 +12,9 @@ class UserMailer < ActionMailer::Base
     @post = post
     @forum = forum
     if Rails.env.development?
-      rootpath = "localhost:3000/"
+      rootpath = "#{request.subdomain}.lvh.me:3000/"
     else
-      rootpath = "https://www.rhodeproject.com/"
+      rootpath = "https://#{request.subdomain}.rhodeproject.com/"
     end
     @link = "#{rootpath}topics/#{post.topic_id}"
     mail(:to => email, :subject => "New Post to #{forum.name}")
@@ -25,9 +25,9 @@ class UserMailer < ActionMailer::Base
     address = @user.email
     subject = "Password reset request for #{@user.name}"
     if Rails.env.development?
-      url = "http://localhost:3000"
+      url = "http://#{request.subdomain}.lvh.me:3000"
     else
-      url = "https://www.rhodeproject.com"
+      url = "https://#{request.subdomain}.rhodeproject.com"
     end
     mail(:to => address, :subject => subject)
   end

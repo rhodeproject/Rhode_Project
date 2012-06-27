@@ -79,7 +79,7 @@ $(document).ready(function() {
         defaultView: 'month',
         height: 500,
         firstHour: 5,
-        slotMinutes: 15,
+        slotMinutes: 30,
 
         loading: function(bool){
             if (bool)

@@ -58,7 +58,7 @@ class TopicsController < ApplicationController
             UserMailer.delay.post_forum_notice(@topic.forum,user.email,@post)
           end
             flash[:success] = "Successfully created topic."
-            redirect_to "/forums/#{@topic.forum_id}"
+            redirect_to "/forums/#{@topic.forum_id}", :only_path => true
         else
           render :action => 'new'
         end

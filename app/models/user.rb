@@ -2,11 +2,18 @@
 #
 # Table name: users
 #
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  created_at :datetime        not null
-#  updated_at :datetime        not null
+#  id                     :integer         not null, primary key
+#  name                   :string(255)
+#  email                  :string(255)
+#  created_at             :datetime        not null
+#  updated_at             :datetime        not null
+#  password_digest        :string(255)
+#  remember_token         :string(255)
+#  admin                  :boolean         default(FALSE)
+#  forum                  :boolean         default(FALSE)
+#  reset_token            :string(255)
+#  password_reset_sent_at :datetime
+#  club_id                :integer
 #
 
 class User < ActiveRecord::Base
@@ -55,12 +62,8 @@ class User < ActiveRecord::Base
 
   #methods
   def send_password_reset
-    #generate_token(:reset_token)
     self.update_attribute('reset_token', generate_token)
     self.update_attribute('password_reset_sent_at', Time.zone.now)
-    #self.reset_token = SecureRandom.urlsafe_base64
-    #self.password_reset_sent_at = Time.zone.now
-    #save!
     UserMailer.password_reset(self).deliver
   end
 

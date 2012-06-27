@@ -21,7 +21,7 @@ class PostsController < ApplicationController
       forum.users.each do |user|
         UserMailer.delay.post_forum_notice(@topic.forum,user.email,@post)
       end
-      redirect_to "/topics/#{@topic.id}"
+      redirect_to "/topics/#{@topic.id}", :only_path => true
     end
   end
 
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
     @post.update_attributes(params[:post])
     if @post.save
       flash[:success] = "Successfully updated post."
-      redirect_to @post.topic
+      redirect_to @post.topic, :only_path => true
     else
       render :action => 'edit'
     end

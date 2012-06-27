@@ -1,4 +1,19 @@
 class Event < ActiveRecord::Base
+  # == Schema Information
+  #
+  # Table name: events
+  #
+  #  id          :integer         not null, primary key
+  #  name        :string(255)
+  #  all_day     :boolean         default(FALSE)
+  #  created_at  :datetime        not null
+  #  updated_at  :datetime        not null
+  #  club_id     :integer
+  #  title       :string(255)
+  #  description :text
+  #  starts_at   :datetime
+  #  ends_at     :datetime
+  #
   attr_accessible :starts_at, :ends_at, :title, :all_day, :description
 
   #associations
@@ -7,7 +22,6 @@ class Event < ActiveRecord::Base
   #validations
 
   validates :title, presence: true
-
 
   #scopes
   scope :before, lambda {|end_time| {:conditions => ["ends_at < ?", Event.format_date(end_time)] }}
@@ -34,3 +48,5 @@ class Event < ActiveRecord::Base
 
 
 end
+
+
