@@ -13,6 +13,7 @@ gem 'kaminari'
 gem 'redcarpet'
 gem 'delayed_job_active_record'
 gem 'jquery-rails'
+gem 'breadcrumbs_on_rails'
 
 gem "rspec-rails", :group => [:test, :development]
 group :test do

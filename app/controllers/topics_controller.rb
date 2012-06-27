@@ -33,7 +33,9 @@ class TopicsController < ApplicationController
   end
 
   def show
+
     @topic = Topic.find(params[:id])
+    add_breadcrumb "topics", "/forums/#{@topic.forum_id}"
     if current_user.club_id == @topic.forum.club_id
       @posts = @topic.posts.paginate(page: params[:page], :per_page => 10).order('created_at ASC')
     else
