@@ -40,7 +40,11 @@
         <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
+              <folding>
+                <marker date="1339459631468" expanded="true" signature="130:533" placeholder="..." />
+                <marker date="1339459631468" expanded="true" signature="140:264" placeholder="..." />
+                <marker date="1339459631468" expanded="true" signature="302:512" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="events_helper.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="events_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/events_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="16" selection-start="141" selection-end="141" vertical-scroll-proportion="0.1734694">
+            <state line="5" column="16" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="402" selection-end="402" vertical-scroll-proportion="-8.5">
+            <state line="5" column="19" selection-start="177" selection-end="177" vertical-scroll-proportion="0.18318966">
               <folding />
             </state>
           </provider>
@@ -144,8 +148,8 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/fullcalendar.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/models/event.rb" />
-        <option value="$PROJECT_DIR$/app/views/events/show.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/events_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/events/show.html.erb" />
       </list>
     </option>
   </component>
@@ -731,7 +735,11 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1339459631468" expanded="true" signature="130:533" placeholder="..." />
+            <marker date="1339459631468" expanded="true" signature="140:264" placeholder="..." />
+            <marker date="1339459631468" expanded="true" signature="302:512" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -802,16 +810,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/events_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="402" selection-end="402" vertical-scroll-proportion="-8.5">
+        <state line="5" column="16" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/events_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="141" selection-end="141" vertical-scroll-proportion="0.1734694">
+        <state line="5" column="19" selection-start="177" selection-end="177" vertical-scroll-proportion="0.18318966">
           <folding />
         </state>
       </provider>
