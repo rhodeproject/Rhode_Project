@@ -115,8 +115,4 @@ class EventsController < ApplicationController
 
   end
 
-  private
-  def adjust_time(time)
-
-  end
 end

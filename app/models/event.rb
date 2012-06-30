@@ -15,7 +15,7 @@ class Event < ActiveRecord::Base
   #  ends_at     :datetime
   #
   attr_accessible :starts_at, :ends_at, :title, :all_day, :description
-
+  #before_save :convert_time
   #associations
   belongs_to :club
 
@@ -34,8 +34,8 @@ class Event < ActiveRecord::Base
         :id => self.id,
         :title => self.title,
         :description => self.description || "",
-        :start => starts_at.rfc822,
-        :end => ends_at.rfc822,
+        :start => starts_at,
+        :end => ends_at,
         :allDay => self.all_day,
         :recurring => false,
         :url => Rails.application.routes.url_helpers.event_path(id)
@@ -46,6 +46,9 @@ class Event < ActiveRecord::Base
     Time.at(date_time.to_i).to_formatted_s(:db)
   end
 
+  def convert_time(time)
+    time.utc
+  end
 
 end
 

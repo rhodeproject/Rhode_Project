@@ -70,6 +70,7 @@ $(document).ready(function() {
     $('#calendar').fullCalendar({
         editable: false,
         theme: true,
+        ignoreTimezone: false,
         header: {
             left: 'prev,next today',
             center: 'title',

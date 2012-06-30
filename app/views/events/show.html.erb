@@ -10,8 +10,8 @@
   <tr>
     <td><%= @event.title %></td>
     <td><%= @event.description %></td>
-    <td><%= @event.starts_at %></td>
-    <td><%= @event.ends_at %></td>
+    <td><%= show_day(@event.starts_at) %></td>
+    <td><%= show_day(@event.ends_at) %></td>
   </tr>
 </table>
 
