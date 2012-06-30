@@ -53,6 +53,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.xml
   def create
+
     @event = Event.new(params[:event])
     @event.club_id = current_user.club_id
 
@@ -111,6 +112,11 @@ class EventsController < ApplicationController
       flash[:warning] = "You are not able to delete this event"
       redirect_to '/calendar'
     end
+
+  end
+
+  private
+  def adjust_time(time)
 
   end
 end

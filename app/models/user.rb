@@ -68,6 +68,7 @@ class User < ActiveRecord::Base
   end
 
   def feed
+    #Micropost.find_by_user_id
     Micropost.from_users_followed_by(self)
   end
 

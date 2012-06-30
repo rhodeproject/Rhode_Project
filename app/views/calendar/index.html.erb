@@ -11,7 +11,7 @@
 <div class="span2">
   <br>
   <% if current_user.admin || current_user.email == "mhatch73@gmail.com"%>
-      <%= link_to "new event", new_event_path, class: "btn btn-mini btn-info" %>
+      <%= link_to "new event", new_event_path, remote: true, id: "btnNewEvent", class: "btn btn-mini btn-info" %>
   <% end %>
   <br>
 </div>
