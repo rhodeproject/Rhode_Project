@@ -1,0 +1,8 @@
+/*<div id="flash_notice" class="alert alert-success">
+ <button class="close" data-dismiss="alert">×</button>
+ </div>*/
+/*render the new post*/
+$("#showPosts").after("<%= escape_javascript(render :partial => @post)%>");
+
+
+

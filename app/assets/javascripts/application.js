@@ -19,6 +19,17 @@
 //= require_tree .
 
 $(document).ready(function() {
+    $("#edit_topic").submit(function(){
+        $.post($(this).attr("action") + '.js', $(this).serialize(), null, "script");
+        return false;
+    });
+});
+
+$(document).ready(function() {
+
+    jQuery.ajaxSetup({
+        'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+    });
 
     //Date Picker for new events
     $('#event_starts_at').datetimepicker({

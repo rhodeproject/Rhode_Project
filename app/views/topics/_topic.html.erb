@@ -1,0 +1,37 @@
+
+  <thead>
+
+  <th width="60%">
+    <%= gravatar_for(@topic.user, size: 65) %>
+    Posted By: <%= link_to(@topic.user.name, users_path)%><br>
+    Original Post: <%= @topic.created_at.to_date %><br>
+    Last Updated: <%= distance_of_time_in_words_to_now @topic.last_post_at %><br>
+    Topic: <%= @topic.name %>
+  </th>
+  <th width="20%">Post</th>
+  <th width="20%">Posted at</th>
+  <th></th>
+  </thead>
+
+  <% @posts.each do |post| %>
+
+      <tr>
+        <td><div style="word-wrap: break-word"><p><%= markdown.render(post.content).html_safe %></p></div></td>
+        <td class="right">
+          <%= gravatar_for(post.user, size: 55) %>
+          Posted By: <%= link_to(post.user.name, users_path)%><br>
+
+        </td>
+        <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
+        <td>
+          <% if post.user == current_user && post.created_at > 15.minutes.ago %>
+              <%= link_to "Edit", "/posts/#{post.id}/edit", class: "btn btn-mini btn-primary", :method => :get %>
+          <% end %>
+          <% if current_user.admin?%>
+              <%= link_to "Delete", post, class: "btn btn-mini btn-primary", :confirm => 'Are you sure?', :method => :delete %>
+          <% end %>
+        </td>
+      </tr>
+
+  <% end %>
+

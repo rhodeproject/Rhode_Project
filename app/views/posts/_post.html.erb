@@ -1,0 +1,26 @@
+<table class="table table-condensed table-striped">
+  <th width="60%">
+
+  </th>
+  <th width="20%"></th>
+  <th width="20%"></th>
+  <th></th>
+  </thead>
+  <tr>
+   <td><div style="word-wrap: break-word"><p><%= markdown.render(post.content).html_safe %></p></div></td>
+   <td class="right">
+     <%= gravatar_for(post.user, size: 55) %>
+     Posted By: <%= link_to(post.user.name, users_path)%><br>
+
+   </td>
+   <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
+   <td>
+     <% if post.user == current_user && post.created_at > 15.minutes.ago %>
+         <%= link_to "Edit", "/posts/#{post.id}/edit", class: "btn btn-mini btn-primary", :method => :get %>
+     <% end %>
+     <% if current_user.admin?%>
+         <%= link_to "Delete", post, class: "btn btn-mini btn-primary", :confirm => 'Are you sure?', :method => :delete %>
+     <% end %>
+   </td>
+ </tr>
+</table>

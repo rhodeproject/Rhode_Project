@@ -1,6 +1,12 @@
 <li>
   <%= gravatar_for user, size: 50 %>
   <%= link_to user.name, user %>
+  <div class=" well user-stats">
+    <ul>
+      <li>Joined <%= time_ago_in_words(user.created_at) %> ago</li>
+      <li>Posted <%= user.posts.count %> times</li>
+    </ul>
+  </div>
   <% if current_user.admin? && !current_user?(user)%>
      <%= link_to "delete", user, method: :delete, confirm: "Are you sure you want to remove #{user.name}?" %>
    <% end %>

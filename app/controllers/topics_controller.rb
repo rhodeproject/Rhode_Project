@@ -10,18 +10,21 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     @topic.update_attributes(:last_poster_id => current_user.id, :last_post_at => Time.now)
-    post = @topic.posts.build(:content => params[:post][:content])
-    post.user_id = current_user.id
-    if post.save
-      flash[:success] = "Post Added to #{@topic.name}"
-      forum = @topic.forum
-      forum.users.each do |user|
-        UserMailer.delay.post_forum_notice(@topic.forum,user.email,post)
+    @post = @topic.posts.build(:content => params[:post][:content])
+    @post.user_id = current_user.id
+    respond_to do |format|
+      if @post.save
+        flash[:notice] = "Post Added to #{@topic.name}"
+        forum = @topic.forum
+        forum.users.each do |user|
+          UserMailer.delay.post_forum_notice(@topic.forum,user.email,@post)
+        end
+        format.html {redirect_to("/topics/#{params[:id]}")}
+        format.js
+      else
+        format.html{render :action => "index"}
+        format.js
       end
-      redirect_back_or "/topics/#{params[:id]}"
-    else
-      redirect_back_or forums_path
-      flash[:warning] = "there was an issue adding the post"
     end
   end
 

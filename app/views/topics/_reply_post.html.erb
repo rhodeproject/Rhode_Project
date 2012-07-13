@@ -1,0 +1,8 @@
+<% if params[:topic] %>
+    <input type="hidden" id="topic_forum_id" name="post[topic_id]" value="<%= params[:id] %>" />
+<% end %>
+<textarea name="post[content]" cols="80" rows="10"><%= params[:content] %></textarea>
+<% if params[:forum] %>
+    <input type="hidden" id="topic_forum_id" name="topic[forum_id]" value="<%= params[:forum] %>" />
+<% end %>
+<%= f.submit "Reply", class: "btn btn-large btn-primary" %>

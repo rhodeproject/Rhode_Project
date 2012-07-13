@@ -15,6 +15,9 @@ module ApplicationHelper
   end
 
   def club_url(subdomain)
+    if subdomain == ''
+      subdomain = 'www'
+    end
     Club.find_by_sub_domain(subdomain)
   end
 

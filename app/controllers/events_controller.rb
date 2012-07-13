@@ -53,12 +53,11 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.xml
   def create
-
     @event = Event.new(params[:event])
     @event.club_id = current_user.club_id
-
     respond_to do |format|
       if @event.save
+        add_event_notice(@event)
         format.html { redirect_to(calendar_path, :notice => 'Event was successfully created.') }
         format.xml  { render :xml => @event, :status => :created, :location => @event }
       else
@@ -115,4 +114,11 @@ class EventsController < ApplicationController
 
   end
 
+  private
+  def add_event_notice(event)
+    micropost = Micropost.new
+    micropost.update_attribute("user_id", current_user.id)
+    micropost.update_attribute("content", "A new event,#{event.title}, has been added to the Club calendar on #{event.starts_at}")
+    micropost.save
+  end
 end

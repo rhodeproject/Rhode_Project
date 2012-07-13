@@ -11,5 +11,6 @@
  *= require_self
  *= require event_calendar
  *= require_fullcalendar
+ *= require_jquery-ui-1.8.21.custom
  *= require_tree .
 */
