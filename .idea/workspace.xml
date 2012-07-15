@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sso/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sso_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sso_controller.rb" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="sso_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/sso_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="46" selection-end="46" vertical-scroll-proportion="0.03803132">
+            <state line="9" column="15" selection-start="280" selection-end="280" vertical-scroll-proportion="0.34228188">
               <folding />
             </state>
           </provider>
@@ -150,8 +150,8 @@
         <option value="$PROJECT_DIR$/app/views/clubs/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/tokens_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/controllers/sso_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/sso/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/sso_controller.rb" />
       </list>
     </option>
   </component>
@@ -855,7 +855,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sso_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="46" selection-end="46" vertical-scroll-proportion="0.03803132">
+        <state line="9" column="15" selection-start="280" selection-end="280" vertical-scroll-proportion="0.34228188">
           <folding />
         </state>
       </provider>
