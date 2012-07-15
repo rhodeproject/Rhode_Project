@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sso_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sso_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sso/create.html.erb" afterPath="$PROJECT_DIR$/app/views/sso/create.html.erb" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sso_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sso_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/sso_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="7" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+            <state line="13" column="48" selection-start="422" selection-end="422" vertical-scroll-proportion="0.4955157">
               <folding />
             </state>
           </provider>
@@ -62,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="create.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/sso/create.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -125,8 +123,8 @@
         <option value="$PROJECT_DIR$/app/views/sso/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/forums/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/sso_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/sso/create.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/sso_controller.rb" />
       </list>
     </option>
   </component>
@@ -786,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sso_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/club.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -803,6 +794,13 @@
     <entry file="file://$PROJECT_DIR$/app/views/sso/create.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sso_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="48" selection-start="422" selection-end="422" vertical-scroll-proportion="0.4955157">
           <folding />
         </state>
       </provider>

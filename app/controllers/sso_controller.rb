@@ -11,6 +11,7 @@ class SsoController < ApplicationController
         #redirect_to root_path
       end
     else
+      flash[:warning] = "login failure using #{params[:token]}"
       #refirect_to root_path
     end
   end
