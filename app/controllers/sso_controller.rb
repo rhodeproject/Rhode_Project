@@ -1,4 +1,6 @@
 class SsoController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
+
   def create
     club = Club.find_by_token_id(params[:token])
     #if club != nil
