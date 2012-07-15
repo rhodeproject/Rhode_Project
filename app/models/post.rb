@@ -17,6 +17,14 @@ class Post < ActiveRecord::Base
   belongs_to  :user
   belongs_to  :topic
 
+  def self.text_search(query)
+    if query.present?
+      where("content @@ :q", q: "%#{query}%")
+    else
+      scoped
+    end
+  end
+
 end
 
 

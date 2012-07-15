@@ -2,17 +2,6 @@ class SessionsController < ApplicationController
   def new
   end
 
-  #SSO Code for accepting all sessions from a trusted session
-  def sso
-    club = Club.find_by_authtoken(params[:session][:token])
-    if club != nil
-      user = User.find_by_email(params[:session][:email])
-      if user != nil
-        sign_in user
-      end
-    end
-  end
-
   def create
     user = User.find_by_email(params[:session][:email])
     club = Club.find_by_sub_domain(request.subdomain)

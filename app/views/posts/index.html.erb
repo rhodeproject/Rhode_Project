@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="span10 offset1">
+  <table class="table table-condensed tabled-striped">
+
+      <thead>
+          <th width="20%">Posted By</th>
+          <th width="60%">Post</th>
+          <th width="20%">Posted at</th>
+          <th></th>
+      </thead>
+      <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td>
+            <%= gravatar_for(post.user, size: 65) %>
+            <%= link_to(post.user.name, users_path) %>
+          </td>
+          <td>
+            <div style="word-wrap: break-word"><p><%= markdown.render(post.content).html_safe %></p></div>
+          </td>
+          <td>
+            <%= post.created_at.strftime('%b %d, %Y') %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%= will_paginate @articles %>

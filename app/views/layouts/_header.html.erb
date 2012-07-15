@@ -33,7 +33,9 @@
                 Admin <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><%= link_to "Edit Club", edit_club_path(current_user.club_id) %></li>
+                  <li><%= link_to "Add Event",new_event_path%></li>
+                  <li><%= link_to "Club Settings", current_user.club %></li>
+                  <li><%= link_to "Edit Club", edit_club_path(current_user.club_id) %></li>
                 </ul>
               </li>
               <% end %>

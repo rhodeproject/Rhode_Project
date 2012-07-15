@@ -27,6 +27,7 @@ class Club < ActiveRecord::Base
   has_many :users
   has_many :forums
   has_many :events
+  has_one  :token
 
   validates :name, presence: true, length:{maximum: 50}
   validates :sub_domain, uniqueness: {case_sensitive: false}

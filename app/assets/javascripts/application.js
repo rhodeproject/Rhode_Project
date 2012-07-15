@@ -20,7 +20,10 @@
 
 $(document).ready(function() {
     $("#edit_topic").submit(function(){
+        $('#commit').attr("disabled", "disabled");
         $.post($(this).attr("action") + '.js', $(this).serialize(), null, "script");
+        $('#commit').removeAttr("disabled");
+        $('#post[commit]').attr("value","");
         return false;
     });
 });

@@ -21,7 +21,11 @@
   </aside>
   <div class="span9">
     <img src="/assets/rp_Banner_triNE_blur.png"/>
-    <%= render 'shared/message' %>
+    <% if current_user.admin %>
+        <%= render 'shared/admin_message' %>
+    <% else %>
+        <%= render 'shared/message' %>
+    <% end %>
   </div>
 </div>
 

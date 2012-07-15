@@ -7,6 +7,9 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def index
+    @posts = Post.text_search(params[:query]).page(params[:page]).per_page(10)
+  end
 
   def create
     @post = Post.new(:content => params[:post][:content])
