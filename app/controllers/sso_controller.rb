@@ -8,10 +8,10 @@ class SsoController < ApplicationController
       unless @user.nil?
         sign_in @user
         flash[:success] = "Welcome #{@user.name}"
-        redirect_to root_path
+        #redirect_to root_path
       end
     else
-      refirect_to root_path
+      #refirect_to root_path
     end
   end
 end
