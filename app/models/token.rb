@@ -1,5 +1,5 @@
 class Token < ActiveRecord::Base
-  #before_create :generate_access_token
+  before_create :generate_access_token
   belongs_to :club
 
   private

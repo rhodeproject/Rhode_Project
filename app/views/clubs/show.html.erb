@@ -40,8 +40,15 @@
         <td>Message3</td>
         <td><%= @club.message3%></td>
       </tr>
+      <% unless @club.token.nil? %>
+          <tr>
+            <td>SSO Token</td>
+            <td><%= @club.token.api_token %></td>
+          </tr>
+      <% end %>
       </tbody>
     </table>
+    <%= link_to "Generate SSO Token", tokens_path, method: 'create', class: 'btn-large btn-primary' %>
   </div>
 </div>
 

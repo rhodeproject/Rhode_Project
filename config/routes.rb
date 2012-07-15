@@ -19,6 +19,7 @@ RhodeProject::Application.routes.draw do
   resources :password_resets
   resources :clubs
   resources :events
+  resources :tokens, only: :create
 
   match '', to: 'static_pages#home', contraints: lambda{|r| r.subdomain == ''}
   match '', to: 'clubs#show', contraints: lambda {|r| r.subdomain.present? && r.subdomain != 'www'}
