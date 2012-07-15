@@ -6,9 +6,11 @@ class SsoController < ApplicationController
     @club = Club.find_by_token_id(params[:token])
     unless @club.nil?
       @user = User.find_by_email(params[:email])
-      sign_in @user
-      flash[:success] = "Welcome #{@user.name}"
-      redirect_to root_path
+      unless @user.nil?
+        sign_in @user
+        flash[:success] = "Welcome #{@user.name}"
+        redirect_to root_path
+      end
     else
       refirect_to root_path
     end

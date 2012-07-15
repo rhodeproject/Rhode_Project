@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sso_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sso_controller.rb" />
     </list>
     <ignored path="Rhode_Project.iws" />
@@ -46,7 +45,7 @@
       <file leaf-file-name="sso_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/sso_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="7" selection-start="375" selection-end="375" vertical-scroll-proportion="0.5107296">
+            <state line="13" column="9" selection-start="373" selection-end="373" vertical-scroll-proportion="0.47424892">
               <folding />
             </state>
           </provider>
@@ -815,7 +814,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sso_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="375" selection-end="375" vertical-scroll-proportion="0.5107296">
+        <state line="13" column="9" selection-start="373" selection-end="373" vertical-scroll-proportion="0.47424892">
           <folding />
         </state>
       </provider>
