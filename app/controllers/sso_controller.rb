@@ -8,10 +8,10 @@ class SsoController < ApplicationController
     if @user.club_id == @club.id
         sign_in @user
         flash[:success] = "Welcome #{@user.name}"
-        redirect_to root_path
+        #redirect_to root_path
     else
       flash[:warning] = "login failure using #{params[:token]}"
-      refirect_to root_path
+      redirect_to root_path
     end
   end
 end
