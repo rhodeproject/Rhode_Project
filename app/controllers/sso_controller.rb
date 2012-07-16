@@ -4,16 +4,16 @@ class SsoController < ApplicationController
   def create
 
     @club = Club.find_by_token_id(params[:token])
-    unless @club.nil?
+
       @user = User.find_by_email(params[:email])
       unless @user.nil?
         sign_in @user
         flash[:success] = "Welcome #{@user.name}"
         #redirect_to root_path
       end
-    else
-      flash[:warning] = "login failure using #{params[:token]}"
+
+      #flash[:warning] = "login failure using #{params[:token]}"
       #refirect_to root_path
-    end
+
   end
 end
