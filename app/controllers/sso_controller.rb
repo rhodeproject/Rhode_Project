@@ -3,9 +3,9 @@ class SsoController < ApplicationController
 
   def create
 
-    @club = Club.find_by_token_id(request.env.headers[:token])
+    @club = Club.find_by_token_id(params[:token])
     unless @club.nil?
-      @user = User.find_by_email(request.env.headers[:email])
+      @user = User.find_by_email(params[:email])
       unless @user.nil?
         sign_in @user
         flash[:success] = "Welcome #{@user.name}"

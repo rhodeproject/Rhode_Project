@@ -46,7 +46,7 @@
       <file leaf-file-name="sso_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/sso_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="76" selection-start="170" selection-end="170" vertical-scroll-proportion="0.19058296">
+            <state line="6" column="55" selection-start="179" selection-end="179" vertical-scroll-proportion="0.22869955">
               <folding />
             </state>
           </provider>
@@ -777,7 +777,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sso_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="76" selection-start="170" selection-end="170" vertical-scroll-proportion="0.19058296">
+        <state line="6" column="55" selection-start="179" selection-end="179" vertical-scroll-proportion="0.22869955">
           <folding />
         </state>
       </provider>
