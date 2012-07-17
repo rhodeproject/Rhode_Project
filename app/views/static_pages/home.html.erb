@@ -21,14 +21,9 @@
   </aside>
   <div class="span9">
     <img src="/assets/rp_Banner_triNE_blur.png"/>
-    <% if current_user.admin %>
-        <%= render 'shared/admin_message' %>
-    <% else %>
-        <%= render 'shared/message' %>
-    <% end %>
+    <%= render 'shared/message' %>
   </div>
 </div>
-
 <% else %>
   <div class="span12 offset1">
     <img src="/assets/rp_Banner_triNE_blur.png"/>
@@ -36,6 +31,4 @@
   <div class="span12">
     <%= render 'shared/default_message' %>
   </div>
-
-
 <% end %>
