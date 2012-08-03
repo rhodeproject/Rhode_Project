@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="span5 offset3">
+    <h2>Club Payment</h2>
+    <%= form_for(@subscription) do |f| %>
+        <% if @subscription.errors.any? %>
+            <div class="error_messages">
+              <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+              <ul>
+                <% @subscription.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+        <%= f.hidden_field :stripe_card_token %>
+        <div class="field">
+          <%= label_tag :price, "Price: $25/month" %>
+        </div>
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.text_field :email%>
+        </div>
+
+        <div id="ccbox">
+          Credit card icons.
+        </div>
+        <div class="field">
+          <%= label_tag :card_number, "Credit Card Number " %>
+          <%= text_field_tag :card_number, nil, name: nil, class: "ccinput"%>
+        </div>
+        <div class="field">
+          <%= label_tag :card_code, "Security Code on Card (CVV)" %>
+          <%= text_field_tag :card_code, nil, name: nil %>
+        </div>
+        <div class="field">
+          <%= label_tag :card_month, "Card Expiration" %>
+          <%= select_month nil, {add_month_numbers_true: true}, {name: nil, id: "card_month"}%>
+          <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"}%>
+        </div>
+        <div class="actions"><%= f.submit "Subscribe", class: 'btn btn-primary' %></div>
+    <% end %>
+  </div>
+</div>
+
+

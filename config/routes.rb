@@ -1,6 +1,8 @@
 RhodeProject::Application.routes.draw do
 
 
+  get "subscriptions/new"
+
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   resources :users do
@@ -20,6 +22,7 @@ RhodeProject::Application.routes.draw do
   resources :clubs
   resources :events
   resources :tokens, only: :create
+  resources :subscriptions, only: [:create, :new]
 
   match '', to: 'static_pages#home', contraints: lambda{|r| r.subdomain == ''}
   match '', to: 'clubs#show', contraints: lambda {|r| r.subdomain.present? && r.subdomain != 'www'}

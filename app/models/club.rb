@@ -28,6 +28,7 @@ class Club < ActiveRecord::Base
   has_many :forums
   has_many :events
   has_one  :token
+  belongs_to :subscription
 
   validates :name, presence: true, length:{maximum: 50}
   validates :sub_domain, uniqueness: {case_sensitive: false}
@@ -35,6 +36,7 @@ class Club < ActiveRecord::Base
   before_save { |club| club.sub_domain = sub_domain.downcase}
 
   accepts_nested_attributes_for :users
+  accepts_nested_attributes_for :subscription
 end
 
 

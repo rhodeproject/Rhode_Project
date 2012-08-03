@@ -34,9 +34,8 @@ class ForumsController < ApplicationController
   end
 
   def show
-
     @forum = Forum.find(params[:id])
-    add_breadcrumb "topics", :forum_path, :title => "topics"
+    add_breadcrumb "#{@forum.name}", :forum_path, :title => "topics"
     if current_user.club_id != @forum.club_id
       flash[:warning] = "You do not have access to this forum"
       redirect_to "/forums"

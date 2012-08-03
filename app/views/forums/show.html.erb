@@ -8,13 +8,14 @@
         <h2><%= @forum.description %></h2>
 
       </div>
-        <table class="table table-condensed table-striped">
+        <table id="tblForum" class="table table-condensed table-striped">
           <thead>
             <th width="50%">Topic Title</th>
             <th width="10%">Replies</th>
             <th width="20%">Original Post</th>
             <th width="20%">Last Post</th>
           </thead>
+          <tbody>
           <% @topics.each do |topic| %>
               <tr>
                 <td><%= link_to h(topic.name), topic_path(topic.id) %>
@@ -35,6 +36,8 @@
                 </td>
               </tr>
           <% end %>
+          </tbody>
+          <tfoot></tfoot>
         </table>
       <%= will_paginate @topics,
           :style => 'font-size: small',

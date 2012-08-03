@@ -1,9 +1,9 @@
 <% provide(:title, "Sign in") %>
-
-<h1>Sign in</h1>
+<%= render 'shared/show_banner' %>
+<h1>sign in</h1>
 
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span4 offset4">
     <%= form_for(:session, url: sessions_path) do |f| %>
 
     <%= f.label :email %>

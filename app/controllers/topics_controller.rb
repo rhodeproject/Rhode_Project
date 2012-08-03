@@ -14,7 +14,7 @@ class TopicsController < ApplicationController
     @post.user_id = current_user.id
     respond_to do |format|
       if @post.save
-        flash[:notice] = "Post Added to #{@topic.name}"
+        flash[:success] = "Post Added to #{@topic.name}"
         forum = @topic.forum
         forum.users.each do |user|
           UserMailer.delay.post_forum_notice(@topic.forum,user.email,@post)
@@ -36,16 +36,14 @@ class TopicsController < ApplicationController
   end
 
   def show
-
     @topic = Topic.find(params[:id])
-    add_breadcrumb "topics", "/forums/#{@topic.forum_id}"
+    add_breadcrumb "#{@topic.forum.name}", "/forums/#{@topic.forum_id}"
     if current_user.club_id == @topic.forum.club_id
       @posts = @topic.posts.paginate(page: params[:page], :per_page => 10).order('created_at ASC')
     else
       flash[:warning] = "You can't view this topic"
       redirect_to '/forums'
     end
-
   end
 
   def create

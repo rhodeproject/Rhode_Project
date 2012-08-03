@@ -14,8 +14,12 @@ class ClubsController < ApplicationController
       user.club_id = @club.id
       if user.save
         flash[:success] = "Thank you for adding your club to the Rhode Project"
-        sign_in user
-        redirect_to edit_club_path(@club.id)
+        #sign_in user
+        if Rails.env.development?
+          redirect_to "http://#{@club.sub_domain}.lvh.me:3000/subscriptions/new"
+        else
+          redirect_to "https://#{@club.sub_domain}.rhodeproject.com/subscriptions/new"
+        end
       else
         flash[:warning] = "failed to create user"
         redirect_to root_path

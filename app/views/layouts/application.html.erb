@@ -6,13 +6,10 @@
                              "fullcalendar",
                              "https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css",
                              media: "all" %>
-  <%= javascript_include_tag "application","https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",
-                             "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js",
-                             "jquery-ui-1.8.17.custom.min",
-                             "fullcalendar","jquery-ui-timepicker-addon" %>
+  <%= javascript_include_tag "https://js.stripe.com/v1/","application", "fullcalendar","jquery-ui-timepicker-addon" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
-
+  <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
   <!-- Google Analytics -->
 
       <script type="text/javascript">

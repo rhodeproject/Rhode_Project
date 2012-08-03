@@ -1,40 +1,30 @@
 <% provide(:title, 'All Users')%>
 <h1><%= current_user.club.name %> Users</h1>
-<div class="container">
-  <div class="row">
-    <div class="span10 offset1">
-        <section id="collapse">
-        <div class="accordion" id="accordion2">
-          <% @users.each_with_index do |user, index|%>
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= index %>">
-                    <%= user.name %>
-                  </a>
-                </div> <!--Accordion Heading-->
-                <div id="collapse<%= index %>" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    <%= render user %>
-                  </div> <!--accordion inner-->
-                </div> <!--accordion inner-->
-              </div> <!--accordion group-->
+
+        <table id="tblUsers" class="table table-condensed table-striped">
+          <thead>
+            <th>User</th>
+            <th>Joined</th>
+            <% if current_user.admin? %><th>Email</th><% end %>
+            <th>Posts</th>
+          </thead>
+          <tbody>
+          <% @users.each do |user|%>
+            <tr>
+              <td><%= user.name %></td>
+              <td><%= time_ago_in_words(user.created_at) %></td>
+              <% if current_user.admin? %><td><%= user.email %></td><% end %>
+              <td><%= user.posts.count %></td>
+            </tr>
           <% end %>
-          </div> <!--top div-->
-        </section>
-        <section id="count">
-        <p>Total user count: <%= @users.count %></p>
-        </section>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
+          </tbody>
+          <tfoot>
+            <th><%= @users.count %></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tfoot>
+        </table>
 
 
 

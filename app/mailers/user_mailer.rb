@@ -14,7 +14,7 @@ class UserMailer < ActionMailer::Base
     if Rails.env.development?
       rootpath = "#{request.subdomain}.lvh.me:3000/"
     else
-      rootpath = "https://www.rhodeproject.com/"
+      rootpath = "https://#{request.subdomain}.rhodeproject.com/"
     end
     @link = "#{rootpath}topics/#{post.topic_id}"
     mail(:to => email, :subject => "New Post to #{forum.name}")

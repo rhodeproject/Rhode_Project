@@ -12,8 +12,11 @@ gem 'newrelic_rpm'
 gem 'kaminari'
 gem 'redcarpet'
 gem 'delayed_job_active_record'
+gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'breadcrumbs_on_rails'
+gem 'stripe'
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
 gem "rspec-rails", :group => [:test, :development]
 

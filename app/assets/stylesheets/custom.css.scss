@@ -244,5 +244,14 @@ aside {
 .ui-timepicker-div td { font-size: 90%; }
 .ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
 
+//CC Sprite Dimmer
+#ccbox {
+  background: transparent url("cards.png");
+  margin: 0 0 10px 0;
+  padding: 0 0 0 150px;
+  width: 0;
+  height: 23px;
+  overflow: hidden;
+}
 
 

@@ -15,8 +15,10 @@
 //= require jquery-ui
 //= require fullcalendar
 //= require jquery-ui-timepicker-addon
+//= require dataTables/jquery.dataTables
 //= require bootstrap
 //= require_tree .
+
 
 $(document).ready(function() {
     $("#edit_topic").submit(function(){
@@ -28,6 +30,26 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function () {
+
+    $('.ccinput').keyup(function() {
+        if($(this).val() == 4){
+            $('#ccbox').css('background-position', '0 -23px');
+        }
+        else if($(this).val() == 5){
+            $('#ccbox').css('background-position', '0 -46px');
+        }
+        else if($(this).val() == 3){
+            $('#ccbox').css('background-position', '0 -69px');
+        }
+        else if($(this).val() == 6){
+            $('#ccbox').css('background-position', '0 -92px');
+        }
+        else if($(this).val() == ''){
+            $('#ccbox').css('background-position', '0 0');
+        }
+    });
+});
 $(document).ready(function() {
 
     jQuery.ajaxSetup({
@@ -143,4 +165,5 @@ function updateEvent(the_event) {
     },
         function (response) { alert('successfully updated task.'); }
     );
-};
+}
+

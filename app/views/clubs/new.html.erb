@@ -1,13 +1,12 @@
 <%= provide(:title, 'Add Club') %>
-<h1>Add Club</h1>
+<%= render 'shared/show_banner' %>
+<h1>new club registration</h1>
 
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span12">
     <%= form_for(@club) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
         <%= render 'fields', f: f %>
-
-        <%= f.submit "Add My Club", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>
