@@ -5,6 +5,7 @@ RhodeProject::Application.configure do
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
+  ########Change back to false
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
@@ -28,7 +29,7 @@ RhodeProject::Application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-   config.force_ssl = true
+  # config.force_ssl = true
 
   # See everything in the log (default is :info)
   # config.log_level = :debug

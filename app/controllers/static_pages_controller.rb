@@ -4,8 +4,12 @@ class StaticPagesController < ApplicationController
       @micropost = current_user.microposts.build
       @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 3 )
     end
-
-    @club = Club.find_by_sub_domain(request.subdomain)
+    sub_domain = request.subdomain
+    if sub_domain.nil?
+      @club = Club.find_by_sub_domain(sub_domain)
+    else
+      @club = Club.find_by_sub_domain('www')
+    end
   end
 
   def help
