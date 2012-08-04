@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
+gem 'bootstrap-sass', '2.0.0'
 gem 'pg'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'will_paginate', '3.0.3'
@@ -11,10 +12,11 @@ gem 'newrelic_rpm'
 gem 'kaminari'
 gem 'redcarpet'
 gem 'delayed_job_active_record'
-
+gem 'jquery-ui-rails'
+gem 'jquery-rails'
 gem 'breadcrumbs_on_rails'
 gem 'stripe'
-
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
 gem "rspec-rails", :group => [:test, :development]
 
@@ -29,10 +31,6 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'bootstrap-sass', '2.0.0'
-  gem 'jquery-ui-rails'
-  gem 'jquery-rails'
-  gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 end
 
 
