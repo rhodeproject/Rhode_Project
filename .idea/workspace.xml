@@ -4,8 +4,6 @@
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\jquery-1.7.1.min.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\jquery-ui-1.8.17.custom.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="Rhode_Project.iws" />
@@ -40,7 +38,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="47" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.8589474">
+            <state line="51" column="60" selection-start="2012" selection-end="2012" vertical-scroll-proportion="0.9284211">
               <folding />
             </state>
           </provider>
@@ -749,7 +747,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="47" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.8589474">
+        <state line="51" column="60" selection-start="2012" selection-end="2012" vertical-scroll-proportion="0.9284211">
           <folding />
         </state>
       </provider>
