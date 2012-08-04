@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require fullcalendar
-//= require jquery-ui-timepicker-addon
 //= require dataTables/jquery.dataTables
 //= require bootstrap
 //= require_tree .
