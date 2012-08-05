@@ -15,7 +15,6 @@
 //= require jquery-ui
 //= require dataTables/jquery.dataTables
 //= require bootstrap
-//= fullcalendar
 //= require_tree .
 
 
