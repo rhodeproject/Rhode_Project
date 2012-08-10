@@ -4,8 +4,48 @@
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\jquery-1.7.1.min.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\jquery-ui-1.8.17.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\RP_Drop_Shadow-4f25f68956db666b0422d1391e7de5b6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\Thumbs-e19e8b4d59ea448cc080df73d93294f6.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-bbbf3d72569247964f26213762aeb49c.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-bbbf3d72569247964f26213762aeb49c.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-e49a6e02e3e2f7e6da19759732c2bb5c.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-e49a6e02e3e2f7e6da19759732c2bb5c.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\bw_kona_start-f5b30e340e69c416000b30f8ff25d22c.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\cards-9468716a69ff01a41fc321c72800b5f7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-efd1794d3a05f50a5b8b750db7f83834.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-efd1794d3a05f50a5b8b750db7f83834.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-cb61a44f3b5a5bf52e837c6e4b6d9cd5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-white-404c25ab455ee5c84e79f23c6ed042ae.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-5dc7ad779e45b5c1ab3638464f3c6f60.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-5dc7ad779e45b5c1ab3638464f3c6f60.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_0_aaaaaa_40x100-eca45c151c24a36f201ac6e40dd7206c.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_75_ffffff_40x100-b605dba38a3f5ff69f8e5e9a8cbaf14b.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_55_fbf9ee_1x400-1b78cb09b30a27b383dfd42e20e31a50.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_65_ffffff_1x400-24b226a6e7cf81a1fbf68eeec962e28e.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_dadada_1x400-b2e69298570c1174a1df376c4c561443.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_e6e6e6_1x400-78f72bbba1f2b15a84e2129875dbd84c.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_95_fef1ec_1x400-28b43ceae9dffe6da50736db5d912e6d.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_highlight-soft_75_cccccc_1x100-05d3fa739a6bcd87b4d439bcc5b49c82.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_222222_256x240-3d9ba2965ec02df400b4f215b53357a4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_2e83ff_256x240-ff6d3f78069c628e8eea68248819143c.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_454545_256x240-fc806b54f9ead2264bb1ddd8a4ebafbc.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_888888_256x240-4be65975d8111eae162e68b8479ca712.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_cd0a0a_256x240-234b4badd49d04e7f2c14d63260990e2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rails-8fac6df4864678acda05061d6325816a.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-2d5f602750f67249577cee68a8261116.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-543ecd40f7da4d523630dee895559440.xcf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE_blur-9afbe4478ad74f983266dcc2b3917a5a.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine-3ddde329451481d3593aa5d8713c504b.JPG" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fullcalendar.js.gz" afterPath="$PROJECT_DIR$/public/assets/fullcalendar.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui-timepicker-addon.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui-timepicker-addon.js.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="$PROJECT_DIR$/public/assets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="$PROJECT_DIR$/public/assets/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="22" selection-start="621" selection-end="621" vertical-scroll-proportion="0.4773218">
+            <state line="8" column="83" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -54,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="30" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
+            <state line="30" column="18" selection-start="714" selection-end="714" vertical-scroll-proportion="0.6695464">
               <folding />
             </state>
           </provider>
@@ -120,8 +160,8 @@
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/users.js" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -662,11 +702,6 @@
         <state line="2" column="5" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0764045" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/manifest.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="159" selection-end="159" vertical-scroll-proportion="0.11805555" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="255" column="0" selection-start="3604" selection-end="3604" vertical-scroll-proportion="0.7707865" />
@@ -714,16 +749,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="30" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
+        <state line="8" column="83" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="22" selection-start="621" selection-end="621" vertical-scroll-proportion="0.4773218">
+        <state line="30" column="18" selection-start="714" selection-end="714" vertical-scroll-proportion="0.6695464">
           <folding />
         </state>
       </provider>
