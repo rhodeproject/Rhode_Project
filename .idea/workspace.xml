@@ -4,48 +4,104 @@
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\jquery-1.7.1.min.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\app\assets\javascripts\jquery-ui-1.8.17.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\RP_Drop_Shadow-01445ebe5a87c1e5e05432bf7ff609d3.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\RP_Drop_Shadow-4f25f68956db666b0422d1391e7de5b6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\RP_Drop_Shadow.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\Thumbs-496dcdeb8548206ceaebf16f04566385.db" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\Thumbs-e19e8b4d59ea448cc080df73d93294f6.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-4e98642f4481254f1c639ea3bbb4957b.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-4e98642f4481254f1c639ea3bbb4957b.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-bbbf3d72569247964f26213762aeb49c.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-bbbf3d72569247964f26213762aeb49c.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-c1e25dc4fd60e819d5be69fa7c4df502.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-c1e25dc4fd60e819d5be69fa7c4df502.css.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-e49a6e02e3e2f7e6da19759732c2bb5c.css" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-e49a6e02e3e2f7e6da19759732c2bb5c.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\bw_kona_start-54940f72548cf7d900e14c189249a1f5.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\bw_kona_start-f5b30e340e69c416000b30f8ff25d22c.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\bw_kona_start.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\cards-9468716a69ff01a41fc321c72800b5f7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\cards-b0d21c5eea29eda0cceef4d7b69fcc7a.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\cards.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-5a8a27203542dabbac33c0393ad62c4a.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-5a8a27203542dabbac33c0393ad62c4a.js.gz" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-efd1794d3a05f50a5b8b750db7f83834.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-efd1794d3a05f50a5b8b750db7f83834.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-0e7ff93d8f48fe1f5f762e4312e78da7.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-cb61a44f3b5a5bf52e837c6e4b6d9cd5.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-white-404c25ab455ee5c84e79f23c6ed042ae.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-white-ef3d5b8d6a297804352b4a46fdb5466d.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-5dc7ad779e45b5c1ab3638464f3c6f60.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-5dc7ad779e45b5c1ab3638464f3c6f60.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-9c17656346a00b7d765fcf5aa14995d4.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-9c17656346a00b7d765fcf5aa14995d4.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_0_aaaaaa_40x100-a1eb3e0764573ed4b261ca742ed96ac3.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_0_aaaaaa_40x100-eca45c151c24a36f201ac6e40dd7206c.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_75_ffffff_40x100-841636c8f8d33987bb8d2f31e8ef92ca.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_75_ffffff_40x100-b605dba38a3f5ff69f8e5e9a8cbaf14b.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_55_fbf9ee_1x400-1b78cb09b30a27b383dfd42e20e31a50.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_55_fbf9ee_1x400-bbb04adbe79f471d8c88a2bc691231b6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_65_ffffff_1x400-24b226a6e7cf81a1fbf68eeec962e28e.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_65_ffffff_1x400-a30aa544902182c133dbb46ac40a08d2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_dadada_1x400-38ed9f33e066d6bee977c567d4b03650.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_dadada_1x400-b2e69298570c1174a1df376c4c561443.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_e6e6e6_1x400-3e20bce1b7b2f5dd47ca6ac361805162.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_e6e6e6_1x400-78f72bbba1f2b15a84e2129875dbd84c.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_95_fef1ec_1x400-28b43ceae9dffe6da50736db5d912e6d.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_95_fef1ec_1x400-c723e9a2b50006c6054836a10b76bb84.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_highlight-soft_75_cccccc_1x100-05d3fa739a6bcd87b4d439bcc5b49c82.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_highlight-soft_75_cccccc_1x100-081f36ef02c9233c6db45d2d566fbecd.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_222222_256x240-1bca65a97a49d7d05ab2f3dc83b97cd5.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_222222_256x240-3d9ba2965ec02df400b4f215b53357a4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_2e83ff_256x240-efb394f4417cc6bd4177a1999474e1eb.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_2e83ff_256x240-ff6d3f78069c628e8eea68248819143c.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_454545_256x240-17e6740beb176dd87da44be76c94bb47.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_454545_256x240-fc806b54f9ead2264bb1ddd8a4ebafbc.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_454545_256x240.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_888888_256x240-4be65975d8111eae162e68b8479ca712.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_888888_256x240-5b928d6b862809eb8130d7b7e0b51a1d.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_888888_256x240.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_cd0a0a_256x240-234b4badd49d04e7f2c14d63260990e2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_cd0a0a_256x240-635d34cf8bf22d711a729017ab9aaebe.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\manifest.yml" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rails-8fac6df4864678acda05061d6325816a.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rails-be8732dac73d845ac5b142c8fb5f9fb0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rails.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-2d5f602750f67249577cee68a8261116.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-543ecd40f7da4d523630dee895559440.xcf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-9197b171b796b669b9c93ab5d6b1199b.xcf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-a12a96209c8d132a6cf1f7a9e03e0d99.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE.xcf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE_blur-8aa7a1a03c2d2ae15ff88cfc6583136f.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE_blur-9afbe4478ad74f983266dcc2b3917a5a.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE_blur.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine-3ddde329451481d3593aa5d8713c504b.JPG" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fullcalendar.js.gz" afterPath="$PROJECT_DIR$/public/assets/fullcalendar.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui-timepicker-addon.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui-timepicker-addon.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="$PROJECT_DIR$/public/assets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="$PROJECT_DIR$/public/assets/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine-fad0ee7e3dd0fb47c3facfd43fe642b3.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine.JPG" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,10 +150,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="18" selection-start="714" selection-end="714" vertical-scroll-proportion="0.6695464">
+            <state line="30" column="18" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,10 +168,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="development.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="74" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0">
+            <state line="53" column="3" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.7062635">
               <folding />
             </state>
           </provider>
@@ -159,9 +215,9 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/users.js" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
       </list>
     </option>
   </component>
@@ -597,14 +653,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="774" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22366288" sideWeight="0.20341615" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30388978" sideWeight="0.757764" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30388978" sideWeight="0.757764" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21636952" sideWeight="0.21273293" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27018633" sideWeight="0.67666125" order="7" side_tool="true" content_ui="tabs" />
@@ -728,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="74" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="57" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
@@ -758,7 +807,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="18" selection-start="714" selection-end="714" vertical-scroll-proportion="0.6695464">
+        <state line="30" column="18" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="3" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.7062635">
           <folding />
         </state>
       </provider>
