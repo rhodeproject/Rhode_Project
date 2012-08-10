@@ -5,7 +5,7 @@ RhodeProject::Application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
-  config.assets.compile = true
+  #config.assets.compile = true
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
 
@@ -35,8 +35,21 @@ RhodeProject::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  ##############Custom Entries##########################
+  ##############Custom Entries#############################################
+  ##############Comment Out All Entries Below unless troubleshootiung prod
   config.action_mailer.default_url_options = { :host => "localhost:3000" }
 
-  config.serve_static_assets = false
+  # Don't fallback to assets pipeline if a precompiled asset is missed
+  config.assets.compile = false
+
+  # Compress JavaScripts and CSS
+  config.assets.compress = true
+
+  # Disable Rails's static asset server (Apache or nginx will already do this)
+  config.serve_static_assets = true
+
+  # Generate digests for assets URLs
+  config.assets.digest = true
+
+  config.assets.precompile += %w( fullcalendar.js jquery-ui-timepicker-addon.js )
 end
