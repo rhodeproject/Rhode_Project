@@ -101,7 +101,6 @@
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine-3ddde329451481d3593aa5d8713c504b.JPG" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine-fad0ee7e3dd0fb47c3facfd43fe642b3.JPG" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine.JPG" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="Rhode_Project.iws" />
@@ -154,7 +153,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="3" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.66090715">
+            <state line="49" column="2" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.66090715">
               <folding />
             </state>
           </provider>
@@ -825,7 +824,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="3" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.66090715">
+        <state line="49" column="2" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.66090715">
           <folding />
         </state>
       </provider>
