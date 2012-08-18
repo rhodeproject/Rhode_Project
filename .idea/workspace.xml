@@ -101,7 +101,7 @@
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine-3ddde329451481d3593aa5d8713c504b.JPG" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine-fad0ee7e3dd0fb47c3facfd43fe642b3.JPG" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine.JPG" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -132,10 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="21" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+            <state line="12" column="95" selection-start="598" selection-end="598" vertical-scroll-proportion="0.25701943">
               <folding />
             </state>
           </provider>
@@ -150,10 +150,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="2" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.66090715">
+            <state line="49" column="2" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -189,8 +189,8 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/users.js" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -808,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="21" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="5" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.0">
@@ -824,7 +817,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="2" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.66090715">
+        <state line="49" column="2" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="95" selection-start="598" selection-end="598" vertical-scroll-proportion="0.25701943">
           <folding />
         </state>
       </provider>
