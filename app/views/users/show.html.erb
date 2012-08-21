@@ -14,14 +14,23 @@
       </div>
     </section>
   </aside>
+
   <div class="span8">
-    <!--<%= render 'follow_form' if signed_in? %> -->
-    <% if @user.microposts.any? %>
-        <h3>Admin Notices (<%= @user.microposts.count %>)</h3>
-        <ol class="microposts">
-          <%= render @microposts %>
-        </ol>
-        <%= will_paginate @microposts %>
+    <h1><%= @user.name %>'s Profile</h1>
+    <% if @user.profile.nil? %>
+        <p>profile does not exists</p>
+        <% if current_user == @user %>
+            <%= link_to 'Create profile', new_profile_path, class: "btn btn-large btn-primary" %>
+        <% end %>
+    <% else %>
+        <table class="table">
+          <tr><td><p><i>Age:</i> <%= @user.profile.age %></p></td></tr>
+          <tr><td><p><i>blog: </i><%= link_to @user.profile.blog, @user.profile.blog %></p></td></tr>
+          <tr><td><p><i>Biography:</i> <%= markdown.render(@user.profile.bio).html_safe %><p></td></tr>
+        </table>
+        <% if current_user == @user%>
+            <%= link_to 'Edit profile', edit_profile_path, class: "btn btn-large btn-primary" %>
+        <% end %>
     <% end %>
   </div>
 </div>

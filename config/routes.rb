@@ -23,6 +23,7 @@ RhodeProject::Application.routes.draw do
   resources :events
   resources :tokens, only: :create
   resources :subscriptions, only: [:create, :new]
+  resources :profiles
 
   match '', to: 'static_pages#home', contraints: lambda{|r| r.subdomain == ''}
   match '', to: 'clubs#show', contraints: lambda {|r| r.subdomain.present? && r.subdomain != 'www'}

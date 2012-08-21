@@ -1,14 +1,14 @@
 
   <% if signed_in? %>
-
       <div class="center hero-unit">
         <h1><%= current_user.club.name %></h1>
       </div>
+
   <% else %>
       <div class="center hero-unit">
-          <h1><%= @club.name %></h1>
+          <h1><%= club_url(request.subdomain).name %></h1>
           <h2>
-            Welcome to the <%= @club.name %>!<br><br>
+            Welcome to the <%= club_url(request.subdomain).name %>!<br><br>
             A meeting place for triathletes to exchange training tips,
             organize group workouts, and to share race experiences<br><br>
           </h2>
@@ -19,37 +19,19 @@
             <% end %>
       </div>
   <% end %>
-<% if signed_in? %>
+
       <div class="row-fluid">
         <div class="span4">
-          <h2><%= current_user.club.heading1 %></h2>
-          <%= current_user.club.message1 %>
+          <h2><%= club_url(request.subdomain).heading1 %></h2>
+          <%= club_url(request.subdomain).message1 %>
         </div><!--/span-->
         <div class="span4">
-          <h2><%= current_user.club.heading2 %></h2>
-          <%= current_user.club.message2 %>
+          <h2><%= club_url(request.subdomain).heading2 %></h2>
+          <%= club_url(request.subdomain).message2 %>
         </div><!--/span-->
         <div class="span4">
-          <h2><%= current_user.club.heading3 %></h2>
-          <%= current_user.club.message3 %>
+          <h2><%= club_url(request.subdomain).heading3 %></h2>
+          <%= club_url(request.subdomain).message3 %>
         </div><!--/span-->
       </div><!--/row-->
-<% else %>
-      <div class="row-fluid">
-        <div class="span4">
-          <h2>Workouts</h2>
-          Why ride, run, or swim alone?  Use the forums to organize group workouts
-          or to learn about the best places to train for your next triathlon here in the Rhode Island area.
-        </div><!--/span-->
-        <div class="span4">
-          <h2>Race Reports</h2>
-          Share your race experiences and learn from others successes. Post your race reports here.
-          From sprint to iron-distance, let us know!
-        </div><!--/span-->
-        <div class="span4">
-          <h2>Status</h2>
-          Add a quick update to let everyone know what your doing right now!
-          If your not working out or sleeping, you must be eating!
-        </div><!--/span-->
-      </div><!--/row-->
-<% end %>
+

@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
   has_many :topics
   belongs_to :club
   has_and_belongs_to_many :forums
+  has_one :profile
 
   #reverse relationship
   has_many :reverse_relationships, foreign_key: "followed_id",

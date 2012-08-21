@@ -11,7 +11,7 @@
           <tbody>
           <% @users.each do |user|%>
             <tr>
-              <td><%= user.name %></td>
+              <td><%= link_to user.name, user %></td>
               <td><%= time_ago_in_words(user.created_at) %></td>
               <% if current_user.admin? %><td><%= user.email %></td><% end %>
               <td><%= user.posts.count %></td>

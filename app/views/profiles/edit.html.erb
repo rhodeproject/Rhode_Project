@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="span5 offset4">
+
+    <%= form_for current_user.profile do |f| %>
+        <%= render 'fields', f: f %>
+
+        <%= f.submit "Update Profile", class: "btn btn-large btn-primary" %>
+        <% end %>
+      </div>
+</div>
