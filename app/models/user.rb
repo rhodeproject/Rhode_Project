@@ -15,6 +15,7 @@
 #  password_reset_sent_at :datetime
 #  club_id                :integer
 #
+# TODO: Create method to validate email uniquness per club - An email address can exists for mutliple clubs
 
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation, :club_id

@@ -4,6 +4,10 @@ class ClubTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  test "create club" do
+    club = Club.new
+    club.Name = "test club"
+  end
 end
 # == Schema Information
 #
