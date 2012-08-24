@@ -1,8 +1,14 @@
 <% provide(:title, 'About Us') %>
+<% if  !club_url(request.subdomain).about.nil? %>
+    <div class="container">
+      <div class="span7 offset2">
+        <h1><%= club_url(request.subdomain).name %></h1>
+        <p>
+            <%= markdown.render(club_url(request.subdomain).about).html_safe %>
+        </p>
+      </div>
+    </div>
+<% end %>
 
-<h1>About Us</h1>
 
 
-<p>
-
-</p>

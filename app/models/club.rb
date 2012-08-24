@@ -23,7 +23,8 @@ class Club < ActiveRecord::Base
                   :heading3,
                   :message1,
                   :message2,
-                  :message3
+                  :message3,
+                  :about
   has_many :users
   has_many :forums
   has_many :events
