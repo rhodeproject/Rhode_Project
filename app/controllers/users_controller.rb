@@ -33,13 +33,29 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     club = Club.find_by_sub_domain(request.subdomain)
     @user.club_id = club.id
+    @user.confirm_token = SecureRandom.urlsafe_base64
     if @user.save
-      sign_in @user
-      flash[:success] = "Welcome to #{club.name}!"
+      flash[:success] = "Welcome to #{club.name}! A confirmation email has been sent to #{@user.email}.
+                        Follow the link in the email to activate your account."
       UserMailer.delay.new_user_notice(@user)
-      redirect_to @user
+      UserMailer.delay.new_user_confirmation(@user)
+      redirect_to root_path
     else
       render 'new'
+    end
+  end
+
+  def confirm
+    @user = User.find(params[:id])
+    if @user.confirm_token == params[:confirm_code]
+      @user.update_attribute('active',true)
+      @user.update_attribute('confirm_token',nil)
+      flash[:success] = "You account has been activated"
+      sign_in(@user)
+      redirect_to @user
+    else
+      flash[:warning] = "Account activation failed"
+      redirect_to root_path
     end
   end
 

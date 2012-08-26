@@ -116,9 +116,9 @@ class EventsController < ApplicationController
 
   private
   def add_event_notice(event)
-    micropost = Micropost.new
-    micropost.update_attribute("user_id", current_user.id)
-    micropost.update_attribute("content", "A new event,#{event.title}, has been added to the Club calendar on #{event.starts_at}")
-    micropost.save
+    content = "A new event,#{event.title}, has been added to the Club calendar on #{event.starts_at}"
+    notice = Notice.new(:content => content)
+    notice.update_attribute('club_id', current_user.club.id)
+    notice.save
   end
 end

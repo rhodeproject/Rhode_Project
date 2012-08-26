@@ -1,0 +1,5 @@
+<%= form_for @notice do |f|%>
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= render 'fields', f: f %>
+    <%= f.submit "Create Notice", class: "btn btn-large btn-primary"  %>
+<% end %>

@@ -40,4 +40,19 @@ class UserMailer < ActionMailer::Base
       mail(:to => u.email, :subject => "New Post")
     end
   end
+
+  def new_user_confirmation(user)
+    @user = user
+    if Rails.env.development?
+      address = "mhatch73@gmail.com"
+      subject = "#{@user.club.name} new user confirmation - #{@user.email}"
+      @url = "http://#{@user.club.sub_domain}.lvh.me:3000"
+    else
+      address = @user.email
+      subject = "#{@user.club.name} new user confirmation - #{@user.email}"
+      @url = "https://#{@user.club.sub_domain}.rhodeproject.com"
+    end
+
+    mail(:to => address, :subject => subject)
+  end
 end

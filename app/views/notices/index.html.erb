@@ -1,0 +1,24 @@
+
+<style>
+    table { table-layout: fixed; }
+    table th, table td { overflow: hidden; }
+</style>
+
+<div class="container">
+  <div class="span10 offset1">
+    <h1><%= current_user.club.name %> Notices</h1>
+    <table class="table table-condensed">
+      <thead>
+        <th style="width: 70%">Content</th>
+        <th style="width: 30%">Date Added</th>
+      </thead>
+      <% @notices.each do |n| %>
+        <tr>
+          <td><%= n.content %></td>
+          <td><%= n.created_at %></td>
+        </tr>
+      <% end %>
+    </table>
+    <%= link_to "Add Notice", new_notice_path, class: "btn btn-large btn-primary"  %>
+  </div>
+</div>

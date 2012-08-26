@@ -8,14 +8,9 @@
     <!--<section>
       <%= render 'shared/stats' %>
     </section> -->
-    <% if current_user.admin? %>
     <section>
-      <%= render 'shared/micropost_form' %>
-    </section>
-    <% end %>
-    <section>
-      <h3>Admin Notices</h3>
-      <%= render 'shared/feed' %>
+      <h4><%= current_user.club.name %> Notices</h4>
+      <%= render 'shared/notices' %>
     </section>
 
   </aside>

@@ -1,0 +1,13 @@
+<% @notices.each do |n| %>
+    <span class="content">
+        <%= n.content %>
+    </span>
+    <span class="timestamp">
+        <%= time_ago_in_words(n.created_at) %> ago
+    </span>
+    <hr>
+<% end %>
+<%= will_paginate @notices,
+                  :style => 'font-size: small',
+                  :next_label => ">>",
+                  :previous_label => "<<"%>

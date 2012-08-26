@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
     if signed_in?
       @micropost = current_user.microposts.build
       @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 3 )
+      @notices = Notice.where(:club_id => current_user.club_id).paginate(page: params[:page], :per_page => 3)
     end
     sub_domain = request.subdomain
     if sub_domain.nil?

@@ -28,6 +28,7 @@ class Club < ActiveRecord::Base
   has_many :users
   has_many :forums
   has_many :events
+  has_many :notices
   has_one  :token
   belongs_to :subscription
 

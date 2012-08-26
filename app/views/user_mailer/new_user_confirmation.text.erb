@@ -1,0 +1,9 @@
+Welcome <%= @user.name %>,
+
+Thank you for joining <%= @user.club.name %>
+In order to activate your account, please follow the link below.
+
+<%= @url %>/user/<%= @user.id %>/confirm/<%= @user.confirm_token %>
+
+Thank you,
+<%= @user.club.name %>

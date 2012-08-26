@@ -6,3 +6,13 @@
 
 <%= f.label :bio %>
 <%= f.text_area :bio %>
+
+<h2>Emergency Contact Information*</h2>
+
+<%= f.label :econtact_name, "Name:" %>
+<%= f.text_field :econtact_name %>
+
+<%= f.label :econtact_number, "Phone Number:" %>
+<%= f.text_field :econtact_number %>
+
+<h6>*only viewable by club administrators</h6><br>
