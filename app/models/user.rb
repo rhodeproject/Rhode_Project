@@ -63,6 +63,7 @@ class User < ActiveRecord::Base
   scope :admin, where(admin: true)
 
   #methods
+
   def active?
     self.active
   end

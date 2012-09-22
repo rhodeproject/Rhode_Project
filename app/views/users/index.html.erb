@@ -7,6 +7,7 @@
             <th>Joined</th>
             <% if current_user.admin? %>
               <th>Email</th>
+              <th>Active</th>
           <% end %>
             <th>Posts</th>
           </thead>
@@ -17,6 +18,7 @@
               <td><%= time_ago_in_words(user.created_at) %></td>
               <% if current_user.admin? %>
                   <td><%= user.email %></td>
+                  <td><%= user.active? %></td>
               <% end %>
               <td><%= user.posts.count %></td>
             </tr>

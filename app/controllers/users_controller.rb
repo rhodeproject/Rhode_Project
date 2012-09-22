@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.where(:club_id => current_user.club_id)
+    @users = User.where('club_id = ?',current_user.club_id)
   end
 
   def new
@@ -34,6 +34,14 @@ class UsersController < ApplicationController
     club = Club.find_by_sub_domain(request.subdomain)
     @user.club_id = club.id
     @user.confirm_token = SecureRandom.urlsafe_base64
+    token = params[:stripeToken]
+    # create the charge on Stripe's servers - this will charge the user's card
+    charge = Stripe::Charge.create(
+        :amount => 2500, # amount in cents, again
+        :currency => "usd",
+        :card => token,
+        :description => @user.email
+    )
     if @user.save
       flash[:success] = "Welcome to #{club.name}! A confirmation email has been sent to #{@user.email}.
                         Follow the link in the email to activate your account."

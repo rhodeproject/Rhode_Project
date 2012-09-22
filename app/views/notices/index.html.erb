@@ -19,6 +19,9 @@
         </tr>
       <% end %>
     </table>
-    <%= link_to "Add Notice", new_notice_path, class: "btn btn-large btn-primary"  %>
+    <%= link_to "Add Notice", new_notice_path, id: "btnNewSession" ,class: "btn btn-large btn-primary"  %>
   </div>
+</div>
+<div id='new_notice'>
+  <%= render 'new_notice' %>
 </div>

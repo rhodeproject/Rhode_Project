@@ -1,15 +1,13 @@
 <% provide(:title) %>
 <%= render_breadcrumbs :separator => '<i class="icon-chevron-right"></i>' %><br>
 <div class="page-header">
-  <h2>
-    <%= @topic.name %>
-  </h2>
+    <h4><%= @topic.name %></h4>
 </div>
 
 <div class="row" id="replyTopic">
   <div class="span10 offset1">
     <%= form_for(@topic, :remote => false, :id => 'edit_topic') do |f| %>
-        <%= render 'post_paginate' %>
+
         <!--Posts for topic-->
         <table class="table table-condensed table-striped">
             <%= render 'topic' %>
@@ -17,7 +15,7 @@
         <!--Place Holder for Ajax Update-->
         <div id="showPosts">
         </div>
-        <%= render 'post_paginate' %>
+
         <%= render 'reply_post', f: f %>
     <% end %>  <!--form end-->
 

@@ -1,22 +1,18 @@
 
+<%= f.label :title %><br />
+<%= f.text_field :title %>
 
+<%= f.label :starts_at %><br />
+<%= f.text_field :starts_at %>
 
-      <%= f.label :title %><br />
-      <%= f.text_field :title %>
+<%= f.label :ends_at %><br />
+<%= f.text_field :ends_at %>
 
+<%= f.label :all_day %>
+<%= f.check_box :all_day %>
 
-      <%= f.label :starts_at %><br />
-      <%= f.text_field :starts_at %>
-
-
-      <%= f.label :ends_at %><br />
-      <%= f.text_field :ends_at %>
-
-      <%= f.label :all_day %>
-      <%= f.check_box :all_day %>
-
-      <%= f.label :description %>
-      <%= f.text_area :description, :size => '30x8' %>
+<%= f.label :description %>
+<%= f.text_area :description, :size => '30x8' %>
 
 
 

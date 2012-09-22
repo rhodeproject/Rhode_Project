@@ -16,7 +16,6 @@
 //= require bootstrap
 //= require_tree .
 
-
 $(document).ready(function() {
     $("#edit_topic").submit(function(){
         $('#commit').attr("disabled", "disabled");

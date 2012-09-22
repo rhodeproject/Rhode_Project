@@ -16,6 +16,7 @@ class NoticesController < ApplicationController
 
   def index
     @notices = Notice.where(:club_id => current_user.club_id)
+    @notice = Notice.new
   end
 
   def edit

@@ -1,7 +1,7 @@
 <div class="center hero-unit">
   <h1><%= club_url(request.subdomain).name %></h1>
   <% if !signed_in? %>
-      <%= link_to "Sign in!", '/signin', class: "btn btn-large btn-primary" %> /
+      <%= link_to "Sign in!", '/signin', id: "btnLogin",class: "btn btn-large btn-primary" %> /
       <%= link_to "Sign up now!", '/signup', class: "btn btn-large btn-primary" %>
           <% if request.subdomain == 'www' %>
               / <%= link_to "Add My Club!", '/addclub', class: "btn btn-large btn-primary" %>

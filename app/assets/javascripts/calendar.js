@@ -7,6 +7,17 @@
  */
 
 $(document).ready(function(){
+    $('#new_event').dialog({
+        autoOpen: false,
+        open: {effect: "fadeIn", duration: 500},
+        hide: {effect: "fadeOut", duration: 500},
+        modal: true
+    });
+    $('#btnNewEvent').click(function event(){
+        $('#new_event').dialog('open');
+        return false;
+    });
+
     $('#calendar').fullCalendar({
         editable: false,
         theme: true,

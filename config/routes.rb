@@ -25,13 +25,14 @@ RhodeProject::Application.routes.draw do
   resources :subscriptions, only: [:create, :new]
   resources :profiles
   resources :notices
-
+  root to: 'static_pages#home'
   match '', to: 'static_pages#home', contraints: lambda{|r| r.subdomain == ''}
   match '', to: 'clubs#show', contraints: lambda {|r| r.subdomain.present? && r.subdomain != 'www'}
 
-  root to: 'static_pages#home'
+
   match '/user/:id/confirm/:confirm_code', to:'users#confirm'
   match '/signup',  to: 'users#new'
+  match '/sponsors', to: 'static_pages#sponsors'
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
