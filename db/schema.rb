@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120826141618) do
+ActiveRecord::Schema.define(:version => 20120926000353) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -159,6 +159,7 @@ ActiveRecord::Schema.define(:version => 20120826141618) do
     t.integer  "club_id"
     t.boolean  "active",                 :default => false
     t.string   "confirm_token"
+    t.datetime "anniversary"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

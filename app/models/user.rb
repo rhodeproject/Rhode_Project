@@ -37,12 +37,13 @@ class User < ActiveRecord::Base
            dependent:   :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
 
-  #repeated code -- commented 4/24 --
-  #before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
 
   #convert email to Lowercase to ensure uniqueness in the DB
   before_save { |user| user.email = email.downcase}
+
+  #create expiry date
+  after_create :update_expiry
 
   #user validation
   validates :name, presence: true, length:{maximum: 50}
@@ -98,5 +99,9 @@ class User < ActiveRecord::Base
 
     def generate_token
       SecureRandom.urlsafe_base64
+    end
+
+    def update_expiry
+      self.update_attribute('anniversary', Date.today.next_year )
     end
 end

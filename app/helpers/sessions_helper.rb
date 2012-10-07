@@ -1,7 +1,12 @@
 module SessionsHelper
   def sign_in(user)
-    cookies.permanent[:remember_token] = user.remember_token
-    current_user = user
+    if user.anniversary.past?
+      flash[:warning] = "Your account has expired"
+    else
+      cookies.permanent[:remember_token] = user.remember_token
+      current_user = user
+      flash[:success] = "Welcome back #{user.name}"
+    end
   end
 
   def sign_out
@@ -11,6 +16,10 @@ module SessionsHelper
 
   def signed_in?
     !current_user.nil?
+  end
+
+  def account_past_due?(user)
+    user.anniversary < Date.today
   end
 
   def current_user=(user)
@@ -29,6 +38,7 @@ module SessionsHelper
     redirect_to(session[:return_to] || default)
     clear_return_to
   end
+
 
   def store_location
     session[:return_to] = request.fullpath

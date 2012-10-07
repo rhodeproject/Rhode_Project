@@ -1,0 +1,12 @@
+<div class="span5">
+<%= form_for (@topic) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <input type="hidden" id="topic_forum_id" value="<%= @forum.id %>" />
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+
+    <textarea name="post[content]" cols="80" rows="20"><%= params[:content] %></textarea>
+
+    <%= f.submit "Create Post", class: "btn btn-large btn-primary" %>
+<% end %>
+</div>

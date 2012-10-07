@@ -1,0 +1,9 @@
+Dear <%= @user.name %>
+
+Your acount will expire on <%= Date.parse(@user.anniversary.to_s) %>
+
+Renew it by following the link below:
+<%= @path %>
+
+Thank you,
+Rhode Project Team

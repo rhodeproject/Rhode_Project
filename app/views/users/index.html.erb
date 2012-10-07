@@ -8,6 +8,7 @@
             <% if current_user.admin? %>
               <th>Email</th>
               <th>Active</th>
+              <th>Exipry date</th>
           <% end %>
             <th>Posts</th>
           </thead>
@@ -19,6 +20,7 @@
               <% if current_user.admin? %>
                   <td><%= user.email %></td>
                   <td><%= user.active? %></td>
+                  <td><%= Date.parse(user.anniversary.to_s) %></td>
               <% end %>
               <td><%= user.posts.count %></td>
             </tr>

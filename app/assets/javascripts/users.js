@@ -1,4 +1,22 @@
 $(document).ready(function(){
+    $('#tabs').tabs();
+    $('#btnTabs').click(function(event){
+       $('#tabs').tabs('select',1);
+       return false;
+    });
+
+    $('#frmNewUser').dialog({
+        autoOpen: false,
+        open: {effect: "fadeIn", duration: 500},
+        height: 500,
+        width: 600,
+        modal: true
+    });
+    $('#btnSignUp').click(function(event){
+        $('#frmNewUser').dialog('open');
+        return false;
+    });
+
     $('#btnNewUser').click(function(event){
         Stripe.createToken({
                 number: $('#card_number').val(),

@@ -13,6 +13,7 @@ gem 'redcarpet'
 gem 'delayed_job_active_record'
 gem 'breadcrumbs_on_rails'
 gem 'stripe'
+gem 'whenever', :require => false
 #gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem "rspec-rails", :group => [:test, :development]
 group :test do

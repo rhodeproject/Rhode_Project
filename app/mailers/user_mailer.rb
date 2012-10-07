@@ -7,6 +7,18 @@ class UserMailer < ActionMailer::Base
     mail(:to => "mhatch73@gmail.com", :subject => "Another User -- #{@user.name}")
   end
 
+  def expiry_notice(user)
+    @user = user
+    if Rails.env.development?
+      toaddr = "mhatch73@gmail.com"
+      @path = "www.lvh.me:3000/user/renew?user=#{@user.id}"
+    else
+      toaddr = @user.email
+      @path = "https://www.rhodeproject.com/user/renew?user=#{@user.id}"
+    end
+    mail(:to => toaddr, :subject => "test - expiry")
+  end
+
   def post_forum_notice(forum,email,post)
     @content = post.content
     @post = post

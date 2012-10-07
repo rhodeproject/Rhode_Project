@@ -58,6 +58,7 @@ class UsersController < ApplicationController
     if @user.confirm_token == params[:confirm_code]
       @user.update_attribute('active',true)
       @user.update_attribute('confirm_token',nil)
+      @user.update_attribute('anniversary', @user.created_at.next_year)
       flash[:success] = "You account has been activated"
       sign_in(@user)
       redirect_to @user
@@ -122,6 +123,7 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to root_path unless current_user.admin?
     end
+
 end
 
 
