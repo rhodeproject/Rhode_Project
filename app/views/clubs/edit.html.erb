@@ -1,9 +1,13 @@
 <%= provide(:title, 'Add Club') %>
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span12">
+  <div class="span5 offset3">
 <%= form_for (@club) do |f| %>
     <%= f.label :sub_domain, "Custom URL"%>
     <%= f.text_field :sub_domain %>
+
+    <%= f.label :fee, "Club Fee(enter yearly fee in dollars)" %>
+    <%= f.text_field :fee %>
 
     <%= f.label :heading1 %>
     <%= f.text_field :heading1 %>
@@ -26,7 +30,14 @@
     <%=  f.label :about %>
     <%=  f.text_area :about%>
 
+    <%= f.label :oath_token %>
+    <%= f.text_field :oath_token %>
+
+    <%= f.label :oath_token_secret %>
+    <%= f.text_field :oath_token_secret %>
+
     <%= f.submit "Customize Club", class: "btn btn-large btn-primary" %>
 <% end %>
-</div>
+  </div>
+  </div>
 </div>

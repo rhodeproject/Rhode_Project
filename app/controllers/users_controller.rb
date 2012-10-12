@@ -23,30 +23,20 @@ class UsersController < ApplicationController
       redirect_to root_path
     end
     @user = User.new
+    @club = Club.find_by_sub_domain(request.subdomain)
   end
 
   def create
-    if signed_in?
-      flash[:success] = "You are already signed in."
-      redirect_to root_path
-    end
-    @user = User.new(params[:user])
     club = Club.find_by_sub_domain(request.subdomain)
-    @user.club_id = club.id
-    @user.confirm_token = SecureRandom.urlsafe_base64
+    @user = club.users.build(params[:user])
+    @user.create_confirm_token
     token = params[:stripeToken]
-    # create the charge on Stripe's servers - this will charge the user's card
-    charge = Stripe::Charge.create(
-        :amount => 2500, # amount in cents, again
-        :currency => "usd",
-        :card => token,
-        :description => @user.email
-    )
+
+    @user.pay_membership_fee(token)
     if @user.save
       flash[:success] = "Welcome to #{club.name}! A confirmation email has been sent to #{@user.email}.
                         Follow the link in the email to activate your account."
-      UserMailer.delay.new_user_notice(@user)
-      UserMailer.delay.new_user_confirmation(@user)
+      @user.send_new_user_emails
       redirect_to root_path
     else
       render 'new'
@@ -56,9 +46,7 @@ class UsersController < ApplicationController
   def confirm
     @user = User.find(params[:id])
     if @user.confirm_token == params[:confirm_code]
-      @user.update_attribute('active',true)
-      @user.update_attribute('confirm_token',nil)
-      @user.update_attribute('anniversary', @user.created_at.next_year)
+      @user.activate_user
       flash[:success] = "You account has been activated"
       sign_in(@user)
       redirect_to @user

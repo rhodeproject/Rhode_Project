@@ -7,6 +7,7 @@
 <div class="container">
   <div class="span10 offset1">
     <h1><%= current_user.club.name %> Notices</h1>
+    <%= link_to "Add Notice", new_notice_path, id: "btnNewSession" ,class: "btn btn-large btn-primary"  %>
     <table class="table table-condensed">
       <thead>
         <th style="width: 70%">Content</th>
@@ -19,7 +20,7 @@
         </tr>
       <% end %>
     </table>
-    <%= link_to "Add Notice", new_notice_path, id: "btnNewSession" ,class: "btn btn-large btn-primary"  %>
+
   </div>
 </div>
 <div id='new_notice'>

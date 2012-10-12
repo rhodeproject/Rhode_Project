@@ -5,47 +5,14 @@
       <thead>
       <th>Setting</th>
       <th>Value</th>
-      <th>Edit</th>
       </thead>
       <tbody>
-      <tr>
-        <td>Sub Domain</td>
-        <td><%= @club.sub_domain %></td>
-      </tr>
-      <tr>
-        <td>Welcome Message</td>
-        <td><%= @club.welcome_message %></td>
-      </tr>
-      <tr>
-        <td>Heading1</td>
-        <td><%= @club.heading1 %></td>
-      </tr>
-      <tr>
-        <td>Message1</td>
-        <td><%= @club.message1 %></td>
-      </tr>
-      <tr>
-        <td>Heading2</td>
-        <td><%= @club.heading2 %></td>
-      </tr>
-      <tr>
-        <td>Message2</td>
-        <td><%= @club.message2%></td>
-      </tr>
-      <tr>
-        <td>Heading3</td>
-        <td><%= @club.heading3%></td>
-      </tr>
-      <tr>
-        <td>Message3</td>
-        <td><%= @club.message3%></td>
-      </tr>
-      <% unless @club.token.nil? %>
-          <tr>
-            <td>SSO Token</td>
-            <td><%= @club.token.api_token %></td>
-          </tr>
-      <% end %>
+        <% @club.attributes.each do |attr_name, attr_val| %>
+        <tr>
+          <td><%= attr_name %></td>
+          <td class="club_edit"><%= attr_val %></td>
+        </tr>
+        <% end %>
       </tbody>
     </table>
     <%= link_to "Generate SSO Token", tokens_path, method: 'create', class: 'btn-large btn-primary' %>

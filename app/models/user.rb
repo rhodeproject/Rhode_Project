@@ -15,9 +15,9 @@
 #  password_reset_sent_at :datetime
 #  club_id                :integer
 #
-# TODO: Create method to validate email uniquness per club - An email address can exists for mutliple clubs
 
 class User < ActiveRecord::Base
+  require 'json'
   attr_accessible :email, :name, :password, :password_confirmation, :club_id
   has_secure_password
 
@@ -54,6 +54,8 @@ class User < ActiveRecord::Base
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false}
 
+  #TODO: drop index on user and email then impliment the following validation
+  #validates_uniqueness_of :email, :scope => :club_id
   #password validation
   validates :password, length: {minimum: 6}
 
@@ -73,6 +75,38 @@ class User < ActiveRecord::Base
     self.update_attribute('reset_token', generate_token)
     self.update_attribute('password_reset_sent_at', Time.zone.now)
     UserMailer.password_reset(self).deliver
+  end
+
+  def pay_membership_fee(token)
+    charge = Stripe::Charge.create(
+        :amount => self.club.fee * 100, # amount in cents, again
+        :currency => "usd",
+        :card => token,
+        :description => self.email
+    )
+  end
+
+  def send_new_user_emails
+    UserMailer.delay.new_user_notice(self)
+    UserMailer.delay.new_user_confirmation(self)
+  end
+
+  def create_confirm_token
+    self.confirm_token = SecureRandom.urlsafe_base64
+  end
+
+  def make_admin
+    self.admin = true
+  end
+
+  def inactivate_user
+    self.active = false
+  end
+
+  def activate_user
+    self.active = true
+    self.confirm_token = nil
+    self.anniversary = self.created_at.next_year
   end
 
   def feed

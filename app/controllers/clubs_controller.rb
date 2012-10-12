@@ -5,13 +5,14 @@ class ClubsController < ApplicationController
   end
 
   def create
-    user = User.new(params[:club][:user])
-    user.update_attribute('admin', true)
     @club = Club.new
     @club.name = params[:club][:name]
     @club.sub_domain = params[:club][:sub_domain]
     if @club.save
-      user.club_id = @club.id
+      user = @club.users.build(params[:club][:user])#.club_id = @club.id
+      user.make_admin
+      user.create_confirm_token
+      user.send_new_user_emails
       if user.save
         flash[:success] = "Thank you for adding your club to the Rhode Project"
         #sign_in user
@@ -54,13 +55,15 @@ class ClubsController < ApplicationController
       flash[:warning] = "You do not have rights to edit this club"
       redirect_to root_path
     end
-
   end
 
   def update
     if current_user.admin?
       @club = Club.find(params[:id])
-      if @club.update_attributes(params[:club])
+      @club.update_attributes(params[:club])
+      @club.fee = params[:club][:fee].gsub(/\D/, '').to_i #refactor to model
+
+      if @club.save
         flash[:success] = "Changes to #{@club.name} have been saved!"
         redirect_to root_path
       else
@@ -70,7 +73,6 @@ class ClubsController < ApplicationController
       flash[:warning] = "You do not have rights to edit this club"
       redirect_to root_path
     end
-
   end
 
 

@@ -54,8 +54,8 @@ class ForumsController < ApplicationController
 
   def create
     if current_user.admin?
-      @forum = Forum.new(params[:forum])
-      @forum.update_attribute('club_id',current_user.club_id)
+      club = Club.find(current_user.club_id)
+      @forum = club.forums.build(params[:forum])
       if @forum.save
         flash[:success] = "New forum created!"
         redirect_to forums_path

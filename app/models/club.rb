@@ -24,7 +24,10 @@ class Club < ActiveRecord::Base
                   :message1,
                   :message2,
                   :message3,
-                  :about
+                  :about,
+                  :oath_token,
+                  :oath_token_secret,
+                  :fee
   has_many :users
   has_many :forums
   has_many :events

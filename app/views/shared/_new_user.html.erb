@@ -12,6 +12,7 @@
           <%= link_to 'Next >>', "#" ,class: "btn btn-large btn-primary", id: "btnTabs" %>
         </div>
         <div id="tabs-2">
+          <label for="fee"><h5>Yearly Fee - $<%= @club.fee %></h5></label>
           <%= label_tag :card_number, "Credit Card Number " %>
           <%= text_field_tag :card_number, nil, name: nil, class: "ccinput"%>
 

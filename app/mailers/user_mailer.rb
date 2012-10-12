@@ -16,7 +16,7 @@ class UserMailer < ActionMailer::Base
       toaddr = @user.email
       @path = "https://www.rhodeproject.com/user/renew?user=#{@user.id}"
     end
-    mail(:to => toaddr, :subject => "test - expiry")
+    mail(:to => toaddr, :subject => "Your Account will expire soon")
   end
 
   def post_forum_notice(forum,email,post)

@@ -4,9 +4,10 @@ class NoticesController < ApplicationController
   end
 
   def create
-    @notice = Notice.new(params[:notice])
-    @notice.update_attribute('club_id', current_user.club.id)
+    club = Club.find(current_user.club.id)
+    @notice = club.notices.build(params[:notice])
     if @notice.save
+      @notice.send_tweet(club)
       flash[:success] = "Notice Added!"
     else
       flash[:success] = "Failed to add Notice"
@@ -15,7 +16,7 @@ class NoticesController < ApplicationController
   end
 
   def index
-    @notices = Notice.where(:club_id => current_user.club_id)
+    @notices = Notice.where(:club_id => current_user.club_id).order('updated_at DESC')
     @notice = Notice.new
   end
 
