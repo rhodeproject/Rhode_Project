@@ -117,8 +117,10 @@ class EventsController < ApplicationController
   private
   def add_event_notice(event)
     content = "A new event,#{event.title}, has been added to the Club calendar on #{event.starts_at}"
-    notice = Notice.new(:content => content)
-    notice.update_attribute('club_id', current_user.club.id)
-    notice.save
+    club = Club.find(current_user.club_id)
+    notice = club.notices.build(:content => content)
+    if notice.save
+      notice.send_tweet(club)
+    end
   end
 end

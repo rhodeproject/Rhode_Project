@@ -30,10 +30,10 @@
     <%=  f.label :about %>
     <%=  f.text_area :about%>
 
-    <%= f.label :oath_token %>
+    <%= f.label :oath_token, "Twitter Access Token" %>
     <%= f.text_field :oath_token %>
 
-    <%= f.label :oath_token_secret %>
+    <%= f.label :oath_token_secret, "Twitter Access Token Secret" %>
     <%= f.text_field :oath_token_secret %>
 
     <%= f.submit "Customize Club", class: "btn btn-large btn-primary" %>
