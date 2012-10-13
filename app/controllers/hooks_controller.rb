@@ -8,21 +8,21 @@ class HooksController < ApplicationController
     #data_json = JSON.parse request.body.read
 
     if params[:type] == "charge.succeeded"
-      make_active(data_event)
+      make_active(params[:id])
     end
 
     if params[:type] == "charge.failed"
-      make_inactive(data_event)
+      make_inactive(params[:id])
     end
   end
 
-  def make_active(data)
-    @user = User.find_by_stripe_id(data[:id])
+  def make_active(id)
+    @user = User.find_by_stripe_id(id)
     @user.activate_user
   end
 
-  def make_inactive(data)
-    @user = User.find_by_stripe_id(data[:id])
+  def make_inactive(id)
+    @user = User.find_by_stripe_id(id)
     @user.inactivate_user
   end
 end
