@@ -2,41 +2,47 @@
 <div class="row">
   <div class="span12">
   <div class="span5 offset3">
-<%= form_for (@club) do |f| %>
-    <%= f.label :sub_domain, "Custom URL"%>
-    <%= f.text_field :sub_domain %>
+    <%= form_for (@club) do |f| %>
+        <%= f.label :sub_domain, "Custom URL"%>
+        <%= f.text_field :sub_domain %>
 
-    <%= f.label :fee, "Club Fee(enter yearly fee in dollars)" %>
-    <%= f.text_field :fee %>
+        <%= f.label :fee, "Club Fee(enter yearly fee in dollars)" %>
+        <%= f.text_field :fee %>
 
-    <%= f.label :heading1 %>
-    <%= f.text_field :heading1 %>
+        <%= f.label :heading1 %>
+        <%= f.text_field :heading1 %>
 
-    <%=  f.label :message1 %>
-    <%=  f.text_area :message1 %>
+        <%=  f.label :message1 %>
+        <%=  f.text_area :message1 %>
 
-    <%= f.label :heading2 %>
-    <%= f.text_field :heading2 %>
+        <%= f.label :heading2 %>
+        <%= f.text_field :heading2 %>
 
-    <%=  f.label :message2 %>
-    <%=  f.text_area :message2 %>
+        <%=  f.label :message2 %>
+        <%=  f.text_area :message2 %>
 
-    <%= f.label :heading3 %>
-    <%= f.text_field :heading3 %>
+        <%= f.label :heading3 %>
+        <%= f.text_field :heading3 %>
 
-    <%=  f.label :message3 %>
-    <%=  f.text_area :message3 %>
+        <%=  f.label :message3 %>
+        <%=  f.text_area :message3 %>
 
-    <%=  f.label :about %>
-    <%=  f.text_area :about%>
+        <%=  f.label :about %>
+        <%=  f.text_area :about%>
 
-    <%= f.label :oath_token, "Twitter Access Token" %>
-    <%= f.text_field :oath_token %>
+        <%= f.label :oath_token, "Twitter Access Token" %>
+        <%= f.text_field :oath_token %>
 
-    <%= f.label :oath_token_secret, "Twitter Access Token Secret" %>
-    <%= f.text_field :oath_token_secret %>
+        <%= f.label :oath_token_secret, "Twitter Access Token Secret" %>
+        <%= f.text_field :oath_token_secret %>
 
-    <%= f.submit "Customize Club", class: "btn btn-large btn-primary" %>
+        <%= f.label :stripe_publishable_key, "Stripe Publishable Key" %>
+        <%= f.text_field :stripe_publishable_key%>
+
+        <%= f.text_field :stripe_api_key%>
+        <%= f.label :stripe_api_key, "Stripe Secret Key"%>
+
+        <%= f.submit "Customize Club", class: "btn btn-large btn-primary" %>
 <% end %>
   </div>
   </div>

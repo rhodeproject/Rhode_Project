@@ -5,24 +5,24 @@ class HooksController < ApplicationController
   Stripe.api_key = "ZZkYFoDzg1jfew3Cv4HWqViVzgZpwEkj"
 
   def receiver
-    data_json = JSON.parse request.body.read
+    #data_json = JSON.parse request.body.read
 
-    if data_json[:type] == "charge.succeeded"
+    if params[:type] == "charge.succeeded"
       make_active(data_event)
     end
 
-    if data_json[:type] == "charge.failed"
+    if params[:type] == "charge.failed"
       make_inactive(data_event)
     end
   end
 
   def make_active(data)
-    @user = User.find_by_email(data['data']['object']['customer'].description)
+    @user = User.find_by_stripe_id(data[:id])
     @user.activate_user
   end
 
   def make_inactive(data)
-    @user = User.find_by_email(data['data']['object']['customer'].description)
+    @user = User.find_by_stripe_id(data[:id])
     @user.inactivate_user
   end
 end

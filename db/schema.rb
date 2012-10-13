@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121012020921) do
+ActiveRecord::Schema.define(:version => 20121013011228) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
     t.string   "sub_domain"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.text     "welcome_message"
     t.string   "heading1"
     t.string   "heading2"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(:version => 20121012020921) do
     t.string   "oath_token"
     t.string   "oath_token_secret"
     t.integer  "fee"
+    t.string   "stripe_publishable_key"
+    t.string   "stripe_api_key"
   end
 
   create_table "delayed_jobs", :force => true do |t|
@@ -163,6 +165,7 @@ ActiveRecord::Schema.define(:version => 20121012020921) do
     t.boolean  "active",                 :default => false
     t.string   "confirm_token"
     t.datetime "anniversary"
+    t.string   "stripe_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

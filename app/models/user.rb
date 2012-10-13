@@ -78,12 +78,21 @@ class User < ActiveRecord::Base
   end
 
   def pay_membership_fee(token)
+    Stripe.api_key = self.club.stripe_api_key
     charge = Stripe::Charge.create(
         :amount => self.club.fee * 100, # amount in cents, again
         :currency => "usd",
         :card => token,
         :description => self.email
     )
+    self.stripe_id = charge[:id]
+    save!
+    if charge[:paid] && charge[:card][:cvc_check] != "fail"
+      activate_user
+      "Thank you for joining #{self.club.name}!  Your payment has been processed successfully!"
+    else
+      "The follow error occured: #{charge[:failure_message]}"
+    end
   end
 
   def send_new_user_emails
@@ -93,6 +102,9 @@ class User < ActiveRecord::Base
 
   def create_confirm_token
     self.confirm_token = SecureRandom.urlsafe_base64
+    self.save!
+    self.send_new_user_emails
+    "An email has been sent to #{self.email}. Please follow the link to confirm your account."
   end
 
   def make_admin
@@ -107,6 +119,7 @@ class User < ActiveRecord::Base
     self.active = true
     self.confirm_token = nil
     self.anniversary = self.created_at.next_year
+    save!
   end
 
   def feed

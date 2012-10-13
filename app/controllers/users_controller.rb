@@ -29,18 +29,18 @@ class UsersController < ApplicationController
   def create
     club = Club.find_by_sub_domain(request.subdomain)
     @user = club.users.build(params[:user])
-    @user.create_confirm_token
-    token = params[:stripeToken]
 
-    @user.pay_membership_fee(token)
-    if @user.save
-      flash[:success] = "Welcome to #{club.name}! A confirmation email has been sent to #{@user.email}.
-                        Follow the link in the email to activate your account."
-      @user.send_new_user_emails
-      redirect_to root_path
-    else
-      render 'new'
+    if !club.fee.nil? #if club charges membership, process the card
+      token = params[:stripeToken]
+      message = @user.pay_membership_fee(token) #user will be saved
+      sign_in_first_time @user
+    else #else create confirm token
+      message = @user.create_confirm_token #user will be saved
     end
+
+    flash[:success] = message
+    redirect_to root_path
+
   end
 
   def confirm
