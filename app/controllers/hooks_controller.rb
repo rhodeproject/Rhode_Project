@@ -1,18 +1,17 @@
 class HooksController < ApplicationController
   require 'json'
+  skip_before_filter  :verify_authenticity_token
 
   Stripe.api_key = "ZZkYFoDzg1jfew3Cv4HWqViVzgZpwEkj"
 
   def receiver
     data_json = JSON.parse request.body.read
 
-    p data_json['data']['object']['customer']
-
-    if data_json[:type] == "invoice.payment_succeeded"
+    if data_json[:type] == "charge.succeeded"
       make_active(data_event)
     end
 
-    if data_json[:type] == "invoice.payment_failed"
+    if data_json[:type] == "charge.failed"
       make_inactive(data_event)
     end
   end
