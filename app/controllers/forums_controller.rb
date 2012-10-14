@@ -41,7 +41,7 @@ class ForumsController < ApplicationController
       flash[:warning] = "You do not have access to this forum"
       redirect_to "/forums"
     end
-    @topics = @forum.topics.paginate(page: params[:page], :per_page => 10).order('updated_at DESC')
+    @topics = @forum.topics.paginate(page: params[:page], :per_page => 10).order('updated_at DESC').includes(:user)
   end
 
   def new

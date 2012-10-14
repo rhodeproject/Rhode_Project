@@ -8,5 +8,6 @@ namespace :anniversary do
         u.update_attribute('anniversary',anndate)
         u.save
       end
+      UserMailer.rake_task_complete("anniversary:update").deliver
     end
 end

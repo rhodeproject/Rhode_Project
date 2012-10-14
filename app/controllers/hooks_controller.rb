@@ -5,7 +5,6 @@ class HooksController < ApplicationController
   Stripe.api_key = "ZZkYFoDzg1jfew3Cv4HWqViVzgZpwEkj"
 
   def receiver
-    #data_json = JSON.parse request.body.read
     @user = User.find_by_stripe_id(params[:id])
     if params[:type] == "charge.succeeded" && !@user.nil?
       make_active(@user)

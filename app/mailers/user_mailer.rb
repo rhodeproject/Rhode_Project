@@ -7,6 +7,11 @@ class UserMailer < ActionMailer::Base
     mail(:to => "mhatch73@gmail.com", :subject => "Another User -- #{@user.name}")
   end
 
+  def rake_task_complete(taskname)
+    @taskname = taskname
+    mail(:to => 'matthew.hatch@rhodeproject.com', :subject => "#{@taskname}")
+  end
+
   def expiry_notice(user)
     @user = user
     if Rails.env.development?

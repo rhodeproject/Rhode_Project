@@ -17,6 +17,7 @@ gem 'whenever', :require => false
 gem 'twitter'
 #gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem "rspec-rails", :group => [:test, :development]
+gem 'bullet', group: :development
 group :test do
   gem "factory_girl_rails"
   gem "capybara"
