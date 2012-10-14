@@ -2,6 +2,7 @@ namespace :user do
   desc "scheduled jobs for users"
     task :check_expiry => :environment do
       check_users
+      UserMailer.rake_task_complete("user:check_expiry").deliver
       #check_user('mhatch73@gmail.com')
     end
 
