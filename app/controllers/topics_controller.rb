@@ -15,10 +15,7 @@ class TopicsController < ApplicationController
     respond_to do |format|
       if @post.save
         flash[:success] = "Post Added to #{@topic.name}"
-        forum = @topic.forum
-        forum.users.each do |user|
-          UserMailer.delay.post_forum_notice(@topic.forum,user.email,@post)
-        end
+        @post.delay.create_email_list(@topic)
         format.html {redirect_to("/topics/#{params[:id]}")}
         format.js
       else

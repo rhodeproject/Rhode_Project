@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013011228) do
+ActiveRecord::Schema.define(:version => 20121020112430) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -168,7 +168,6 @@ ActiveRecord::Schema.define(:version => 20121013011228) do
     t.string   "stripe_id"
   end
 
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

@@ -13,6 +13,7 @@ class StaticPagesController < ApplicationController
     else
       @club = Club.find_by_sub_domain('www')
     end
+
   end
 
   def help

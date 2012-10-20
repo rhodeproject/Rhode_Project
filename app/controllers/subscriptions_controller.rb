@@ -5,7 +5,7 @@ class SubscriptionsController < ApplicationController
   end
 
   def create
-    club = Club.find_by_sub_domain(request.subdomain)#Club.find(current_user.club_id)
+    @club = Club.find_by_sub_domain(request.subdomain)#Club.find(current_user.club_id)
     @subscription = Subscription.new(params[:subscription])
     if @subscription.save_with_payment
       club.update_attribute('subscription_id', @subscription.id)

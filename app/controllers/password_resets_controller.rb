@@ -1,6 +1,6 @@
 class PasswordResetsController < ApplicationController
   def create
-    user = User.find_by_email(params[:email])
+    user = User.find_by_email_and_club_id(params[:email], find_club(request.subdomain))
     user.send_password_reset if user
     flash[:information] = "Email has been sent with reset instruction"
     redirect_to root_url
@@ -22,4 +22,10 @@ class PasswordResetsController < ApplicationController
       render :edit
     end
   end
+
+  private
+    def find_club(subdomain)
+      club = Club.find_by_sub_domain(subdomain)
+      club.id
+    end
 end

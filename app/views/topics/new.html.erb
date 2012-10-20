@@ -8,7 +8,7 @@
         <%= f.label :name %><br />
         <%= f.text_field :name %>
 
-        <textarea name="post[content]" cols="80" rows="20"><%= params[:content] %></textarea>
+        <textarea name="post[content]" cols="80" rows="10"><%= params[:content] %></textarea>
 
         <%= f.submit "Create Post", class: "btn btn-large btn-primary" %>
     <% end %>

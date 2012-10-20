@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_email(params[:session][:email])
+    @user = User.find_by_email_and_club_id(params[:session][:email], find_club(request.subdomain))
     if @user.active?
       club = Club.find_by_sub_domain(request.subdomain)
       if @user.club_id != club.id
@@ -29,4 +29,9 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
+  private
+  def find_club(subdomain)
+    club = Club.find_by_sub_domain(subdomain)
+    club.id
+  end
 end

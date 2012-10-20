@@ -1,7 +1,6 @@
 <% provide(:title, "Forums") %>
 <%= render_breadcrumbs :separator => '<i class="icon-chevron-right"></i>' %><br>
 
-
 <div class="page-header">
     <h4><%= current_user.club.name %> Forums</h4>
 </div>
@@ -44,7 +43,6 @@
 <% if current_user.admin? %>
     <p><%= link_to "New Forum", new_forum_path, class: "btn btn-mini btn-info" %></p>
 <% end %>
-
 
 
 

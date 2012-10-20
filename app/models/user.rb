@@ -51,8 +51,7 @@ class User < ActiveRecord::Base
   #email validation
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,
-            format: {with: VALID_EMAIL_REGEX},
-            uniqueness: {case_sensitive: false}
+            format: {with: VALID_EMAIL_REGEX}
 
   #TODO: drop index on user and email then impliment the following validation
   #validates_uniqueness_of :email, :scope => :club_id

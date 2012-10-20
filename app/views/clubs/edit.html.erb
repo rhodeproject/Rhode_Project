@@ -39,8 +39,9 @@
         <%= f.label :stripe_publishable_key, "Stripe Publishable Key" %>
         <%= f.text_field :stripe_publishable_key%>
 
-        <%= f.text_field :stripe_api_key%>
         <%= f.label :stripe_api_key, "Stripe Secret Key"%>
+        <%= f.text_field :stripe_api_key%>
+
 
         <%= f.submit "Customize Club", class: "btn btn-large btn-primary" %>
 <% end %>

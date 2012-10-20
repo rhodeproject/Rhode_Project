@@ -47,7 +47,7 @@ RhodeProject::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   #config.assets.precompile += %w( *.js *.css )
-  config.assets.precompile += %w( fullcalendar.js jquery-ui-timepicker-addon.js )
+  config.assets.precompile += %w( fullcalendar.js jquery-ui-timepicker-addon.js jquery.cycle.all.js )
   #config.assets.precompile += %w( fullcalendar.print.js )
   #config.assets.precompile += %w( jquery-ui-timepicker-addon.js )
 

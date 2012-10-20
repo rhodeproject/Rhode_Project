@@ -18,6 +18,7 @@ $(document).ready(function(){
     });
 
     $('#btnNewUser').click(function(event){
+        Stripe.setPublishableKey($('#stripe_pk').val());
         Stripe.createToken({
                 number: $('#card_number').val(),
                 cvc: $('#card_code').val(),

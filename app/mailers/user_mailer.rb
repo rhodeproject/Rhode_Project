@@ -16,22 +16,22 @@ class UserMailer < ActionMailer::Base
     @user = user
     if Rails.env.development?
       toaddr = "mhatch73@gmail.com"
-      @path = "www.lvh.me:3000/user/renew?user=#{@user.id}"
+      @path = "#{@user.club.sub_domain}.lvh.me:3000/user/renew?user=#{@user.id}"
     else
       toaddr = @user.email
-      @path = "https://www.rhodeproject.com/user/renew?user=#{@user.id}"
+      @path = "https://#{@user.club.sub_domain}.rhodeproject.com/user/renew?user=#{@user.id}"
     end
     mail(:to => toaddr, :subject => "Your Account will expire soon")
   end
 
-  def post_forum_notice(forum,email,post)
+  def post_forum_notice(forum,email,post,sub_domain)
     @content = post.content
     @post = post
     @forum = forum
     if Rails.env.development?
-      rootpath = "#{request.subdomain}.lvh.me:3000/"
+      rootpath = "#{sub_domain}.lvh.me:3000/"
     else
-      rootpath = "https://www.rhodeproject.com/"
+      rootpath = "https://#{sub_domain}.rhodeproject.com/"
     end
     @link = "#{rootpath}topics/#{post.topic_id}"
     mail(:to => email, :subject => "New Post to #{forum.name}")
@@ -42,10 +42,11 @@ class UserMailer < ActionMailer::Base
     address = @user.email
     subject = "Password reset request for #{@user.name}"
     if Rails.env.development?
-      url = "http://#{request.subdomain}.lvh.me:3000"
+      @url = "http://#{@user.club.sub_domain}.lvh.me:3000/password_resets/#{@user.reset_token}/edit"
     else
-      url = "https://www.rhodeproject.com"
+      @url = "https://#{@user.club.sub_domain}.rhodeproject.com/password_resets/#{@user.reset_token}/edit"
     end
+
     mail(:to => address, :subject => subject)
   end
 

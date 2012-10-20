@@ -12,22 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(:content => params[:post][:content])
-    @post.topic_id = params[:post][:topic_id]
-    @post.user_id = current_user.id
-
-    if @post.save
-      @topic = Topic.find(@post.topic_id)
-      @topic.update_attributes(:last_poster_id => current_user.id, :last_post_at => Time.now)
-      flash[:success] = "Successfully created post."
-      forum = @topic.forum
-      forum.users.each do |user|
-        UserMailer.delay.post_forum_notice(@topic.forum,user.email,@post)
-      end
-      redirect_to "/topics/#{@topic.id}", :only_path => true
-    end
   end
-
 
   def edit
       @post = Post.find(params[:id])
@@ -45,7 +30,6 @@ class PostsController < ApplicationController
   end
 
   def  show
-
   end
 
   def destroy
@@ -63,7 +47,6 @@ class PostsController < ApplicationController
   end
 
   def correct_user
-
   end
 
 end

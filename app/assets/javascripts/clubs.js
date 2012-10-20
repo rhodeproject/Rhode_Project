@@ -41,4 +41,17 @@ $(document).ready(function(){
         content: "Enter the password. Do not use any common words, this is your admin user password!",
         delay: { show: 500, hide: 100 }
     });
+
+    /*Sponsor Cycle*/
+    $("#sponsors").cycle({
+        fx: 'fade',
+        speed: '2500',
+        timeout: '1000'
+    });
+
+    $(".sponsorLink").click(function(){
+       window.open($(this).attr("alt"));
+       return false;
+    });
+
 });
