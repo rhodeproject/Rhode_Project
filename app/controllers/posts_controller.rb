@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def index
+    #TODO limit search results to current user's club
     @posts = Post.text_search(params[:query]).page(params[:page]).per_page(10)
   end
 

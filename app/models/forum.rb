@@ -21,6 +21,12 @@ class Forum < ActiveRecord::Base
   def most_recent_post
     topic = Topic.first(:order => 'last_post_at DESC', :conditions => ['forum_id = ?', self.id])
   end
+
+  def email_followers(topic, post)
+    self.users.each do |user|
+      UserMailer.delay.post_forum_notice(topic.forum,user.email,post,user.club.sub_domain)
+    end
+  end
 end
 
 

@@ -16,7 +16,7 @@ class NoticesController < ApplicationController
   end
 
   def index
-    @notices = Notice.where(:club_id => current_user.club_id).order('updated_at DESC')
+    @notices = Notice.scoped_by_club_id(current_user.club_id).order('updated_at DESC')
     @notice = Notice.new
   end
 

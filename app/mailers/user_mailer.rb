@@ -29,6 +29,7 @@ class UserMailer < ActionMailer::Base
     @post = post
     @forum = forum
     if Rails.env.development?
+      email = "mhatch73@gmail.com"
       rootpath = "#{sub_domain}.lvh.me:3000/"
     else
       rootpath = "https://#{sub_domain}.rhodeproject.com/"

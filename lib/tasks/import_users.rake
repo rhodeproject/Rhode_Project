@@ -11,7 +11,7 @@ namespace :import do
 		def import_users(club_id)
 				puts "user import started..."
         file = "db/users.csv"
-				admins = ['cwalsh','Matt','coachtara','lamoureux', 'Kellie A.','jackspratt']
+				admins = ['cwalsh','Matt','coachtara','lamoureux', 'Kellie A.','jackspratt','Kevan']
 				CSV.foreach(file, :headers => false) do |row|
 					#check if the user is in the admin group
 					#but needs to be reset to false for each new row

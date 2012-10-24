@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.where('club_id = ?',current_user.club_id)
+    @users = User.scoped_by_club_id(current_user.club_id)
   end
 
   def new
@@ -84,20 +84,6 @@ class UsersController < ApplicationController
         redirect_to '/users'
       end
     end
-  end
-
-  def following
-    @title = "Following"
-    @user = User.find(params[:id])
-    @users = @user.followed_users.paginate(page: params[:page])
-    render 'show_follow'
-  end
-
-  def followers
-    @title = "Followers"
-    @user = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
-    render 'show_follow'
   end
 
   #Private Functions

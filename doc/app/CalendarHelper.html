@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>module CalendarHelper - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/calendar_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-event_calendar">#event_calendar</a>
+    
+    <li><a href="#method-i-event_calendar_opts">#event_calendar_opts</a>
+    
+    <li><a href="#method-i-month_link">#month_link</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CalendarController.html">CalendarController</a>
+  
+    <li><a href="./CalendarHelper.html">CalendarHelper</a>
+  
+    <li><a href="./Club.html">Club</a>
+  
+    <li><a href="./ClubsController.html">ClubsController</a>
+  
+    <li><a href="./ClubsHelper.html">ClubsHelper</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./EventsHelper.html">EventsHelper</a>
+  
+    <li><a href="./Forum.html">Forum</a>
+  
+    <li><a href="./ForumsController.html">ForumsController</a>
+  
+    <li><a href="./ForumsHelper.html">ForumsHelper</a>
+  
+    <li><a href="./HooksController.html">HooksController</a>
+  
+    <li><a href="./HooksHelper.html">HooksHelper</a>
+  
+    <li><a href="./Micropost.html">Micropost</a>
+  
+    <li><a href="./MicropostsController.html">MicropostsController</a>
+  
+    <li><a href="./MicropostsHelper.html">MicropostsHelper</a>
+  
+    <li><a href="./Notice.html">Notice</a>
+  
+    <li><a href="./NoticesController.html">NoticesController</a>
+  
+    <li><a href="./NoticesHelper.html">NoticesHelper</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./PasswordResetsController.html">PasswordResetsController</a>
+  
+    <li><a href="./PasswordResetsHelper.html">PasswordResetsHelper</a>
+  
+    <li><a href="./Post.html">Post</a>
+  
+    <li><a href="./PostsController.html">PostsController</a>
+  
+    <li><a href="./PostsHelper.html">PostsHelper</a>
+  
+    <li><a href="./Profile.html">Profile</a>
+  
+    <li><a href="./ProfilesController.html">ProfilesController</a>
+  
+    <li><a href="./ProfilesHelper.html">ProfilesHelper</a>
+  
+    <li><a href="./Relationship.html">Relationship</a>
+  
+    <li><a href="./RelationshipsController.html">RelationshipsController</a>
+  
+    <li><a href="./SessionsController.html">SessionsController</a>
+  
+    <li><a href="./SessionsHelper.html">SessionsHelper</a>
+  
+    <li><a href="./SitemapController.html">SitemapController</a>
+  
+    <li><a href="./SsoController.html">SsoController</a>
+  
+    <li><a href="./SsoHelper.html">SsoHelper</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
+  
+    <li><a href="./Subscription.html">Subscription</a>
+  
+    <li><a href="./SubscriptionsController.html">SubscriptionsController</a>
+  
+    <li><a href="./SubscriptionsHelper.html">SubscriptionsHelper</a>
+  
+    <li><a href="./Token.html">Token</a>
+  
+    <li><a href="./TokensController.html">TokensController</a>
+  
+    <li><a href="./TokensHelper.html">TokensHelper</a>
+  
+    <li><a href="./Topic.html">Topic</a>
+  
+    <li><a href="./TopicsController.html">TopicsController</a>
+  
+    <li><a href="./TopicsHelper.html">TopicsHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module CalendarHelper</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-event_calendar" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">event_calendar</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="event_calendar-source">
+            <pre><span class="ruby-comment"># File app/helpers/calendar_helper.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">event_calendar</span>
+  <span class="ruby-comment"># args is an argument hash containing :event, :day, and :options</span>
+  <span class="ruby-identifier">calendar</span> <span class="ruby-identifier">event_calendar_opts</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">event</span>, <span class="ruby-identifier">day</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:event</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">:day</span>]
+    <span class="ruby-comment">#if event.club_id == current_user.club_id</span>
+      <span class="ruby-identifier">html</span> = <span class="ruby-node">%Q(&lt;a href=&quot;/events/#{event.id}&quot; title=&quot;#{h(event.name)}&quot;&gt;)</span>
+      <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">display_event_time</span>(<span class="ruby-identifier">event</span>, <span class="ruby-identifier">day</span>)
+      <span class="ruby-identifier">html</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%Q(#{h(event.name)}&lt;/a&gt;)</span>
+      <span class="ruby-identifier">html</span>
+    <span class="ruby-comment">#end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- event_calendar-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- event_calendar-method -->
+
+    
+      <div id="method-i-event_calendar_opts" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">event_calendar_opts</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>custom options for this calendar</p>
+          
+
+          
+          <div class="method-source-code" id="event_calendar_opts-source">
+            <pre><span class="ruby-comment"># File app/helpers/calendar_helper.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">event_calendar_opts</span>
+  { 
+    <span class="ruby-value">:year</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@year</span>,
+    <span class="ruby-value">:month</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@month</span>,
+    <span class="ruby-value">:event_strips</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@event_strips</span>,
+    <span class="ruby-value">:month_name_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">localize</span>(<span class="ruby-ivar">@shown_month</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%B %Y&quot;</span>),
+    <span class="ruby-value">:previous_month_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&lt;&lt; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">month_link</span>(<span class="ruby-ivar">@shown_month</span>.<span class="ruby-identifier">prev_month</span>),
+    <span class="ruby-value">:next_month_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">month_link</span>(<span class="ruby-ivar">@shown_month</span>.<span class="ruby-identifier">next_month</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot; &gt;&gt;&quot;</span>,
+    <span class="ruby-value">:use_all_day</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>,
+    <span class="ruby-value">:width</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">975</span>,
+    <span class="ruby-value">:height</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">575</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- event_calendar_opts-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- event_calendar_opts-method -->
+
+    
+      <div id="method-i-month_link" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">month_link</span><span
+            class="method-args">(month_date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="month_link-source">
+            <pre><span class="ruby-comment"># File app/helpers/calendar_helper.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">month_link</span>(<span class="ruby-identifier">month_date</span>)
+  <span class="ruby-identifier">link_to</span>(<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">localize</span>(<span class="ruby-identifier">month_date</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%B&quot;</span>), {<span class="ruby-value">:month</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">month_date</span>.<span class="ruby-identifier">month</span>, <span class="ruby-value">:year</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">month_date</span>.<span class="ruby-identifier">year</span>})
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- month_link-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- month_link-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

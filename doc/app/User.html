@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class User - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/user.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-activate_user">#activate_user</a>
+    
+    <li><a href="#method-i-active-3F">#active?</a>
+    
+    <li><a href="#method-i-create_confirm_token">#create_confirm_token</a>
+    
+    <li><a href="#method-i-feed">#feed</a>
+    
+    <li><a href="#method-i-follow-21">#follow!</a>
+    
+    <li><a href="#method-i-following-3F">#following?</a>
+    
+    <li><a href="#method-i-inactivate_user">#inactivate_user</a>
+    
+    <li><a href="#method-i-make_admin">#make_admin</a>
+    
+    <li><a href="#method-i-pay_membership_fee">#pay_membership_fee</a>
+    
+    <li><a href="#method-i-send_new_user_emails">#send_new_user_emails</a>
+    
+    <li><a href="#method-i-send_password_reset">#send_password_reset</a>
+    
+    <li><a href="#method-i-unfollow-21">#unfollow!</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CalendarController.html">CalendarController</a>
+  
+    <li><a href="./CalendarHelper.html">CalendarHelper</a>
+  
+    <li><a href="./Club.html">Club</a>
+  
+    <li><a href="./ClubsController.html">ClubsController</a>
+  
+    <li><a href="./ClubsHelper.html">ClubsHelper</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./EventsHelper.html">EventsHelper</a>
+  
+    <li><a href="./Forum.html">Forum</a>
+  
+    <li><a href="./ForumsController.html">ForumsController</a>
+  
+    <li><a href="./ForumsHelper.html">ForumsHelper</a>
+  
+    <li><a href="./HooksController.html">HooksController</a>
+  
+    <li><a href="./HooksHelper.html">HooksHelper</a>
+  
+    <li><a href="./Micropost.html">Micropost</a>
+  
+    <li><a href="./MicropostsController.html">MicropostsController</a>
+  
+    <li><a href="./MicropostsHelper.html">MicropostsHelper</a>
+  
+    <li><a href="./Notice.html">Notice</a>
+  
+    <li><a href="./NoticesController.html">NoticesController</a>
+  
+    <li><a href="./NoticesHelper.html">NoticesHelper</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./PasswordResetsController.html">PasswordResetsController</a>
+  
+    <li><a href="./PasswordResetsHelper.html">PasswordResetsHelper</a>
+  
+    <li><a href="./Post.html">Post</a>
+  
+    <li><a href="./PostsController.html">PostsController</a>
+  
+    <li><a href="./PostsHelper.html">PostsHelper</a>
+  
+    <li><a href="./Profile.html">Profile</a>
+  
+    <li><a href="./ProfilesController.html">ProfilesController</a>
+  
+    <li><a href="./ProfilesHelper.html">ProfilesHelper</a>
+  
+    <li><a href="./Relationship.html">Relationship</a>
+  
+    <li><a href="./RelationshipsController.html">RelationshipsController</a>
+  
+    <li><a href="./SessionsController.html">SessionsController</a>
+  
+    <li><a href="./SessionsHelper.html">SessionsHelper</a>
+  
+    <li><a href="./SitemapController.html">SitemapController</a>
+  
+    <li><a href="./SsoController.html">SsoController</a>
+  
+    <li><a href="./SsoHelper.html">SsoHelper</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
+  
+    <li><a href="./Subscription.html">Subscription</a>
+  
+    <li><a href="./SubscriptionsController.html">SubscriptionsController</a>
+  
+    <li><a href="./SubscriptionsHelper.html">SubscriptionsHelper</a>
+  
+    <li><a href="./Token.html">Token</a>
+  
+    <li><a href="./TokensController.html">TokensController</a>
+  
+    <li><a href="./TokensHelper.html">TokensHelper</a>
+  
+    <li><a href="./Topic.html">Topic</a>
+  
+    <li><a href="./TopicsController.html">TopicsController</a>
+  
+    <li><a href="./TopicsHelper.html">TopicsHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class User</h1>
+
+  <div id="description" class="description">
+    
+<h2 id="label-Schema+Information">Schema Information</h2>
+
+<p>Table name: users</p>
+
+<pre>id                     :integer         not null, primary key
+name                   :string(255)
+email                  :string(255)
+created_at             :datetime        not null
+updated_at             :datetime        not null
+password_digest        :string(255)
+remember_token         :string(255)
+admin                  :boolean         default(FALSE)
+forum                  :boolean         default(FALSE)
+reset_token            :string(255)
+password_reset_sent_at :datetime
+club_id                :integer</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="VALID_EMAIL_REGEX">VALID_EMAIL_REGEX
+        
+        <dd class="description"><p>email validation</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-activate_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">activate_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="activate_user-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">activate_user</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">confirm_token</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">anniversary</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">created_at</span>.<span class="ruby-identifier">next_year</span>
+  <span class="ruby-identifier">save!</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- activate_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- activate_user-method -->
+
+    
+      <div id="method-i-active-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">active?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>methods</p>
+          
+
+          
+          <div class="method-source-code" id="active-3F-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">active?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- active-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- active-3F-method -->
+
+    
+      <div id="method-i-create_confirm_token" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_confirm_token</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_confirm_token-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_confirm_token</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">confirm_token</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">urlsafe_base64</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save!</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send_new_user_emails</span>
+  <span class="ruby-node">&quot;An email has been sent to #{self.email}. Please follow the link to confirm your account.&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create_confirm_token-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create_confirm_token-method -->
+
+    
+      <div id="method-i-feed" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">feed</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="feed-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">feed</span>
+  <span class="ruby-comment">#Micropost.find_by_user_id</span>
+  <span class="ruby-constant">Micropost</span>.<span class="ruby-identifier">from_users_followed_by</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- feed-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- feed-method -->
+
+    
+      <div id="method-i-follow-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">follow!</span><span
+            class="method-args">(other_user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="follow-21-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">follow!</span>(<span class="ruby-identifier">other_user</span>)
+  <span class="ruby-identifier">relationships</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">followed_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">other_user</span>.<span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- follow-21-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- follow-21-method -->
+
+    
+      <div id="method-i-following-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">following?</span><span
+            class="method-args">(other_user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="following-3F-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">following?</span>(<span class="ruby-identifier">other_user</span>)
+  <span class="ruby-identifier">relationships</span>.<span class="ruby-identifier">find_by_followed_id</span>(<span class="ruby-identifier">other_user</span>.<span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- following-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- following-3F-method -->
+
+    
+      <div id="method-i-inactivate_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inactivate_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="inactivate_user-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inactivate_user</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">active</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- inactivate_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- inactivate_user-method -->
+
+    
+      <div id="method-i-make_admin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">make_admin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="make_admin-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_admin</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">admin</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- make_admin-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- make_admin-method -->
+
+    
+      <div id="method-i-pay_membership_fee" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">pay_membership_fee</span><span
+            class="method-args">(token)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="pay_membership_fee-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pay_membership_fee</span>(<span class="ruby-identifier">token</span>)
+  <span class="ruby-constant">Stripe</span>.<span class="ruby-identifier">api_key</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">club</span>.<span class="ruby-identifier">stripe_api_key</span>
+  <span class="ruby-identifier">charge</span> = <span class="ruby-constant">Stripe</span><span class="ruby-operator">::</span><span class="ruby-constant">Charge</span>.<span class="ruby-identifier">create</span>(
+      <span class="ruby-value">:amount</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">club</span>.<span class="ruby-identifier">fee</span> * <span class="ruby-value">100</span>, <span class="ruby-comment"># amount in cents, again</span>
+      <span class="ruby-value">:currency</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;usd&quot;</span>,
+      <span class="ruby-value">:card</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">token</span>,
+      <span class="ruby-value">:description</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">email</span>
+  )
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stripe_id</span> = <span class="ruby-identifier">charge</span>[<span class="ruby-value">:id</span>]
+  <span class="ruby-identifier">save!</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">charge</span>[<span class="ruby-value">:paid</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">charge</span>[<span class="ruby-value">:card</span>][<span class="ruby-value">:cvc_check</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;fail&quot;</span>
+    <span class="ruby-identifier">activate_user</span>
+    <span class="ruby-node">&quot;Thank you for joining #{self.club.name}!  Your payment has been processed successfully!&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">&quot;The follow error occured: #{charge[:failure_message]}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- pay_membership_fee-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- pay_membership_fee-method -->
+
+    
+      <div id="method-i-send_new_user_emails" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">send_new_user_emails</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="send_new_user_emails-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">send_new_user_emails</span>
+  <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">delay</span>.<span class="ruby-identifier">new_user_notice</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">delay</span>.<span class="ruby-identifier">new_user_confirmation</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- send_new_user_emails-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- send_new_user_emails-method -->
+
+    
+      <div id="method-i-send_password_reset" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">send_password_reset</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="send_password_reset-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">send_password_reset</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-string">'reset_token'</span>, <span class="ruby-identifier">generate_token</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-string">'password_reset_sent_at'</span>, <span class="ruby-constant">Time</span>.<span class="ruby-identifier">zone</span>.<span class="ruby-identifier">now</span>)
+  <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">password_reset</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">deliver</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- send_password_reset-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- send_password_reset-method -->
+
+    
+      <div id="method-i-unfollow-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">unfollow!</span><span
+            class="method-args">(other_user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="unfollow-21-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unfollow!</span>(<span class="ruby-identifier">other_user</span>)
+  <span class="ruby-identifier">relationships</span>.<span class="ruby-identifier">find_by_followed_id</span>(<span class="ruby-identifier">other_user</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">destroy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- unfollow-21-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- unfollow-21-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -4,15 +4,15 @@ class ForumsController < ApplicationController
   before_filter :admin_user, only: :destroy
 
   def index
-    @forums = Forum.where(:club_id => current_user.club_id)
+    @forums = Forum.scoped_by_club_id(current_user.club_id)
   end
 
   def update
-    if params[:commit] == "email updates"
+    if params[:commit] == "follow"
       @forum = Forum.find(params[:id])
       add_user_to_forum
     else
-      if params[:commit] == "stop updates"
+      if params[:commit] == "unfollow"
         @forum = Forum.find(params[:id])
         remove_user_from_forum
         #flash[:warning] = "you will no longer receive email updates for #{@forum.name} forum"

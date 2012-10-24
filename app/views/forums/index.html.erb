@@ -12,7 +12,7 @@
     <th></th>
   </thead>
   <tbody>
-  <% for forum in @forums %>
+  <% @forums.each do |forum| %>
       <tr>
         <td><h4><%= link_to h(forum.name), forum_path(forum.id) %></h4>
           <small><%= forum.topics.count %> topics</small><br />
