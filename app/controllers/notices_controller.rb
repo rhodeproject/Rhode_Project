@@ -4,6 +4,10 @@ class NoticesController < ApplicationController
   end
 
   def create
+    if !current_user.admin
+      flash[:warning] = "you aren't able to add new notices!"
+      redirect_to notices_path
+    end
     club = Club.find(current_user.club.id)
     @notice = club.notices.build(params[:notice])
     if @notice.save

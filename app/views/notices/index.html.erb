@@ -7,7 +7,9 @@
 <div class="container">
   <div class="span10 offset1">
     <h1><%= current_user.club.name %> Notices</h1>
-    <%= link_to "Add Notice", new_notice_path, id: "btnNewSession" ,class: "btn btn-large btn-primary"  %>
+    <% if current_user.admin? %>
+        <%= link_to "Add Notice", new_notice_path, id: "btnNewSession" ,class: "btn btn-large btn-primary"  %>
+    <% end %>
     <table class="table table-condensed">
       <thead>
         <th style="width: 60%">Content</th>
