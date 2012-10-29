@@ -37,7 +37,7 @@ RhodeProject::Application.routes.draw do
   match '/sponsors', to: 'static_pages#sponsors'
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
-  match '/contact', to: 'static_pages#contact'
+  match '/contact', to: 'clubs#contact', via: :post
   match '/signin',  to: 'sessions#new'
   match '/addclub', to: 'clubs#new'
   match '/newforum', to: 'forums#new'

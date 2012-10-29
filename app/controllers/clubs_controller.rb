@@ -71,5 +71,18 @@ class ClubsController < ApplicationController
     end
   end
 
+  def contact
+    #use this action to submit contact form and send an email
+    @club = Club.find_by_sub_domain(request.subdomain)
+    content = params[:message]
+    sender_name = params[:name]
+    sender_email = params[:email]
+    @club.send_contact_email(content,sender_email,sender_name)
+
+    respond_to do |format|
+      format.json {render :json => root_path }
+      format.js {render :js => root_path}
+    end
+  end
 
 end

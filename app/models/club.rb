@@ -49,6 +49,12 @@ class Club < ActiveRecord::Base
   def has_sponsors?
     self.sponsors.count > 0
   end
+
+  def send_contact_email(content,sender_email,sender_name)
+    club_admin = User.find_by_club_id_and_admin(self.id, true)
+    club_email = club_admin.email
+    UserMailer.delay.contact_email(content,sender_email,sender_name,club_email)
+  end
 end
 
 

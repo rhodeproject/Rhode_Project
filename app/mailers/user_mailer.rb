@@ -20,6 +20,18 @@ class UserMailer < ActionMailer::Base
     mail(:bcc => emails, :subject => "update from #{club_name}")
   end
 
+  def contact_email(content,sender_email,sender_name, club_email)
+    if Rails.env.development?
+      toaddr = "mhatch73@gmail.com"
+    else
+      toaddr = club_email
+    end
+    @content = content
+    @sender_email = sender_email
+    @sender_name = sender_name
+    mail(:to => toaddr, :subject => "Contact Us - submitted from #{sender_email}")
+  end
+
   def expiry_notice(user)
     @user = user
     if Rails.env.development?

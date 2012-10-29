@@ -27,62 +27,8 @@ $(document).ready(function(){
             }, stripeResponseHandler);
         return false;
     });
-
-    /*modal for contact form*/
-    $("#contact").dialog({
-        title: "Contact",
-        autoOpen: false,
-        open: {effect: "fadeIn", duration: 500},
-        height: 540,
-        width: 300,
-        modal: true,
-        buttons: [
-            {
-                text: "Send",
-                click: function(event){
-                    $(this).dialog("close");
-                    sendContactAjax($("#contactName"),
-                        $("#contactEmail").val,$("#contactMessage"));
-                }
-            },
-            {
-                text: "Close",
-                click: function(){$(this).dialog("close")}
-
-            }
-        ]
-    });
-    $("#linkContact").click(function(event){
-        $("#contact").dialog('open');
-        return false;
-    });
-
-    $("#linkContact").popover({
-    animation: true,
-        placement: "top",
-        title: "Contact",
-        content: "Click to send club leaders a message...",
-        delay: { show: 500, hide: 100 }
-    });
-
 });
 
-function sendContactAjax(sName,sEmail,sMessage){
-    $.ajax({
-        type: "POST",
-        url: "/contact",
-        data: {contact:{name: sName,
-            email: sEmail,
-            message: sMessage}},
-        error: function(e){
-            alert('There was problem saving the session');
-        },
-        success: function(e){
-            alert('Your Message will be sent');
-        }
-    });
-
-}
 
 function stripeResponseHandler(status, response){
     if (response.error){

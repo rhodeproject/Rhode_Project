@@ -54,4 +54,55 @@ $(document).ready(function(){
        return false;
     });
 
+    /*modal for contact form*/
+    $("#contact").dialog({
+        title: "Contact",
+        autoOpen: false,
+        open: {effect: "fadeIn", duration: 500},
+        height: 540,
+        width: 300,
+        modal: true,
+        buttons: [
+            {
+                text: "Close",
+                click: function(){$(this).dialog("close")}
+            },
+            {
+                text: "Send",
+                click: function(event){
+                    sendContactAjax($("#contactName").val(),$("#contactEmail").val(),$("#contactMessage").val());
+                    $("#contentName").val('');
+                    $("#contactEmail").val('');
+                    $("#contactMessage").val('');
+                    $(this).dialog("close");
+                }
+            }
+        ]
+    });
+    $("#linkContact").click(function(event){
+        $("#contact").dialog('open');
+        return false;
+    });
+
+    $("#linkContact").popover({
+        animation: true,
+        placement: "top",
+        title: "Contact",
+        content: "Click to send club leaders a message...",
+        delay: { show: 500, hide: 100 }
+    });
+
 });
+
+/*Functions*/
+function sendContactAjax(sName,sEmail,sMessage){
+    $.ajax({
+        type: "POST",
+        url: "/contact",
+        dataType: "JSON",
+        data: {name: sName,
+            email: sEmail,
+            message: sMessage}
+    });
+
+}
