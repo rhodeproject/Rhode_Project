@@ -1,11 +1,11 @@
 
   <% if signed_in? %>
-      <div class="center hero-unit">
+      <div class="well">
         <h1><%= current_user.club.name %></h1>
       </div>
 
   <% else %>
-      <div class="center hero-unit">
+      <div class="well">
           <h1><%= club_url(request.subdomain).name %></h1>
           <h2>
             Welcome to the <%= club_url(request.subdomain).name %>!<br><br>
