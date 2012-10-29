@@ -35,6 +35,7 @@ class Club < ActiveRecord::Base
   has_many :events
   has_many :notices
   has_one  :token
+  has_many :sponsors
   belongs_to :subscription
 
   validates :name, presence: true, length:{maximum: 50}
@@ -44,6 +45,10 @@ class Club < ActiveRecord::Base
 
   accepts_nested_attributes_for :users
   accepts_nested_attributes_for :subscription
+
+  def has_sponsors?
+    self.sponsors.count > 0
+  end
 end
 
 

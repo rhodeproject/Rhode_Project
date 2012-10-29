@@ -12,6 +12,14 @@ class UserMailer < ActionMailer::Base
     mail(:to => 'matthew.hatch@rhodeproject.com', :subject => "#{@taskname}")
   end
 
+  def notice_email(emails, content, club_name)
+    #email is an array of email addresses
+    #TODO: check if we can send an array as bcc
+    #TODO: add and ERB file email_notices.text.erb
+    @content = content
+    mail(:bcc => emails, :subject => "update from #{club_name}")
+  end
+
   def expiry_notice(user)
     @user = user
     if Rails.env.development?

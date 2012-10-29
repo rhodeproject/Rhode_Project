@@ -4,24 +4,14 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by_email_and_club_id(params[:session][:email], find_club(request.subdomain))
-    if @user.active?
-      club = Club.find_by_sub_domain(request.subdomain)
-      if @user.club_id != club.id
-        flash[:warning] = "There is an issue signing you into #{club.name}"
-        redirect_to root_path
-      else
-       if @user && @user.authenticate(params[:session][:password])
-         sign_in @user
-          redirect_back_or root_path
-        else
-          flash.now[:error] = 'Invalid email/password combination'
-          render 'new'
-       end
-      end
+    club = Club.find_by_sub_domain(request.subdomain)
+   if @user && @user.authenticate(params[:session][:password]) && @user.active? && @user.club_id == club.id
+     sign_in @user
+      redirect_back_or root_path
     else
-      flash[:warning] = "Your account is not active. Check your inbox for confirmation email!"
-      render('users/renew')
-    end
+      flash.now[:error] = 'Invalid email/password combination'
+      render 'new'
+   end
   end
 
   def destroy

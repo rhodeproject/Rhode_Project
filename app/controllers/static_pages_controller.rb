@@ -1,10 +1,9 @@
 class StaticPagesController < ApplicationController
   def home
     @user = User.new
+
     if signed_in?
-      @micropost = current_user.microposts.build
-      @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 3 )
-      #@notices = Notice.where(:club_id => current_user.club_id).paginate(page: params[:page], :per_page => 3).order('created_at DESC')
+      @sponsors = Sponsor.scoped_by_club_id(current_user.club_id)
       @notices = Notice.scoped_by_club_id(current_user.club_id).order('created_at DESC').first(3)
     end
     sub_domain = request.subdomain
@@ -20,7 +19,7 @@ class StaticPagesController < ApplicationController
   end
 
   def sponsors
-
+    @sponsors = Sponsor.soped_by_club_id(current_user.club_id)
   end
 
   def about

@@ -33,10 +33,6 @@ class ClubsController < ApplicationController
 
   def show
     @club = Club.find_by_sub_domain!(request.subdomain)
-    if signed_in?
-      @micropost = current_user.microposts.build
-      @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 3 )
-    end
   end
 
   def index

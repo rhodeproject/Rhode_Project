@@ -18,6 +18,7 @@
 
 $(document).ready(function() {
 
+    $("#flash_message").delay(5000).fadeOut(1000);
     $("#edit_topic").submit(function(){
         $('#commit').attr("disabled", "disabled");
         $.post($(this).attr("action") + '.js', $(this).serialize(), null, "script");

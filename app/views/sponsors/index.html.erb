@@ -1,0 +1,26 @@
+<%= provide(:title, "#{current_user.club.name}'s Sponsors") %>
+<h1><%= current_user.club.name %>'s Sponsors</h1>
+
+<div class="span5 offset3">
+<% @sponsors.each do |s| %>
+      <div class="row">
+        <% if s.image_name? %>
+            <%= image_tag("/assets/#{s.image_name}", :height => '90', :width => '120', :alt => s.url, class:"sponsorLink") %>
+        <% else %>
+            <%= link_to s.name, s.url %>
+        <% end %>
+        <p><%= s.description %></p>
+        <%= link_to '[edit sponsor]', "/sponsors/#{s.id}/edit" %>
+        | <%= link_to '[delete sponsor]', s, :confirm => 'Are you sure?', :method => :delete  %>
+        <hr>
+      </div>
+<% end %>
+</div>
+
+
+<%= render 'shared/sponsor_form' %>
+<div class="row">
+  <% if current_user.admin? %>
+      <button id="btnNewSponsor" class="btn btn-primary">add new sponsor</button>   <br>
+  <% end %>
+</div>

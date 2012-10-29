@@ -13,6 +13,20 @@ class Notice < ActiveRecord::Base
       }
   end
 
+  def send_email(club)
+    #send email to all active club members
+    emails = []
+    club.users.each do |u|
+      if u.active?
+        #create array of emails
+        emails << u.email
+      end
+    end
+    #send email pass in email array
+    UserMailer.delay.notice_email(emails, self.content)
+  end
+
+
   def set_tokens(key, secret_key)
     Twitter.configure do |config|
       config.consumer_key = ENV["TWITTER_CONSUMER_KEY"]

@@ -1,7 +1,12 @@
-
+<% if current_user.club.has_sponsors? %>
 <h5><%= current_user.club.name %> Sponsors</h5><br>
 <div class="span2" id="sponsors">
- <img class="sponsorLink" src="/assets/nancy.JPG" width="120" height="90" alt="http://www.nancygillooly.com">
- <img class="sponsorLink" src="/assets/fp.JPG" width="120" height="90" alt="http://www.foundationperformance.com/">
- <img class="sponsorLink" src="/assets/provbike.jpg" width="120" height="90" alt="http://providencebicycle.com/">
+  <% @sponsors.each do |s| %>
+      <% if s.image_name? %>
+        <%= image_tag("/assets/#{s.image_name}", :height => '90', :width => '120', :alt => s.url, class:"sponsorLink") %>
+      <% else %>
+        <%= link_to s.name, s.url %>
+      <% end %>
+  <% end %>
 </div>
+<% end %>

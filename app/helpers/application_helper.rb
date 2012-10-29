@@ -20,6 +20,4 @@ module ApplicationHelper
     end
     Club.find_by_sub_domain(subdomain)
   end
-
-
 end

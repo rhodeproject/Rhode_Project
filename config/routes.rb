@@ -25,6 +25,7 @@ RhodeProject::Application.routes.draw do
   resources :subscriptions, only: [:create, :new]
   resources :profiles
   resources :notices
+  resources :sponsors
 
   root to: 'static_pages#home'
   match '', to: 'static_pages#home', contraints: lambda{|r| r.subdomain == ''}
