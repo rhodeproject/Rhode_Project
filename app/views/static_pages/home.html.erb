@@ -1,32 +1,33 @@
-<% if signed_in? %>
 
 <div class="row">
-  <aside class="span3">
-    <section>
-      <%= render 'shared/user_info' %>
-    </section>
-    <section>
-      <h4><%= current_user.club.name %> Notices</h4><br>
-      <%= render 'shared/notices' %>
-    </section>
-      <%= render 'shared/sponsors' %>
-  </aside>
-  <div class="span9">
-    <img src="/assets/rp_Banner_triNE_blur.png"/>
-    <%= render 'shared/message' %>
-  </div>
-</div>
-<% else %>
-  <div class="span10 offset1">
-    <img src="/assets/rp_Banner_triNE_blur.png"/>
-  </div>
-  <div class="span12">
-    <%= render 'shared/default_message' %>
-  </div>
-<% end %>
-<div id="frmLogin" title="Login">
-  <%= render 'shared/login' %>
-</div>
-<div id="frmNewUser" title="<%= club_url(request.subdomain).name %> -- New User">
-  <%= render 'shared/new_user' %>
+    <% if signed_in? %>
+      <aside class="span3">
+        <section>
+          <%= render 'shared/user_info' %>
+        </section>
+        <section>
+          <h4><%= current_user.club.name %> Notices</h4><br>
+          <%= render 'shared/notices' %>
+        </section>
+          <%= render 'shared/sponsors' %>
+      </aside>
+      <div class="span9">
+        <img src="/assets/rp_Banner_triNE_blur.png"/>
+        <%= render 'shared/message' %>
+      </div>
+
+    <% else %>
+      <div class="span10 offset1">
+        <img src="/assets/rp_Banner_triNE_blur.png"/>
+      </div>
+      <div class="span12">
+        <%= render 'shared/default_message' %>
+      </div>
+    <% end %>
+    <div id="frmLogin" title="Login">
+      <%= render 'shared/login' %>
+    </div>
+    <div id="frmNewUser" title="<%= club_url(request.subdomain).name %> -- New User">
+      <%= render 'shared/new_user' %>
+    </div>
 </div>
