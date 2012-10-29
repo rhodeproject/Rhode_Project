@@ -25,6 +25,7 @@ class Club < ActiveRecord::Base
                   :message2,
                   :message3,
                   :about,
+                  :contact_email,
                   :oath_token,
                   :oath_token_secret,
                   :fee,
@@ -51,9 +52,7 @@ class Club < ActiveRecord::Base
   end
 
   def send_contact_email(content,sender_email,sender_name)
-    club_admin = User.find_by_club_id_and_admin(self.id, true)
-    club_email = club_admin.email
-    UserMailer.delay.contact_email(content,sender_email,sender_name,club_email)
+    UserMailer.delay.contact_email(content,sender_email,sender_name,self.contact_email)
   end
 end
 
