@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
 
     if signed_in?
       @sponsors = Sponsor.scoped_by_club_id(current_user.club_id)
-      @notices = Notice.scoped_by_club_id(current_user.club_id).order('created_at DESC').first(3)
+      @notices = Notice.scoped_by_club_id(current_user.club_id).order('created_at DESC').first(2)
     end
     sub_domain = request.subdomain
     if sub_domain.nil?
