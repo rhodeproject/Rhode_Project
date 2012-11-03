@@ -5,7 +5,7 @@ class Profile < ActiveRecord::Base
   private
 
   def convert_phone_number
-    self.econtact_number = self.econtact_number.gsub(/\D/,'')
+    self.econtact_number = self.econtact_number.gsub(/\D/,'') unless self.econtact_number.nil?
   end
 
 end

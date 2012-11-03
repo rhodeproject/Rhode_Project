@@ -121,23 +121,6 @@ class User < ActiveRecord::Base
     save!
   end
 
-  def feed
-    #Micropost.find_by_user_id
-    Micropost.from_users_followed_by(self)
-  end
-
-  def following?(other_user)
-    relationships.find_by_followed_id(other_user.id)
-  end
-
-  def follow!(other_user)
-    relationships.create!(followed_id: other_user.id)
-  end
-
-  def unfollow!(other_user)
-    relationships.find_by_followed_id(other_user.id).destroy
-  end
-
   private
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64

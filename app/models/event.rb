@@ -14,6 +14,9 @@ class Event < ActiveRecord::Base
   #  starts_at   :datetime
   #  ends_at     :datetime
   #
+
+  #CONSTANTS
+  VALID_DATE_REGEX = /(0[1-9]|[12][0-9]|3[01])/
   attr_accessible :starts_at, :ends_at, :title, :all_day, :description
   #before_save :convert_time
   #associations
@@ -21,6 +24,8 @@ class Event < ActiveRecord::Base
 
   #validations
   validates :title, presence: true
+  validates :starts_at, presence: true
+  validates :ends_at, presence: true, :format => VALID_DATE_REGEX
 
   #scopes
   scope :before, lambda {|end_time| {:conditions => ["ends_at < ?", Event.format_date(end_time)] }}

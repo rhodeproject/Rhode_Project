@@ -79,7 +79,10 @@ class EventsController < ApplicationController
     if current_user.club_id == @event.club_id
       respond_to do |format|
         if @event.update_attributes(params[:event])
-          format.html { redirect_to(calendar_path, :notice => 'Event was successfully updated.') }
+          format.html {
+            flash[:success] = 'Event was successfully updated'
+            redirect_to calendar_path
+          }
           format.xml  { head :ok }
           format.js { head :ok}
         else

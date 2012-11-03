@@ -255,5 +255,12 @@ aside {
 
 
 }
-
 .content {font: 100% "Trebuchet MS", sans-serif; margin: 1px;}
+#flash_message {
+  position: absolute;
+  left: 400px;
+  top: 50px;
+  width: 400px;
+  opacity: 0.90;
+}
+

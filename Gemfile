@@ -15,13 +15,17 @@ gem 'breadcrumbs_on_rails'
 gem 'stripe'
 gem 'whenever', :require => false
 gem 'twitter'
-#gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem "rspec-rails", :group => [:test, :development]
 gem 'bullet', group: :development
 group :test do
   gem "factory_girl_rails"
-  gem "capybara"
-  gem "guard-rspec"
+  gem "cucumber-rails"
+  gem "database_cleaner"
+end
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "webrat"
 end
 
 group :assets do

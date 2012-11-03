@@ -11,14 +11,18 @@ class ForumsController < ApplicationController
     if params[:commit] == "follow"
       @forum = Forum.find(params[:id])
       add_user_to_forum
+
     else
       if params[:commit] == "unfollow"
         @forum = Forum.find(params[:id])
         remove_user_from_forum
-        #flash[:warning] = "you will no longer receive email updates for #{@forum.name} forum"
       end
     end
-    redirect_to "/forums"
+    respond_to do |format|
+      format.html { redirect_to "/forums" }
+      format.js
+    end
+
   end
 
   def destroy
@@ -84,7 +88,7 @@ class ForumsController < ApplicationController
   def remove_user_from_forum
     @forum = Forum.find(params[:id])
     if @forum.users.delete(current_user)
-      flash[:warning] = "You will no longer receive email updates for the #{@forum.name} forum"
+      flash[:success] = "You will no longer receive email updates for the #{@forum.name} forum"
     end
   end
 
