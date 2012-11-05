@@ -30,6 +30,8 @@ class User < ActiveRecord::Base
   belongs_to :club
   has_and_belongs_to_many :forums
   has_one :profile
+  has_many :lists, dependent: :destroy
+  has_many :events, :through => :lists
 
   #reverse relationship
   has_many :reverse_relationships, foreign_key: "followed_id",
@@ -119,6 +121,11 @@ class User < ActiveRecord::Base
     self.confirm_token = nil
     self.anniversary = self.created_at.next_year
     save!
+  end
+
+  def get_slot_state(event_id)
+    list = self.lists.find_by_event_id(event_id)
+    list.state
   end
 
   private

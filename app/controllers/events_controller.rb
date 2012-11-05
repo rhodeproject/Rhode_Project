@@ -22,6 +22,7 @@ class EventsController < ApplicationController
   # GET /events/1.xml
   def show
     @event = Event.find(params[:id])
+    @users = @event.users.order('created_at ASC')
     if @event.club_id == current_user.club_id
       respond_to do |format|
         format.html # show.html.erb
@@ -75,27 +76,40 @@ class EventsController < ApplicationController
   # viv la REST!
   def update
     @event = Event.find(params[:id])
-
-    if current_user.club_id == @event.club_id
-      respond_to do |format|
-        if @event.update_attributes(params[:event])
-          format.html {
-            flash[:success] = 'Event was successfully updated'
-            redirect_to calendar_path
-          }
-          format.xml  { head :ok }
-          format.js { head :ok}
-        else
-          format.html { render :action => "edit" }
-          format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
-          format.js  { render :js => @event.errors, :status => :unprocessable_entity }
-        end
+    if params[:commit] == "add me"
+      #Add user to event
+      flash[:success] = @event.add_user(current_user)
+    elsif params[:commit] == "remove me"
+      #remove user
+      flash[:success] = @event.remove_user(current_user)
+    elsif params[:commit] == "add/remove member" && current_user.admin?
+      #admin can add user
+      user = User.find(params[:all][:users])
+      if @event.signed_up?(user)
+        flash[:success] = @event.remove_user(user)
+      else
+        flash[:success] = @event.add_user(user)
       end
     else
-      flash[:warning] = "you are not able to update this event"
-      redirect_to '/calendar'
+      if current_user.club_id == @event.club_id
+        respond_to do |format|
+          if @event.update_attributes(params[:event])
+            format.html {
+              flash[:success] = 'Event was successfully updated'
+            }
+            format.xml  { head :ok }
+            format.js { head :ok}
+          else
+            format.html { render :action => "edit" }
+            format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
+            format.js  { render :js => @event.errors, :status => :unprocessable_entity }
+          end
+        end
+      else
+        flash[:warning] = "you are not able to update this event"
+      end
     end
-
+    redirect_to @event
   end
 
   # DELETE /events/1

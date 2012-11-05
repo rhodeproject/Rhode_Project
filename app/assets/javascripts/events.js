@@ -6,6 +6,21 @@
  * To change this template use File | Settings | File Templates.
  */
 $(document).ready(function(){
+    /*Add User for Admin*/
+    $('#btnAdminAddUser').click(function(event){
+        $('#adminAddUser').dialog('open');
+        return false;
+    });
+
+    $('#adminAddUser').dialog({
+        title: "select a user",
+        autoOpen: false,
+        open: {effect: "fadeIn", duration: 500},
+        height: 150,
+        width: 300,
+        modal: true
+    });
+
     //Date Picker for new events
     $('#event_starts_at').datetimepicker({
         onClose: function(dateText, inst){

@@ -2,11 +2,10 @@ require 'spec_helper'
 
 describe Club do
   before(:each) do
-    @club = Club.new
+    @club = Club.new(:name => "test club", :sub_domain => "test")
   end
 
   it "should be valid with valid attributes" do
-    @club.update_attributes(:name => "test club", :sub_domain => "test")
     @club.should be_valid
   end
 
@@ -15,7 +14,7 @@ describe Club do
   end
 
   it "should not be valid without name" do
-    @club.update_attributes(:sub_domain => "test")
+    @club.name = nil
     @club.should_not be_valid
   end
 end

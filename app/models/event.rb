@@ -21,6 +21,8 @@ class Event < ActiveRecord::Base
   #before_save :convert_time
   #associations
   belongs_to :club
+  has_many  :lists, dependent: :destroy
+  has_many :users, :through => :lists
 
   #validations
   validates :title, presence: true
@@ -46,6 +48,30 @@ class Event < ActiveRecord::Base
         :recurring => false,
         :url => Rails.application.routes.url_helpers.event_path(id)
     }
+  end
+
+  def add_user(user)
+    if self.users << user
+      @list = user.lists.find_by_event_id(self.id)
+      @list.update_attribute("state", "Signed Up")
+      flash = "You are signed up for #{self.title}"
+    else
+      flash = "There was an issue adding you to #{self.title}"
+    end
+    flash
+  end
+
+  def remove_user(user)
+    if self.users.delete(user)
+      flash = "You have been removed from #{self.title}"
+    else
+      flash = "There was an issue removing you from #{self.title}"
+    end
+    flash
+  end
+
+  def signed_up?(user)
+    self.users.where(:id => user.id).present?
   end
 
   def self.format_date(date_time)

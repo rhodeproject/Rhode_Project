@@ -1,19 +1,56 @@
 <% provide(:title, 'Event')%>
-<h1><%= @event.name %> Event Details</h1>
-<table class="table table-condensed table-striped">
-  <thead>
-    <th>Event Name</th>
-    <th>Description</th>
-    <th>Start Time</th>
-    <th>End Time</th>
-  </thead>
-  <tr>
-    <td><%= @event.title %></td>
-    <td><%= @event.description %></td>
-    <td><%= show_day(@event.starts_at) %></td>
-    <td><%= show_day(@event.ends_at) %></td>
-  </tr>
-</table>
+  <br>
+  <div class="row span10">
+    <h3><%= @event.name %> Event Details</h3>
+  </div><hr>
+  <div class="row span10">
+    <em>Name:</em> <strong><%= @event.title %></strong>
+  </div><br>
+  <div class="row span10">
+    <em>Description:</em> <strong><%= @event.description %> </strong>
+  </div><br>
+  <div class="row span10">
+    <em>Start Time:</em> <strong><%= show_day(@event.starts_at) %></strong>
+  </div><br>
+  <div class="row span10">
+    <em>End Time:</em> <strong><%= show_day(@event.ends_at) %></strong>
+  </div>
+<br>
+<div class="row span5">
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Back', events_path %>
+</div>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<hr>
+
+<h3>Who's attending?</h3>
+
+  <div class="span12">
+    <table class="table table-condensed table-striped">
+      <thead>
+      <th>name</th>
+      <% if current_user.admin? %> <th>email</th> <% end %>
+      <th>status</th>
+      </thead>
+      <tbody>
+      <% @users.each do |u| %>
+        <tr>
+          <td><%= u.name %></td>
+          <%if current_user.admin?%><td><%= u.email %></td><% end %>
+          <td><%= u.get_slot_state(params[:id]) %></td>
+        </tr>
+      <% end %>
+      </tbody>
+   </table>
+  </div>
+
+<%= form_for @event do |e| %>
+    <% if signed_up?%>
+        <%= e.submit "remove me", class: "btn btn-primary" %>
+    <% else %>
+         <%= e.submit "add me", class: "btn btn-primary" %>
+    <% end %>
+    <% if current_user.admin? %>-or- <%= link_to "add/remove a member","#", id: "btnAdminAddUser", class: "btn btn-primary"  %><% end %>
+<% end %>
+<% if current_user.admin? %><%= render 'admin_add_user'%><% end %>
+

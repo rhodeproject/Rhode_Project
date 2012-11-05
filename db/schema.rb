@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121029175519) do
+ActiveRecord::Schema.define(:version => 20121104214641) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -80,6 +80,14 @@ ActiveRecord::Schema.define(:version => 20121029175519) do
 
   add_index "forums_users", ["forum_id"], :name => "index_forums_users_on_forum_id"
   add_index "forums_users", ["user_id"], :name => "index_forums_users_on_user_id"
+
+  create_table "lists", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.string   "state"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
