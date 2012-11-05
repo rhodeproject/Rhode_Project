@@ -19,3 +19,7 @@
 
 #ignore tests
 /test
+
+#ignore database YAML
+/config/database.yml
+
