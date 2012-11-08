@@ -15,14 +15,18 @@
   <div class="row span10">
     <em>End Time:</em> <strong><%= show_day(@event.ends_at) %></strong>
   </div>
+  <% if @event.limit? %>
+  <div class="row span10">
+    <em>Limit:</em> <strong><%= @event.limit %></strong>
+  </div><br>
+  <% end %>
 <br>
-<div class="row span5">
+<div class="row span10">
   <%= link_to 'Edit', edit_event_path(@event) %> |
   <%= link_to 'Back', events_path %>
 </div>
-
 <hr>
-
+<br>
 <h3>Who's attending?</h3>
 
   <div class="span12">
@@ -34,11 +38,22 @@
       </thead>
       <tbody>
       <% @users.each do |u| %>
-        <tr>
-          <td><%= u.name %></td>
-          <%if current_user.admin?%><td><%= u.email %></td><% end %>
-          <td><%= u.get_slot_state(params[:id]) %></td>
-        </tr>
+        <% if u.get_slot_state(params[:id]) == "Signed Up" %>
+            <tr>
+              <td><%= u.name %></td>
+              <%if current_user.admin?%><td><%= u.email %></td><% end %>
+              <td><%= u.get_slot_state(params[:id]) %></td>
+            </tr>
+        <% end %>
+      <% end %>
+      <% @users.each do |u| %>
+          <% if u.get_slot_state(params[:id]) == "Waiting" %>
+              <tr>
+                <td><%= u.name %></td>
+                <%if current_user.admin?%><td><%= u.email %></td><% end %>
+                <td><%= u.get_slot_state(params[:id]) %></td>
+              </tr>
+          <% end %>
       <% end %>
       </tbody>
    </table>
@@ -53,4 +68,5 @@
     <% if current_user.admin? %>-or- <%= link_to "add/remove a member","#", id: "btnAdminAddUser", class: "btn btn-primary"  %><% end %>
 <% end %>
 <% if current_user.admin? %><%= render 'admin_add_user'%><% end %>
+
 

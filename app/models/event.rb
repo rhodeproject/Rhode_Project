@@ -17,7 +17,7 @@ class Event < ActiveRecord::Base
 
   #CONSTANTS
   VALID_DATE_REGEX = /(0[1-9]|[12][0-9]|3[01])/
-  attr_accessible :starts_at, :ends_at, :title, :all_day, :description
+  attr_accessible :starts_at, :ends_at, :title, :all_day, :description, :limit
   #before_save :convert_time
   #associations
   belongs_to :club
@@ -50,10 +50,28 @@ class Event < ActiveRecord::Base
     }
   end
 
+  def available_spots
+    self.limit - self.lists.where(:state => "Signed Up").count
+  end
+
+  def waiting
+    self.lists.where(:state => "Waiting").count
+  end
+
   def add_user(user)
+    if self.limit.nil?
+      state = "Signed Up"
+    else
+      if self.available_spots > 0 || self.limit.nil?
+        state = "Signed Up"
+      else
+        state = "Waiting"
+      end
+    end
+
     if self.users << user
       @list = user.lists.find_by_event_id(self.id)
-      @list.update_attribute("state", "Signed Up")
+      @list.update_attribute("state", state)
       flash = "You are signed up for #{self.title}"
     else
       flash = "There was an issue adding you to #{self.title}"
@@ -62,12 +80,23 @@ class Event < ActiveRecord::Base
   end
 
   def remove_user(user)
+    list = self.lists.where(:user_id => user.id)
+    if list[0].state != "Waiting"
+      check_wait_list
+    end
     if self.users.delete(user)
       flash = "You have been removed from #{self.title}"
     else
       flash = "There was an issue removing you from #{self.title}"
     end
     flash
+  end
+
+  def check_wait_list
+    list = self.lists.where(:state => "Waiting").order('updated_at ASC')
+    if list.count > 0
+      list[0].update_attribute('state', 'Signed Up')
+    end
   end
 
   def signed_up?(user)

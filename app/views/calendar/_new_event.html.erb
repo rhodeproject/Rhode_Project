@@ -14,7 +14,10 @@
       <%= f.check_box :all_day %>
 
       <%= f.label :description %>
-      <%= f.text_area :description, :size => '30x8' %>
+      <%= f.text_area :description, :size => '30x5' %>
+
+      <%= f.label :limit %>
+      <%= f.number_field :limit, :in => 1..200 %>
 
       <%= f.submit "Add Event", class: "btn btn-large btn-primary" %>
     <% end %>

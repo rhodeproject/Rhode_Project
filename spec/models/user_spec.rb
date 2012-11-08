@@ -8,19 +8,39 @@ describe User do
     @bad_password_confirmation = "barfoo"
     @user = User.new(:name => @name, :email => @email,
                      :password => @password,
-                     :password_confirmation => @password)
+                     :password_confirmation => @password,
+                     :club_id => 1)
   end
 
   context "valid tests" do
     it "should be valid with valid attributes" do
       @user.should be_valid
     end
+
+    it "should be valid with same email and different club_id" do
+
+      @user2 = User.new(:name => @name, :email => @email,
+                        :password => @password,
+                        :password_confirmation => @password,
+                        :club_id => 2)
+
+      @user2.should be_valid
+    end
+
   end
 
   context "invalid attributes" do
     it "should be invalid with no name" do
       @user.name = nil
       @user.should_not be_valid
+    end
+
+    it "should be invalid with same email and club_id" do
+      @user2 = User.new(:name => @name, :email => @email,
+                        :password => @password,
+                        :password_confirmation => @password,
+                        :club_id => 1)
+      @user2.should_not be_valid
     end
 
     it "should be invalid with no email" do

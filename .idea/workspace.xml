@@ -2,105 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\RP_Drop_Shadow-01445ebe5a87c1e5e05432bf7ff609d3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\RP_Drop_Shadow-4f25f68956db666b0422d1391e7de5b6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\RP_Drop_Shadow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\Thumbs-496dcdeb8548206ceaebf16f04566385.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\Thumbs-e19e8b4d59ea448cc080df73d93294f6.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-4e98642f4481254f1c639ea3bbb4957b.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-4e98642f4481254f1c639ea3bbb4957b.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-bbbf3d72569247964f26213762aeb49c.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-bbbf3d72569247964f26213762aeb49c.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-c1e25dc4fd60e819d5be69fa7c4df502.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-c1e25dc4fd60e819d5be69fa7c4df502.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-e49a6e02e3e2f7e6da19759732c2bb5c.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application-e49a6e02e3e2f7e6da19759732c2bb5c.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\application.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\bw_kona_start-54940f72548cf7d900e14c189249a1f5.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\bw_kona_start-f5b30e340e69c416000b30f8ff25d22c.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\bw_kona_start.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\cards-9468716a69ff01a41fc321c72800b5f7.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\cards-b0d21c5eea29eda0cceef4d7b69fcc7a.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\cards.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-5a8a27203542dabbac33c0393ad62c4a.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-5a8a27203542dabbac33c0393ad62c4a.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-efd1794d3a05f50a5b8b750db7f83834.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar-efd1794d3a05f50a5b8b750db7f83834.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\fullcalendar.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-0e7ff93d8f48fe1f5f762e4312e78da7.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-cb61a44f3b5a5bf52e837c6e4b6d9cd5.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-white-404c25ab455ee5c84e79f23c6ed042ae.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-white-ef3d5b8d6a297804352b4a46fdb5466d.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-5dc7ad779e45b5c1ab3638464f3c6f60.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-5dc7ad779e45b5c1ab3638464f3c6f60.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-9c17656346a00b7d765fcf5aa14995d4.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon-9c17656346a00b7d765fcf5aa14995d4.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui-timepicker-addon.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_0_aaaaaa_40x100-a1eb3e0764573ed4b261ca742ed96ac3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_0_aaaaaa_40x100-eca45c151c24a36f201ac6e40dd7206c.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_75_ffffff_40x100-841636c8f8d33987bb8d2f31e8ef92ca.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_75_ffffff_40x100-b605dba38a3f5ff69f8e5e9a8cbaf14b.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_55_fbf9ee_1x400-1b78cb09b30a27b383dfd42e20e31a50.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_55_fbf9ee_1x400-bbb04adbe79f471d8c88a2bc691231b6.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_65_ffffff_1x400-24b226a6e7cf81a1fbf68eeec962e28e.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_65_ffffff_1x400-a30aa544902182c133dbb46ac40a08d2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_dadada_1x400-38ed9f33e066d6bee977c567d4b03650.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_dadada_1x400-b2e69298570c1174a1df376c4c561443.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_e6e6e6_1x400-3e20bce1b7b2f5dd47ca6ac361805162.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_e6e6e6_1x400-78f72bbba1f2b15a84e2129875dbd84c.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_95_fef1ec_1x400-28b43ceae9dffe6da50736db5d912e6d.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_95_fef1ec_1x400-c723e9a2b50006c6054836a10b76bb84.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_highlight-soft_75_cccccc_1x100-05d3fa739a6bcd87b4d439bcc5b49c82.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_highlight-soft_75_cccccc_1x100-081f36ef02c9233c6db45d2d566fbecd.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_222222_256x240-1bca65a97a49d7d05ab2f3dc83b97cd5.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_222222_256x240-3d9ba2965ec02df400b4f215b53357a4.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_2e83ff_256x240-efb394f4417cc6bd4177a1999474e1eb.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_2e83ff_256x240-ff6d3f78069c628e8eea68248819143c.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_454545_256x240-17e6740beb176dd87da44be76c94bb47.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_454545_256x240-fc806b54f9ead2264bb1ddd8a4ebafbc.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_888888_256x240-4be65975d8111eae162e68b8479ca712.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_888888_256x240-5b928d6b862809eb8130d7b7e0b51a1d.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_cd0a0a_256x240-234b4badd49d04e7f2c14d63260990e2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_cd0a0a_256x240-635d34cf8bf22d711a729017ab9aaebe.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\jquery-ui\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\manifest.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rails-8fac6df4864678acda05061d6325816a.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rails-be8732dac73d845ac5b142c8fb5f9fb0.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rails.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-2d5f602750f67249577cee68a8261116.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-543ecd40f7da4d523630dee895559440.xcf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-9197b171b796b669b9c93ab5d6b1199b.xcf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE-a12a96209c8d132a6cf1f7a9e03e0d99.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE.xcf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE_blur-8aa7a1a03c2d2ae15ff88cfc6583136f.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE_blur-9afbe4478ad74f983266dcc2b3917a5a.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\rp_Banner_triNE_blur.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine-3ddde329451481d3593aa5d8713c504b.JPG" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine-fad0ee7e3dd0fb47c3facfd43fe642b3.JPG" afterPath="" />
-      <change type="DELETED" beforePath="C:\Sites\Rhode_Project\public\assets\trine.JPG" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/create_notice.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/step_definitions/notice_steps.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/views/notices/show.html.erb_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/events.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event.rb" afterPath="$PROJECT_DIR$/app/models/event.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calendar/_new_event.html.erb" afterPath="$PROJECT_DIR$/app/views/calendar/_new_event.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/events/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/show.html.erb" afterPath="$PROJECT_DIR$/app/views/events/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -126,10 +39,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="529" selection-end="529" vertical-scroll-proportion="0.65912765">
+            <state line="16" column="13" selection-start="366" selection-end="366" vertical-scroll-proportion="0.5654886">
               <folding />
             </state>
           </provider>
@@ -151,22 +64,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/models/post_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/profile_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/sponsor_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/topic_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/controllers/notices_controller_spec.rb" />
-        <option value="$PROJECT_DIR$/app/models/list.rb" />
-        <option value="$PROJECT_DIR$/spec/models/list_spec.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/events_helper.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/events.js" />
-        <option value="$PROJECT_DIR$/app/views/events/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/event.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/events/_admin_add_user.html.erb" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/spec/views/notices/new.html.erb_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/views/notices/show.html.erb_spec.rb" />
+        <option value="$PROJECT_DIR$/features/create_notice.feature" />
+        <option value="$PROJECT_DIR$/features/step_definitions/notice_steps.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121107233423_add_limit_to_event.rb" />
+        <option value="$PROJECT_DIR$/app/views/events/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/calendar/_new_event.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/events.js" />
+        <option value="$PROJECT_DIR$/app/models/event.rb" />
+        <option value="$PROJECT_DIR$/app/views/events/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -225,54 +138,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="RailsProjectView">
         <subPane>
           <PATH>
@@ -293,6 +158,26 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rhode_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rhode_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rhode_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,15 +185,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="121" />
     <property name="options.splitter.main.proportions" value="0.30000004" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/assets/javascripts/fullcalendar" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="127" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="807" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="127" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="811" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="807" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="125" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -486,6 +371,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -513,13 +405,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -673,17 +558,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="774" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1568323" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22366288" sideWeight="0.20341615" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24311183" sideWeight="0.78571427" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2471637" sideWeight="0.78571427" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35403726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21636952" sideWeight="0.21273293" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27018633" sideWeight="0.67666125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21428572" sideWeight="0.3176661" order="9" side_tool="false" content_ui="tabs" x="15" y="223" width="1234" height="497" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21428572" sideWeight="0.3176661" order="9" side_tool="false" content_ui="tabs" x="15" y="223" width="1234" height="497" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32763976" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -749,110 +634,116 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121104214641_create_lists.rb">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/notice_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="58" selection-start="62" selection-end="334" vertical-scroll-proportion="0.2746365" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/event_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="94" selection-start="73" selection-end="154" vertical-scroll-proportion="0.1098546" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/list.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="31" selection-start="124" selection-end="124" vertical-scroll-proportion="0.16478191" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/list_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="638" selection-end="638" vertical-scroll-proportion="0.7422037" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="22" selection-start="3675" selection-end="3675" vertical-scroll-proportion="4.4885654" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/notice.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.42411643" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/forum.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.21205822" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="7" selection-start="543" selection-end="543" vertical-scroll-proportion="0.02746365">
+        <state line="15" column="17" selection-start="632" selection-end="632" vertical-scroll-proportion="0.42079207">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/topics/update.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="60" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.70689654">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="54" selection-start="1796" selection-end="1796" vertical-scroll-proportion="0.02746365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121104214641_create_lists.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121107233423_add_limit_to_event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="33" selection-start="160" selection-end="160" vertical-scroll-proportion="0.24717286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121029175519_add_contact_email_to_clubs.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/events/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="26" selection-start="344" selection-end="344" vertical-scroll-proportion="0.41098902">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/events/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="28" selection-start="363" selection-end="363" vertical-scroll-proportion="0.6725275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/calendar/_new_event.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="49" selection-start="598" selection-end="598" vertical-scroll-proportion="0.85934067">
           <folding>
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1352078298359" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1352334583738" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/events_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.2746365">
+        <state line="25" column="85" selection-start="715" selection-end="715" vertical-scroll-proportion="0.3991684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/clubs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="7" selection-start="192" selection-end="398" vertical-scroll-proportion="0.508547">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/event.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="28" selection-start="2148" selection-end="2148" vertical-scroll-proportion="0.42326334">
+        <state line="85" column="46" selection-start="2378" selection-end="2378" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="40" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.0">
+        <state line="87" column="32" selection-start="2808" selection-end="2808" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/events/_admin_add_user.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="190" selection-end="190" vertical-scroll-proportion="0.11467116">
+        <state line="129" column="2" selection-start="3681" selection-end="3681" vertical-scroll-proportion="0.6361746">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.73021">
+        <state line="49" column="58" selection-start="1494" selection-end="1494" vertical-scroll-proportion="1.8846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="529" selection-end="529" vertical-scroll-proportion="0.65912765">
+        <state line="16" column="13" selection-start="366" selection-end="366" vertical-scroll-proportion="0.5654886">
           <folding />
         </state>
       </provider>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121104214641) do
+ActiveRecord::Schema.define(:version => 20121107233423) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20121104214641) do
     t.text     "description"
     t.datetime "starts_at"
     t.datetime "ends_at"
+    t.integer  "limit"
   end
 
   create_table "forums", :force => true do |t|

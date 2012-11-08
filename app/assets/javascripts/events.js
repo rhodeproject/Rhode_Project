@@ -6,6 +6,32 @@
  * To change this template use File | Settings | File Templates.
  */
 $(document).ready(function(){
+    /*Popovers*/
+    $("#event_limit").popover({
+        animation: true,
+        placement: "left",
+        title: "Event Limit",
+        content: "Enter a limit for this event.  If there is no limit, leave it blank",
+        delay: { show: 500, hide: 100 }
+    });
+
+    $("#event_title").popover({
+        animation: true,
+        placement: "left",
+        title: "Event Title",
+        content: "Enter a Name or a Title for this event.",
+        delay: { show: 500, hide: 100 }
+    });
+
+    $("#event_description").popover({
+        animation: true,
+        placement: "left",
+        title: "Event Description",
+        content: "Enter a description for this event. If there you need to " +
+            "enter a location this would be a good place to put it.",
+        delay: { show: 500, hide: 100 }
+    });
+
     /*Add User for Admin*/
     $('#btnAdminAddUser').click(function(event){
         $('#adminAddUser').dialog('open');
