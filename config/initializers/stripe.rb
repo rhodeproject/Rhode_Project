@@ -1,2 +1,2 @@
-STRIPE_PUBLIC_KEY = "pk_R9umuRMRGIOEvqPxuoOkTfizApA02"
-STRIPE_API_KEY = "ZZkYFoDzg1jfew3Cv4HWqViVzgZpwEkj"
+STRIPE_PUBLIC_KEY = Figaro.env.stripe_public_key
+STRIPE_API_KEY = Figaro.env.stripe_api_key

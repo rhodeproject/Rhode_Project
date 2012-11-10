@@ -8,8 +8,8 @@ $(document).ready(function(){
     $('#frmNewUser').dialog({
         autoOpen: false,
         open: {effect: "fadeIn", duration: 500},
-        height: 550,
-        width: 600,
+        height: 525,
+        width: 425,
         modal: true
     });
     $('#btnSignUp').click(function(event){
@@ -28,7 +28,6 @@ $(document).ready(function(){
         return false;
     });
 });
-
 
 function stripeResponseHandler(status, response){
     if (response.error){

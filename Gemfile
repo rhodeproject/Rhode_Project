@@ -15,6 +15,7 @@ gem 'breadcrumbs_on_rails'
 gem 'stripe'
 gem 'whenever', :require => false
 gem 'twitter'
+gem 'figaro'
 gem "rspec-rails", :group => [:test, :development]
 gem 'bullet', group: :development
 group :test do

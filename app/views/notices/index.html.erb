@@ -23,7 +23,7 @@
           <td>
               <% if current_user.admin?%>
                 <%= link_to "Edit", "/notices/#{n.id}/edit", :method => :get %> |
-                <%= link_to "Delete", n, :confirm => 'Are you sure?', :method => :delete %>
+                <%= link_to "Delete", n, :data => {:confirm => 'Are you sure?'}, :method => :delete %>
             <% end %>
           </td>
         </tr>
