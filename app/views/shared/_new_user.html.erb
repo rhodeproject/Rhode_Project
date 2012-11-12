@@ -11,7 +11,7 @@
           <div class="span7">
             <div id="tabs-1">
 
-                <h4>The enrollment fee for <%= @club.name %> is $<%= @club.fee %>/year.</h4><br><hr class="payments">
+                <h4>The enrollment fee for <%= club_url(request.subdomain).name %> is $<%= club_url(request.subdomain).fee %>/year.</h4><br><hr class="payments">
               <ul class="payments">
                 <li>Please enter your Name, email address, and password to create an account.</li>
                 <li>Your email address will be used as your login and password must be at least 6 characters.</li>
@@ -32,7 +32,7 @@
               <%= link_to "Next >>", "#", class: "btn btn-primary", id: "btnTabPay" %>
             </div>
             <div id="tabs-3" class="span4">
-              <label for="fee"><h5>Yearly Fee - $<%= @club.fee %></h5></label>
+              <label for="fee"><h5>Yearly Fee - $<%= club_url(request.subdomain).fee %></h5></label>
               <input type="hidden" id="stripe_pk" value="<%= @club.stripe_publishable_key %>"/>
 
               <%= render 'shared/cc_input' %>

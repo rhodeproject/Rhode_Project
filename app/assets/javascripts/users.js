@@ -34,7 +34,7 @@ $(document).ready(function(){
     $('#frmNewUser').dialog({
         autoOpen: false,
         open: {effect: "fadeIn", duration: 500},
-        height: 625,
+        height: 600,
         width: 600,
         modal: true
     });
