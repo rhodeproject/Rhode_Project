@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121107233423) do
+ActiveRecord::Schema.define(:version => 20121112125029) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20121107233423) do
     t.string   "stripe_publishable_key"
     t.string   "stripe_api_key"
     t.string   "contact_email"
+    t.text     "terms_and_conditions"
   end
 
   create_table "delayed_jobs", :force => true do |t|

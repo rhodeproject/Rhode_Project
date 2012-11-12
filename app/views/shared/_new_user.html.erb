@@ -1,24 +1,43 @@
-<div class="span5">
+<div class="span7">
     <%= form_for(@user) do |f| %>
         <div class="row" id="tabs">
 
           <ul>
             <li><a href="#tabs-1">User Information</a></li>
-            <li><a href="#tabs-2">Payment Information</a></li>
+            <li><a href="#tabs-2">Terms and Conditions</a></li>
+            <li><a href="#tabs-3">Payment Information</a></li>
           </ul>
           <%= render 'shared/error_messages', object: f.object %>
-          <div class="span4">
+          <div class="span7">
             <div id="tabs-1">
-              <%= render 'fields', f: f %>
-              <%= link_to 'Next >>', "#" ,class: "btn btn-large btn-primary", id: "btnTabs" %>
+
+                <h4>The enrollment fee for <%= @club.name %> is $<%= @club.fee %>/year.</h4><br><hr class="payments">
+              <ul class="payments">
+                <li>Please enter your Name, email address, and password to create an account.</li>
+                <li>Your email address will be used as your login and password must be at least 6 characters.</li>
+              </ul>
+              <hr>
+              <div class="span4">
+                <%= render 'fields', f: f %><br>
+                <%= link_to 'Next >>', "#" ,class: "btn btn-primary", id: "btnTabs" %><br>
+              </div>
             </div>
-            <div id="tabs-2">
+            <div id="tabs-2" class="legal">
+              <h4>Terms and Conditions</h4>
+              <hr class="payments">
+              <br>
+              <%= markdown.render(@club.terms_and_conditions).html_safe unless @club.terms_and_conditions.nil? %>
+              <%= check_box_tag 'termsYes' %> I accept the <%= @club.name %> Terms and Conditions <br>
+              <%= check_box_tag "termsNo"%> I don't accept the <%= @club.name %> Terms and Conditions <br><br>
+              <%= link_to "Next >>", "#", class: "btn btn-primary", id: "btnTabPay" %>
+            </div>
+            <div id="tabs-3" class="span4">
               <label for="fee"><h5>Yearly Fee - $<%= @club.fee %></h5></label>
               <input type="hidden" id="stripe_pk" value="<%= @club.stripe_publishable_key %>"/>
 
               <%= render 'shared/cc_input' %>
 
-              <%= f.submit "Create my account", id:"btnNewUser" ,class: "btn btn-large btn-primary" %>
+              <%= f.submit "Create my account", id:"btnNewUser" ,class: "btn btn-primary" %>
 
             </div>
           </div>
