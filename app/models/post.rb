@@ -20,8 +20,6 @@ class Post < ActiveRecord::Base
 
   def self.text_search(query)
     if query.present?
-      #TODO Add club to post restrict query to just posts for that club
-      #where("content @@ :q and club_id == #{club_id}", :q => "%#{query}%")
       where("content @@ :q", :q => "%#{query}%")
     else
       scoped

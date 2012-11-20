@@ -4,12 +4,38 @@ $(document).ready(function(){
        $('#tabs').tabs('select',1);
        return false;
     });
+    $("#btnTabPay").click(function(event){
+        var termsCheck = $("#termsYes");
+        if (termsCheck.is(':checked')){
+            $('#tabs').tabs('select',2);
+        }
+        return false;
+    });
+    /*disable new user button if the terms and conditions aren't checked*/
+    /*disable the payment tab if the terms and conditions aren't checked*/
+    /*disable the next button on the terms and conditions tab if terms and conditions aren't checked*/
+    /*btnNewUser*/
+    $("#tabs-3").attr('disabled', true);
+    $("#btnTabPay").attr('disabled', true);
+    $("#btnNewUser").attr('disabled', true);
+    $("#termsYes").click(function(event){
+        var thisCheck = $(this);
+        if (thisCheck.is(':checked')){
+           $("#btnNewUser").attr('disabled', false);
+           $("#tabs-3").attr('disabled', false);
+           $("#btnTabPay").attr('disabled', false);
+       }else{
+           $("#btnNewUser").attr('disabled', true);
+           $("#tabs-3").attr('disabled', true);
+           $("#btnTabPay").attr('disabled', true);
+       }
+    });
 
     $('#frmNewUser').dialog({
         autoOpen: false,
         open: {effect: "fadeIn", duration: 500},
-        height: 525,
-        width: 425,
+        height: 600,
+        width: 600,
         modal: true
     });
     $('#btnSignUp').click(function(event){

@@ -264,3 +264,11 @@ aside {
   opacity: 0.90;
 }
 
+.legal {font: 80% "Trebuchet MS", sans-serif; margin: 1px;}
+.payments {font: 90% "Trebuchet MS", sans-serif; margin: 1px;}
+hr.payments {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+

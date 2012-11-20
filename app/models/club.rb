@@ -30,7 +30,8 @@ class Club < ActiveRecord::Base
                   :oath_token_secret,
                   :fee,
                   :stripe_api_key,
-                  :stripe_publishable_key
+                  :stripe_publishable_key,
+                  :terms_and_conditions
   has_many :users
   has_many :forums
   has_many :events
