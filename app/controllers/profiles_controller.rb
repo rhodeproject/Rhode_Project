@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
-  before_filter :signed_in_user, only: [:show, :edit, :update]
-  before_filter :correct_user, only: [:edit, :update]
+  before_filter :signed_in_user, :only => [:show, :edit, :update]
+  before_filter :correct_user, :only => [:edit, :update]
 
   def new
     @profile = Profile.new

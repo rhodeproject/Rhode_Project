@@ -12,11 +12,11 @@ class Forum < ActiveRecord::Base
   #
 
   attr_accessible :description, :name
-  has_many :topics, dependent: :destroy
+  has_many :topics, :dependent => :destroy
   has_and_belongs_to_many :users
   belongs_to :club
 
-  validates :name, presence: true
+  validates :name, :presence => true
 
   def most_recent_post
     topic = Topic.first(:order => 'last_post_at DESC', :conditions => ['forum_id = ?', self.id])

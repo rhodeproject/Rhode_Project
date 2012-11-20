@@ -1,7 +1,7 @@
 class ForumsController < ApplicationController
   before_filter :signed_in_user
   #before_filter :correct_user, only: [:edit, :update]
-  before_filter :admin_user, only: :destroy
+  before_filter :admin_user, :only => :destroy
 
   def index
     @forums = Forum.scoped_by_club_id(current_user.club_id)
@@ -11,7 +11,6 @@ class ForumsController < ApplicationController
     if params[:commit] == "follow"
       @forum = Forum.find(params[:id])
       add_user_to_forum
-
     else
       if params[:commit] == "unfollow"
         @forum = Forum.find(params[:id])
@@ -22,7 +21,6 @@ class ForumsController < ApplicationController
       format.html { redirect_to "/forums" }
       format.js
     end
-
   end
 
   def destroy
@@ -45,7 +43,7 @@ class ForumsController < ApplicationController
       flash[:warning] = "You do not have access to this forum"
       redirect_to "/forums"
     end
-    @topics = @forum.topics.paginate(page: params[:page], :per_page => 10).order('updated_at DESC').includes(:user)
+    @topics = @forum.topics.paginate(:page => params[:page], :per_page => 10).order('updated_at DESC').includes(:user)
   end
 
   def new

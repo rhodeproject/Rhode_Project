@@ -4,8 +4,8 @@ class Sponsor < ActiveRecord::Base
 
   URL_REGEX = /^(http[s]?:\/\/)([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 
-  validates :name, presence: true
-  validates :club_id, presence: true
-  validates :url, presence: true,
-            format: {with: URL_REGEX}
+  validates :name, :presence => true
+  validates :club_id, :presence => true
+  validates :url, :presence => true,
+            :format => {:with => URL_REGEX}
 end

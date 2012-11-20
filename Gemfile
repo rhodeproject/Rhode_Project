@@ -17,7 +17,7 @@ gem 'whenever', :require => false
 gem 'twitter'
 gem 'figaro'
 gem "rspec-rails", :group => [:test, :development]
-gem 'bullet', group: :development
+gem 'bullet', :group => :development
 group :test do
   gem "factory_girl_rails"
   gem "cucumber-rails"

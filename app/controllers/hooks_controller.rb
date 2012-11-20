@@ -2,7 +2,7 @@ class HooksController < ApplicationController
   require 'json'
   skip_before_filter  :verify_authenticity_token
 
-  Stripe.api_key = "ZZkYFoDzg1jfew3Cv4HWqViVzgZpwEkj"
+  Stripe.api_key = Figaro.env.stripe_api_key
 
   def receiver
     @user = User.find_by_stripe_id(params[:id])

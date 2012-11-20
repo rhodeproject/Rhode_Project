@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   before_filter :signed_in_user
-  before_filter :correct_user, only: [:edit]
-  before_filter :admin_user, only: :destroy
+  before_filter :correct_user, :only => [:edit]
+  before_filter :admin_user, :only => :destroy
 
   def new
       @topic = Topic.new
@@ -12,6 +12,7 @@ class TopicsController < ApplicationController
     @topic.update_attributes(:last_poster_id => current_user.id, :last_post_at => Time.now)
     @post = @topic.posts.build(:content => params[:post][:content])
     @post.user_id = current_user.id
+    @post.club_id = current_user.club_id
     respond_to do |format|
       if @post.save
         flash[:success] = "Post Added to #{@topic.name}"
@@ -36,7 +37,7 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
     add_breadcrumb "#{@topic.forum.name}", "/forums/#{@topic.forum_id}"
     if current_user.club_id == @topic.forum.club_id
-      @posts = @topic.posts.paginate(page: params[:page], :per_page => 10).order('created_at ASC').includes(:user)
+      @posts = @topic.posts.paginate(:page => params[:page], :per_page => 10).order('created_at ASC').includes(:user)
     else
       flash[:warning] = "You can't view this topic"
       redirect_to '/forums'
@@ -51,7 +52,9 @@ class TopicsController < ApplicationController
 
     @topic.user_id = current_user.id
       if @topic.save
-        @post = current_user.posts.build(:content => params[:post][:content],:topic_id => @topic.id)
+        @post = current_user.posts.build(:content => params[:post][:content],
+                                         :topic_id => @topic.id,
+                                          :club_id => current_user.club_id)
         if @post.save
           forum = @topic.forum
           forum.email_followers(@topic, @post)

@@ -21,13 +21,13 @@ class Event < ActiveRecord::Base
   #before_save :convert_time
   #associations
   belongs_to :club
-  has_many  :lists, dependent: :destroy
+  has_many  :lists, :dependent => :destroy
   has_many :users, :through => :lists
 
   #validations
-  validates :title, presence: true
-  validates :starts_at, presence: true
-  validates :ends_at, presence: true, :format => VALID_DATE_REGEX
+  validates :title, :presence => true
+  validates :starts_at, :presence => true
+  validates :ends_at, :presence => true, :format => VALID_DATE_REGEX
 
   #scopes
   scope :before, lambda {|end_time| {:conditions => ["ends_at < ?", Event.format_date(end_time)] }}

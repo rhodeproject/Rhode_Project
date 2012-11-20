@@ -7,6 +7,6 @@ class Token < ActiveRecord::Base
     def generate_access_token
       begin
         self.api_token = SecureRandom.hex
-      end while self.class.exists?(api_token: api_token)
+      end while self.class.exists?(:api_token => api_token)
     end
 end

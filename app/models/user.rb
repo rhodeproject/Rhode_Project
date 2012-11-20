@@ -22,22 +22,22 @@ class User < ActiveRecord::Base
   has_secure_password
 
   #Data Relationships
-  has_many :microposts, dependent: :destroy
-  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
-  has_many :followed_users, through:  :relationships, source: :followed
+  has_many :microposts, :dependent => :destroy
+  has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
+  has_many :followed_users, :through =>  :relationships, :source => :followed
   has_many :posts
   has_many :topics
   belongs_to :club
   has_and_belongs_to_many :forums
   has_one :profile
-  has_many :lists, dependent: :destroy
+  has_many :lists, :dependent => :destroy
   has_many :events, :through => :lists
 
   #reverse relationship
-  has_many :reverse_relationships, foreign_key: "followed_id",
-           class_name:  "Relationship",
-           dependent:   :destroy
-  has_many :followers, through: :reverse_relationships, source: :follower
+  has_many :reverse_relationships, :foreign_key => "followed_id",
+           :class_name =>  "Relationship",
+           :dependent =>   :destroy
+  has_many :followers, :through => :reverse_relationships, :source => :follower
 
   before_save :create_remember_token
 
@@ -48,23 +48,23 @@ class User < ActiveRecord::Base
   after_create :update_expiry
 
   #user validation
-  validates :name, presence: true, length:{maximum: 50}
+  validates :name, :presence => true, :length => {:maximum => 50}
 
   #email validation
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, presence: true,
-            format: {with: VALID_EMAIL_REGEX}
+  validates :email, :presence => true,
+            :format => {:with => VALID_EMAIL_REGEX}
 
   #TODO: drop index on user and email then impliment the following validation
   validates_uniqueness_of :email, :scope => :club_id
   #password validation
-  validates :password, length: {minimum: 6}
+  validates :password, :length => {:minimum => 6}
 
   #password_confirmation validation
-  validates :password_confirmation, presence: true
+  validates :password_confirmation, :presence => true
 
   #scopes
-  scope :admin, where(admin: true)
+  scope :admin, where(:admin => true)
 
   #methods
 

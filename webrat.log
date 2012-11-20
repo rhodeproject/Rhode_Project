@@ -1,0 +1,18 @@
+# Logfile created on 2012-11-20 10:57:37 -0500 by logger.rb/31641
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /default with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /default with {} and HTTP headers {}
+REQUESTING PAGE: GET /home with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /home with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET http://www.example.com/home with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: GET /home with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /home with {} and HTTP headers {}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /home with {} and HTTP headers {}
+REQUESTING PAGE: GET http://www.example.com/clubs/new with {} and HTTP headers {"HTTP_REFERER"=>"/home"}
+REQUESTING PAGE:  /home with {"HTTP_HOST"=>"www.rhodeproject.com"} and HTTP headers {}
+REQUESTING PAGE: {"HTTP_HOST"=>"WWW.RHODEPROJECT.COM"} /home with {} and HTTP headers {}

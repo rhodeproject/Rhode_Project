@@ -35,12 +35,13 @@ class Club < ActiveRecord::Base
   has_many :forums
   has_many :events
   has_many :notices
+  has_many :posts
   has_one  :token
   has_many :sponsors
   belongs_to :subscription
 
-  validates :name, presence: true, length:{maximum: 50}
-  validates :sub_domain, uniqueness: {case_sensitive: false}
+  validates :name, :presence => true, :length => {:maximum => 50}
+  validates :sub_domain, :uniqueness => {:case_sensitive => false}
 
   before_save { |club| club.sub_domain = sub_domain.downcase}
 

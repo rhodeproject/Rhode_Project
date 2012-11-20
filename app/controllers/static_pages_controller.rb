@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    #TODO:if the subdomain is www then act as a marketing page
     @user = User.new
 
     if signed_in?

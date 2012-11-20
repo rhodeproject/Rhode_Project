@@ -10,16 +10,19 @@ class Post < ActiveRecord::Base
   #  user_id    :integer
   #  topic_id   :integer
   #
-  attr_accessible :content, :topic_id
+  attr_accessible :content, :topic_id, :club_id
 
-  validates :content, presence: true
+  validates :content, :presence => true
 
   belongs_to  :user
   belongs_to  :topic
+  belongs_to  :club
 
   def self.text_search(query)
     if query.present?
-      where("content @@ :q", q: "%#{query}%")
+      #TODO Add club to post restrict query to just posts for that club
+      #where("content @@ :q and club_id == #{club_id}", :q => "%#{query}%")
+      where("content @@ :q", :q => "%#{query}%")
     else
       scoped
     end

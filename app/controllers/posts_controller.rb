@@ -1,15 +1,14 @@
 class PostsController < ApplicationController
   before_filter :signed_in_user
-  before_filter :admin_user, only: [:destroy]
-  before_filter :correct_user, only: [:edit, :update]
+  before_filter :admin_user, :only => [:destroy]
+  before_filter :correct_user, :only => [:edit, :update]
 
   def new
     @post = Post.new
   end
 
   def index
-    #TODO limit search results to current user's club
-    @posts = Post.text_search(params[:query]).page(params[:page]).per_page(10)
+    @posts = Post.scoped_by_club_id(current_user.club_id).text_search(params[:query]).page(params[:page]).per_page(10)
   end
 
   def create
