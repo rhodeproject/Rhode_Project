@@ -1,0 +1,13 @@
+<%= @user.name %>,
+
+You are receiving this email to remind you you're signed up for <%= @event.title %> at <%= @event.starts_at %>.
+
+Here are the details:
+
+Event: <%= @event.title %>
+Start Time: <%= @event.starts_at %>
+End Time: <%= @event.ends_at %>
+
+Thanks,
+<%= @user.club.name %>
+

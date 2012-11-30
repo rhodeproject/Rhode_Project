@@ -6,7 +6,9 @@ Given /^I am logged in as administrator$/ do
 end
 
 When /^I create a notice with content "([^"]*)"$/ do |content|
-  @notice = Notice.new(:content => content)
+  visit new_notice_path
+  fill_in "Content", :with => "content"
+  click_button "Create Notice"
 end
 
 Then /^I should see notice with content "([^"]*)"$/ do |content|

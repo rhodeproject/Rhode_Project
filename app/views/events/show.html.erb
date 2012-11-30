@@ -23,9 +23,9 @@
 <br>
 <div class="row span10">
   <%= link_to 'Edit', edit_event_path(@event) %> |
-  <%= link_to 'Back', events_path %>
+  <%= link_to 'Back', calendar_path %>
 </div>
-<hr>
+<hr class="shadow">
 <br>
 <h3>Who's attending?</h3>
 
@@ -61,11 +61,11 @@
 
 <%= form_for @event do |e| %>
     <% if signed_up?%>
-        <%= e.submit "remove me", class: "btn btn-primary" %>
+        <%= e.submit "remove me", :class => "btn btn-primary" %>
     <% else %>
-         <%= e.submit "add me", class: "btn btn-primary" %>
+         <%= e.submit "add me", :class => "btn btn-primary" %>
     <% end %>
-    <% if current_user.admin? %>-or- <%= link_to "add/remove a member","#", id: "btnAdminAddUser", class: "btn btn-primary"  %><% end %>
+    <% if current_user.admin? %>-or- <%= link_to "add/remove a member","#", :id => "btnAdminAddUser", :class => "btn btn-primary"  %><% end %>
 <% end %>
 <% if current_user.admin? %><%= render 'admin_add_user'%><% end %>
 

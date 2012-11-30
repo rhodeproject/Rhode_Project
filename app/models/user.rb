@@ -55,7 +55,6 @@ class User < ActiveRecord::Base
   validates :email, :presence => true,
             :format => {:with => VALID_EMAIL_REGEX}
 
-  #TODO: drop index on user and email then impliment the following validation
   validates_uniqueness_of :email, :scope => :club_id
   #password validation
   validates :password, :length => {:minimum => 6}

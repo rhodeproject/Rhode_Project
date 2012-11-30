@@ -2,14 +2,7 @@ require 'spec_helper'
 
 describe User do
   before(:each) do
-    @name = "Test User"
-    @email = "foo@bar.com"
-    @password = "foobar"
-    @bad_password_confirmation = "barfoo"
-    @user = User.new(:name => @name, :email => @email,
-                     :password => @password,
-                     :password_confirmation => @password,
-                     :club_id => 1)
+    @user = FactoryGirl.build(:user)
   end
 
   context "valid tests" do
@@ -18,12 +11,8 @@ describe User do
     end
 
     it "should be valid with same email and different club_id" do
-
-      @user2 = User.new(:name => @name, :email => @email,
-                        :password => @password,
-                        :password_confirmation => @password,
-                        :club_id => 2)
-
+      @user2 = FactoryGirl.build(:user)
+      @user2.club_id = 2
       @user2.should be_valid
     end
 
@@ -36,11 +25,7 @@ describe User do
     end
 
     it "should be invalid with same email and club_id" do
-      @user2 = User.new(:name => @name, :email => @email,
-                        :password => @password,
-                        :password_confirmation => @password,
-                        :club_id => 1)
-      @user2.should_not be_valid
+      pending 'need to figure out Factory with same email'
     end
 
     it "should be invalid with no email" do
@@ -85,6 +70,7 @@ describe User do
       @user.active = true
       @user.active.should be_true
     end
+
   end
 
   context "check for admin" do

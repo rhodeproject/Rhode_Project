@@ -1,5 +1,12 @@
 class UserMailer < ActionMailer::Base
-  default :from => "matt@rhodeproject.com"
+  default :from => Figaro.env.email_from
+  default :reply_to => Figaro.env.email_reply_to
+
+  def event_reminder(user, event)
+    @user = user
+    @event = event
+    mail(:to => @user.email, :subject => "Reminder: #{@event.title}")
+  end
 
   def new_user_notice(user)
     @user = user
@@ -13,10 +20,8 @@ class UserMailer < ActionMailer::Base
   end
 
   def notice_email(emails, content, club_name)
-    #email is an array of email addresses
-    #TODO: check if we can send an array as bcc
-    #TODO: add and ERB file email_notices.text.erb
     @content = content
+    @club_name = club_name
     mail(:bcc => emails, :subject => "update from #{club_name}")
   end
 
@@ -29,17 +34,16 @@ class UserMailer < ActionMailer::Base
     @content = content
     @sender_email = sender_email
     @sender_name = sender_name
-    mail(:to => toaddr, :subject => "Contact Us - submitted from #{sender_email}")
+    mail(:to => toaddr, :reply_to => sender_email, :subject => "Contact Us - submitted by #{sender_name} at #{sender_email}")
   end
 
   def expiry_notice(user)
     @user = user
+    @path = "#{Figaro.env.protocol}#{@user.club.sub_domain}.#{Figaro.env.base_url}/user/renew?user=#{@user.id}"
     if Rails.env.development?
       toaddr = "mhatch73@gmail.com"
-      @path = "#{@user.club.sub_domain}.lvh.me:3000/user/renew?user=#{@user.id}"
     else
       toaddr = @user.email
-      @path = "https://#{@user.club.sub_domain}.rhodeproject.com/user/renew?user=#{@user.id}"
     end
     mail(:to => toaddr, :subject => "Your Account will expire soon")
   end
@@ -48,12 +52,12 @@ class UserMailer < ActionMailer::Base
     @content = post.content
     @post = post
     @forum = forum
+    rootpath = "#{Figaro.rnv.protocol}#{sub_domain}.#{Figaro.env.base_url}"
+
     if Rails.env.development?
       email = "mhatch73@gmail.com"
-      rootpath = "#{sub_domain}.lvh.me:3000/"
-    else
-      rootpath = "https://#{sub_domain}.rhodeproject.com/"
     end
+
     @link = "#{rootpath}topics/#{post.topic_id}"
     mail(:to => email, :subject => "New Post to #{forum.name}")
   end
@@ -62,12 +66,7 @@ class UserMailer < ActionMailer::Base
     @user = user
     address = @user.email
     subject = "Password reset request for #{@user.name}"
-    if Rails.env.development?
-      @url = "http://#{@user.club.sub_domain}.lvh.me:3000/password_resets/#{@user.reset_token}/edit"
-    else
-      @url = "https://#{@user.club.sub_domain}.rhodeproject.com/password_resets/#{@user.reset_token}/edit"
-    end
-
+    @url = "#{Figaro.env.protocol}#{@user.club.sub_domain}.#{Figaro.env.base_url}/password_resets/#{@user.reset_token}/edit"
     mail(:to => address, :subject => subject)
   end
 
@@ -82,14 +81,12 @@ class UserMailer < ActionMailer::Base
 
   def new_user_confirmation(user)
     @user = user
+    @url = "#{Figaro.env.protocol}#{@user.club.sub_domain}.#{Figaro.env.base_url}"
+    subject = "#{@user.club.name} new user confirmation - #{@user.email}"
     if Rails.env.development?
       address = "mhatch73@gmail.com"
-      subject = "#{@user.club.name} new user confirmation - #{@user.email}"
-      @url = "http://#{@user.club.sub_domain}.lvh.me:3000"
     else
       address = @user.email
-      subject = "#{@user.club.name} new user confirmation - #{@user.email}"
-      @url = "https://#{@user.club.sub_domain}.rhodeproject.com"
     end
 
     mail(:to => address, :subject => subject)

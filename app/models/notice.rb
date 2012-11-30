@@ -2,7 +2,7 @@ class Notice < ActiveRecord::Base
   attr_accessible :content
 
   belongs_to :club
-  validates :content, presence: true
+  validates :content, :presence => true
 
 
   def send_tweet(club)
@@ -29,8 +29,8 @@ class Notice < ActiveRecord::Base
 
   def set_tokens(key, secret_key)
     Twitter.configure do |config|
-      config.consumer_key = ENV["TWITTER_CONSUMER_KEY"]
-      config.consumer_secret = ENV["TWITTER_CONSUMER_SECRET"]
+      config.consumer_key = Figaro.env.twitter_consumer_key #ENV["TWITTER_CONSUMER_KEY"]
+      config.consumer_secret = Figaro.env.twitter_consumer_secret #ENV["TWITTER_CONSUMER_SECRET"]
       config.oauth_token = key
       config.oauth_token_secret = secret_key
     end

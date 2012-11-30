@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/update_posts_with_club.rake" afterPath="$PROJECT_DIR$/lib/tasks/update_posts_with_club.rake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/user_mailer/event_reminder.text.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/user_mailer/notice_email.text.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/application.yml.sample" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/mailers/user_mailer_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/hooks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/hooks_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/users_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/users_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/user_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/notice.rb" afterPath="$PROJECT_DIR$/app/models/notice.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/show.html.erb" afterPath="$PROJECT_DIR$/app/views/events/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/show.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/notices/_new_notice.html.erb" afterPath="$PROJECT_DIR$/app/views/notices/_new_notice.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_login.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_login.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_quote.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_quote.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_mailer/expiry_notice.text.erb" afterPath="$PROJECT_DIR$/app/views/user_mailer/expiry_notice.text.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/schedule.rb" afterPath="$PROJECT_DIR$/config/schedule.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/notice_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/notice_steps.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/schedule.rake" afterPath="$PROJECT_DIR$/lib/tasks/schedule.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/hooks_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/hooks_controller_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/subscriptions_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/subscriptions_controller_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories.rb" afterPath="$PROJECT_DIR$/spec/factories.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,46 +52,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="event.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/event.rb">
+      <file leaf-file-name="user_mailer.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="club.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/club.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="32" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update_posts_with_club.rake" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/update_posts_with_club.rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="79" selection-start="274" selection-end="274" vertical-scroll-proportion="0.22626263">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/post.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="21" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+            <state line="21" column="46" selection-start="626" selection-end="626" vertical-scroll-proportion="0.5045045">
               <folding />
             </state>
           </provider>
@@ -89,22 +77,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/clubs/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/user_mailer/event_reminder.text.erb" />
+        <option value="$PROJECT_DIR$/app/helpers/users_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/user_mailer/expiry_notice.text.erb" />
+        <option value="$PROJECT_DIR$/app/views/user_mailer/notice_email.text.erb" />
+        <option value="$PROJECT_DIR$/config/schedule.rb" />
+        <option value="$PROJECT_DIR$/config/application.yml" />
+        <option value="$PROJECT_DIR$/spec/mailers/user_mailer_spec.rb" />
         <option value="$PROJECT_DIR$/app/controllers/hooks_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/forums/show.html.erb" />
+        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/spec/controllers/hooks_controller_spec.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/forums_controller.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20121120195240_add_club_id_to_post.rb" />
-        <option value="$PROJECT_DIR$/app/models/club.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/topics_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/post.rb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/update_posts_with_club.rake" />
+        <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/factories.rb" />
+        <option value="$PROJECT_DIR$/spec/controllers/subscriptions_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/config/application.yml.sample" />
+        <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
       </list>
     </option>
   </component>
@@ -161,6 +149,26 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rhode_Project" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -189,11 +197,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -207,28 +211,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -240,15 +224,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="121" />
     <property name="options.splitter.main.proportions" value="0.30000004" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/assets/javascripts/fullcalendar" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="127" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="807" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="127" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="811" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="807" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="125" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -445,6 +429,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -476,13 +467,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -657,14 +641,14 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1568323" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16594517" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22366288" sideWeight="0.20341615" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1969697" sideWeight="0.7532467" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23409091" sideWeight="0.6785714" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35403726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21636952" sideWeight="0.21273293" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21273293" sideWeight="0.6790924" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24675325" sideWeight="0.31523502" order="9" side_tool="false" content_ui="tabs" x="15" y="223" width="1234" height="497" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32142857" sideWeight="0.31523502" order="9" side_tool="false" content_ui="tabs" x="15" y="223" width="1234" height="497" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32763976" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -730,114 +714,100 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/models/notice.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/forum.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/event_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.057057057" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="52" selection-start="3154" selection-end="3181" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/clubs_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/club.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0960961" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="20" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spec/controllers/hooks_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="52" selection-end="187" vertical-scroll-proportion="0.12929294">
+        <state line="5" column="12" selection-start="83" selection-end="83" vertical-scroll-proportion="0.12012012">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/hooks_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="44" selection-start="157" selection-end="157" vertical-scroll-proportion="0.12929294">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/subscriptions_controller_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="46" selection-start="238" selection-end="238" vertical-scroll-proportion="0.17151608">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="51" selection-start="487" selection-end="513" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="5" selection-start="2073" selection-end="2073" vertical-scroll-proportion="0.8318318">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/mailers/user_mailer_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="17" column="32" selection-start="0" selection-end="2077" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/forum.rb">
+    <entry file="file://$PROJECT_DIR$/config/application.yml.sample">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="55" column="36" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.8078078">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121107233423_add_limit_to_event.rb">
+    <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121120195240_add_club_id_to_post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="162" selection-end="162" vertical-scroll-proportion="0.29090908">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/forums_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="374" selection-end="374" vertical-scroll-proportion="0.35555556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/topics_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="75" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.6141414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/user_active.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="91" selection-start="647" selection-end="647" vertical-scroll-proportion="-0.06666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="21" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/club.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="32" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/update_posts_with_club.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="79" selection-start="274" selection-end="274" vertical-scroll-proportion="0.22626263">
+        <state line="21" column="46" selection-start="626" selection-end="626" vertical-scroll-proportion="0.5045045">
           <folding />
         </state>
       </provider>
