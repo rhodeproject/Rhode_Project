@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121120195240) do
+ActiveRecord::Schema.define(:version => 20121207011608) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -67,6 +67,8 @@ ActiveRecord::Schema.define(:version => 20121120195240) do
     t.integer  "limit"
   end
 
+  add_index "events", ["club_id"], :name => "events_club_idx"
+
   create_table "forums", :force => true do |t|
     t.string   "name"
     t.string   "description"
@@ -74,6 +76,8 @@ ActiveRecord::Schema.define(:version => 20121120195240) do
     t.datetime "updated_at",  :null => false
     t.integer  "club_id"
   end
+
+  add_index "forums", ["club_id"], :name => "forums_club_idx"
 
   create_table "forums_users", :id => false, :force => true do |t|
     t.integer "forum_id"
@@ -91,6 +95,9 @@ ActiveRecord::Schema.define(:version => 20121120195240) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "lists", ["event_id"], :name => "lists_event_idx"
+  add_index "lists", ["user_id"], :name => "lists_user_idx"
+
   create_table "microposts", :force => true do |t|
     t.string   "content"
     t.integer  "user_id"
@@ -107,6 +114,8 @@ ActiveRecord::Schema.define(:version => 20121120195240) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "notices", ["club_id"], :name => "notices_club_idx"
+
   create_table "posts", :force => true do |t|
     t.text     "content"
     t.datetime "created_at", :null => false
@@ -115,6 +124,10 @@ ActiveRecord::Schema.define(:version => 20121120195240) do
     t.integer  "user_id"
     t.integer  "club_id"
   end
+
+  add_index "posts", ["club_id"], :name => "posts_club_idx"
+  add_index "posts", ["topic_id"], :name => "posts_topic_idx"
+  add_index "posts", ["user_id"], :name => "posts_user_idx"
 
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
@@ -126,6 +139,8 @@ ActiveRecord::Schema.define(:version => 20121120195240) do
     t.string   "econtact_name"
     t.string   "econtact_number"
   end
+
+  add_index "profiles", ["user_id"], :name => "profiles_user_idx"
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
@@ -147,6 +162,8 @@ ActiveRecord::Schema.define(:version => 20121120195240) do
     t.datetime "updated_at",  :null => false
     t.text     "description"
   end
+
+  add_index "sponsors", ["club_id"], :name => "sponsors_club_idx"
 
   create_table "subscriptions", :force => true do |t|
     t.string   "email"
@@ -172,6 +189,9 @@ ActiveRecord::Schema.define(:version => 20121120195240) do
     t.integer  "user_id"
   end
 
+  add_index "topics", ["forum_id"], :name => "topics_forum_idx"
+  add_index "topics", ["user_id"], :name => "topics_user_idx"
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -190,6 +210,7 @@ ActiveRecord::Schema.define(:version => 20121120195240) do
     t.string   "stripe_id"
   end
 
+  add_index "users", ["club_id"], :name => "users_club_idx"
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

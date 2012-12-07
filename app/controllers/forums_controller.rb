@@ -7,6 +7,10 @@ class ForumsController < ApplicationController
     @forums = Forum.scoped_by_club_id(current_user.club_id)
   end
 
+  def edit
+
+  end
+
   def update
     if params[:commit] == "follow"
       @forum = Forum.find(params[:id])
