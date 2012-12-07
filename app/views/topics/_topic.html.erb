@@ -2,7 +2,7 @@
   <thead>
 
   <th width="60%">
-    <%= gravatar_for(@topic.user, size: 65) %>
+    <%= gravatar_for(@topic.user, :size => 65) %>
     Posted By: <%= link_to(@topic.user.name, @topic.user)%><br>
     Original Post: <%= @topic.created_at.to_date %><br>
     Last Updated: <%= distance_of_time_in_words_to_now @topic.last_post_at %><br>
@@ -18,17 +18,17 @@
       <tr>
         <td><div style="word-wrap: break-word"><p><%= markdown.render(post.content).html_safe %></p></div></td>
         <td class="right">
-          <%= gravatar_for(post.user, size: 55) %>
+          <%= gravatar_for(post.user, :size => 55) %>
           Posted By: <%= link_to(post.user.name,post.user )%><br>
 
         </td>
         <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
         <td>
           <% if post.user == current_user && post.created_at > 15.minutes.ago %>
-              <%= link_to "Edit", "/posts/#{post.id}/edit", class: "btn btn-mini btn-primary", :method => :get %>
+              <%= link_to "Edit", "/posts/#{post.id}/edit", :class => "btn btn-mini btn-primary", :method => :get %>
           <% end %>
           <% if current_user.admin?%>
-              <%= link_to "Delete", post, class: "btn btn-mini btn-primary", :confirm => 'Are you sure?', :method => :delete %>
+              <%= link_to "Delete", post, :class => "btn btn-mini btn-primary", :confirm => 'Are you sure?', :method => :delete %>
           <% end %>
         </td>
       </tr>

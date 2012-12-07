@@ -8,19 +8,19 @@ class ForumsController < ApplicationController
   end
 
   def edit
-
+    @forum = Forum.find(params[:id])
   end
 
   def update
+    @forum = Forum.find(params[:id])
     if params[:commit] == "follow"
-      @forum = Forum.find(params[:id])
       add_user_to_forum
-    else
-      if params[:commit] == "unfollow"
-        @forum = Forum.find(params[:id])
-        remove_user_from_forum
-      end
+    elsif params[:commit] == "unfollow"
+      remove_user_from_forum
     end
+
+    @forum.update_attributes(params[:forum])
+
     respond_to do |format|
       format.html { redirect_to "/forums" }
       format.js

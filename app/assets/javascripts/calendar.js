@@ -44,8 +44,9 @@ $(document).ready(function(){
         eventSources: [{
             url: '/events',
             eventColor: '#378006',
+            eventBackgroundColor: 'green',
             color: 'green',
-            textColor: 'black',
+            textColor: 'blue',
             ignoreTimezone: true
         }],
 

@@ -1,8 +1,4 @@
-
-
 <% provide(:title, "Add Forum") %>
-
-
 <% if signed_in? %>
     <h1>Admin - Create New Forum</h1>
 
@@ -15,7 +11,7 @@
             <%= f.label :description %>
             <%= f.text_field :description %>
 
-            <%= f.submit "Add Forum", class: "btn btn-large btn-primary" %>
+            <%= f.submit "Add Forum", :class => "btn btn-large btn-primary" %>
         <% end %>
       </div>
     </div>

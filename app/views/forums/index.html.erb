@@ -16,7 +16,12 @@
       <tr>
         <td><h4><%= link_to h(forum.name), forum_path(forum.id) %></h4>
           <small><%= forum.topics.count %> topics</small><br />
-          <%=h forum.description %></td>
+          <%=h forum.description %><br>
+          <% if current_user.admin? %>
+            <%= link_to 'Edit', edit_forum_path(forum) %> |
+            <%= link_to 'Delete', forum, :confirm => 'Are you sure?', :method => :delete %>
+          <% end %>
+        </td>
         <td class="right">
           <% if forum.most_recent_post %>
               <%= distance_of_time_in_words_to_now forum.most_recent_post.last_post_at %> ago by

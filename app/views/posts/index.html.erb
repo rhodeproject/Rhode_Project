@@ -12,7 +12,7 @@
       <% @posts.each do |post| %>
         <tr>
           <td>
-            <%= gravatar_for(post.user, size: 65) %>
+            <%= gravatar_for(post.user, :size => 65) %>
             <%= link_to(post.user.name, users_path) %>
           </td>
           <td>
