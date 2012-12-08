@@ -1,6 +1,6 @@
-<% provide(:title, "Add Forum") %>
+<% provide(:title, "Edit Forum") %>
 
-<h1>Admin - Create New Forum</h1>
+<h1>Edit <%= @forum.name %> Forum</h1>
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@forum) do |f| %>
@@ -9,6 +9,8 @@
 
         <%= f.label :description %>
         <%= f.text_field :description %>
+
+        <%= f.label :admin, "admin?" %><%= f.check_box :admin %>
 
         <%= f.submit "Edit Forum", :class => "btn btn-large btn-primary" %>
     <% end %>

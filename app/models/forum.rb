@@ -11,7 +11,7 @@ class Forum < ActiveRecord::Base
   #  club_id     :integer
   #
 
-  attr_accessible :description, :name
+  attr_accessible :description, :name, :admin
   has_many :topics, :dependent => :destroy
   has_and_belongs_to_many :users
   belongs_to :club
@@ -26,6 +26,11 @@ class Forum < ActiveRecord::Base
     self.users.each do |user|
       UserMailer.delay.post_forum_notice(topic.forum,user.email,post,user.club.sub_domain)
     end
+  end
+
+  def make_admin
+    self.admin = true
+    save!
   end
 end
 

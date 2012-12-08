@@ -11,6 +11,8 @@
             <%= f.label :description %>
             <%= f.text_field :description %>
 
+            <%= f.label :admin, "admin?" %><%= f.check_box :admin%>
+
             <%= f.submit "Add Forum", :class => "btn btn-large btn-primary" %>
         <% end %>
       </div>

@@ -8,15 +8,10 @@ class NoticesController < ApplicationController
       flash[:warning] = "you aren't able to add new notices!"
       redirect_to notices_path
     end
-    club = Club.find(current_user.club.id)
-    @notice = club.notices.build(params[:notice])
+    @notice = current_club.notices.build(params[:notice])
     if @notice.save
-      if params[:tweet] == "1"
-        @notice.send_tweet(club)
-      end
-      if params[:email] == "1"
-        @notice.send_email(club)
-      end
+      @notice.send_tweet(current_club) if params[:tweet] == "1"
+      @notice.send_email(current_club) if params[:email] == "1"
       flash[:success] = "Notice Added!"
     else
       flash[:success] = "Failed to add Notice"
@@ -25,7 +20,7 @@ class NoticesController < ApplicationController
   end
 
   def index
-    @notices = Notice.scoped_by_club_id(current_user.club_id).order('updated_at DESC')
+    @notices = Notice.scoped_by_club_id(current_club).order('updated_at DESC')
     @notice = Notice.new
   end
 
@@ -37,6 +32,8 @@ class NoticesController < ApplicationController
     @notice = Notice.find(params[:id])
     @notice.update_attributes(params[:notice])
     if @notice.save
+      @notice.send_tweet(current_club) if params[:tweet] == "1"
+      @notice.send_email(current_club) if params[:email] == "1"
       flash[:success] = "notice updated!"
       redirect_to notices_path
     else

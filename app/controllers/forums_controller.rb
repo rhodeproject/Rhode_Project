@@ -1,10 +1,14 @@
 class ForumsController < ApplicationController
   before_filter :signed_in_user
-  #before_filter :correct_user, only: [:edit, :update]
-  before_filter :admin_user, :only => :destroy
+  before_filter :admin_user, :only => [:edit, :create, :destroy]
 
   def index
-    @forums = Forum.scoped_by_club_id(current_user.club_id)
+    if current_user.admin?
+      @forums = Forum.scoped_by_club_id(current_club.id).order("name DESC")
+    else
+      @forums = Forum.scoped_by_club_id(current_club.id).where("admin = ?", false).order("name DESC")
+    end
+
   end
 
   def edit
@@ -13,12 +17,8 @@ class ForumsController < ApplicationController
 
   def update
     @forum = Forum.find(params[:id])
-    if params[:commit] == "follow"
-      add_user_to_forum
-    elsif params[:commit] == "unfollow"
-      remove_user_from_forum
-    end
-
+    add_user_to_forum if params[:commit] == "follow"
+    remove_user_from_forum if params[:commit] == "unfollow"
     @forum.update_attributes(params[:forum])
 
     respond_to do |format|
@@ -28,15 +28,10 @@ class ForumsController < ApplicationController
   end
 
   def destroy
-    if current_user.admin?
-      @remove =  Forum.find(params[:id])
-      @remove.destroy
-      flash[:success] = "Forum #{@remove.name} removed."
-      redirect_to forums_path
-    else
-      flash[:warning] = "You do not have rights to remove this forum"
-      redirect_to '/forums'
-    end
+    @remove =  Forum.find(params[:id])
+    @remove.destroy
+    flash[:success] = "Forum #{@remove.name} removed."
+    redirect_to forums_path
   end
 
   def show
@@ -59,22 +54,22 @@ class ForumsController < ApplicationController
   end
 
   def create
-    if current_user.admin?
-      club = Club.find(current_user.club_id)
-      @forum = club.forums.build(params[:forum])
-      if @forum.save
-        flash[:success] = "New forum created!"
-        redirect_to forums_path
-      else
-        @forum = []
-        flash[:warning] = "Failed to Create forum"
-      end
+    @forum = current_club.forums.build(params[:forum])
+    if @forum.save
+      flash[:success] = "New forum created!"
+      redirect_to forums_path
     else
-      flash[:warning] = "You must be ann admin to create a new Forum"
+      @forum = []
+      flash[:warning] = "Failed to Create forum"
     end
   end
 
   private
+
+
+  def admin_user
+    current_user.admin?
+  end
 
   def add_user_to_forum
 
