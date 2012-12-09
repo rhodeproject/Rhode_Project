@@ -115,8 +115,13 @@ class User < ActiveRecord::Base
     self.admin = true
   end
 
+  #depricate this method
   def inactivate_user
-    self.active = false
+    self.update_attribute('active',false)
+  end
+
+  def disable
+    self.update_attribute('active',false)
   end
 
   def activate_user

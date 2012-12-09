@@ -1,27 +1,20 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user, :only => [:index, :edit, :update]
-  before_filter :correct_user, :only => [:edit, :update]
-  before_filter :admin_user, :only => :destroy
+  before_filter :correct_user, :only => [:edit, :update, :show]
+  before_filter :correct_club, :only => :show
+  before_filter :sign_in_check, :only => :new
+  before_filter :destroy_check, :only => :destroy
+  before_filter :admin_check, :only => :destroy
 
   def show
     @user = User.find(params[:id])
-    if current_user.club_id == @user.club_id
-      @microposts = @user.microposts.paginate(:page => params[:page], :per_page => 5)
-    else
-      flash[:warning] = "you cannot view this user"
-      redirect_to '/users'
-    end
   end
 
   def index
-    @users = User.scoped_by_club_id(current_user.club_id)
+    @users = User.scoped_by_club_id(current_club.id)
   end
 
   def new
-    if signed_in?
-      flash[:success] = "You are already signed in."
-      redirect_to root_path
-    end
     @user = User.new
     @club = Club.find_by_sub_domain(request.subdomain)
   end
@@ -60,30 +53,32 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update_attributes(params[:user])
+    if @user.update_attribute(:admin, params[:user][:admin]) &&
+      @user.update_attribute(:name, params[:user][:name]) &&
+      @user.update_attribute(:email, params[:user][:email]) &&
+      @user.update_attribute(:active, params[:user][:active])
       flash[:success] = "Profile updated"
-      sign_in @user
-      redirect_to @user
+      redirect_to users_path
     else
       render 'edit'
     end
   end
 
+  def disable
+    flash[:success] = "User diabled"
+    redirect_to users_path
+  end
+
   def destroy
-    @remove =  User.find(params[:id])
-    if @remove == current_user
-      flash[:success] = "You cannot remove yourself"
-      redirect_to users_path
+    @user =  User.find(params[:id])
+    if @user.active?
+      @user.disable
+      flash[:success] = "User #{@user.name} has been disabled!"
     else
-      if current_user.admin?
-        @remove.destroy  unless @remove == current_user
-        flash[:success] = "User #{@remove.name} removed."
-        redirect_to users_path
-      else
-        flash[:warning] = "you cannot remove this user"
-        redirect_to '/users'
-      end
+      @user.destroy  unless @user == current_user
+      flash[:success] = "User #{@user.name} removed."
     end
+    redirect_to users_path
   end
 
   #Private Functions
@@ -91,13 +86,29 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user)
+      redirect_to(root_path) unless current_user?(@user) || current_user.admin?
     end
 
-    def admin_user
-      redirect_to root_path unless current_user.admin?
-    end
+  def correct_club
+    @user = User.find(params[:id])
+    redirect_to(root_path) unless current_club.id == @user.club_id
+  end
 
+  def sign_in_check
+    redirect_to(root_path) unless signed_in?
+  end
+
+  def admin_check
+    redirect_to(root_path) unless current_user.admin?
+  end
+
+  def destroy_check
+    if current_user == User.find(params[:id])
+      flash[:warning] = "you can't remove yourself"
+      redirect_to users_path
+    end
+  end
 end
+
 
 

@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_filter :check_active, :only => :create
   def new
   end
 
@@ -23,5 +24,13 @@ class SessionsController < ApplicationController
   def find_club(subdomain)
     club = Club.find_by_sub_domain(subdomain)
     club.id
+  end
+
+  def check_active
+    @user = User.find_by_email_and_club_id(params[:session][:email], find_club(request.subdomain))
+    unless @user.active?
+      flash[:warning] = "you account is inactive, check your email for activation or renewal notice!"
+      redirect_to root_path
+    end
   end
 end

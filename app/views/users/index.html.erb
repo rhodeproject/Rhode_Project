@@ -15,7 +15,10 @@
           <tbody>
           <% @users.each do |user|%>
             <tr>
-              <td><%= link_to user.name, user %></td>
+              <td><%= link_to user.name, user %><br>
+                <%= link_to "Edit", edit_user_path(user)%> |
+                <%= link_to "Delete", user, :confirm => 'Are you sure?', :method => :delete%>
+              </td>
               <td><%= time_ago_in_words(user.created_at) %></td>
               <% if current_user.admin? %>
                   <td><%= user.email %></td>

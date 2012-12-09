@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_filter :admin_check, :only => [:create, :edit, :new]
   # GET /events
   # GET /events.xml
   def index
@@ -140,4 +141,9 @@ class EventsController < ApplicationController
       notice.send_tweet(club)
     end
   end
+
+  def admin_check
+    redirect_to(root_path) unless current_user.admin?
+  end
+
 end
