@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, :only => [:index, :edit, :update]
-  before_filter :correct_user, :only => [:edit, :update, :show]
+  before_filter :signed_in_user, :only => [:index, :show]
+  before_filter :correct_user, :only => [:edit, :update]
   before_filter :correct_club, :only => :show
   before_filter :sign_in_check, :only => :new
   before_filter :destroy_check, :only => :destroy
@@ -22,13 +22,12 @@ class UsersController < ApplicationController
   def create
     club = Club.find_by_sub_domain(request.subdomain)
     @user = club.users.build(params[:user])
-
-    if !club.fee.nil? #if club charges membership, process the card
+    if club.fee.nil? #if club charges membership, process the card
+      message = @user.create_confirm_token #user will be saved
+    else #else create confirm token
       token = params[:stripeToken]
       message = @user.pay_membership_fee(token) #user will be saved
       sign_in_first_time @user
-    else #else create confirm token
-      message = @user.create_confirm_token #user will be saved
     end
 
     flash[:success] = message
@@ -64,11 +63,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def disable
-    flash[:success] = "User diabled"
-    redirect_to users_path
-  end
-
   def destroy
     @user =  User.find(params[:id])
     if @user.active?
@@ -86,7 +80,10 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user) || current_user.admin?
+      unless current_user?(@user) || current_user.admin?
+        flash[:warning] = "you are not able to make this change"
+        redirect_to(root_path)
+      end
     end
 
   def correct_club
@@ -99,7 +96,10 @@ class UsersController < ApplicationController
   end
 
   def admin_check
-    redirect_to(root_path) unless current_user.admin?
+    unless current_user.admin?
+      flash[:warning] = "you cannot make this change"
+      redirect_to(root_path)
+    end
   end
 
   def destroy_check

@@ -113,6 +113,7 @@ class User < ActiveRecord::Base
 
   def make_admin
     self.admin = true
+    self.active = true unless self.active? #always activate the user if they are an admin - this is for initial club set up
   end
 
   #depricate this method

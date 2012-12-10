@@ -1,4 +1,5 @@
 class SponsorsController < ApplicationController
+  #before_filter :check_admin, :only => [:create, :edit, :destroy, :update]
   def index
     @sponsors = Sponsor.scoped_by_club_id(current_user.club_id)
     @sponsor = Sponsor.new
@@ -9,10 +10,13 @@ class SponsorsController < ApplicationController
   end
 
   def create
-    club = Club.find(current_user.club_id)
-    @sponsor = club.sponsors.build(params[:sponsor])
+    #club = Club.find(current_user.club_id)
+    @sponsor = current_club.sponsors.build(params[:sponsor])
     if @sponsor.save
-      flash[:success] = "Sponsor Added to #{club.name}"
+      flash[:success] = "Sponsor Added to #{current_club.name}"
+      redirect_to sponsors_path
+    else
+      flash[:waring] = "There was an issue adding sponsor"
       redirect_to sponsors_path
     end
   end
@@ -40,5 +44,14 @@ class SponsorsController < ApplicationController
     @remove.destroy
     flash[:danger] = "sponsor removed"
     redirect_to sponsors_path
+  end
+
+  private
+
+  def check_admin
+    unless current_user.admin?
+      flash[:waring] = "You are not able to perform this action"
+      redirect_to root_path
+    end
   end
 end

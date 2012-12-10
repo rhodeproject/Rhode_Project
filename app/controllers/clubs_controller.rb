@@ -11,16 +11,10 @@ class ClubsController < ApplicationController
     if @club.save
       user = @club.users.build(params[:club][:user])#.club_id = @club.id
       user.make_admin
-      user.create_confirm_token
-      user.send_new_user_emails
       if user.save
         flash[:success] = "Thank you for adding your club to the Rhode Project"
-        #sign_in user
-        if Rails.env.development?
-          redirect_to "http://#{@club.sub_domain}.lvh.me:3000/subscriptions/new"
-        else
-          redirect_to "https://#{@club.sub_domain}.rhodeproject.com/subscriptions/new"
-        end
+        sign_in user
+        redirect_to "#{Figaro.env.protocol}#{@club.sub_domain}.#{Figaro.env.base_url}/subscriptions/new"
       else
         flash[:warning] = "failed to create user"
         redirect_to root_path
