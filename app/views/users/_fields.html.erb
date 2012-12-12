@@ -5,8 +5,8 @@
 <%= f.label :email %>
 <%= f.text_field :email %>
 
-<% if current_user.admin? %>
-    <%= f.label :active, "active?" %><%= f.check_box :active, :id => "chkActive"%>
-    <%= f.label :admin, "admin?" %><%= f.check_box :admin, :id => "chkAdmin"%>
-    <br><hr class="style-four">
-<% end %>
+%= f.label :password %>
+<%= f.password_field :password %>
+
+<%= f.label :password_confirmation, "Confirmation" %>
+<%= f.password_field :password_confirmation %>

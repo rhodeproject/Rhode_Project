@@ -8,7 +8,6 @@ class ForumsController < ApplicationController
     else
       @forums = Forum.scoped_by_club_id(current_club.id).where("admin = ?", false).order("name DESC")
     end
-
   end
 
   def edit
@@ -68,7 +67,11 @@ class ForumsController < ApplicationController
 
 
   def admin_user
-    current_user.admin?
+    unless current_user.admin?
+      flash[:warning] = "you can't perform this action"
+      redirect_to forums_path
+    end
+
   end
 
   def add_user_to_forum
