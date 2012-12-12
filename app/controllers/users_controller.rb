@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :signed_in_user, :only => [:index, :show]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :correct_club, :only => :show
-  before_filter :sign_in_check, :only => :new
+  #before_filter :sign_in_check, :only => :new
   before_filter :destroy_check, :only => :destroy
   before_filter :admin_check, :only => :destroy
 
