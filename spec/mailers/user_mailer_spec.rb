@@ -13,10 +13,63 @@ describe UserMailer do
     @user.stub!(:reset_token).and_return(SecureRandom.urlsafe_base64)
   end
 
+  describe "subscription_update_email" do
+
+    before do
+      @mail = UserMailer.subscription_update_email(@club, "invoice.payment_failed","2500")
+    end
+
+    it "should be from rhodeproject@gmail.com" do
+      @mail.from.should eq(["rhodeproject@gmail.com"])
+    end
+
+    it "should be have a reply_to address of rhodeproject@gmail.com" do
+      @mail.reply_to.should eq(["rhodeproject@gmail.com"])
+    end
+
+    describe "email body" do
+
+      it "should contain club name" do
+        @mail.body.should contain(@club.name)
+      end
+
+      it "should contain payment date" do
+        @mail.body.should contain("Payment Date:")
+      end
+
+      it "should contain payment amount" do
+        @mail.body.should contain("Amount")
+      end
+
+      it "should contain the actual $amount" do
+        @mail.body.should contain("$25.00")
+      end
+      it "should contain the actual due date"
+
+      context "failed payment" do
+        it "should contain failure" do
+          @mail.body.should contain("invoice.payment_failed")
+        end
+      end
+
+      context "successful payment" do
+        before do
+          @mail = UserMailer.subscription_update_email(@club, "invoice.payment_succeeded","2500")
+        end
+        it "should contain succeeded" do
+          @mail.body.should contain("invoice.payment_succeeded")
+        end
+      end
+
+
+    end
+
+  end
 
   describe "new_user_confirmation" do
     before do
       @mail = UserMailer.new_user_confirmation(@user).deliver
+      @subscription = mock_model(Subscription, :stripe_customer_token => "cus_123", :email => "foo@bar.com")
     end
 
     it "should be from rhodeproject@gmail.com" do

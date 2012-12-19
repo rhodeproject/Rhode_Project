@@ -3,6 +3,7 @@ require 'spec_helper'
 describe User do
   before(:each) do
     @user = FactoryGirl.build(:user)
+    @user.update_attribute('admin',false)
   end
 
   context "valid tests" do

@@ -26,13 +26,14 @@ RhodeProject::Application.routes.draw do
   resources :profiles
   resources :notices
   resources :sponsors
+  resources :renew_users
 
   root :to => 'static_pages#home'
   match '/home', :to => 'static_pages#home'
   #match '', :to => 'static_pages#home', :contraints => lambda{|r| r.subdomain == ''}
   #match '', :to => 'clubs#show', :contraints => lambda {|r| r.subdomain.present? && r.subdomain != 'www'}
 
-
+  match 'renew_users/:id', :to => 'renew_users#new'
   match '/user/:id/confirm/:confirm_code', :to =>'users#confirm'
   match '/signup',  :to => 'users#new'
   match '/sponsors', :to => 'static_pages#sponsors'
@@ -46,4 +47,6 @@ RhodeProject::Application.routes.draw do
   match 'sitemap',  :to => 'sitemap#index', :via => :get
   match '/sso',     :to => 'sessions#sso', :via => :post
   match '/hooks',   :to => 'hooks#receiver', :via => :post
+  match '/subscription_hook', :to => 'hooks#subscription', :via => :post
+
 end

@@ -56,6 +56,10 @@ class Club < ActiveRecord::Base
   def send_contact_email(content,sender_email,sender_name)
     UserMailer.delay.contact_email(content,sender_email,sender_name,self.contact_email)
   end
+
+  def send_subscription_update(type, amount)
+    UserMailer.delay.subscription_update_email(self, type, amount)
+  end
 end
 
 

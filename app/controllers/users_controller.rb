@@ -17,6 +17,8 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @club = Club.find_by_sub_domain(request.subdomain)
+    @btntext = "Create My Account"
+    @btnid = "btnNewUser"
   end
 
   def create
@@ -26,7 +28,7 @@ class UsersController < ApplicationController
       message = @user.create_confirm_token #user will be saved
     else #else create confirm token
       token = params[:stripeToken]
-      message = @user.pay_membership_fee(token) #user will be saved
+      message = @user.pay_membership_fee(token)
       sign_in_first_time @user
     end
 
@@ -49,6 +51,8 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @btntext = "Renew My Account"
+    @btnid = "btnRenewUser"
   end
 
   def update
@@ -56,9 +60,11 @@ class UsersController < ApplicationController
       @user.update_attribute(:name, params[:user][:name]) &&
       @user.update_attribute(:email, params[:user][:email]) &&
       @user.update_attribute(:active, params[:user][:active])
-      flash[:success] = "Profile updated"
+      flash[:success] = "#{@user.name} has been updated"
+      re_sign_in(@user) unless current_user != @user
       redirect_to users_path
     else
+      flash[:warning] = "there was an issue updating#{@user.name}"
       render 'edit'
     end
   end
@@ -92,7 +98,10 @@ class UsersController < ApplicationController
   end
 
   def sign_in_check
-    redirect_to(root_path) unless signed_in?
+    unless signed_in?
+      flash[:warning] = "you need to be signed in to make changes"
+      redirect_to(root_path)
+    end
   end
 
   def admin_check

@@ -16,4 +16,9 @@ class HooksController < ApplicationController
     end
   end
 
+  def subscription
+    @club = Club.find_by_subscription_id(params[:customer])
+    @club.send_subscription_update(params[:type], params[:amount])
+  end
+
 end

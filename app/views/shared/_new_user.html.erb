@@ -11,7 +11,7 @@
           <div class="span7">
             <div id="tabs-1">
 
-                <h4>The enrollment fee for <%= club_url(request.subdomain).name %> is $<%= club_url(request.subdomain).fee %>/year.</h4><br><hr class="payments">
+                <h4>The enrollment fee for <%= current_club.name %> is $<%= current_club.fee %>/year.</h4><br><hr class="payments">
               <ul class="payments">
                 <li>Please enter your Name, email address, and password to create an account.</li>
                 <li>Your email address will be used as your login and password must be at least 6 characters.</li>
@@ -26,18 +26,18 @@
               <h4>Terms and Conditions</h4>
               <hr class="payments">
               <br>
-              <%= markdown.render(@club.terms_and_conditions).html_safe unless @club.terms_and_conditions.nil? %>
-              <%= check_box_tag 'termsYes' %> I accept the <%= @club.name %> Terms and Conditions <br>
-              <%= check_box_tag "termsNo"%> I don't accept the <%= @club.name %> Terms and Conditions <br><br>
+              <%= markdown.render(current_club.terms_and_conditions).html_safe unless current_club.terms_and_conditions.nil? %>
+              <%= check_box_tag 'termsYes' %> I accept the <%= current_club.name %> Terms and Conditions <br>
+              <%= check_box_tag "termsNo"%> I don't accept the <%= current_club.name %> Terms and Conditions <br><br>
               <%= link_to "Next >>", "#", :class => "btn btn-primary", :id => "btnTabPay" %>
             </div>
             <div id="tabs-3" class="span4">
-              <label for="fee"><h5>Yearly Fee - $<%= club_url(request.subdomain).fee %></h5></label>
-              <input type="hidden" id="stripe_pk" value="<%= @club.stripe_publishable_key %>"/>
+              <label for="fee"><h5>Yearly Fee - $<%= current_club.fee %></h5></label>
+              <input type="hidden" id="stripe_pk" value="<%= current_club.stripe_publishable_key %>"/>
 
               <%= render 'shared/cc_input' %>
 
-              <%= f.submit "Create my account", id:"btnNewUser" ,:class => "btn btn-primary" %>
+              <%= f.submit "add my account", :id => "btnNewUser" ,:class => "btn btn-primary"  %>
 
             </div>
           </div>

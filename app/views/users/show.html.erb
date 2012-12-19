@@ -3,7 +3,7 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= gravatar_for @user, size: 120 %>
+        <%= gravatar_for @user, :size => 120 %>
         <%= @user.name %>
       </h1>
       <div class=" well user-stats">
@@ -20,7 +20,7 @@
     <% if @user.profile.nil? %>
         <p>A Profile for <%= @user.name %> has not been created</p>
         <% if current_user == @user %>
-            <%= link_to 'Create profile', new_profile_path, class: "btn btn-large btn-primary" %>
+            <%= link_to 'Create profile', new_profile_path, :class => "btn btn-large btn-primary" %>
         <% end %>
     <% else %>
         <table class="table">
@@ -33,7 +33,7 @@
                 <tr><td><p><i>Emergency Contact:</i> <%= @user.profile.econtact_name %></p></td></tr>
                 <tr><td><p><i>Emergency Contact Number:</i> <%= number_to_phone(@user.profile.econtact_number.to_i) %></p></td></tr>
             </table>
-            <%= link_to 'Edit profile', edit_profile_path, class: "btn btn-large btn-primary" %>
+            <%= link_to 'Edit profile', edit_profile_path, :class => "btn btn-large btn-primary" %>
         <% end %>
     <% end %>
   </div>

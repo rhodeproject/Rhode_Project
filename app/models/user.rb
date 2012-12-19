@@ -82,18 +82,23 @@ class User < ActiveRecord::Base
   end
 
   def pay_membership_fee(token)
-    Stripe.api_key = self.club.stripe_api_key
-    charge = Stripe::Charge.create(
-        :amount => self.club.fee * 100, # amount in cents, again
-        :currency => "usd",
-        :card => token,
-        :description => self.email
-    )
+    charge = create_stripe_charge(token)
     self.stripe_id = charge[:id]
     save!
     if charge[:paid] && charge[:card][:cvc_check] != "fail"
       activate_user
       "Thank you for joining #{self.club.name}!  Your payment has been processed successfully!"
+    else
+      "The follow error occured: #{charge[:failure_message]}"
+    end
+  end
+
+  def renew_membership_fee(token)
+    charge = create_stripe_charge(token)
+    if charge[:paid] && charge[:card][:cvc_check] != "fail"
+      self.update_attribute('stripe_id',charge[:id])
+      self.update_attribute('anniversary', anniversary.next_year)
+      "Thank's for ewnewing!  Your payment has been processed successfully!"
     else
       "The follow error occured: #{charge[:failure_message]}"
     end
@@ -126,6 +131,7 @@ class User < ActiveRecord::Base
   end
 
   def activate_user
+    #TODO: make this work for a renewal
     self.active = true
     self.confirm_token = nil
     self.anniversary = self.created_at.next_year
@@ -138,6 +144,17 @@ class User < ActiveRecord::Base
   end
 
   private
+
+    def create_stripe_charge(token)
+      Stripe.api_key = self.club.stripe_api_key
+      Stripe::Charge.create(
+          :amount => self.club.fee * 100, # amount in cents, again
+          :currency => "usd",
+          :card => token,
+          :description => self.email
+      )
+    end
+
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
     end

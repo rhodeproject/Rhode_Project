@@ -5,8 +5,11 @@
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', :object => f.object %>
+        <p>Expiration: <%= show_date_with_time(@user.anniversary) %>
+          <% if current_user == @user %>
+          | <%= link_to "renew membership","/renew_users/#{current_user.id}", :id => "btnRenew" %><p> <hr class="style-four">
+          <% end %>
         <%=render 'edit_fields', :f => f %>
-
         <%= f.submit "Save changes", :class => "btn btn-large btn-primary" %>
     <% end %>
     <%= gravatar_for @user %>

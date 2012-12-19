@@ -20,4 +20,12 @@ module ApplicationHelper
     end
     Club.find_by_sub_domain(subdomain)
   end
+
+  def show_date(date)
+    date.in_time_zone("Eastern Time (US & Canada)").strftime("%m/%d/%Y")
+  end
+
+  def show_date_with_time(date_time)
+    date_time.in_time_zone("Eastern Time (US & Canada)").strftime("%m/%d/%Y %I:%M:%S %p")
+  end
 end

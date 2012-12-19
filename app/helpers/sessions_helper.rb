@@ -9,6 +9,10 @@ module SessionsHelper
     end
   end
 
+  def re_sign_in(user)
+    cookies.permanent[:remember_token] = user.remember_token
+    current_user = user
+  end
   def sign_in_first_time(user)
     cookies.permanent[:remember_token] = user.remember_token
     current_user = user
@@ -44,7 +48,7 @@ module SessionsHelper
   end
 
   def current_club
-    @current_club ||= Club.find(current_user.club_id)
+    @current_club ||= Club.find_by_sub_domain(request.subdomain)
   end
 
   def current_club?(club)

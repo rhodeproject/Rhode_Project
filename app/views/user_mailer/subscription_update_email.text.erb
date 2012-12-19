@@ -1,0 +1,18 @@
+The most recent payment for <%= @club.name %> for the Rhode Project completed with the status:
+
+    <% if @type == "invoice.payment_failed" %>
+        The most recent payment to the Rhode Project has failed.
+
+        Status:<%= @type %>
+        Payment Date:
+        Amount: <%= number_to_currency(@amount) %>
+
+    <% else %>
+        Your monthly subscription fee for the Rhode Project has been charged to your Credit Card
+
+        Status: <%= @type %>
+        Payment Date:
+        Amount: <%= number_to_currency(@amount) %>
+    <% end %>
+
+--Rhode Project

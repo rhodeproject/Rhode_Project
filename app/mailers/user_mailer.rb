@@ -2,6 +2,16 @@ class UserMailer < ActionMailer::Base
   default :from => Figaro.env.email_from
   default :reply_to => Figaro.env.email_reply_to
 
+  def subscription_update_email(club, type, amount)
+    @club = club
+    @type = type
+
+    #amount is coming in stripe format -- need to make it currency
+    @amount = amount.to_i/100
+
+    mail(:to => @club.contact_email, :subject => @type)
+  end
+
   def event_reminder(user, event)
     @user = user
     @event = event
@@ -39,7 +49,7 @@ class UserMailer < ActionMailer::Base
 
   def expiry_notice(user)
     @user = user
-    @path = "#{Figaro.env.protocol}#{@user.club.sub_domain}.#{Figaro.env.base_url}/user/renew?user=#{@user.id}"
+    @path = "#{Figaro.env.protocol}#{@user.club.sub_domain}.#{Figaro.env.base_url}/renew_users/#{@user.id}"
     if Rails.env.development?
       toaddr = "mhatch73@gmail.com"
     else

@@ -5,6 +5,7 @@ describe HooksController do
   before(:each) do
     @user = mock_model(User, :name => "Test User", :email => "foo@bar.com", :stripe_id => "12345", :active => false)
     User.stub(:find_by_stripe_id).and_return(@user)
+
   end
 
   describe 'post should be successful' do
@@ -27,4 +28,29 @@ describe HooksController do
       post :receiver, {:type => "charge.failed"},{:id => "12345"}
     end
   end
+
+  context "club subscription hooks" do
+
+    before do
+      @club = mock_model(Club, :name => "test club", :sub_domain => "test", :contact_email => "foo@bar.com", :subscription_id => "cus_123")
+      Club.stub(:find_by_subscription_id).and_return(@club)
+
+    end
+    describe 'post to receiver that with invoice.payment_succeeded' do
+      it "should send an email to club admin" do
+        @club.should_receive(:send_subscription_update).with("invoice.payment_succeeded", "2500").and_return(true)
+        post :subscription, {:type => "invoice.payment_succeeded", :id => "cus_123", :amount => "2500"}
+        response.should be_success
+      end
+    end
+
+    describe 'post to receiver with invoice.payment_failed' do
+      it "should send an email to rhodeproject" do
+        @club.should_receive(:send_subscription_update).with("invoice.payment_failed","2500").and_return(true)
+        post :subscription, {:type => "invoice.payment_failed", :id => @club.subscription_id, :amount => "2500"}
+        response.should be_success
+      end
+    end
+  end
+
 end
