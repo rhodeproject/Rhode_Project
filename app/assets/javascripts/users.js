@@ -45,6 +45,7 @@ $(document).ready(function(){
     });
 
     $('#btnNewUser').click(function(event){
+        $('#cc_new_errors').remove();
         stripePayment();
         return false;
     });
@@ -61,12 +62,19 @@ function stripePayment(){
 }
 
 function stripeResponseHandler(status, response){
-    if (response.error){
-        alert(response.error.message)
-    }else{
+    if (status == 200){
         var form$ = $('#new_user');
         var token = response['id'];
         form$.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
         form$.get(0).submit();
+
+    }else{
+        $('#tabs-3').prepend('<div id="cc_new_errors">'+ response.error.message +'</div>');
+        $('#cc_new_errors').addClass("alert").addClass("alert-error");
     }
+}
+function removeInputNames() {
+    $("#card_number").removeAttr("name");
+    $("#card_code").removeAttr("name");
+    $("#card_year").removeAttr("name");
 }

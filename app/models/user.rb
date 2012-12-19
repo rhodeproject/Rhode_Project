@@ -95,13 +95,9 @@ class User < ActiveRecord::Base
 
   def renew_membership_fee(token)
     charge = create_stripe_charge(token)
-    if charge[:paid] && charge[:card][:cvc_check] != "fail"
-      self.update_attribute('stripe_id',charge[:id])
-      self.update_attribute('anniversary', anniversary.next_year)
-      "Thank's for ewnewing!  Your payment has been processed successfully!"
-    else
-      "The follow error occured: #{charge[:failure_message]}"
-    end
+    self.update_attribute('stripe_id',charge[:id])
+    self.update_attribute('anniversary', anniversary.next_year)
+    "Thank's for renewing!  Your payment has been processed successfully!"
   end
 
   def send_new_user_emails

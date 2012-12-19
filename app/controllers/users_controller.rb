@@ -22,18 +22,24 @@ class UsersController < ApplicationController
   end
 
   def create
-    club = Club.find_by_sub_domain(request.subdomain)
-    @user = club.users.build(params[:user])
-    if club.fee.nil? #if club charges membership, process the card
-      message = @user.create_confirm_token #user will be saved
-    else #else create confirm token
-      token = params[:stripeToken]
-      message = @user.pay_membership_fee(token)
-      sign_in_first_time @user
+    begin
+      club = Club.find_by_sub_domain(request.subdomain)
+      @user = club.users.build(params[:user])
+      if club.fee.nil? #if club charges membership, process the card
+        message = @user.create_confirm_token #user will be saved
+      else #else create confirm token
+        token = params[:stripeToken]
+        message = @user.pay_membership_fee(token)
+        sign_in_first_time @user
+      end
+      key = "success"
+    rescue Stripe::CardError => e
+      message = "Processing Error: #{e.message}"
+      key = "error"
     end
-
-    flash[:success] = message
+    flash[key] = message
     redirect_to root_path
+
 
   end
 

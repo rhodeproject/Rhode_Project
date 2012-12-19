@@ -10,13 +10,22 @@
           <ul>
               <li>Joined <%= time_ago_in_words(@user.created_at) %> ago</li>
               <li>Posted <%= @user.posts.count %> times</li>
+
+            <div class="big-buffer"></div>
+            <div class="big-buffer"></div>
+            <div class="big-buffer"></div>
+            <div class="big-buffer"></div>
+            <li>Expiration: <%= show_date_with_time(@user.anniversary)%></li>
+            <% if current_user == @user %>
+                <%= link_to "renew membership","/renew_users/#{current_user.id}", :id => "btnRenew" %><p> <hr class="style-four">
+            <% end %>
           </ul>
       </div>
     </section>
   </aside>
 
   <div class="span8">
-    <h1><%= @user.name %>'s Profile</h1>
+    <div class="big-buffer"></div>
     <% if @user.profile.nil? %>
         <p>A Profile for <%= @user.name %> has not been created</p>
         <% if current_user == @user %>

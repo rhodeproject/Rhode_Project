@@ -1,8 +1,11 @@
 <%= provide(:title, "Renew | #{@user.name}") %>
 <h1>user renewal - <%= @user.name %></h1>
+<div class="span8 offset2" id="user_renew_main"></div>
 <div class="row">
   <div class="span8 offset2">
+   <%= render 'shared/cc_errors' %>
     <%= form_for @user, :html => {:id => 'renew_users'}, :url => {:controller => :renew_users, :action => :update} do |f| %>
+
         <div class="row" id="tabs">
 
           <ul>
@@ -10,7 +13,7 @@
             <li><a href="#tabs-2">Terms and Conditions</a></li>
             <li><a href="#tabs-3">Payment Information</a></li>
           </ul>
-          <%= render 'shared/error_messages', :object => f.object %>
+
           <div class="span7">
             <div id="tabs-1">
 
@@ -18,11 +21,13 @@
               <ul class="payments">
                 <li>Please enter your Name, email address, and password to create an account.</li>
                 <li>Your email address will be used as your login and password must be at least 6 characters.</li>
+
               </ul>
               <hr>
               <div class="span4">
                 <%= render 'fields', :f => f %><br>
                 <%= link_to 'Next >>', "#" ,:class => "btn btn-primary", :id => "btnTabs" %><br>
+                <div class="big-buffer"></div>
               </div>
             </div>
             <div id="tabs-2" class="legal">
@@ -45,6 +50,7 @@
             </div>
           </div>
         </div>
+        <div class="big-buffer"></div>
         <small><i>Payments Processed by Stripe - www.stripe.com</i></small>
 
 

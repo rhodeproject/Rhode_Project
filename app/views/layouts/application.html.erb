@@ -37,10 +37,13 @@
 <%= render 'layouts/header' %>
 <div class="container">
   <% flash.each do |key, value| %>
-      <div id="flash_message" class="alert alert-<%= key %>">
-        <%= value %>
-      </div>
+  <!--if message is credit_card don't flash here-->
+      <% unless key == "credit_card" %>
+          <div id="flash_message" class="alert alert-<%= key %>">
+            <%= value %>
+          </div>
       <!--<%= content_tag(:div, value, :class => "alert alert-#{key}") %> -->
+      <% end %>
   <% end %>
   <%= yield %>
   <%= render 'layouts/contact' %>

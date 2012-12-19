@@ -1,5 +1,7 @@
 $(document).ready(function(){
     $('#btnRenewUser').click(function(event){
+        $("#cc_errors").remove();
+        removeInputNames();
         stripeRenew();
         return false;
     });
@@ -17,7 +19,8 @@ function stripeRenew(){
 
 function stripeRenewHandler(status, response){
     if (response.error){
-        alert(response.error.message)
+        $('#user_renew_main').append('<div id="cc_errors">'+ response.error.message +'</div>');
+        $('#cc_errors').addClass("alert").addClass("alert-error");
     }else{
         var form$ = $('#renew_users');
         var token = response['id'];

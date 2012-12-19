@@ -3,6 +3,4 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   add_breadcrumb "home", :root_path
   add_breadcrumb "forums", :forums_path
-
-
 end
