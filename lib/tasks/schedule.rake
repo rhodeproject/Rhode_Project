@@ -1,8 +1,8 @@
 namespace :user do
   desc "scheduled jobs for users"
     task :check_expiry, [:trace] => :environment do |t, args|
-      check_users(args.trace)
-      UserMailer.rake_task_complete("user:check_expiry").deliver
+      count = check_users(args.trace)
+      UserMailer.rake_task_complete("user:check_expiry - Notices Sent: #{count.to_s}").deliver
     end
 
     task :event_reminders, [:trace] => :environment do |t, args|
@@ -35,12 +35,19 @@ namespace :user do
     end
 
     def check_users(trace)
-      @users = User.all
-      @users.each do |u|
+      count = 0
+      puts "user check starting..." if trace == "trace"
+      users = User.all
+      users.each do |u|
         puts "checking user #{u.name}" if trace == "trace"
-        @warningdate = Date.parse(u.anniversary.to_s) - 14.days
-        @warningdate7 = @warningdate - 7.days
-        if Date.today == @warningdate || Date.today == @warningdate7
+        warningdate = Date.parse(u.anniversary.to_s) - 14.days
+        warningdate7 = warningdate + 7.days #7 days before expiration
+        warningdate2 = warningdate7 + 5.days #2 days before expiration
+        puts "warning date: #{warningdate}" if trace == "trace"
+        puts "warning date: #{warningdate7}" if trace == "trace"
+        puts "warning date: #{warningdate2}" if trace == "trace"
+        if Date.today == warningdate || Date.today == warningdate7 || Date.today == warningdate2
+          count += 1
           puts "Sending warning email to #{u.name}" if trace == "trace"
           UserMailer.expiry_notice(u).deliver
           #check if we are past expiry date, if so set active to false
@@ -50,6 +57,7 @@ namespace :user do
           end
         end
       end
+      count
     end
 
     def signout_account(user)

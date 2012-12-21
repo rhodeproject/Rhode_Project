@@ -2,12 +2,11 @@
 <h1>user renewal - <%= @user.name %></h1>
 <div class="span8 offset2" id="user_renew_main"></div>
 <div class="row">
+  <%= render 'shared/cc_errors' %>
   <div class="span8 offset2">
-   <%= render 'shared/cc_errors' %>
     <%= form_for @user, :html => {:id => 'renew_users'}, :url => {:controller => :renew_users, :action => :update} do |f| %>
 
         <div class="row" id="tabs">
-
           <ul>
             <li><a href="#tabs-1">User Information</a></li>
             <li><a href="#tabs-2">Terms and Conditions</a></li>

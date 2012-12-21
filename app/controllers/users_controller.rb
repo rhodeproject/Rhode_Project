@@ -39,8 +39,6 @@ class UsersController < ApplicationController
     end
     flash[key] = message
     redirect_to root_path
-
-
   end
 
   def confirm

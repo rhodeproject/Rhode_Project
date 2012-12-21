@@ -4,22 +4,34 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <style type="text/css">
     body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
+    h1.error {
+        margin-right: 5px;
+        font-size: 2em;
+        color: #3f3dff;
+        letter-spacing: 2px;
+        padding-top: 10px;
+        padding-bottom: 40px;
+        font-weight: lighter;
+        line-height: 0;
     }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+    div.dialog {
+        width: 40em;
+        padding: 0 4em;
+        margin: 4em auto 0 auto;
+        border: 10px solid #ccc;
+        border-right-color: #999;
+        border-bottom-color: #999;
+    }
+    h1 { font-size: 100%; color: #3f3dff; line-height: 1.5em;  }
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/404.html -->
   <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
+    <h1 class="error">404</h1>
+
+      <h1>This is not the page you are looking for!</h1>
     <p>You may have mistyped the address or the page may have moved.</p>
   </div>
 </body>

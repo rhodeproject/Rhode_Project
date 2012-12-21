@@ -70,7 +70,7 @@ function stripeResponseHandler(status, response){
 
     }else{
         $('#tabs-3').prepend('<div id="cc_new_errors">'+ response.error.message +'</div>');
-        $('#cc_new_errors').addClass("alert").addClass("alert-error");
+        $('#cc_new_errors').addClass("alert").addClass("alert-error").addClass('span5');
     }
 }
 function removeInputNames() {

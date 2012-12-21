@@ -2,25 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/shared/_cc_errors.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/hooks.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/profiles.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/sso.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/tokens.js.coffee" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/renew_user/new.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/renew_users.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/renew_users.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/users.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/renew_users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/renew_users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/profiles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profiles_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/user_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/renew_users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/renew_users/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_feed_item.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_feed_item.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_new_user.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_new_user.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/schedule.rake" afterPath="$PROJECT_DIR$/lib/tasks/schedule.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/404.html" afterPath="$PROJECT_DIR$/public/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/422.html" afterPath="$PROJECT_DIR$/public/422.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/500.html" afterPath="$PROJECT_DIR$/public/500.html" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,55 +40,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_new_user.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_new_user.html.erb">
+      <file leaf-file-name="500.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/500.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="97" selection-start="2072" selection-end="2072" vertical-scroll-proportion="-16.0">
+            <state line="31" column="27" selection-start="833" selection-end="833" vertical-scroll-proportion="-19.84">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/renew_users/show.html.erb">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="35" selection-start="228" selection-end="228" vertical-scroll-proportion="-3.2">
+            <state line="18" column="77" selection-start="670" selection-end="670" vertical-scroll-proportion="0.43672457">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/users.js">
+      <file leaf-file-name="422.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/422.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="66" selection-start="1942" selection-end="1942" vertical-scroll-proportion="0.5124224">
+            <state line="14" column="63" selection-start="429" selection-end="482" vertical-scroll-proportion="-8.96">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="renew_users.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/renew_users.js">
+      <file leaf-file-name="404.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/404.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="67" selection-start="569" selection-end="723" vertical-scroll-proportion="0.0">
+            <state line="31" column="2" selection-start="827" selection-end="855" vertical-scroll-proportion="-19.84">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="17" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="renew_users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/renew_users_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="62" selection-start="496" selection-end="552" vertical-scroll-proportion="0.0">
+            <state line="65" column="0" selection-start="798" selection-end="991" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,22 +101,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_feed_item.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_error_messages.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_stripe_errors.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/renew_users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/renew_users.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_new_user.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_cc_errors.html.erb" />
         <option value="$PROJECT_DIR$/app/views/renew_users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_new_user.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/users.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/renew_users.js" />
+        <option value="$PROJECT_DIR$/config/application.yml" />
+        <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/schedule.rake" />
+        <option value="$PROJECT_DIR$/app/controllers/profiles_controller.rb" />
+        <option value="$PROJECT_DIR$/public/422.html" />
+        <option value="$PROJECT_DIR$/public/404.html" />
+        <option value="$PROJECT_DIR$/public/500.html" />
+        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
       </list>
     </option>
   </component>
@@ -188,16 +173,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="RailsProjectView">
         <subPane>
           <PATH>
@@ -236,11 +211,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,7 +233,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="renew_users" />
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rhode_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rhode_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,22 +269,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rhode_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -720,18 +701,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16594517" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22366288" sideWeight="0.20341615" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6753247" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.6753247" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35403726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21636952" sideWeight="0.21273293" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21273293" sideWeight="0.6790924" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32467532" sideWeight="0.31523502" order="9" side_tool="false" content_ui="tabs" x="15" y="223" width="1234" height="497" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32467532" sideWeight="0.31523502" order="9" side_tool="false" content_ui="tabs" x="15" y="223" width="1234" height="497" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32763976" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -797,108 +778,92 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_feed_item.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="49" selection-start="363" selection-end="363" vertical-scroll-proportion="0.36548224" />
+        <state line="24" column="34" selection-start="997" selection-end="997" vertical-scroll-proportion="0.49004593" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_login.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="59" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.3843844" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/schedule.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="30" selection-start="180" selection-end="180" vertical-scroll-proportion="0.1921922" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/mailers/user_mailer_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/lib/tasks/schedule.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="72" selection-start="2240" selection-end="2240" vertical-scroll-proportion="1.4174174" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="31" selection-start="181" selection-end="181" vertical-scroll-proportion="0.14906833">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_error_messages.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="51" selection-start="336" selection-end="336" vertical-scroll-proportion="0.27457097">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="72" selection-start="1761" selection-end="1761" vertical-scroll-proportion="1.1981279">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.12324493" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="75" selection-start="2728" selection-end="2728" vertical-scroll-proportion="0.2057057" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="58" selection-start="1615" selection-end="1615" vertical-scroll-proportion="1.3588588" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profiles_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="118" selection-end="118" vertical-scroll-proportion="0.04804805" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/422.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="63" selection-start="429" selection-end="482" vertical-scroll-proportion="-8.96">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="33" selection-start="3527" selection-end="3527" vertical-scroll-proportion="0.6246246">
+        <state line="65" column="0" selection-start="798" selection-end="991" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/public/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="294" selection-end="470" vertical-scroll-proportion="0.24960998">
+        <state line="31" column="2" selection-start="827" selection-end="855" vertical-scroll-proportion="-19.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/500.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="27" selection-start="833" selection-end="833" vertical-scroll-proportion="-19.84">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="413" selection-end="413" vertical-scroll-proportion="0.21019109">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_cc_errors.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="129" selection-end="129" vertical-scroll-proportion="0.099843994">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/renew_users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="62" selection-start="496" selection-end="552" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="17" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/renew_users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="67" selection-start="569" selection-end="723" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/renew_users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="35" selection-start="228" selection-end="228" vertical-scroll-proportion="-3.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_new_user.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="97" selection-start="2072" selection-end="2072" vertical-scroll-proportion="-16.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="66" selection-start="1942" selection-end="1942" vertical-scroll-proportion="0.5124224">
+        <state line="18" column="77" selection-start="670" selection-end="670" vertical-scroll-proportion="0.43672457">
           <folding />
         </state>
       </provider>

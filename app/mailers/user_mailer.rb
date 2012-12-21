@@ -51,7 +51,7 @@ class UserMailer < ActionMailer::Base
     @user = user
     @path = "#{Figaro.env.protocol}#{@user.club.sub_domain}.#{Figaro.env.base_url}/renew_users/#{@user.id}"
     if Rails.env.development?
-      toaddr = "mhatch73@gmail.com"
+      toaddr = Figaro.env.test_email
     else
       toaddr = @user.email
     end
@@ -62,7 +62,7 @@ class UserMailer < ActionMailer::Base
     @content = post.content
     @post = post
     @forum = forum
-    rootpath = "#{Figaro.rnv.protocol}#{sub_domain}.#{Figaro.env.base_url}"
+    rootpath = "#{Figaro.env.protocol}#{sub_domain}.#{Figaro.env.base_url}"
 
     if Rails.env.development?
       email = "mhatch73@gmail.com"
