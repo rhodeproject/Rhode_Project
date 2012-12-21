@@ -13,6 +13,7 @@ describe UserMailer do
     @user.stub!(:reset_token).and_return(SecureRandom.urlsafe_base64)
   end
 
+
   describe "subscription_update_email" do
 
     before do

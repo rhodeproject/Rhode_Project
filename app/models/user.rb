@@ -66,6 +66,9 @@ class User < ActiveRecord::Base
   scope :admin, where(:admin => true)
 
   #methods
+  def to_param
+    "#{id} #{name}".parameterize
+  end
 
   def active?
     self.active

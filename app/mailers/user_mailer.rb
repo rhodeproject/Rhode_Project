@@ -37,7 +37,7 @@ class UserMailer < ActionMailer::Base
 
   def contact_email(content,sender_email,sender_name, club_email)
     if Rails.env.development?
-      toaddr = "mhatch73@gmail.com"
+      toaddr = Figaro.env.test_email
     else
       toaddr = club_email
     end
@@ -65,10 +65,10 @@ class UserMailer < ActionMailer::Base
     rootpath = "#{Figaro.env.protocol}#{sub_domain}.#{Figaro.env.base_url}"
 
     if Rails.env.development?
-      email = "mhatch73@gmail.com"
+      email = Figaro.env.test_email
     end
 
-    @link = "#{rootpath}topics/#{post.topic_id}"
+    @link = "#{rootpath}/topics/#{post.topic_id}"
     mail(:to => email, :subject => "New Post to #{forum.name}")
   end
 
@@ -94,7 +94,7 @@ class UserMailer < ActionMailer::Base
     @url = "#{Figaro.env.protocol}#{@user.club.sub_domain}.#{Figaro.env.base_url}"
     subject = "#{@user.club.name} new user confirmation - #{@user.email}"
     if Rails.env.development?
-      address = "mhatch73@gmail.com"
+      address = Figaro.env.test_email
     else
       address = @user.email
     end
