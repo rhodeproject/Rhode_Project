@@ -1,7 +1,14 @@
 $(document).ready(function(){
+    UserValidation();
+    //btnTabs - OnClick Add Class require
     $('#tabs').tabs();
     $('#btnTabs').click(function(event){
-       $('#tabs').tabs('select',1);
+        if (validator.numberOfInvalids() > 0){
+            $('#tabs').tabs('select',0);
+        }else{
+            $('#tabs').tabs('select',1);
+        }
+
        return false;
     });
     $("#btnTabPay").click(function(event){
@@ -77,4 +84,47 @@ function removeInputNames() {
     $("#card_number").removeAttr("name");
     $("#card_code").removeAttr("name");
     $("#card_year").removeAttr("name");
+}
+
+function UserValidation(){
+    /*forms validation for new user*/
+    var validator = $('#new_user').validate({
+        rules: {
+            "user[name]": {
+                required: true,
+                minlength: 2
+            },
+            "user[email]": {
+                required: true,
+                email: true
+            },
+            "user[password]": {
+                required: true,
+                minlength: 6
+            },
+            "user[password_confirmation]": {
+                equalTo: "#user_password"
+            },
+            card_number: {
+                required: true,
+                creditcard: true
+            }
+        }, //end of rules
+        messages:{
+            "user[name]": {
+                required: "you need to enter a name!",
+                minlength: "your name has to be at least 2 characters"
+            },
+            "user[email]": {
+                required: "you must enter your email address!",
+                email: "this must be a valid address, example: me@here.com"
+            },
+            "user[password]": {
+                minlength: "your password must be at least 6 charaters"
+            },
+            "user[password_confirmation]": {
+                equalTo: "not matching..."
+            }
+        } //end of messages
+    }); //end validate new_user
 }

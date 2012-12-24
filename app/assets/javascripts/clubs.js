@@ -5,19 +5,81 @@
  * Time: 9:04 PM
  * To change this template use File | Settings | File Templates.
  */
+
+
 $(document).ready(function(){
+
+    $("#new_club").validate({
+        rules: {
+            "club[name]": {
+                required: true,
+                minlength: 2
+            },
+            "club[sub_domain]": {
+                required: true
+            },
+            "club[user][name]": {
+                required: true,
+                minlength: 2
+            },
+            "club[user][email]": {
+                required: true,
+                email: true
+            },
+            "club[user][password]": {
+                required: true,
+                minlength: 6
+            },
+            "club[user][password_confirmation]": {
+                equalTo: "#club_user_password"
+            }
+        },
+        messages: {
+            "club[name]": {
+                required: "you must enter a club name",
+                minlength: "your club name must be at least 2 charaters long"
+            },
+            "club[sub_domain]": "you must enter custum url",
+            "club[user][email]": {
+                required: "you must enter an email address",
+                email: "must be a valid email address"
+            },
+            "club[user][password]": {
+                required: "you must enter a pasword",
+                minlength: "you password has to be at least 6 characters long"
+            },
+            "club[user][password_confirmation]": {
+                equalTo: "doesn't match"
+            }
+
+        },
+        success: function(label){
+           //TODO: Add class that indicates success
+        }
+
+    });
+
+    //Make suggestion on club url name
+    //TODO: show what the URL will be
+    $("#club_sub_domain").focus(function(){
+       var clubName = $("#club_name").val();
+        suggestion = clubName.replace(/\s+/g, '-').toLowerCase();
+        if (clubName && !this.value){
+            this.value = suggestion;
+        }
+    });
     $("#club_name").popover({
         animation: true,
         placement: "right",
         title: "New Club Name",
-        content: "Enter the name of your club",
+        content: "Enter the name of your club, must be at least 2 charaters.",
         delay: { show: 500, hide: 100 }
     });
     $("#club_sub_domain").popover({
         animation: true,
         placement: "right",
         title: "Sub Domain",
-        content: "The sub-domain will be a unique name that will represent your club in the URL your members will use to access your site. For example, <em>clubname</em>.rhodeproject.com, where <em>clubname</em> is the Custom URL",
+        content: "The sub-domain will be a unique name that will represent your club in the URL your members will use to access your site. For example, <em>http://clubname</em>.rhodeproject.com, where <em>clubname</em> is the Custom URL",
         delay: { show: 500, hide: 100 }
     });
     $("#club_user_name").popover({
@@ -38,7 +100,7 @@ $(document).ready(function(){
         animation: true,
         placement: "left",
         title: "Administrator Password",
-        content: "Enter the password. Do not use any common words, this is your admin user password!",
+        content: "Enter the password. It must be a minimum of 6 characters. Do not use any common words, this is your admin user password!",
         delay: { show: 500, hide: 100 }
     });
 

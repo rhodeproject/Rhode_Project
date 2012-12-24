@@ -3,11 +3,11 @@
 </div>
 <div class="field">
   <%= label_tag :card_number, "Credit Card Number " %>
-  <%= text_field_tag :card_number, nil, :name => nil, :class => "ccinput"%>
+  <%= text_field_tag :card_number, nil, :name => :card_number, :class => "ccinput"%>
 </div>
 <div class="field">
   <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-  <%= text_field_tag :card_code, nil, :name => nil %>
+  <%= text_field_tag :card_code, nil, :name => :card_code %>
 </div>
 <div class="field">
   <%= label_tag :card_month, "Card Expiration" %>

@@ -13,7 +13,7 @@ class ClubsController < ApplicationController
       user.make_admin
       if user.save
         flash[:success] = "Thank you for adding your club to the Rhode Project"
-        sign_in user
+        #sign_in user
         redirect_to "#{Figaro.env.protocol}#{@club.sub_domain}.#{Figaro.env.base_url}/subscriptions/new"
       else
         flash[:warning] = "failed to create user"
