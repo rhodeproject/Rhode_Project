@@ -8,6 +8,12 @@ describe UsersController do
     controller.stub!(:current_club).and_return(@current_club)
 
   end
+
+  describe "GET 'usercheck'" do
+    it "should return true if the email and club_id is unique"
+    it "should return false if the email and club_id are not uniqueu"
+  end
+
   describe "GET 'show'" do
     it "should assign user to @user" do
       @user = stub_model(User, :name => "test", :email =>"foo@bar.com", :club_id => @current_club.id )
@@ -29,17 +35,5 @@ describe UsersController do
     end
   end
 
-  describe "POST 'renew'" do
-    it "renders the redirect to user template" do
-      post :renew
-      response.should redirect_to(users_path)
-    end
 
-    it "calls method pay membership fee" do
-      token = "SOMETOKENTHATISPASSED"
-      @current_user.stub(:pay_membership_fee).with(token, true).and_return(true)
-      post :renew
-
-    end
-  end
 end

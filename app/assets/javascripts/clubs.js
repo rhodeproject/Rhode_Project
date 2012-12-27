@@ -54,16 +54,19 @@ $(document).ready(function(){
 
         },
         success: function(label){
-           //TODO: Add class that indicates success
+            label.addClass('valid');
+            if (label.attr('for') == 'club_sub_domain'){
+                label.html("https://" + $('#club_sub_domain').val().toLowerCase() +".rhodeproject.com").addClass('valid_club');
+            }
         }
-
     });
 
     //Make suggestion on club url name
     //TODO: show what the URL will be
     $("#club_sub_domain").focus(function(){
        var clubName = $("#club_name").val();
-        suggestion = clubName.replace(/\s+/g, '-').toLowerCase();
+        suggestion = cleanURL(clubName);
+
         if (clubName && !this.value){
             this.value = suggestion;
         }
@@ -79,7 +82,7 @@ $(document).ready(function(){
         animation: true,
         placement: "right",
         title: "Sub Domain",
-        content: "The sub-domain will be a unique name that will represent your club in the URL your members will use to access your site. For example, <em>http://clubname</em>.rhodeproject.com, where <em>clubname</em> is the Custom URL",
+        content: "The sub-domain will be a unique name that will represent your club in the URL your members will use to access your site. For example, <em>https://clubname</em>.rhodeproject.com, where <em>clubname</em> is the Custom URL",
         delay: { show: 500, hide: 100 }
     });
     $("#club_user_name").popover({
@@ -166,5 +169,20 @@ function sendContactAjax(sName,sEmail,sMessage){
             email: sEmail,
             message: sMessage}
     });
-
+}
+function cleanURL(url){
+    suggestion = url.replace(/\s+/g, '-');
+    suggestion = suggestion.replace(/\'+/g, "");
+    suggestion = suggestion.replace(/\"+/g, "");
+    suggestion = suggestion.replace(/\@+/g, "-at-");
+    suggestion = suggestion.replace(/\/+/g, "");
+    suggestion = suggestion.replace(/\\+/g, "");
+    suggestion = suggestion.replace(/\&+/g, "and");
+    suggestion = suggestion.replace(/\:+/g, "");
+    suggestion = suggestion.replace(/\?+/g, "");
+    suggestion = suggestion.replace(/\|+/g, "-");
+    suggestion = suggestion.replace(/\<+/g, "");
+    suggestion = suggestion.replace(/\>+/g, "");
+    suggestion = suggestion.replace(/\*+/g, "");
+    return suggestion.toLowerCase();
 }

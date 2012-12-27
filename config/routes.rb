@@ -5,12 +5,7 @@ RhodeProject::Application.routes.draw do
 
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
-  resources :users do
-    member do
-      get :following, :followers
-    end
-  end
-
+  resources :users
   resources :sessions, :only => [:new, :create, :destroy]
   resources :microposts, :only => [:create, :destroy]
   resources :relationships, :only => [:create, :destroy]
@@ -48,5 +43,8 @@ RhodeProject::Application.routes.draw do
   match '/sso',     :to => 'sessions#sso', :via => :post
   match '/hooks',   :to => 'hooks#receiver', :via => :post
   match '/subscription_hook', :to => 'hooks#subscription', :via => :post
+
+  #validation
+  match 'users/validate', :to => 'users#validate'
 
 end

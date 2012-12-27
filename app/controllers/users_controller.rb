@@ -36,7 +36,11 @@ class UsersController < ApplicationController
     rescue Stripe::CardError => e
       message = "Processing Error: #{e.message}"
       key = "error"
+    rescue Exception => e
+      message = e.message
+      key = "error"
     end
+
     flash[key] = message
     redirect_to root_path
   end
@@ -70,6 +74,16 @@ class UsersController < ApplicationController
     else
       flash[:warning] = "there was an issue updating#{@user.name}"
       render 'edit'
+    end
+  end
+
+  def validation
+    #get the user from the passed in params--I hope its params[:id]
+    #then check if its valid -- the model is wired to do this
+    #TODO: prevent the user#show action from firing
+    remote_validation(params[:user][:email],current_club)
+    respond_to do |format|
+      format.json
     end
   end
 

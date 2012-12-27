@@ -1,16 +1,13 @@
 $(document).ready(function(){
-    UserValidation();
+    validator = UserValidation();
+    //TODO: Add server side validation to check unique email address
     //btnTabs - OnClick Add Class require
     $('#tabs').tabs();
     $('#btnTabs').click(function(event){
-        if (validator.numberOfInvalids() > 0){
-            $('#tabs').tabs('select',0);
-        }else{
-            $('#tabs').tabs('select',1);
-        }
-
+        $('#tabs').tabs('select',1);
        return false;
     });
+
     $("#btnTabPay").click(function(event){
         var termsCheck = $("#termsYes");
         if (termsCheck.is(':checked')){
@@ -41,7 +38,7 @@ $(document).ready(function(){
     $('#frmNewUser').dialog({
         autoOpen: false,
         open: {effect: "fadeIn", duration: 500},
-        height: 600,
+        height: 620,
         width: 600,
         modal: true
     });
@@ -72,8 +69,14 @@ function stripeResponseHandler(status, response){
     if (status == 200){
         var form$ = $('#new_user');
         var token = response['id'];
-        form$.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
-        form$.get(0).submit();
+        if (validator.numberOfInvalids() == "0"){  //check for validation errors before submitting
+            form$.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
+            form$.get(0).submit();
+        }
+         else{
+            $('#tabs').tabs('select',0); //if there is invalid data return to the main tab
+        };
+
 
     }else{
         $('#tabs-3').prepend('<div id="cc_new_errors">'+ response.error.message +'</div>');
@@ -104,10 +107,6 @@ function UserValidation(){
             },
             "user[password_confirmation]": {
                 equalTo: "#user_password"
-            },
-            card_number: {
-                required: true,
-                creditcard: true
             }
         }, //end of rules
         messages:{
@@ -125,6 +124,10 @@ function UserValidation(){
             "user[password_confirmation]": {
                 equalTo: "not matching..."
             }
-        } //end of messages
+        }, //end of messages
+        success: function(label){
+            label.addClass('valid');
+        }//end of success
     }); //end validate new_user
+    return validator;
 }
