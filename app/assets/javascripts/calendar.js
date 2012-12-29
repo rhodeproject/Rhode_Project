@@ -43,15 +43,10 @@ $(document).ready(function(){
         // a future calendar might have many sources.
         eventSources: [{
             url: '/events',
-            eventColor: '#378006',
-            eventBackgroundColor: 'green',
-            color: 'green',
-            textColor: 'blue',
             ignoreTimezone: true
         }],
-
-        timeFormat: 'h:mm t{ - h:mm t} ',
-        dragOpacity: "0.5",
+        timeFormat: 'h:mm t',
+        dragOpacity: "0.8",
 
         //http://arshaw.com/fullcalendar/docs/event_ui/eventDrop/
         eventDrop: function(event, dayDelta, minuteDelta, allDay, revertFunc){

@@ -30,8 +30,8 @@
                 </td>
                 <td>
                     <% if current_user.admin?%>
-                        <%= link_to "Edit", edit_topic_path(topic), :class => "btn btn-mini btn-primary"%>
-                        <%= link_to "Delete", topic, :class => "btn btn-mini btn-danger", :confirm => 'Are you sure?', :method => :delete %>
+                        <%= link_to raw('<i class="icon-pencil icon-white"></i>'), edit_topic_path(topic), :class => "btn btn-mini btn-primary"%>
+                        <%= link_to raw('<i class="icon-trash icon-white"></i>'), topic, :class => "btn btn-mini btn-danger", :confirm => 'Are you sure?', :method => :delete %>
                     <% end %>
                 </td>
               </tr>

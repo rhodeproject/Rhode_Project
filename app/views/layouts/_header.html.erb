@@ -8,10 +8,10 @@
       <% end %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to raw('<i class="icon-home icon-white"></i> Home'), root_path %></li>
           <% if signed_in? %>
-              <li><%= link_to "Forums", "/forums"%></li>
-              <li><%= link_to "Calendar", "/calendar"%></li>
+              <li><%= link_to raw('<i class="icon-comment icon-white"></i> Forums'), "/forums"%></li>
+              <li><%= link_to raw('<i class="icon-calendar icon-white"></i> Calendar'), "/calendar"%>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="icon-user icon-white"></i>
@@ -30,7 +30,8 @@
               <% if current_user.admin? %>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Admin <b class="caret"></b>
+                  <i class="icon-cog icon-white"></i>
+                  Admin <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Club Notices",notices_path%></li>

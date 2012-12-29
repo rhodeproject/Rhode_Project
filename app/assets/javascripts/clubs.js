@@ -106,7 +106,31 @@ $(document).ready(function(){
         content: "Enter the password. It must be a minimum of 6 characters. Do not use any common words, this is your admin user password!",
         delay: { show: 500, hide: 100 }
     });
+    $("#club_fee").popover({
+        animation: true,
+        placement: "right",
+        title: "Club Fee",
+        content: "If you want to charge club members a yearly fee, add it here.  If not, just leave it blank.",
+        delay: { show: 500, hide: 100}
 
+    });
+    $("#club_stripe_api_key").popover({
+        animation: true,
+        placement: "right",
+        title: "API Key -- Stripe",
+        content: "If you are accepting payments, please signup for a Stripe Account and enter your API Key here.  You can always skip this and create it later",
+        delay: { show: 500, hide: 100}
+
+    });
+
+    $("#club_stripe_publishable_key").popover({
+        animation: true,
+        placement: "right",
+        title: "Public Key -- Stripe",
+        content: "If you are accepting payments, please signup for a Stripe Account and enter your publishable Key here (this will start with the letter pk).  You can always skip this and create it later",
+        delay: { show: 500, hide: 100}
+
+    });
     /*Sponsor Cycle*/
     $("#sponsors").cycle({
         fx: 'fade',

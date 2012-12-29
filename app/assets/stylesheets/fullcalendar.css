@@ -279,8 +279,8 @@ a.fc-event {
 	}
 	
 .fc-event-skin {
-	border-color: #36c;     /* default BORDER color */
-	background-color: #36c; /* default BACKGROUND color */
+	border-color: #00008b;     /* default BORDER color */
+	background-color: blue; /* default BACKGROUND color */
 	color: #fff;            /* default TEXT color */
 	}
 	
@@ -296,7 +296,14 @@ a.fc-event {
 .fc-event-time,
 .fc-event-title {
 	padding: 0 1px;
+    color: blue;
+    text-decoration: underline;
+    font-size: 90%;
 	}
+.fc-event-title:hover{
+    color: #00008b;
+    font-weight: bold;
+}
 	
 .fc .ui-resizable-handle { /*** TODO: don't use ui-resizable anymore, change class ***/
 	display: block;
@@ -306,9 +313,7 @@ a.fc-event {
 	font-size: 300%;  /* */
 	line-height: 50%; /* */
 	}
-	
-	
-	
+
 /* Horizontal Events
 ------------------------------------------------------------------------*/
 
@@ -384,19 +389,19 @@ a.fc-event {
 -----------------------------------------------------------------*/
 	
 .fc-corner-left .fc-event-inner {
-	border-left-width: 1px;
+	border-left-width: 2px;
 	}
 	
 .fc-corner-right .fc-event-inner {
-	border-right-width: 1px;
+	border-right-width: 2px;
 	}
 	
 .fc-corner-top .fc-event-inner {
-	border-top-width: 1px;
+	border-top-width: 2px;
 	}
 	
 .fc-corner-bottom .fc-event-inner {
-	border-bottom-width: 1px;
+	border-bottom-width: 2px;
 	}
 	
 	
@@ -615,3 +620,6 @@ table.fc-border-separate {
 	_overflow: hidden;
 	}
 
+div.fc-view.fc-view-month.fc-grid {
+    overflow: visible;
+}

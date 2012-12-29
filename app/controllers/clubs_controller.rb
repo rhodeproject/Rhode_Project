@@ -8,11 +8,16 @@ class ClubsController < ApplicationController
     @club = Club.new
     @club.name = params[:club][:name]
     @club.sub_domain = params[:club][:sub_domain]
+    @club.fee = params[:club][:fee]
+    @club.stripe_api_key = params[:club][:stripe_api_key]
+    @club.stripe_publishable_key = params[:club][:stripe_publishable_key]
+    @club.contact_email = params[:club][:user][:email]
     if @club.save
       user = @club.users.build(params[:club][:user])#.club_id = @club.id
       user.make_admin
       if user.save
         flash[:success] = "Thank you for adding your club to the Rhode Project"
+
         #sign_in user
         redirect_to "#{Figaro.env.protocol}#{@club.sub_domain}.#{Figaro.env.base_url}/subscriptions/new"
       else

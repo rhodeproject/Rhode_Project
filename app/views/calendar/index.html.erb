@@ -4,14 +4,14 @@
 
 
 
-<h2><%= current_user.club.name %> Calendar of Events</h2>
+<h2><i class="icon-calendar"></i> <%= current_user.club.name %> Calendar of Events</h2>
 
 <div id='calendar'></div>
 
 <div class="span2">
   <br>
   <% if current_user.admin || current_user.email == "mhatch73@gmail.com"%>
-      <%= link_to "new event", new_event_path, id: "btnNewEvent", class: "btn btn-mini btn-info" %>
+      <%= link_to "new event", new_event_path, :id => "btnNewEvent", :class => "btn btn-mini btn-info" %>
   <% end %>
   <br>
 </div>

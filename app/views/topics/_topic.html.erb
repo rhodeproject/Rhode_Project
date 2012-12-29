@@ -25,10 +25,10 @@
         <td><%= distance_of_time_in_words_to_now post.created_at %> ago</td>
         <td>
           <% if post.user == current_user && post.created_at > 15.minutes.ago %>
-              <%= link_to "Edit", "/posts/#{post.id}/edit", :class => "btn btn-mini btn-primary", :method => :get %>
+              <%= link_to raw('<i class="icon-pencil icon-white"></i>'), "/posts/#{post.id}/edit", :class => "btn btn-mini btn-primary", :method => :get %>
           <% end %>
           <% if current_user.admin?%>
-              <%= link_to "Delete", post, :class => "btn btn-mini btn-primary", :confirm => 'Are you sure?', :method => :delete %>
+              <%= link_to raw('<i class="icon-trash icon-white"></i>'), post, :class => "btn btn-mini btn-danger", :confirm => 'Are you sure?', :method => :delete %>
           <% end %>
         </td>
       </tr>

@@ -18,12 +18,12 @@
         </div>
         <div class="field">
           <%= f.label :email %>
-          <%= f.text_field :email%>
+          <%= f.text_field :email, :value => current_club.contact_email %>
         </div>
 
         <%= render 'shared/cc_input' %>
 
-        <div class="actions"><%= f.submit "Subscribe", class: 'btn btn-primary' %></div>
+        <div class="actions"><%= f.submit "Subscribe", :class => 'btn btn-primary' %></div>
     <% end %>
   </div>
 </div>

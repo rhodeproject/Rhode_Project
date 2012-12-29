@@ -45,7 +45,6 @@ class Club < ActiveRecord::Base
   validates :sub_domain, :uniqueness => {:case_sensitive => false}
 
   before_save { |club| club.sub_domain = sub_domain.downcase}
-
   accepts_nested_attributes_for :users
   accepts_nested_attributes_for :subscription
 
@@ -60,6 +59,7 @@ class Club < ActiveRecord::Base
   def send_subscription_update(type, amount)
     UserMailer.delay.subscription_update_email(self, type, amount)
   end
+
 end
 
 
