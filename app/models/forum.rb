@@ -18,6 +18,10 @@ class Forum < ActiveRecord::Base
 
   validates :name, :presence => true
 
+  def to_param
+    "#{id} #{name}".parameterize
+  end
+
   def most_recent_post
     topic = Topic.first(:order => 'last_post_at DESC', :conditions => ['forum_id = ?', self.id])
   end

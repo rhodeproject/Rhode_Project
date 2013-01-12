@@ -20,6 +20,9 @@ class Topic < ActiveRecord::Base
   belongs_to  :user
   has_many :posts, :dependent => :destroy
 
+  def to_param
+    "#{id} #{name}".parameterize
+  end
 end
 
 
