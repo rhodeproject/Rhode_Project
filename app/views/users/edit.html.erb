@@ -1,8 +1,8 @@
 <% provide(:title, "Edit user") %>
-<h4><%= current_user.name %>'s settings</h4><hr class="shadow">
+<h4><%= @user.name %>'s settings</h4><hr class="shadow">
 
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span6 offset1">
     <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', :object => f.object %>
         <p>Expiration: <%= show_date_with_time(@user.anniversary) %>

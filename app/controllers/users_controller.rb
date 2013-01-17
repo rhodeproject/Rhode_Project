@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.scoped_by_club_id(current_club.id)
+    @users = User.scoped_by_club_id(current_club.id).by_name
   end
 
   def new

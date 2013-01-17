@@ -72,9 +72,9 @@ class Event < ActiveRecord::Base
     if self.users << user
       @list = user.lists.find_by_event_id(self.id)
       @list.update_attribute("state", state)
-      flash = "You are signed up for #{self.title}"
+      flash = "#{user.name} has been signed up for #{self.title}"
     else
-      flash = "There was an issue adding you to #{self.title}"
+      flash = "There was an issue adding #{user.name} to #{self.title}"
     end
     flash
   end
@@ -85,9 +85,9 @@ class Event < ActiveRecord::Base
       check_wait_list
     end
     if self.users.delete(user)
-      flash = "You have been removed from #{self.title}"
+      flash = "#{user.name} has been removed from #{self.title}"
     else
-      flash = "There was an issue removing you from #{self.title}"
+      flash = "There was an issue removing #{user.name} from #{self.title}"
     end
     flash
   end
