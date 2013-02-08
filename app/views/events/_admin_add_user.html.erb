@@ -2,6 +2,6 @@
 <div id="adminAddUser">
   <%= form_for @event do |f| %>
       <%= collection_select(:all, :users, User.scoped_by_club_id(current_user.club_id).by_name, :id, :name) %>
-      <%= f.submit "add/remove member", class: "btn btn-primary" %>
+      <%= f.submit "add/remove member", :class => "btn btn-primary" %>
   <% end %>
 </div>
