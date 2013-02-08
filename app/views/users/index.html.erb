@@ -24,7 +24,7 @@
               <td><%= show_date_with_time(user.created_at) %></td>
               <% if current_user.admin? %>
                   <td><%= user.email %></td>
-                  <td><%= user.active? %></td>
+                  <td><%= user.active_yes_no %></td>
                   <td><%= show_date_with_time(user.anniversary) %></td>
               <% end %>
               <td><%= user.posts.count %></td>

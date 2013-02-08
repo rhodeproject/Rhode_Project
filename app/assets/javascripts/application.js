@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require dataTables/jquery.dataTables
 //= require bootstrap
 //= require_tree .
 
@@ -26,6 +27,7 @@ $(document).ready(function() {
         $('#post[commit]').attr("value","");
         return false;
     });
+
 });
 
 $(document).ready(function () {

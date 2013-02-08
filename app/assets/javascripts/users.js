@@ -53,6 +53,29 @@ $(document).ready(function(){
         stripePayment();
         return false;
     });
+
+    $('#tblUsers').dataTable({
+        "bRetrieve": true,
+        "bPaginate": true,
+        "bLengthChange": false,
+        "bFilter": true,
+        "bInfo": true,
+        "bAutoWidth": false,
+        "aaSorting": [[0, "asc"]],
+        "sPaginationType": "two_button",
+        "sDom": "<'row-fluid'<'span10'T>r>t<'row-fluid'<'span6'i<'btn btn-mini'p>>>",
+        "fnRowCallback": function(nRow, aData, iDisplayIndex){ //change the color of text based on cell content
+            if (aData[3] == "no"){ //if the user is inactive change the color of the whole row to red
+                $('td:eq(0)',nRow).css('color','red'); //User
+                $('td:eq(1)',nRow).css('color','red'); //Joined
+                $('td:eq(2)',nRow).css('color','red'); //Email
+                $('td:eq(3)',nRow).css('color','red'); //Active
+                $('td:eq(4)',nRow).css('color','red'); //Expiry
+                $('td:eq(5)',nRow).css('color','red'); //Posts
+            }
+            return nRow;
+        }
+    });
 });
 
 function stripePayment(){

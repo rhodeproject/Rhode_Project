@@ -75,6 +75,16 @@ class User < ActiveRecord::Base
     self.active
   end
 
+  def active_yes_no
+
+    if self.active
+      result = "yes"
+    else
+      result = "no"
+    end
+    result
+  end
+
   def admin?
     self.admin
   end
