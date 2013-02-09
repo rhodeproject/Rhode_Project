@@ -10,7 +10,6 @@ class SponsorsController < ApplicationController
   end
 
   def create
-    #club = Club.find(current_user.club_id)
     @sponsor = current_club.sponsors.build(params[:sponsor])
     if @sponsor.save
       flash[:success] = "Sponsor Added to #{current_club.name}"

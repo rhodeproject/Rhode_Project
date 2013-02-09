@@ -65,6 +65,7 @@ class User < ActiveRecord::Base
   #scopes
   scope :admin, where(:admin => true)
   scope :by_name, {:order => "lower(name) ASC"}
+  scope :active_users, where(:active => true)
 
   #methods
   def to_param

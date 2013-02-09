@@ -12,7 +12,7 @@ class RenewUsersController < ApplicationController
   def update
     begin
       @user = User.find(params[:id])
-      token = token = params[:stripeToken]
+      token = params[:stripeToken]
       message = @user.renew_membership_fee(token)
       flash[:success] = message
       re_sign_in(@user)

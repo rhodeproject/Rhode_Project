@@ -1,11 +1,11 @@
 
 <% if user_added_to_forum? %>
     <%= form_for @forum do |f| %>
-        <%= f.submit "Stop E-Mails!", class: "btn btn-mini btn-primary" %>
+        <%= f.submit "Stop E-Mails!", :class => "btn btn-mini btn-primary" %>
     <% end %>
 <% else %>
     <%= form_for @forum do |f| %>
-        <%= f.submit "E-Mail Me!", class: "btn btn-mini btn-primary" %>
+        <%= f.submit "E-Mail Me!", :id => "btn_forum_follow",:class => "btn btn-mini btn-primary" %>
     <% end %>
 <% end %>
 

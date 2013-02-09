@@ -66,7 +66,6 @@ $(document).ready(function(){
         "sDom": "<'row-fluid'<'span10'T>r>t<'row-fluid'<'span6'i<'btn btn-mini'p>>>",
         "fnRowCallback": function(nRow, aData, iDisplayIndex){ //change the color of text based on cell content
             if (aData[3] == "no"){ //if the user is inactive change the color of the whole row to red
-                $('td:eq(0)',nRow).css('color','red'); //User
                 $('td:eq(1)',nRow).css('color','red'); //Joined
                 $('td:eq(2)',nRow).css('color','red'); //Email
                 $('td:eq(3)',nRow).css('color','red'); //Active

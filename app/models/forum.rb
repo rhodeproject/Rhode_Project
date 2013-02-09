@@ -36,6 +36,26 @@ class Forum < ActiveRecord::Base
     self.admin = true
     save!
   end
+
+  def following?(user)
+    self.users.where(:id => user.id).present?
+  end
+
+  def add_user(user)
+    self.users << user
+  end
+
+  def toggle_user(user,val)
+    if self.users.where(:id => user.id).present? && val == "unfollow"
+      self.users.delete(user)
+    elsif val == "follow"
+      self.users << user
+    end
+  end
+
+  def remove_user(user)
+    self.users.delete(user)
+  end
 end
 
 
