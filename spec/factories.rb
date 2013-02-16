@@ -7,6 +7,7 @@ FactoryGirl.define do
     password "secret"
     password_confirmation "secret"
     club_id 1
+    referral_count 0
     admin true
   end
 

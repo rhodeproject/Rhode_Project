@@ -29,7 +29,10 @@ describe UsersController do
 
   describe "GET 'index'" do
     it "assigns users to @users" do
+      pending "chain stubs..."
       User.stub(:scoped_by_club_id).and_return(@current_user)
+      @current_user.stub(:admin?).and_return(false)
+      User.stub(:scoped_by_club_id).stub(:active_users).stub(:by_name).and_return(@current_user)
       get :index
       assigns(:users).should eq(@current_user)
     end

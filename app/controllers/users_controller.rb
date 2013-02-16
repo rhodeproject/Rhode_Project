@@ -46,6 +46,11 @@ class UsersController < ApplicationController
       key = "error"
     end
 
+    #create instance of User class for referral
+    referral_email = params[:referred_by]
+    @referral = User.find_by_email_and_club_id(referral_email,current_club.id) unless referral_email.nil? #this can return multiple records
+    @referral.add_referral unless @referral.nil?
+
     flash[key] = message
     redirect_to root_path
   end

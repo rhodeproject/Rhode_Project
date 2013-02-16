@@ -6,6 +6,13 @@ describe User do
     @user.update_attribute('admin',false)
   end
 
+  context "referral count" do
+    it "should increment when a new user is referred" do
+      @user.add_referral
+      @user.referral_count.should eq(1)
+    end
+  end
+
   context "valid tests" do
     it "should be valid with valid attributes" do
       @user.should be_valid
@@ -26,7 +33,10 @@ describe User do
     end
 
     it "should be invalid with same email and club_id" do
-      pending 'need to figure out Factory with same email'
+      #pending 'need to figure out Factory with same email'
+      @another_user = FactoryGirl.build(:user)
+      @another_user.email = @user.email
+      @another_user.should_not be_valid
     end
 
     it "should be invalid with no email" do

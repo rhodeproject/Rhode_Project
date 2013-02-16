@@ -9,6 +9,7 @@
               <th>Email</th>
               <th>Active</th>
               <th>Exipry date</th>
+              <th>Referrals</th>
           <% end %>
             <th>Posts</th>
           </thead>
@@ -26,6 +27,7 @@
                   <td><%= user.email %></td>
                   <td><%= user.active_yes_no %></td>
                   <td><%= show_date_with_time(user.anniversary) %></td>
+                  <td><%= user.referral_count %></td>
               <% end %>
               <td><%= user.posts.count %></td>
             </tr>

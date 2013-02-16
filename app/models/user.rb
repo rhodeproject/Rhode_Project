@@ -18,7 +18,7 @@
 
 class User < ActiveRecord::Base
   require 'json'
-  attr_accessible :email, :name, :password, :password_confirmation, :club_id
+  attr_accessible :email, :name, :password, :password_confirmation, :club_id,:referral_count
   has_secure_password
 
   #Data Relationships
@@ -43,6 +43,7 @@ class User < ActiveRecord::Base
 
   #convert email to Lowercase to ensure uniqueness in the DB
   before_save { |user| user.email = email.downcase}
+
 
   #create expiry date
   after_create :update_expiry
@@ -158,6 +159,23 @@ class User < ActiveRecord::Base
   def get_slot_state(event_id)
     list = self.lists.find_by_event_id(event_id)
     list.state
+  end
+
+  def add_referral
+    #check if the current value is nil
+    if self.referral_count.nil?
+      referrals = 0
+    else
+      referrals = self.referral_count
+    end
+
+    referrals = referrals + 1
+    self.update_attribute('referral_count',referrals)
+  end
+
+  def referred_by(referrer)
+    #find user whose name is a close macth to what is entered
+    User.find.where("name like ?", referrer)
   end
 
   private

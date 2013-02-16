@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121208035742) do
+ActiveRecord::Schema.define(:version => 20130210153910) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -209,6 +209,7 @@ ActiveRecord::Schema.define(:version => 20121208035742) do
     t.string   "confirm_token"
     t.datetime "anniversary"
     t.string   "stripe_id"
+    t.integer  "referral_count"
   end
 
   add_index "users", ["club_id"], :name => "users_club_idx"
