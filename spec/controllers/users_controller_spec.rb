@@ -37,6 +37,4 @@ describe UsersController do
       assigns(:users).should eq(@current_user)
     end
   end
-
-
 end

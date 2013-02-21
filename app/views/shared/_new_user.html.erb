@@ -36,6 +36,7 @@
               <input type="hidden" id="stripe_pk" value="<%= current_club.stripe_publishable_key %>"/>
 
               <%= render 'shared/cc_input' %>
+              <%= label_tag%>Referred by(optional): <%= text_field_tag 'txt_referred_by' %>
 
               <%= f.submit "add my account", :id => "btnNewUser" ,:class => "btn btn-primary"  %>
             </div>

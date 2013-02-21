@@ -91,10 +91,6 @@ class User < ActiveRecord::Base
     self.admin
   end
 
-  def remote_validation(email, club)
-    validates_uniqueness_of email, :scope => club.id
-  end
-
   def send_password_reset
     self.update_attribute('reset_token', generate_token)
     self.update_attribute('password_reset_sent_at', Time.zone.now)

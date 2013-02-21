@@ -10,6 +10,14 @@ if defined?(Bundler)
 end
 
 module RhodeProject
+  #constants
+  SIGNED_UP = "Signed Up"
+  WAITING = "Waiting"
+  FORUM_FOLLOW = "follow"
+  FORUM_UNFOLLOW = "unfollow"
+
+  VALID_DATE_REGEX = /(0[1-9]|[12][0-9]|3[01])/
+
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

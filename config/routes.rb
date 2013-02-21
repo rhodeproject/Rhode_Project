@@ -45,6 +45,6 @@ RhodeProject::Application.routes.draw do
   match '/subscription_hook', :to => 'hooks#subscription', :via => :post
 
   #validation
-  match 'users/validate', :to => 'users#validate'
+  match 'user/validation', :to => 'users#validation', :via => :get
 
 end

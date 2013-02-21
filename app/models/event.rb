@@ -15,8 +15,6 @@ class Event < ActiveRecord::Base
   #  ends_at     :datetime
   #
 
-  #CONSTANTS
-  VALID_DATE_REGEX = /(0[1-9]|[12][0-9]|3[01])/
   attr_accessible :starts_at, :ends_at, :title, :all_day, :description, :limit
   #before_save :convert_time
   #associations
@@ -27,7 +25,7 @@ class Event < ActiveRecord::Base
   #validations
   validates :title, :presence => true
   validates :starts_at, :presence => true
-  validates :ends_at, :presence => true, :format => VALID_DATE_REGEX
+  validates :ends_at, :presence => true, :format => RhodeProject::VALID_DATE_REGEX
 
   #scopes
   scope :before, lambda {|end_time| {:conditions => ["ends_at < ?", Event.format_date(end_time)] }}
@@ -51,21 +49,21 @@ class Event < ActiveRecord::Base
   end
 
   def available_spots
-    self.limit - self.lists.where(:state => "Signed Up").count
+    self.limit - self.lists.where(:state => RhodeProject::SIGNED_UP).count
   end
 
   def waiting
-    self.lists.where(:state => "Waiting").count
+    self.lists.where(:state => RhodeProject::WAITING).count
   end
 
   def add_user(user)
     if self.limit.nil?
-      state = "Signed Up"
+      state = RhodeProject::SIGNED_UP
     else
       if self.available_spots > 0 || self.limit.nil?
-        state = "Signed Up"
+        state = RhodeProject::SIGNED_UP
       else
-        state = "Waiting"
+        state = RhodeProject::WAITING
       end
     end
 
@@ -81,7 +79,7 @@ class Event < ActiveRecord::Base
 
   def remove_user(user)
     list = self.lists.where(:user_id => user.id)
-    if list[0].state != "Waiting"
+    if list[0].state != RhodeProject::WAITING
       check_wait_list
     end
     if self.users.delete(user)
@@ -93,9 +91,9 @@ class Event < ActiveRecord::Base
   end
 
   def check_wait_list
-    list = self.lists.where(:state => "Waiting").order('updated_at ASC')
+    list = self.lists.where(:state => RhodeProject::WAITING).order('updated_at ASC')
     if list.count > 0
-      list[0].update_attribute('state', 'Signed Up')
+      list[0].update_attribute('state', RhodeProject::WAITING)
     end
   end
 

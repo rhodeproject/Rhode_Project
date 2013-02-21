@@ -10,6 +10,8 @@ class StaticPagesController < ApplicationController
     if signed_in?
       @sponsors = Sponsor.scoped_by_club_id(current_user.club_id)
       @notices = Notice.scoped_by_club_id(current_user.club_id).order('created_at DESC').first(2)
+      #@events = Event.scoped_by_club_id(current_club.id).first(3)
+      #@topics = Topic(current_club.id).includes(:forum).last(3)
     end
     sub_domain = request.subdomain
     if sub_domain.nil?

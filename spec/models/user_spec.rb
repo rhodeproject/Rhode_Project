@@ -76,9 +76,8 @@ describe User do
       @user.active?.should be_false
     end
 
-    it "should be active once set as active" do #not sure if this really makes sense
-      #@user.activate_user #I think this is an issue because activate_user relies on created_at date
-      @user.active = true
+    it "should be active once set as active" do
+      @user.activate_user
       @user.active.should be_true
     end
 

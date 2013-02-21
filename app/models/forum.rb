@@ -46,9 +46,9 @@ class Forum < ActiveRecord::Base
   end
 
   def toggle_user(user,val)
-    if self.users.where(:id => user.id).present? && val == "unfollow"
+    if self.users.where(:id => user.id).present? && val == RhodeProject::FORUM_UNFOLLOW
       self.users.delete(user)
-    elsif val == "follow"
+    elsif val == RhodeProject::FORUM_FOLLOW
       self.users << user
     end
   end

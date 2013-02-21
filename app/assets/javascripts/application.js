@@ -71,3 +71,7 @@ function updateEvent(the_event) {
     );
 }
 
+function logIt(text){
+    window.console && console.log(text);
+}
+

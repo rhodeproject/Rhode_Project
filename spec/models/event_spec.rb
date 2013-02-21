@@ -35,4 +35,5 @@ describe Event do
     @event.should_not be_valid
   end
 
+
 end

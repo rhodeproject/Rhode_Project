@@ -90,10 +90,15 @@ class UsersController < ApplicationController
   def validation
     #get the user from the passed in params--I hope its params[:id]
     #then check if its valid -- the model is wired to do this
-    #TODO: prevent the user#show action from firing
-    remote_validation(params[:user][:email],current_club)
+
+    @user = User.find_by_email_and_club_id(params[:user][:email], current_club.id)
+    if @user.nil?
+      @return = true
+    else
+      @return = false
+    end
     respond_to do |format|
-      format.json
+      format.js {render :json => @return}
     end
   end
 

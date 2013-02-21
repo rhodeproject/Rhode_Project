@@ -15,10 +15,12 @@ $(document).ready(function(){
         }
         return false;
     });
+
     /*disable new user button if the terms and conditions aren't checked*/
     /*disable the payment tab if the terms and conditions aren't checked*/
     /*disable the next button on the terms and conditions tab if terms and conditions aren't checked*/
     /*btnNewUser*/
+
     $("#tabs-3").attr('disabled', true);
     $("#btnTabPay").attr('disabled', true);
     $("#btnNewUser").attr('disabled', true);
@@ -33,6 +35,13 @@ $(document).ready(function(){
            $("#tabs-3").attr('disabled', true);
            $("#btnTabPay").attr('disabled', true);
        }
+    });
+    $('#txt_referred_by').popover({
+        animation: true,
+        placement: "right",
+        title: "Referral Email",
+        content: "If someone referred you, enter their email address here",
+        delay: { show: 500, hide: 100 }
     });
 
     $('#frmNewUser').dialog({
@@ -121,7 +130,8 @@ function UserValidation(){
             },
             "user[email]": {
                 required: true,
-                email: true
+                email: true,
+                remote: '/user/validation'
             },
             "user[password]": {
                 required: true,
@@ -129,6 +139,9 @@ function UserValidation(){
             },
             "user[password_confirmation]": {
                 equalTo: "#user_password"
+            },
+            "txt_referred_by":{
+                email: true
             }
         }, //end of rules
         messages:{
@@ -138,7 +151,8 @@ function UserValidation(){
             },
             "user[email]": {
                 required: "you must enter your email address!",
-                email: "this must be a valid address, example: me@here.com"
+                email: "this must be a valid address, example: me@here.com",
+                remote: 'this email address is already being used by another account...'
             },
             "user[password]": {
                 minlength: "your password must be at least 6 charaters"
