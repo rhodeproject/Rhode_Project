@@ -39,22 +39,26 @@ namespace :user do
       puts "user check starting..." if trace == "trace"
       users = User.all
       users.each do |u|
-        puts "checking user #{u.name}" if trace == "trace"
+        puts "checking user #{u.name} - anniversay: #{u.anniversary}" if trace == "trace"
         warningdate = Date.parse(u.anniversary.to_s) - 14.days
         warningdate7 = warningdate + 7.days #7 days before expiration
         warningdate2 = warningdate7 + 5.days #2 days before expiration
-        puts "warning date: #{warningdate}" if trace == "trace"
-        puts "warning date: #{warningdate7}" if trace == "trace"
-        puts "warning date: #{warningdate2}" if trace == "trace"
+        puts " 14 day warning: #{warningdate}" if trace == "trace"
+        puts "7 day warning: #{warningdate7}" if trace == "trace"
+        puts "5 day warning: #{warningdate2}" if trace == "trace"
         if Date.today == warningdate || Date.today == warningdate7 || Date.today == warningdate2
           count += 1
-          puts "Sending warning email to #{u.name}" if trace == "trace"
-          UserMailer.expiry_notice(u).deliver
-          #check if we are past expiry date, if so set active to false
-          if Date.parse(u.anniversary.to_s).past?
-            puts "disabling #{u.name}" if trace == "trace"
-            signout_account(u)
+          if u.club.active? #only send an email if the club is active
+            puts "Sending warning email to #{u.name}" if trace == "trace"
+            UserMailer.expiry_notice(u).deliver
           end
+        end
+
+        #check if we are past expiry date, if so set active to false
+        puts "checking if #{u.anniversary} is in the past..." if trace == "trace"
+        if Date.parse(u.anniversary.to_s).past?
+          puts "disabling #{u.name}" if trace == "trace"
+          signout_account(u)
         end
       end
       count
