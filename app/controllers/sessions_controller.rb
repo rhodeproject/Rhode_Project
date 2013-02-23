@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   before_filter :check_active, :only => :create
+  #before_filter :check_active_club, :only => :create
   def new
   end
 
@@ -35,4 +36,12 @@ class SessionsController < ApplicationController
       end
     end
   end
+
+  def check_active_club
+    unless current_clubactive?
+      flash[:warning] = "#{current_club.name} is currently inactive"
+      redirect_to root_path
+    end
+  end
+
 end

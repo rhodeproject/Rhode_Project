@@ -1,6 +1,9 @@
 <div class="container">
   <div class="span8 offset2">
     <h1><%= @club.name %></h1>
+    <% unless current_club.active? %>
+    <%= link_to "Activate Club", :controller => :subscriptions, :action => :new %>
+    <% end %>
     <table class="table table-striped table-condensed">
       <thead>
       <th>Setting</th>
@@ -16,7 +19,7 @@
       </tbody>
     </table>
 
-    <%= link_to "Generate SSO Token", tokens_path, method: 'create', class: 'btn-large btn-primary' %> <br>
+    <%= link_to "Generate SSO Token", tokens_path, :method => 'create', :class => 'btn-large btn-primary' %> <br>
   </div>
 </div>
 

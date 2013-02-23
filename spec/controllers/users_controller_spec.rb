@@ -9,7 +9,7 @@ describe UsersController do
 
   end
 
-  describe "GET 'usercheck'" do
+  describe "GET 'validation'" do
     it "should return true if the email and club_id is unique"
     it "should return false if the email and club_id are not uniqueu"
   end
@@ -37,4 +37,6 @@ describe UsersController do
       assigns(:users).should eq(@current_user)
     end
   end
+
+
 end
