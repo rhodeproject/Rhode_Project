@@ -8,9 +8,14 @@
 <div class="field">
   <%= label_tag :card_code, "Security Code on Card (CVV)" %>
   <%= text_field_tag :card_code, nil, :name => :card_code %>
+
 </div>
 <div class="field">
   <%= label_tag :card_month, "Card Expiration" %>
   <%= select_month nil, {:add_month_numbers_true => true}, {:name => nil, :id => "card_month"}%>
   <%= select_year nil, {:start_year => Date.today.year, :end_year => Date.today.year+15}, {:name => nil, :id =>"card_year"}%>
+</div>
+<div id="cvv_help">
+  <a href="http://www.merchantequip.com/">
+    <img src="https://www.merchantequip.com/images/logos/all-cvv.gif" width="200" height="100" alt="Merchant Account Services" /></a>
 </div>

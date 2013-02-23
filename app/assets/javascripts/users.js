@@ -8,6 +8,12 @@ $(document).ready(function(){
        return false;
     });
 
+    //hide cvv_help on load
+    $("#cvv_help").hide();
+    $("#card_code").hover(function(){
+       $("#cvv_help").toggle();
+    });
+
     $("#btnTabPay").click(function(event){
         var termsCheck = $("#termsYes");
         if (termsCheck.is(':checked')){
