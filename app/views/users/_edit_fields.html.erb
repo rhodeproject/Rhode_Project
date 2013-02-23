@@ -6,6 +6,8 @@
 <%= f.text_field :email %>
 
 <% if current_user.admin? %>
+    <%= f.label :anniversary %>
+    <%= f.text_field :anniversary %>
     <%= f.label :active, "active?" %><%= f.check_box :active, :id => "chkActive"%>
     <%= f.label :admin, "admin?" %><%= f.check_box :admin, :id => "chkAdmin"%>
     <br><hr class="style-four">
