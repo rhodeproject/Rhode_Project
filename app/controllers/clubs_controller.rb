@@ -84,4 +84,18 @@ class ClubsController < ApplicationController
     end
   end
 
+  def validation
+    #used for remote validation calls
+    #return true if the club url is already used by another club
+
+    @club = Club.find_by_sub_domain(params[:club][:sub_domain])
+    if @club.nil?
+      @return = true
+    else
+      @return = false
+    end
+    respond_to do |format|
+      format.js {render :json => @return}
+    end
+  end
 end

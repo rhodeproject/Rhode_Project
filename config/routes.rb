@@ -46,5 +46,6 @@ RhodeProject::Application.routes.draw do
 
   #validation
   match 'user/validation', :to => 'users#validation', :via => :get
+  match 'club/validation', :to => 'clubs#validation', :via => :get
 
 end

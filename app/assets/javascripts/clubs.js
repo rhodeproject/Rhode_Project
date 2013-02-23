@@ -8,6 +8,20 @@
 
 
 $(document).ready(function(){
+    //disable stripe key inputs, unless the fee is greater than 0
+    $('#club_stripe_api_key').attr('disabled', 'disabled');
+    $('#club_stripe_publishable_key').attr('disabled', 'disabled');
+
+    $('#club_fee').focusout(function(){
+        if($(this).val() != ""){
+            $('#club_stripe_api_key').removeAttr('disabled');
+            $('#club_stripe_publishable_key').removeAttr('disabled');
+        }else{
+            $('#club_stripe_api_key').attr('disabled', 'disabled');
+            $('#club_stripe_publishable_key').attr('disabled', 'disabled');
+        }
+    });
+
 
     $("#new_club").validate({
         rules: {
@@ -16,7 +30,11 @@ $(document).ready(function(){
                 minlength: 2
             },
             "club[sub_domain]": {
-                required: true
+                required: true,
+                remote: '/club/validation'
+            },
+            "club[fee]": {
+                min: 1
             },
             "club[user][name]": {
                 required: true,
@@ -39,7 +57,13 @@ $(document).ready(function(){
                 required: "you must enter a club name",
                 minlength: "your club name must be at least 2 charaters long"
             },
-            "club[sub_domain]": "you must enter custum url",
+            "club[sub_domain]": {
+                required: "you must enter custum url",
+                remote: "that url is already in use"
+            },
+            "club[fee]": {
+                number: "this must be a number greater than 0"
+            },
             "club[user][email]": {
                 required: "you must enter an email address",
                 email: "must be a valid email address"
