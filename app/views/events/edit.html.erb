@@ -3,9 +3,9 @@
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@event) do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
-        <%= render 'form', f: f %>
-        <%= f.submit "Update Event", class: "btn btn-large btn-primary" %>
+        <%= render 'shared/error_messages', :object => f.object %>
+        <%= render 'form', :f => f %>
+        <%= f.submit "Update Event", :class => "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>

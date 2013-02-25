@@ -20,24 +20,41 @@ namespace :import do
           signed_up = row[6].to_date
 					#create random password
 					password = SecureRandom.hex(10)
-					
-					#create user
-					puts "Creating new user #{row[9]}"
-          user = User.create(:name => row[9],
-                   :email => row[4],
-                   :club_id => club_id,
-                   :password => password,
-                   :password_confirmation => password)
-          #assign protected attributes
-          puts "#{row[9]} has been created..."
-          puts "assigning protected attributes..."
-          user.anniversary = signed_up.next_year
-          user.admin = is_admin
-          user.active = true
-          user.save
-          puts "#{row[9]} has been saved!"
-          puts "***********************"
-          puts ""
+
+          if user_exists?(row[4], club_id)
+            puts "user already exists, skipping #{row[9]}"
+          else
+            #create user
+            puts "Creating new user #{row[9]}"
+            user = User.create(:name => row[9],
+                               :email => row[4],
+                               :club_id => club_id,
+                               :password => password,
+                               :password_confirmation => password)
+            #assign protected attributes
+            puts "#{row[9]} has been created..."
+            puts "assigning protected attributes..."
+            user.anniversary = signed_up.next_year
+            user.admin = is_admin
+            user.active = true
+            user.save
+            puts "#{row[9]} has been saved!"
+            puts "***********************"
+            puts ""
+          end
 				end
-		end
+    end
+
+    def user_exists?(email, club_id)
+      #lookup user based on email address passed
+      user = User.find_by_email_and_club_id(email, club_id)
+      #if user already exists set exists to true
+      if user.nil?
+        exists = false
+      else
+        exists = true
+      end
+      exists
+    end
+
 end
