@@ -34,8 +34,8 @@
           <% end %>
           </tbody>
           <tfoot>
-            <th><%= @users.count %></th>
-            <th></th>
+            <th><%if current_user.admin? %>Total: <%= @users.count %><% end %></th>
+            <th><%if current_user.admin? %>Active: <%= @active_users.count %><% end %></th>
             <th></th>
             <th></th>
           </tfoot>

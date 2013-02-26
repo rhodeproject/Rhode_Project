@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   def index
     if current_user.admin?
       @users = User.scoped_by_club_id(current_club.id).by_name
+      @active_users = User.scoped_by_club_id(current_club.id).active_users.by_name
     else
       @users = User.scoped_by_club_id(current_club.id).active_users.by_name
     end
