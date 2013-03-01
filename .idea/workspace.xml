@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/renew_user/new.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/password_resets/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/password_resets/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forums/new.html.erb" afterPath="$PROJECT_DIR$/app/views/forums/new.html.erb" />
     </list>
     <ignored path="Rhode_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/password_resets/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="63" selection-start="579" selection-end="579" vertical-scroll-proportion="0.349454">
+            <state line="14" column="63" selection-start="579" selection-end="579" vertical-scroll-proportion="-8.96">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/forums/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="6" selection-start="346" selection-end="346" vertical-scroll-proportion="0.22325581">
               <folding />
             </state>
           </provider>
@@ -54,7 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/test_user.csv" />
         <option value="$PROJECT_DIR$/lib/tasks/import_users.rake" />
         <option value="$PROJECT_DIR$/app/views/events/edit.html.erb" />
@@ -70,6 +78,7 @@
         <option value="$PROJECT_DIR$/app/views/password_resets/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/password_resets_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/password_resets/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/forums/new.html.erb" />
       </list>
     </option>
   </component>
@@ -200,7 +209,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="password_resets" />
+              <option name="myItemId" value="forums" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -584,11 +593,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Production: Rhode_Project" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Development: Rhode_Project" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="0" class="java.lang.String" itemvalue="Rails.Production: Rhode_Project" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Development: Rhode_Project" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -651,7 +660,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35403726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21636952" sideWeight="0.21273293" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21273293" sideWeight="0.6790924" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3044733" sideWeight="0.31523502" order="9" side_tool="false" content_ui="tabs" x="15" y="223" width="1234" height="497" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3044733" sideWeight="0.31523502" order="9" side_tool="false" content_ui="tabs" x="15" y="223" width="1234" height="497" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32763976" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -717,11 +726,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="67" selection-start="5316" selection-end="5316" vertical-scroll-proportion="4.2549453" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/subscriptions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -806,7 +810,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/password_resets/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="63" selection-start="579" selection-end="579" vertical-scroll-proportion="0.349454">
+        <state line="14" column="63" selection-start="579" selection-end="579" vertical-scroll-proportion="-8.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forums/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="346" selection-end="346" vertical-scroll-proportion="0.22325581">
           <folding />
         </state>
       </provider>

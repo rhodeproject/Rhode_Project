@@ -1,9 +1,12 @@
 <% provide(:title, "Add Forum") %>
 <% if signed_in? %>
-    <h1>Admin - Create New Forum</h1>
-
+    <h4>Admin - Create New Forum</h4>
+    <hr class="shadow">
+    This is an administriative function that adds a new forum and should be used sparingly. <br>
+    If your intention is to add a new topic to an existing forum, visit forums and find the appropriate forum for this topic.
+    <hr>
     <div class="row">
-      <div class="span6 offset3">
+      <div class="span6">
         <%= form_for(@forum) do |f| %>
             <%= f.label :name %>
             <%= f.text_field :name %>
