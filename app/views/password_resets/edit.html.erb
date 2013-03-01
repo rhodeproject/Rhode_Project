@@ -1,8 +1,8 @@
 <% provide(:title, "Edit user") %>
-<h1>Password Reset</h1>
-
+<h4><%= current_club.name %>Password Reset</h4>
+<hr class="shadow">
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span6 offset1">
     <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
         <%= render 'shared/error_messages', :object => f.object %>
 
@@ -12,7 +12,7 @@
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation %>
 
-        <%= f.submit "Change Password", :class => "btn btn-large btn-primary" %>
+        <%= f.submit "Change Password", :class => "btn btn-mini btn-primary" %>
     <% end %>
   </div>
 </div>
