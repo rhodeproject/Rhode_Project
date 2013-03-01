@@ -296,12 +296,12 @@ a.fc-event {
 .fc-event-time,
 .fc-event-title {
 	padding: 0 1px;
-    color: blue;
+    color: white;
     text-decoration: underline;
     font-size: 90%;
 	}
 .fc-event-title:hover{
-    color: #00008b;
+    color: gray;
     font-weight: bold;
 }
 	
