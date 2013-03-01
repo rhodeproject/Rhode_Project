@@ -6,7 +6,7 @@
     <br>
 
     <div class="big-buffer">
-        <%= @event.description %>
+        <%= markdown.render(@event.description).html_safe %>
         <hr>
     </div>
     <div>
