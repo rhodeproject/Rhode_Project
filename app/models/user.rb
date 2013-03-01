@@ -94,7 +94,7 @@ class User < ActiveRecord::Base
   def send_password_reset
     self.update_attribute('reset_token', generate_token)
     self.update_attribute('password_reset_sent_at', Time.zone.now)
-    UserMailer.password_reset(self).deliver
+    UserMailer.delay.password_reset(self)
   end
 
   def pay_membership_fee(token)

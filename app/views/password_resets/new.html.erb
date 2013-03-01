@@ -1,11 +1,14 @@
 <% provide(:title, "Reset Request") %>
-<h1>Password Reset</h1>
+<h4><%= current_club.name %> Password Reset</h4><hr class="shadow">
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span6 offset1">
+    Fill in the email address you use to login and click Reset.
+    <br>An email will be sent with instructions.
+    <hr>
     <%=form_tag password_resets_path, :method => :post do %>
-        <%= label_tag :email %>
+        <%= label_tag :email, "Email Address(your login for " + current_club.name+")"%>
         <%= text_field_tag :email, params[:email] %>
-        <%= submit_tag "Reset" %>
+        <%= submit_tag "Reset", :class => "btn-primary btn-mini"%>
     <% end %>
   </div>
 </div>
