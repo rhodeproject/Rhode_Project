@@ -48,6 +48,10 @@ class Event < ActiveRecord::Base
     }
   end
 
+  def to_param
+    "#{id} #{name}".parameterize
+  end
+
   def available_spots
     self.limit - self.lists.where(:state => RhodeProject::SIGNED_UP).count
   end
