@@ -279,8 +279,8 @@ a.fc-event {
 	}
 	
 .fc-event-skin {
-	border-color: #00008b;     /* default BORDER color */
-	background-color: blue; /* default BACKGROUND color */
+	border-color: #36C;     /* default BORDER color */
+	background-color: #36C; /* default BACKGROUND color */
 	color: #fff;            /* default TEXT color */
 	}
 	
@@ -297,13 +297,8 @@ a.fc-event {
 .fc-event-title {
 	padding: 0 1px;
     color: white;
-    text-decoration: underline;
     font-size: 90%;
 	}
-.fc-event-title:hover{
-    color: gray;
-    font-weight: bold;
-}
 	
 .fc .ui-resizable-handle { /*** TODO: don't use ui-resizable anymore, change class ***/
 	display: block;

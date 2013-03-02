@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.print.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/renew_user/new.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css" />
@@ -76,19 +75,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fullcalendar.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="fullcalendar.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="45" selection-start="4793" selection-end="4793" vertical-scroll-proportion="0.0">
+            <state line="298" column="17" selection-start="4738" selection-end="4738" vertical-scroll-proportion="0.66512704">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calendar.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="calendar.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="45" column="32" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,7 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/users.csv" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
@@ -134,6 +132,7 @@
         <option value="$PROJECT_DIR$/app/views/forums/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/events/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/topics/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/calendar.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css" />
       </list>
     </option>
@@ -880,16 +879,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/calendar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="45" selection-start="4793" selection-end="4793" vertical-scroll-proportion="0.0">
+        <state line="45" column="32" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/calendar.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fullcalendar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="298" column="17" selection-start="4738" selection-end="4738" vertical-scroll-proportion="0.66512704">
           <folding />
         </state>
       </provider>
