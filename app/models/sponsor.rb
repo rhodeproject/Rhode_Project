@@ -8,4 +8,13 @@ class Sponsor < ActiveRecord::Base
   validates :club_id, :presence => true
   validates :url, :presence => true,
             :format => {:with => URL_REGEX}
+
+  def image_path
+    #if the image_name starts with http then use the path entered else append /assets/
+    path = self.image_name
+    unless self.image_name.slice(0..3).downcase == "http"
+      path = "/assets/#{self.image_name}"
+    end
+    path
+  end
 end
