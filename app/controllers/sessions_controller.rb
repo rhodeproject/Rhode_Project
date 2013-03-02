@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_email_and_club_id(params[:session][:email], find_club(request.subdomain))
+    @user = User.find_by_email_and_club_id(params[:session][:email].downcase, find_club(request.subdomain))
     club = Club.find_by_sub_domain(request.subdomain)
    if @user && @user.authenticate(params[:session][:password]) && @user.active? && @user.club_id == club.id
      sign_in @user
