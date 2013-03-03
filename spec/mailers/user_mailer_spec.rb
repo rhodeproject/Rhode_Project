@@ -8,11 +8,22 @@ describe UserMailer do
     ActionMailer::Base.deliveries = []
 
     @club = mock_model(Club, :name => "Test Club", :sub_domain => "www")
-    @user = mock_model(User, :name => "Test User", :email => "foo@bar.com", :club => @club)
+    @user = mock_model(User, :name => "Test User", :email => "foo@bar.com",:stripe_id => "ch_stripeChardID", :club => @club)
     @user.stub!(:confirm_token).and_return(SecureRandom.urlsafe_base64)
     @user.stub!(:reset_token).and_return(SecureRandom.urlsafe_base64)
   end
 
+  describe "payment_confirmation" do
+
+    before do
+      @mail = UserMailer.payment_confirmation(@user)
+    end
+
+    it "should contain stripe id" do
+      @mail.body.should contain(@user.stripe_id)
+    end
+
+  end
 
   describe "subscription_update_email" do
 

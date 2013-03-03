@@ -1,0 +1,9 @@
+<%= @user.name %>,
+
+Thank you for your payment to <%= @user.club.name %>, your confirmation code is <%= @user.stripe_id %>
+
+If you have any questions, email <%= @user.club.contact_email %>
+
+Thanks you,
+
+<%= @user.club.name %>

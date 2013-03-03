@@ -31,7 +31,9 @@ class Event < ActiveRecord::Base
   scope :before, lambda {|end_time| {:conditions => ["ends_at < ?", Event.format_date(end_time)] }}
   scope :after, lambda {|start_time| {:conditions => ["starts_at > ?", Event.format_date(start_time)] }}
 
-  #callbacks
+  def to_param
+    "#{id} #{title}".parameterize
+  end
 
   # need to override the json view to return what full_calendar is expecting.
   # http://arshaw.com/fullcalendar/docs/event_data/Event_Object/
@@ -46,10 +48,6 @@ class Event < ActiveRecord::Base
         :recurring => false,
         :url => Rails.application.routes.url_helpers.event_path(id)
     }
-  end
-
-  def to_param
-    "#{id} #{name}".parameterize
   end
 
   def available_spots

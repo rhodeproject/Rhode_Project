@@ -15,7 +15,19 @@ class UserMailer < ActionMailer::Base
   def event_reminder(user, event)
     @user = user
     @event = event
+
     mail(:to => @user.email, :subject => "Reminder: #{@event.title}")
+  end
+
+  def payment_confirmation(user)
+    @user = user
+    if Rails.env.development?
+      mail = Figaro.env.test_email
+    else
+      mail = @user.email
+    end
+
+    mail(:to => mail, :subject => "Payment confirmation - #{@user.stripe_id}")
   end
 
   def new_user_notice(user)

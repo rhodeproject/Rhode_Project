@@ -8,6 +8,7 @@
             <% if current_user.admin? %>
               <th>Email</th>
               <th>Active</th>
+              <th>Payment ID</th>
               <th>Exipry date</th>
               <th>Referrals</th>
           <% end %>
@@ -26,6 +27,7 @@
               <% if current_user.admin? %>
                   <td><%= user.email %></td>
                   <td><%= user.active_yes_no %></td>
+                  <td><%= user.stripe_id %></td>
                   <td><%= show_date_with_time(user.anniversary) %></td>
                   <td><%= user.referral_count %></td>
               <% end %>

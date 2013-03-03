@@ -103,6 +103,7 @@ class User < ActiveRecord::Base
     save!
     if charge[:paid] && charge[:card][:cvc_check] != "fail"
       activate_user
+      send_payment_confirmation
       "Thank you for joining #{self.club.name}!  Your payment has been processed successfully!"
     else
       "The follow error occured: #{charge[:failure_message]}"
@@ -113,6 +114,7 @@ class User < ActiveRecord::Base
     charge = create_stripe_charge(token)
     self.update_attribute('stripe_id',charge[:id])
     self.update_attribute('anniversary', anniversary.next_year)
+    send_payment_confirmation
     "Thank's for renewing!  Your payment has been processed successfully!"
   end
 
@@ -196,5 +198,10 @@ class User < ActiveRecord::Base
 
     def update_expiry
       self.update_attribute('anniversary', Date.today.next_year )
+    end
+
+    def send_payment_confirmation
+      #create user_mailer method and send it user object and last_4 digits
+      UserMailer.delay.payment_confirmation(self)
     end
 end
