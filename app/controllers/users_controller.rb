@@ -93,7 +93,7 @@ class UsersController < ApplicationController
     #get the user from the passed in params--I hope its params[:id]
     #then check if its valid -- the model is wired to do this
 
-    @user = User.find_by_email_and_club_id(params[:user][:email], current_club.id)
+    @user = User.find_by_email_and_club_id(params[:user][:email].downcase, current_club.id)
     if @user.nil?
       @return = true
     else
