@@ -34,7 +34,7 @@
     <% else %>
         <table class="table">
           <tr><td><p><i>Age:</i> <%= @user.profile.age %></p></td></tr>
-          <tr><td><p><i>blog: </i><%= link_to @user.profile.blog, @user.profile.blog %></p></td></tr>
+          <tr><td><p><i>blog: </i><%= link_to @user.profile.blog, url_with_protocol(@user.profile.blog) %></p></td></tr>
           <tr><td><p><i>Biography:</i> <%= markdown.render(@user.profile.bio).html_safe %><p></td></tr>
         </table>
         <% if current_user == @user || current_user.admin?%>

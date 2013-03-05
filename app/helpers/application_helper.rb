@@ -21,6 +21,10 @@ module ApplicationHelper
     Club.find_by_sub_domain(subdomain)
   end
 
+  def url_with_protocol(url)
+    /^http/.match(url) ? url : "http://#{url}"
+  end
+
   def show_date(date)
     date.in_time_zone("Eastern Time (US & Canada)").strftime("%m/%d/%Y") unless date.nil?
   end
