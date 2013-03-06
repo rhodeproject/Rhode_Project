@@ -177,6 +177,10 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 
+input.sponsor, textarea.sponsor{
+  width: 33%;
+}
+
 input.search{
   width: 10%;
   height: 80%;
@@ -332,4 +336,10 @@ img.floatleft{
   margin: 4px;
   height: 100px;
   width: 100px;
+}
+
+img.sponsor{
+  position: absolute;
+  left: 600px;
+  top: 100px;
 }

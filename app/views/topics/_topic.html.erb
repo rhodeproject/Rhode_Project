@@ -1,4 +1,4 @@
-
+<table class="table table-condensed table-striped">
   <thead>
 
   <th width="60%">
@@ -34,4 +34,8 @@
       </tr>
 
   <% end %>
-
+</table>
+  <%= will_paginate @posts,
+                    :style => 'font-size: small',
+                    :next_label => ">>",
+                    :previous_label => "<<"%>

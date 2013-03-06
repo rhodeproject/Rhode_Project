@@ -25,6 +25,22 @@ describe UserMailer do
 
   end
 
+  describe "post_forum_notice" do
+    before do
+      @forum = mock_model(Forum, :name => "Test Forum")
+      @topic = mock_model(Topic, :name => "test topic")
+      @post = mock_model(Post, :content => "Test's content")
+      @post.stub!(:topic).and_return(@topic)
+      @topic.stub!(:user).and_return(@user)
+      @post.stub!(:user).and_return(@user)
+      @mail = UserMailer.post_forum_notice(@forum,@user.email,@post,@club.sub_domain)
+    end
+
+    it "should contain an apostrophe when there is one" do
+      @mail.body.should_not contain("'")
+    end
+  end
+
   describe "subscription_update_email" do
 
     before do

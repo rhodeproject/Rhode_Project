@@ -2,8 +2,10 @@
   <% if signed_in? %>
       <div class="well">
         <h1><%= current_user.club.name %></h1>
-        <% unless current_club.active? && current_user.admin?%>
-            <h2>[trial period]</h2>
+        <% unless current_club.active?%>
+            <% if current_user.admin? %>
+                <h2>[trial period]</h2>
+            <% end %>
         <% end %>
       </div>
 
