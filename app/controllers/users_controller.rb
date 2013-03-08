@@ -75,11 +75,14 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update_attribute(:admin, params[:user][:admin]) &&
-      @user.update_attribute(:name, params[:user][:name]) &&
-      @user.update_attribute(:email, params[:user][:email]) &&
-      @user.update_attribute(:active, params[:user][:active]) &&
+    if current_user.admin?
+      @user.update_attribute(:admin, params[:user][:admin])
+      @user.update_attribute(:active, params[:user][:active])
       @user.update_attribute(:anniversary, params[:user][:anniversary] )
+    end
+
+    if @user.update_attribute(:name, params[:user][:name]) &&
+      @user.update_attribute(:email, params[:user][:email]) &&
       flash[:success] = "#{@user.name} has been updated"
       re_sign_in(@user) unless current_user != @user
       redirect_to users_path
