@@ -1,12 +1,13 @@
 class EventsController < ApplicationController
   before_filter :admin_check, :only => [:create, :edit, :new]
+  before_filter :signed_in_user, :only => [:show]
   # GET /events
   # GET /events.xml
 
   def index
 
     #@events = Event.scoped_by_club_id(current_user.club_id)
-    @events = Event.scoped_by_club_id(current_club.id)
+    @events = Event.scoped_by_club_id(current_club.id).order('starts_at ASC')
     @events = @events.after(params['start']) if (params['start'])
     @events = @events.before(params['end']) if (params['end'])
 
@@ -144,5 +145,4 @@ class EventsController < ApplicationController
   def admin_check
     redirect_to(root_path) unless current_user.admin?
   end
-
 end
