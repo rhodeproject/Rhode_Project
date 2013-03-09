@@ -1,7 +1,7 @@
 class SponsorsController < ApplicationController
   #before_filter :check_admin, :only => [:create, :edit, :destroy, :update]
   def index
-    @sponsors = Sponsor.scoped_by_club_id(current_user.club_id)
+    @sponsors = Sponsor.scoped_by_club_id(current_club.id)
     @sponsor = Sponsor.new
   end
 
