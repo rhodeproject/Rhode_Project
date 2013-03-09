@@ -1,7 +1,7 @@
-<%= provide(:title, "#{current_user.club.name} Sponsors") %>
-<h1><%= current_user.club.name %>'s Sponsors</h1>
+<%= provide(:title, "#{current_club.name} Sponsors") %>
+<h1><%= current_club.name %>'s Sponsors</h1>
 
-<div class="span7 offset2">
+<div class="span10">
 <% @sponsors.each do |s| %>
       <div class="row">
         <% if s.image_name? %>
@@ -10,9 +10,14 @@
             <%= link_to s.name, s.url %>
         <% end %>
         <p><%= markdown.render(s.description).html_safe %></p>
-        <%= link_to '[edit sponsor]', "/sponsors/#{s.id}/edit" %>
-        | <%= link_to '[delete sponsor]', s, :confirm => 'Are you sure?', :method => :delete  %>
-        <hr>
+        <% unless current_user.nil? %>
+            <% if current_user.admin? %>
+            <%= link_to '[edit sponsor]', "/sponsors/#{s.id}/edit" %>
+            | <%= link_to '[delete sponsor]', s, :confirm => 'Are you sure?', :method => :delete  %>
+
+            <% end %>
+         <% end %>
+        <hr class="shadow">
       </div>
 <% end %>
 </div>
@@ -20,8 +25,11 @@
 
 <%= render 'shared/sponsor_form' %>
 <div class="row">
-  <% if current_user.admin? %>
-      <br>
-      <button id="btnNewSponsor" class="btn btn-primary">add new sponsor</button>   <br>
-  <% end %>
+  <div class="span3"><% unless current_user.nil? %>
+        <% if current_user.admin? %>
+            <br>
+            <button id="btnNewSponsor" class="btn btn-primary">add new sponsor</button>   <br>
+        <% end %>
+    <% end %>
+  </div>
 </div>

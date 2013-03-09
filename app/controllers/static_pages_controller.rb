@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
     @user = User.new
 
     if signed_in?
-      @sponsors = Sponsor.scoped_by_club_id(current_user.club_id)
+      @sponsors = Sponsor.scoped_by_club_id(current_club.id)
       @notices = Notice.scoped_by_club_id(current_user.club_id).order('created_at DESC').first(2)
       #@events = Event.scoped_by_club_id(current_club.id).first(3)
       #@topics = Topic(current_club.id).includes(:forum).last(3)
@@ -26,7 +26,7 @@ class StaticPagesController < ApplicationController
   end
 
   def sponsors
-    @sponsors = Sponsor.soped_by_club_id(current_user.club_id)
+    @sponsors = Sponsor.scoped_by_club_id(current_club.id)
   end
 
   def about
