@@ -20,7 +20,7 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    dob = Date.parse(params[:date][:month] + "/" + params[:date][:day] + "/" + params[:date][:year])
+    dob = Date.parse(params[:date][:day] + "/" + params[:date][:month] + "/" + params[:date][:year])
 
     current_user.profile.update_attribute("dob",dob)
     if current_user.profile.update_attributes(params[:profile])

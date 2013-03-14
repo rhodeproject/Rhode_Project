@@ -7,11 +7,12 @@
     <%= f.label :name_last, "Last Name" %>
     <%= f.text_field :name_last %>
 
+    <!--add helper to return default month, day, year based on current user birthday if it is set-->
     <%= f.label :dob, "Birth Date" %>
     <div class="row">
-      <div class="span2"><%= select_month(1) %></div>
-      <div class="span1"><%= select_day(1) %></div>
-      <div class="span1"><%= select_year(1973,{:start_year => Time.now.year-50}) %></div>
+      <div class="span2"><%= select_month(default_month) %></div>
+      <div class="span1"><%= select_day(default_day) %></div>
+      <div class="span1"><%= select_year(default_year,{:start_year => Time.now.year-50}) %></div>
     </div>
 
     <%= f.label :shirt_size %>
