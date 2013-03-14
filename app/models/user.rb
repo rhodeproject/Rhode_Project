@@ -176,6 +176,18 @@ class User < ActiveRecord::Base
     User.find.where("name like ?", referrer)
   end
 
+  def age
+    unless self.profile.dob.nil?
+      ((Time.now - self.profile.dob)/1.year).floor
+    end
+  end
+
+  def real_name
+    unless self.profile.full_name.nil?
+      self.profile.full_name
+    end
+  end
+
   private
 
     def create_stripe_charge(token)
@@ -201,7 +213,6 @@ class User < ActiveRecord::Base
     end
 
     def send_payment_confirmation
-      #create user_mailer method and send it user object and last_4 digits
       UserMailer.delay.payment_confirmation(self)
     end
 end

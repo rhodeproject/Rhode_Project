@@ -1,5 +1,7 @@
 class SponsorsController < ApplicationController
-  #before_filter :check_admin, :only => [:create, :edit, :destroy, :update]
+  before_filter :check_admin, :only => [:create, :edit, :destroy, :update]
+  before_filter :correct_club, :only => [:create, :edit, :destroy, :update]
+
   def index
     @sponsors = Sponsor.scoped_by_club_id(current_club.id)
     @sponsor = Sponsor.new
@@ -21,12 +23,7 @@ class SponsorsController < ApplicationController
   end
 
   def edit
-    if current_user.admin?
       @sponsor = Sponsor.find(params[:id])
-    else
-      flash[:warning] = "You do not have rights to edit this club"
-      redirect_to root_path
-    end
   end
 
   def update
@@ -49,6 +46,13 @@ class SponsorsController < ApplicationController
 
   def check_admin
     unless current_user.admin?
+      flash[:waring] = "You are not able to perform this action"
+      redirect_to root_path
+    end
+  end
+
+  def correct_club
+    unless current_user.club == current_club
       flash[:waring] = "You are not able to perform this action"
       redirect_to root_path
     end

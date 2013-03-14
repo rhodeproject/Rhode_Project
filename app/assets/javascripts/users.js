@@ -1,6 +1,5 @@
 $(document).ready(function(){
     validator = UserValidation();
-    //TODO: Add server side validation to check unique email address
     //btnTabs - OnClick Add Class require
     $('#tabs').tabs();
     $('#btnTabs').click(function(event){

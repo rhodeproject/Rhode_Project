@@ -20,6 +20,9 @@ class ProfilesController < ApplicationController
   end
 
   def update
+    dob = Date.parse(params[:date][:month] + "/" + params[:date][:day] + "/" + params[:date][:year])
+
+    current_user.profile.update_attribute("dob",dob)
     if current_user.profile.update_attributes(params[:profile])
       flash[:success] = "Profile updated"
       redirect_to current_user
@@ -29,6 +32,10 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    @sizes = Array.new
+    @sizes << RhodeProject::T_SHIRT_LARGE
+    @sizes << RhodeProject::T_SHIRT_MEDIUM
+    @sizes << RhodeProject::T_SHIRT_SMALL
   end
 
   #Private Functions

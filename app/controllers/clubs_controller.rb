@@ -1,4 +1,6 @@
 class ClubsController < ApplicationController
+  before_filter :signed_in_user, :only => [:show, :edit, :update]
+  before_filter :admin_check, :only => [:edit, :update]
 
   def new
     @club = Club.new
@@ -96,6 +98,14 @@ class ClubsController < ApplicationController
     end
     respond_to do |format|
       format.js {render :json => @return}
+    end
+  end
+
+  private
+  def admin_check
+    unless current_user.admin?
+      flash[:warning] = "you are not permitted to take this action"
+      redirect_to(root_path)
     end
   end
 end

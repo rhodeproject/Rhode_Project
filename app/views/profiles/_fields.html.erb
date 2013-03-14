@@ -1,18 +1,52 @@
-<%= f.label :age %>
-<%= f.text_field :age %>
+<div class="row">
+  <div class="span5 offset1">
+    <h2>Profile</h2>
+    <%= f.label :name_first, "First Name" %>
+    <%= f.text_field :name_first %>
 
-<%= f.label :blog %>
-<%= f.text_field :blog %>
+    <%= f.label :name_last, "Last Name" %>
+    <%= f.text_field :name_last %>
 
-<%= f.label :bio %>
-<%= f.text_area :bio %>
+    <%= f.label :dob, "Birth Date" %>
+    <div class="row">
+      <div class="span2"><%= select_month(1) %></div>
+      <div class="span1"><%= select_day(1) %></div>
+      <div class="span1"><%= select_year(1973,{:start_year => Time.now.year-50}) %></div>
+    </div>
 
-<h2>Emergency Contact Information*</h2>
+    <%= f.label :shirt_size %>
+    <div class="row">
+      <div class="span2">
+        <%= f.select(:shirt_size,
+                     [RhodeProject::T_SHIRT_XS,
+                      RhodeProject::T_SHIRT_SMALL,
+                      RhodeProject::T_SHIRT_MEDIUM,
+                      RhodeProject::T_SHIRT_LARGE,
+                      RhodeProject::T_SHIRT_XL]) %>
+      </div>
+    </div>
 
-<%= f.label :econtact_name, "Name:" %>
-<%= f.text_field :econtact_name %>
+    <%= f.label :blog %>
+    <%= f.text_field :blog %>
 
-<%= f.label :econtact_number, "Phone Number:" %>
-<%= f.text_field :econtact_number %>
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div>
 
-<h6>*only viewable by club administrators</h6><br>
+  <div class="span5 offset1">
+    <h2>Emergency Contact Information*</h2>
+    <%= f.label :contact_number, "Primary Contact Number" %>
+    <%= f.telephone_field :contact_number %>
+
+    <%= f.label :econtact_name, "Name:" %>
+    <%= f.text_field :econtact_name %>
+
+    <%= f.label :econtact_number, "Phone Number:" %>
+    <%= f.telephone_field :econtact_number %>
+
+    <h6>*only viewable by club administrators</h6><br>
+
+    <%= f.submit "Update Profile", :class => "btn btn-large btn-primary" %>
+  </div>
+</div>
+

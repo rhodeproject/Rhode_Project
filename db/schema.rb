@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130210153910) do
+ActiveRecord::Schema.define(:version => 20130312005657) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -139,6 +139,11 @@ ActiveRecord::Schema.define(:version => 20130210153910) do
     t.datetime "updated_at",      :null => false
     t.string   "econtact_name"
     t.string   "econtact_number"
+    t.string   "name_first"
+    t.string   "name_last"
+    t.string   "shirt_size"
+    t.datetime "dob"
+    t.string   "contact_number"
   end
 
   add_index "profiles", ["user_id"], :name => "profiles_user_idx"

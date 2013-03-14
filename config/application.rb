@@ -15,6 +15,11 @@ module RhodeProject
   WAITING = "Waiting"
   FORUM_FOLLOW = "follow"
   FORUM_UNFOLLOW = "unfollow"
+  T_SHIRT_XS = "xsmall"
+  T_SHIRT_SMALL = "small"
+  T_SHIRT_MEDIUM = "medium"
+  T_SHIRT_LARGE = "large"
+  T_SHIRT_XL = "xlarge"
 
   VALID_DATE_REGEX = /(0[1-9]|[12][0-9]|3[01])/
 

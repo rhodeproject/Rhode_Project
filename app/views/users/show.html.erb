@@ -33,14 +33,17 @@
         <% end %>
     <% else %>
         <table class="table">
-          <tr><td><p><i>Age:</i> <%= @user.profile.age %></p></td></tr>
+          <tr><td><p><i>Name:</i> <%= @user.real_name%></p></td></tr>
+          <tr><td><p><i>Age:</i> <%= @user.age %></p></td></tr>
           <tr><td><p><i>blog: </i><%= link_to @user.profile.blog, url_with_protocol(@user.profile.blog) %></p></td></tr>
           <tr><td><p><i>Biography:</i> <%= markdown.render(@user.profile.bio).html_safe %><p></td></tr>
         </table>
         <% if current_user == @user || current_user.admin?%>
             <table class="table">
+                <tr><td><p><i>Primary Contact Number:</i> <%= number_to_phone(@user.profile.contact_number)%></p></td></tr>
                 <tr><td><p><i>Emergency Contact:</i> <%= @user.profile.econtact_name %></p></td></tr>
                 <tr><td><p><i>Emergency Contact Number:</i> <%= number_to_phone(@user.profile.econtact_number.to_i) %></p></td></tr>
+                <tr><td><p><i>T-Shirt Size:</i> <%= @user.profile.shirt_size %></p></td></tr>
             </table>
             <%= link_to 'Edit profile', edit_profile_path, :class => "btn btn-large btn-primary" %>
         <% end %>
