@@ -37,7 +37,7 @@ describe UserMailer do
     end
 
     it "should contain an apostrophe when there is one" do
-      @mail.body.should_not contain("'")
+      @mail.body.should contain("'")
     end
   end
 
@@ -72,7 +72,6 @@ describe UserMailer do
       it "should contain the actual $amount" do
         @mail.body.should contain("$25.00")
       end
-      it "should contain the actual due date"
 
       context "failed payment" do
         it "should contain failure" do
@@ -166,6 +165,9 @@ describe UserMailer do
       @mail.to.should eq([@user.email])
     end
 
+    it "should contain the club name" do
+      @mail.body.should contain(@user.club.name)
+    end
   end
 
   describe "event_reminder" do
@@ -265,10 +267,6 @@ describe UserMailer do
 
       it "should contain club_url" do
         @mail.body.should contain(@club.sub_domain)
-      end
-
-      it "should contain rhodeproject.com" do
-        @mail.body.should contain("rhodeproject.com")
       end
 
       it "should contain a reset token" do

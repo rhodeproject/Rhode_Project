@@ -1,11 +1,7 @@
 <header class="navbar navbar-fixed-top" xmlns="http://www.w3.org/1999/html">
   <div class="navbar-inner">
     <div class="container">
-      <% if signed_in? %>
-        <%= link_to current_user.club.name, root_path, :id => "logo" %>
-      <% else %>
-        <%= link_to club_url(request.subdomain).name, root_path, :id => "logo" %>
-      <% end %>
+      <%= link_to current_club.name, root_path, :id => "logo" %>
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to raw('<i class="icon-home icon-white"></i> Home'), root_path %></li>
