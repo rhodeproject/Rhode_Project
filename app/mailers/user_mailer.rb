@@ -67,7 +67,7 @@ class UserMailer < ActionMailer::Base
     else
       toaddr = @user.email
     end
-    mail(:to => toaddr, :subject => "Your Account will expire soon")
+    mail(:to => toaddr, :subject => "Your #{@user.club.name} membership will expire soon")
   end
 
   def post_forum_notice(forum,email,post,sub_domain)

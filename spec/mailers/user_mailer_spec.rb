@@ -87,8 +87,6 @@ describe UserMailer do
           @mail.body.should contain("invoice.payment_succeeded")
         end
       end
-
-
     end
 
   end
@@ -140,6 +138,11 @@ describe UserMailer do
   describe "expiry_notice" do
     before do
       @mail = UserMailer.expiry_notice(@user).deliver
+    end
+
+    it "should have a subject with club name and the word expire" do
+      @mail.subject.should contain(@club.name)
+      @mail.subject.should contain("expire")
     end
 
     it "should be from rhodeproject@gmail.com" do

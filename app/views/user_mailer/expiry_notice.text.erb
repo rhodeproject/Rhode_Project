@@ -1,6 +1,6 @@
 Dear <%= @user.name %>
 
-Your acount will expire on <%= @user.anniversary.to_s %>
+Your <%= @user.club.name %> membership will expire on <%= @user.anniversary.to_s %>
 
 Renew it by following the link below:
 <%= @path %>
