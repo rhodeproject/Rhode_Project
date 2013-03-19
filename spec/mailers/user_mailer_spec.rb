@@ -14,7 +14,6 @@ describe UserMailer do
   end
 
   describe "payment_confirmation" do
-
     before do
       @mail = UserMailer.payment_confirmation(@user)
     end
@@ -22,7 +21,6 @@ describe UserMailer do
     it "should contain stripe id" do
       @mail.body.should contain(@user.stripe_id)
     end
-
   end
 
   describe "post_forum_notice" do
@@ -132,7 +130,6 @@ describe UserMailer do
     it "should have subject with club name" do
       @mail.subject.should contain(@club.name)
     end
-
   end
 
   describe "expiry_notice" do

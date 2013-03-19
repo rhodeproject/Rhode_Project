@@ -1,7 +1,40 @@
 <% provide(:title, 'Help') %>
-
-<h1>Help</h1>
-<div class="span8 offset2" id="help">
+<div class="row">
+<h3>Help</h3>
+<div class="span10" id="help">
   <br>
-  <iframe width="640" height="360" src="https://www.youtube.com/embed/sIS9TGJhfzw?rel=0" frameborder="0" allowfullscreen></iframe>
+  <h4>Forum</h4><hr class="shadow">
+  <p>
+  Forums are used to communicate with other club members about on going activities. And for club organizers to post updates
+    about the club.
+
+    <ul>
+      <li>to receive an email when anyone adds a topic or posts/responds to an existing topic in a forum, simply click <%= mini_btn('follow') %> to the right of the forum</li>
+      <li>if you are following a forum the button will change to 'unfollow' to stop receiving email updates for that forum, click <%= mini_btn('unfollow') %></li>
+      <li>even if you are not 'following' a forum, you will receive updates for any topic you have created or responded to</li>
+    </ul>
+  </p>
+
+  <h4>Events</h4><hr class="shadow">
+  <p>
+    Visit the calendar of events to see what club organized events are coming up.
+    <ul>
+      <li>On the calender click on an event to see event details</li>
+      <li>if you would like to attend an event, click <%= mini_btn('add me') %>, this button will change to <%= mini_btn('remove me') %>.</li>
+      <li>to remove yourself from an event, click 'remove me'</li>
+    </ul>
+  </p>
+
+  <h4>Profiles</h4><hr class="shadow">
+  <p>
+    Use your profile to tell everyone else in the club a little about yourself.
+    <ul>
+      <li>Blog</li>
+      <li>Bio</li>
+      <li>Birthdate - we use this calculate your age</li>
+      <li>t-shirt size - we use this to help estimate sizes for any t-shirt orders</li>
+      <li>contact information and emergency contact information</li>
+    </ul>
+  </p>
+</div>
 </div>
