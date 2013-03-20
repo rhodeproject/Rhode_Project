@@ -13,6 +13,28 @@ describe UserMailer do
     @user.stub!(:reset_token).and_return(SecureRandom.urlsafe_base64)
   end
 
+  describe "welcome_email" do
+    before do
+      @mail = UserMailer.welcome_email(@user)
+    end
+
+    it "should be addressed to user" do
+      @mail.to.should eq([@user.email])
+    end
+
+    it "should have subject contains welcome user name" do
+      @mail.subject.should contain("Welcome to #{@user.club.name}, #{@user.name}")
+    end
+
+    it "should contain user name" do
+      @mail.body.should contain(@user.name)
+    end
+
+    it "should have a body that contains the club name" do
+      @mail.body.should contain(@user.club.name)
+    end
+  end
+
   describe "payment_confirmation" do
     before do
       @mail = UserMailer.payment_confirmation(@user)

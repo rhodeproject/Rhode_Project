@@ -1,10 +1,8 @@
 <div class="row">
-  <div class="span5 offset4">
+  <div class="span12">
     <h2>Profile for <%= current_user.name %></h2>
     <%= form_for @profile do |f| %>
-
-    <%= render 'fields', f: f %>
-        <%= f.submit "Create Profile", class: "btn btn-large btn-primary" %>
+    <%= render 'fields', :f => f %>
     <% end %>
   </div>
 </div>

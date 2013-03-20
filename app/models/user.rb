@@ -123,6 +123,11 @@ class User < ActiveRecord::Base
     UserMailer.delay.new_user_confirmation(self)
   end
 
+  #send welcome email to new user
+  def send_welcome_email
+    UserMailer.delay.welcome_email(self)
+  end
+
   def create_confirm_token
     self.confirm_token = SecureRandom.urlsafe_base64
     self.save!

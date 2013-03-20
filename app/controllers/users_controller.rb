@@ -37,6 +37,7 @@ class UsersController < ApplicationController
         token = params[:stripeToken]
         message = @user.pay_membership_fee(token)
         sign_in_first_time @user
+        @user.send_welcome_email
       end
       key = "success"
     rescue Stripe::CardError => e

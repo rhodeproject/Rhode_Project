@@ -2,6 +2,18 @@ class UserMailer < ActionMailer::Base
   default :from => Figaro.env.email_from
   default :reply_to => Figaro.env.email_reply_to
 
+  def welcome_email(user)
+    @user = user
+    if Rails.env.development?
+      email = Figaro.env.test_email
+      subject = "Welcome to #{@user.club.name}, #{@user.name} -- #{@user.email}"
+    else
+      email = @user.email
+      subject = "Welcome to #{@user.club.name}, #{@user.name}"
+    end
+    mail(:to => email, :subject => subject)
+  end
+
   def subscription_update_email(club, type, amount)
     @club = club
     @type = type
