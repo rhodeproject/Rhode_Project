@@ -32,7 +32,7 @@ $(document).ready(function(){
             effect: "fadeOut",
             duration: 500
         },
-        height: 150,
+        height: 225,
         width: 550,
         modal: true,
         beforeClose: function(){
@@ -129,7 +129,7 @@ function getCharge(chargeId){
         },
         success: function(data){
             $("#show_charge").empty();
-            $("#show_charge").dialog('option','title','payment details - '+ data.description);
+            $("#show_charge").dialog('option','title','payment details | '+ data.description);
             $('#show_charge').append(
             '<table class="table-condensed table-striped">' +
              '<thead><th>Card Type</th><th>last 4</th><th>exp date</th><th>paid</th><th>stripe fee</th><th>date paid</th>' +
@@ -143,8 +143,9 @@ function getCharge(chargeId){
              '</tr>' +
              '</table>'
             ).fadeIn("slow");
-            $("#show_charge").append('<br>-- Payment ID: '+chargeId);
-            $("#show_charge").append('<br>-- Email: ' + data.description);
+            $("#show_charge").append('<hr class="shadow">');
+            $("#show_charge").append('<br><h6>--Payment ID: '+chargeId+'</h6>');
+            $("#show_charge").append('<br><h6>--Email: ' + data.description + '</h6>');
         },
         dataType: "JSON",
         async: false
