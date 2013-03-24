@@ -21,6 +21,31 @@ $(document).ready(function(){
         return false;
     });
 
+    //charges modal
+    $("#show_charge").dialog({
+        title: "payment details",
+        autoOpen: false,
+        open: {
+            effect: "fadeIn",
+            duration: 500},
+        hide: {
+            effect: "fadeOut",
+            duration: 500
+        },
+        height: 150,
+        width: 550,
+        modal: true,
+        beforeClose: function(){
+            $("#show_charge").empty();
+        }
+    });
+
+    $(".stripe_payment").click(function(){
+        getCharge($(this).text());
+        $("#show_charge").dialog('open');
+        return false;
+    });
+
     /*disable new user button if the terms and conditions aren't checked*/
     /*disable the payment tab if the terms and conditions aren't checked*/
     /*disable the next button on the terms and conditions tab if terms and conditions aren't checked*/
@@ -70,6 +95,7 @@ $(document).ready(function(){
 
     $('#tblUsers').dataTable({
         "bRetrieve": true,
+        "bStateSave": true,
         "bPaginate": true,
         "bLengthChange": false,
         "bFilter": true,
@@ -90,6 +116,40 @@ $(document).ready(function(){
         }
     });
 });
+
+function getCharge(chargeId){
+
+    $.ajax({
+        type: "POST",
+        url: '/club/charge',
+        data: {charge:chargeId},
+        error: function(e){
+            $("#show_charge").empty();
+            $("#show_charge").append("There was an issue retreiving data");
+        },
+        success: function(data){
+            $("#show_charge").empty();
+            $("#show_charge").dialog('option','title','payment details - '+ data.description);
+            $('#show_charge').append(
+            '<table class="table-condensed table-striped">' +
+             '<thead><th>Card Type</th><th>last 4</th><th>exp date</th><th>paid</th><th>stripe fee</th><th>date paid</th>' +
+             '</thead>' +
+             '<tbody><tr>' +
+                '<td>'+data.card.type+'</td><td>'+data.card.last4+'</td>' +
+                '<td>'+data.card.exp_month+'/'+data.card.exp_year+'</td>' +
+                '<td>$'+(data.amount/100).toFixed(2)+'</td>' +
+                '<td>$'+(data.fee/100).toFixed(2)+'</td>' +
+                '<td>'+convertTimeStamp(data.created)+'</td>'+
+             '</tr>' +
+             '</table>'
+            ).fadeIn("slow");
+            $("#show_charge").append('<br>-- Payment ID: '+chargeId);
+            $("#show_charge").append('<br>-- Email: ' + data.description);
+        },
+        dataType: "JSON",
+        async: false
+    })
+}
 
 function stripePayment(){
     Stripe.setPublishableKey($('#stripe_pk').val());

@@ -1,6 +1,6 @@
 class ClubsController < ApplicationController
   before_filter :signed_in_user, :only => [:show, :edit, :update]
-  before_filter :admin_check, :only => [:edit, :update]
+  before_filter :admin_check, :only => [:edit, :update, :payments,:charge]
 
   def new
     @club = Club.new
@@ -98,6 +98,21 @@ class ClubsController < ApplicationController
     end
     respond_to do |format|
       format.js {render :json => @return}
+    end
+  end
+
+  def payments
+    #retrieve current_club payments
+    @club = Club.find_by_sub_domain(request.subdomain)
+    start_date = Time.parse(params[:start_date]).to_i unless params[:start_date].nil?
+    end_date = Time.parse(params[:end_date]).to_i unless params[:end_date].nil?
+    @payments = @club.payments(start_date,end_date)[:data]
+  end
+
+  def charge
+    @charge = current_club.charge(params[:charge])
+    respond_to do |format|
+      format.js {render :json => @charge}
     end
   end
 

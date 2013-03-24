@@ -27,7 +27,7 @@
               <% if current_user.admin? %>
                   <td><%= user.email %></td>
                   <td><%= user.active_yes_no %></td>
-                  <td><%= user.stripe_id %></td>
+                  <td class="stripe_payment"><%= link_to user.stripe_id,"" %></td>
                   <td><%= show_date_with_time(user.anniversary) %></td>
                   <td><%= user.referral_count %></td>
               <% end %>
@@ -42,7 +42,7 @@
             <th></th>
           </tfoot>
         </table>
-
+       <div id="show_charge"></div>
 
 
 

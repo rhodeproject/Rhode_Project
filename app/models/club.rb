@@ -60,6 +60,17 @@ class Club < ActiveRecord::Base
     UserMailer.delay.subscription_update_email(self, type, amount)
   end
 
+  def payments(start_date, end_date)
+    Stripe.api_key = self.stripe_api_key
+    Stripe::Charge.all(:count => 100,:created => {:gte => start_date, :lte => end_date})
+  end
+
+  def charge(charge)
+    Stripe.api_key = self.stripe_api_key
+    Stripe::Charge.retrieve(charge)
+  end
+
+
 end
 
 

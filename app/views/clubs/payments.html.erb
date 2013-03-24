@@ -1,0 +1,24 @@
+<div class="row">
+  <h4><%= current_club.name %> payments</h4>
+</div>
+<table id="tblPayments" class="table table-condensed table-striped">
+  <thead>
+    <th>User</th>
+    <th>Payment ID</th>
+    <th>Amount</th>
+    <th>Paid On</th>
+    <th>Last 4 CC Number</th>
+  </thead>
+  <tbody>
+    <% @payments.each do |p| %>
+        <tr>
+          <td><%= card_user(p.description)%></td>
+          <td><%= p.id %></td>
+          <td>$<%= p.amount/100 %></td>
+          <td><%= Time.at(p.created).to_datetime %></td>
+          <td><%= p.card.last4 %></td>
+
+        </tr>
+    <% end %>
+  </tbody>
+</table>

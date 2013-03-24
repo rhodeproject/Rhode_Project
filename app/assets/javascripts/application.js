@@ -18,7 +18,6 @@
 //= require_tree .
 
 $(document).ready(function() {
-
     $("#flash_message").delay(7000).fadeOut(1000);
     $("#edit_topic").submit(function(){
         $('#commit').attr("disabled", "disabled");
@@ -73,5 +72,14 @@ function updateEvent(the_event) {
 
 function logIt(text){
     window.console && console.log(text);
+}
+
+function convertTimeStamp(sdate){
+    var date = new Date(sdate*1000);
+    var day = date.getDate();
+    var month = date.getMonth() + 1; //month is 0 based
+    var year = date.getFullYear();
+
+    return month +'/'+day+'/'+year;
 }
 

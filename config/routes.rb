@@ -43,6 +43,8 @@ RhodeProject::Application.routes.draw do
   match '/sso',     :to => 'sessions#sso', :via => :post
   match '/hooks',   :to => 'hooks#receiver', :via => :post
   match '/subscription_hook', :to => 'hooks#subscription', :via => :post
+  match '/club/payments', :to => 'clubs#payments'
+  match 'club/charge', :to => 'clubs#charge'
 
   #validation
   match 'user/validation', :to => 'users#validation', :via => :get
