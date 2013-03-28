@@ -5,4 +5,4 @@
 <% if params[:forum] %>
     <input type="hidden" id="topic_forum_id" name="topic[forum_id]" value="<%= params[:forum] %>" />
 <% end %>
-<%= f.submit "Reply", class: "btn btn-large btn-primary" %>
+<%= f.submit "Reply", :class => "btn btn-large btn-primary", :id => "topic_reply" %>

@@ -37,7 +37,7 @@ namespace :user do
     def check_users(trace)
       count = 0
       puts "user check starting..." if trace == "trace"
-      users = User.all
+      users = User.active_users
       users.each do |u|
         puts "checking user #{u.name} - anniversay: #{u.anniversary}" if trace == "trace"
         warningdate = Date.parse(u.anniversary.to_s) - 14.days
