@@ -4,6 +4,7 @@ class SponsorsController < ApplicationController
 
   def index
     @sponsors = Sponsor.scoped_by_club_id(current_club.id).group("id","label").order("priority")
+    @atom_sponsors = Sponsor.scoped_by_club_id(current_club.id)
     @sponsor = Sponsor.new
   end
 

@@ -1,7 +1,7 @@
 atom_feed :version => "2.0" do |feed|
   feed.title "sponsors"
-  feed.updated @sponsors.maximum(:updated_at)
-  @sponsors.each do |sponsor|
+  feed.updated @atom_sponsors.maximum(:updated_at)
+  @atom_sponsors.each do |sponsor|
     feed.entry sponsor do |entry|
       entry.title sponsor.name
       entry.content sponsor.description
