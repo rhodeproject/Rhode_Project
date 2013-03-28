@@ -116,6 +116,13 @@ class ClubsController < ApplicationController
     end
   end
 
+  def refund
+    @refund = current_club.refund(params[:refund])
+    respond_to do |format|
+      format.js {render :json => @refund}
+    end
+  end
+
   private
   def admin_check
     unless current_user.admin?

@@ -3,7 +3,7 @@ class SponsorsController < ApplicationController
   before_filter :correct_club, :only => [:create, :edit, :destroy, :update]
 
   def index
-    @sponsors = Sponsor.scoped_by_club_id(current_club.id)
+    @sponsors = Sponsor.scoped_by_club_id(current_club.id).group("id","label").order("priority")
     @sponsor = Sponsor.new
   end
 

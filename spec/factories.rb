@@ -27,6 +27,15 @@ FactoryGirl.define do
 end
 
 FactoryGirl.define do
+  factory :sponsor do
+    name "test sponsor"
+    image_name "http://link_to.image.com"
+    url "http://www.sponsor.com"
+    description "some stuff about the sponsor"
+  end
+end
+
+FactoryGirl.define do
   factory :club do
     name "Test Club"
     sequence(:sub_domain){|d| "www#{d}"}

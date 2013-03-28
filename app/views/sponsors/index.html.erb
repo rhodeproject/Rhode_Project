@@ -1,9 +1,10 @@
 <%= provide(:title, "#{current_club.name} Sponsors") %>
-<h1><%= current_club.name %>'s Sponsors</h1>
+<h1 class="text-shadow"><%= current_club.name %>'s Sponsors</h1>
 
 <div class="span10">
 <% @sponsors.each do |s| %>
       <div class="row">
+        <h4 class="sponsor"><%= show_label(s.label) %></h4>
         <% if s.image_name? %>
             <%= image_tag(s.image_path, :height => '90', :width => '120', :alt => s.url, :class =>"sponsorLink floatleft") %>
         <% else %>
@@ -17,8 +18,9 @@
 
             <% end %>
          <% end %>
-        <hr class="shadow">
       </div>
+      <br>
+      <hr>
 <% end %>
 </div>
 

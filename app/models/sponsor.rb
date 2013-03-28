@@ -1,5 +1,5 @@
 class Sponsor < ActiveRecord::Base
-  attr_accessible :club_id, :image_name, :name, :url, :description
+  attr_accessible :club_id, :image_name, :name, :url, :description, :label, :priority
   belongs_to :club
 
   URL_REGEX = /^(http[s]?:\/\/)([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/

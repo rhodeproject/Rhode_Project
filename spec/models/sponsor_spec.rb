@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Sponsor do
   before(:each) do
-    @sponsor = Sponsor.new(:name => "test sponsor", :url => "https://www.test.com", :club_id => 1)
+    @sponsor = Sponsor.new(:name => "test sponsor", :url => "https://www.test.com", :club_id => 1, :label => "level1", :priority => 1)
   end
 
   it "should be valid with valid attributes" do

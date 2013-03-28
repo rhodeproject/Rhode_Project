@@ -25,6 +25,20 @@ $(document).ready(function(){
     $("#show_charge").dialog({
         title: "payment details",
         autoOpen: false,
+        buttons:[
+            {
+                text: "Refund",
+                click: function(event){
+                    refundCharge($("#payId").text().substring(14));
+                }
+            },
+            {
+                text: "Close",
+                click: function(events){
+                    $(this).dialog("close");
+                }
+            }
+        ],
         open: {
             effect: "fadeIn",
             duration: 500},
@@ -32,8 +46,8 @@ $(document).ready(function(){
             effect: "fadeOut",
             duration: 500
         },
-        height: 225,
-        width: 550,
+        height: 250,
+        width: 590,
         modal: true,
         beforeClose: function(){
             $("#show_charge").empty();
@@ -116,6 +130,23 @@ $(document).ready(function(){
         }
     });
 });
+function refundCharge(chargeId){
+    $.ajax({
+        type: "POST",
+        url: '/club/refund',
+        data: {refund: chargeId},
+        error: function(e){
+            //logIt(err.message);
+            $("#show_charge").empty();
+            $("#show_charge").append('<div>'+ e["responseText"] +'</div><hr class="shadow">').css('color','red');
+        },
+        success: function(data){
+            showPaymentInfo(data,chargeId);
+        },
+        dataType: "JSON",
+        async: false
+    })
+}
 
 function getCharge(chargeId){
 
@@ -125,33 +156,43 @@ function getCharge(chargeId){
         data: {charge:chargeId},
         error: function(e){
             $("#show_charge").empty();
-            $("#show_charge").append("There was an issue retreiving data");
+            $("#show_charge").append('<div>'+e["responseText"]+'</div><hr class="shadow">').css('color','red');
         },
         success: function(data){
-            $("#show_charge").empty();
-            $("#show_charge").dialog('option','title','payment details | '+ data.description);
-            $('#show_charge').append(
-            '<table class="table-condensed table-striped">' +
-             '<thead><th>Card Type</th><th>last 4</th><th>exp date</th><th>paid</th><th>stripe fee</th><th>date paid</th>' +
-             '</thead>' +
-             '<tbody><tr>' +
-                '<td>'+data.card.type+'</td><td>'+data.card.last4+'</td>' +
-                '<td>'+data.card.exp_month+'/'+data.card.exp_year+'</td>' +
-                '<td>$'+(data.amount/100).toFixed(2)+'</td>' +
-                '<td>$'+(data.fee/100).toFixed(2)+'</td>' +
-                '<td>'+convertTimeStamp(data.created)+'</td>'+
-             '</tr>' +
-             '</table>'
-            ).fadeIn("slow");
-            $("#show_charge").append('<hr class="shadow">');
-            $("#show_charge").append('<br><h6>--Payment ID: '+chargeId+'</h6>');
-            $("#show_charge").append('<br><h6>--Email: ' + data.description + '</h6>');
+            showPaymentInfo(data,chargeId);
         },
         dataType: "JSON",
         async: false
     })
 }
 
+function showPaymentInfo(data,chargeId){
+    $("#show_charge").empty();
+    $("#show_charge").dialog('option','title','payment details | '+ data.description);
+    $('#show_charge').append(
+        '<table class="table-condensed table-striped">' +
+            '<thead><th>Card Type</th><th>last 4</th><th>exp date</th><th>paid</th><th>stripe fee</th><th>date paid</th><th>refund amt</th>' +
+            '</thead>' +
+            '<tbody><tr>' +
+            '<td>'+data.card.type+'</td><td>'+data.card.last4+'</td>' +
+            '<td>'+data.card.exp_month+'/'+data.card.exp_year+'</td>' +
+            '<td>$'+(data.amount/100).toFixed(2)+'</td>' +
+            '<td>$'+(data.fee/100).toFixed(2)+'</td>' +
+            '<td>'+convertTimeStamp(data.created)+'</td>'+
+            '<td id="refund_amt">$'+(data.amount_refunded/100).toFixed(2)+'</td>' +
+            '</tr>' +
+            '</table>'
+    ).fadeIn("slow");
+    $("#show_charge").append('<hr class="shadow">');
+    $("#show_charge").append('<br><h6 id="payId">--Payment ID: '+chargeId+'</h6>');
+    $("#show_charge").append('<br><h6>--Email: ' + data.description + '</h6>');
+    if(data.amount_refunded != 0){
+        $(":button:contains('Refund')").prop("disabled", true).addClass("ui-state-disabled");
+        $("#refund_amt").css('color','red');
+    }else{
+        $(":button:contains('Refund')").prop("disabled", false).removeClass("ui-state-disabled");
+    }
+}
 function stripePayment(){
     Stripe.setPublishableKey($('#stripe_pk').val());
     Stripe.createToken({

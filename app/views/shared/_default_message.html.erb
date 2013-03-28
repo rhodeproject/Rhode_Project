@@ -1,5 +1,5 @@
 <div class="center hero-unit">
-  <h1><%= club_url(request.subdomain).name %></h1>
+  <h1 class="text-shadow"><%= club_url(request.subdomain).name %></h1>
   <% if !signed_in? %>
       <%= link_to "Sign in!", '/signin', :id => "btnLogin",:class => "btn btn-large btn-primary" %> /
       <%= link_to "Sign up now!", '/signup', :id => "btnSignUp",:class=> "btn btn-large btn-primary" %>

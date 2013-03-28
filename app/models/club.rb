@@ -66,8 +66,41 @@ class Club < ActiveRecord::Base
   end
 
   def charge(charge)
-    Stripe.api_key = self.stripe_api_key
-    Stripe::Charge.retrieve(charge)
+    begin
+      Stripe.api_key = self.stripe_api_key
+      ret_val = Stripe::Charge.retrieve(charge)
+    rescue Stripe::InvalidRequestError => e
+      ret_val = "Stripe Error: #{e.message}"
+    rescue Stripe::AuthenticationError => e
+      ret_val = "Stripe Authentication Error: #{e.message}"
+    rescue Stripe::APIConnectionError => e
+      ret_val = e.message
+    rescue Stripe::StripeError => e
+      ret_val = e.message
+    rescue => e
+      ret_val = e.message
+    end
+    ret_val
+
+  end
+
+  def refund(charge)
+    begin
+      Stripe.api_key = self.stripe_api_key
+      ch = Stripe::Charge.retrieve(charge)
+      ret_val = ch.refund
+    rescue Stripe::InvalidRequestError => e
+      ret_val = "Stripe Error: #{e.message}"
+    rescue Stripe::AuthenticationError => e
+      ret_val = "Stripe Authentication Error: #{e.message}"
+    rescue Stripe::APIConnectionError => e
+      ret_val = e.message
+    rescue Stripe::StripeError => e
+      ret_val = e.message
+    rescue => e
+      ret_val = e.message
+    end
+    ret_val
   end
 
 

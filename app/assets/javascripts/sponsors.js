@@ -3,7 +3,7 @@ $(document).ready(function(){
        title: "add new sponsor",
        autoOpen: false,
        open: {effect: "fadeIn", duration: 500},
-       height: 600,
+       height: 650,
        width: 450,
        modal: true
    });
