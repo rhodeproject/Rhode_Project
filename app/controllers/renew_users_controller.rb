@@ -1,10 +1,10 @@
 class RenewUsersController < ApplicationController
-  before_filter :correct_user
+  #before_filter :correct_user
 
   def show
     begin
       @user = User.find(params[:id])
-    rescue ActionController::Exception
+    rescue ActiveRecord::RecordNotFound
       redirect_to root_path
     end
   end
@@ -19,11 +19,16 @@ class RenewUsersController < ApplicationController
       redirect_to @user
     rescue Stripe::CardError => @e
       flash["credit_card"] = "Processing Error: #{@e.message}"
-      redirect_to "/renew_users/#{current_user.id}"
+      redirect_to "/renew_users/#{@user.id}"
     end
   end
 
   private
+
+  def show_error
+    flash[:warning] = "invalid user"
+    redirect_to root_path
+  end
 
   def correct_user
     begin

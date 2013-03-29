@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_filter :check_expiry, :only => :create
   before_filter :check_active, :only => :create
   #before_filter :check_active_club, :only => :create
   def new
@@ -31,11 +32,21 @@ class SessionsController < ApplicationController
     @user = User.find_by_email_and_club_id(params[:session][:email], find_club(request.subdomain))
     unless @user.nil?
       unless @user.active?
-        flash[:warning] = "your account is inactive, check your email for activation or renewal notice!"
-        redirect_to root_path
+        #flash[:warning] = "your account is inactive, check your email for activation or renewal notice!"
+        redirect_to "/renew_users/#{@user.id}-#{@user.name.parameterize}"
       end
     end
   end
+
+  def check_expiry
+    @user = User.find_by_email_and_club_id(params[:session][:email], find_club(request.subdomain))
+    unless @user.nil?
+      if @user.anniversary.past?
+        @user.inactivate_user
+      end
+    end
+  end
+
 
   def check_active_club
     unless current_clubactive?

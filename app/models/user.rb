@@ -114,6 +114,7 @@ class User < ActiveRecord::Base
     charge = create_stripe_charge(token)
     self.update_attribute('stripe_id',charge[:id])
     self.update_attribute('anniversary', anniversary.next_year)
+    self.update_attribute('active', true)
     send_payment_confirmation
     "Thank's for renewing!  Your payment has been processed successfully!"
   end

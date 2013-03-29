@@ -5,6 +5,6 @@ Posted By: <%= @post.user.name%>
 Original Poster: <%= @post.topic.user.name %>
 Reply To link: <%= @link %>
 
-<%= @content %>
+<%= @content.html_safe %>
 
 
