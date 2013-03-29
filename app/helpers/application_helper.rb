@@ -2,7 +2,7 @@ module ApplicationHelper
   #Returns the full title on a per-page  basis
   def full_title(page_title)
     if signed_in?
-      base_title = current_user.club.name
+      base_title = "#{current_user.club.name} | #{current_user.name.html_safe}"#current_user.club.name
     else
       base_title = "The Rhode Project"
     end
