@@ -18,14 +18,14 @@ namespace :user do
 
       #loop through all events
       events.each do |e|
-         puts "checking event #{e.title}" if trace.downcase == "trace"
+         puts "checking event #{e.title}" if trace == "trace"
 
         #get all users for the event
         users = e.users
 
         #loop through all users
         users.each do |u|
-          puts "user #{u.name} is signed up for #{e.title}... sending mail now" if trace.downcase == "trace"
+          puts "user #{u.name} is signed up for #{e.title}... sending mail now" if trace == "trace"
           count += 1
           UserMailer.event_reminder(u, e).deliver
         end
