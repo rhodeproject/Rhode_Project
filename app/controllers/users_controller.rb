@@ -54,7 +54,7 @@ class UsersController < ApplicationController
     @referral.add_referral unless @referral.nil?
 
     flash[key] = message
-    redirect_to root_path
+    redirect_to @user
   end
 
   def confirm

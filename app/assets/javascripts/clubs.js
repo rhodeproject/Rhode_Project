@@ -8,6 +8,20 @@
 
 
 $(document).ready(function(){
+    //club table
+    $("#tblClubs").dataTable({
+        "bRetrieve": true,
+        "bStateSave": true,
+        "bPaginate": true,
+        "bLengthChange": false,
+        "bFilter": true,
+        "bInfo": true,
+        "bAutoWidth": false,
+        "aaSorting": [[0, "asc"]],
+        "sPaginationType": "two_button",
+        "sDom": "<'row-fluid'<'span10'T>r>t<'row-fluid'<'span6'i<'btn btn-mini'p>>>"
+    });
+
     //payments_table
     $("#tblPayments").dataTable({
         "bRetrieve": true,

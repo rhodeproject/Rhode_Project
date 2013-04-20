@@ -1,6 +1,7 @@
 class ClubsController < ApplicationController
   before_filter :signed_in_user, :only => [:show, :edit, :update]
   before_filter :admin_check, :only => [:edit, :update, :payments,:charge]
+  before_filter :god_check, :only => [:index]
 
   def new
     @club = Club.new
@@ -37,12 +38,7 @@ class ClubsController < ApplicationController
   end
 
   def index
-    if current_user.email == "mhatch73@gmail.com"
-      @clubs = Club.all
-    else
-      flash[:warning] = "You are not the Admin"
-      redirect_to root_path
-    end
+   @clubs = Club.all
   end
 
   def edit
@@ -124,6 +120,13 @@ class ClubsController < ApplicationController
   end
 
   private
+
+  def god_check
+    unless current_user.email == Figaro.env.god_account
+      redirect_to root_path
+    end
+  end
+
   def admin_check
     unless current_user.admin?
       flash[:warning] = "you are not permitted to take this action"

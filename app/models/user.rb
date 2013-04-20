@@ -111,9 +111,22 @@ class User < ActiveRecord::Base
   end
 
   def renew_membership_fee(token)
+
+    #check if the expiry date has past, if it has new expiry should be a year from today
+    #else it should be a year from previous anniversary
+    unless anniversary.nil?
+      if anniversary.past?
+        new_anniversary = Date.today.next_year
+      else
+        new_anniversary = anniversary.next_year
+      end
+    else
+      new_anniversary = Date.today.next_year
+    end
+
     charge = create_stripe_charge(token)
     self.update_attribute('stripe_id',charge[:id])
-    self.update_attribute('anniversary', anniversary.next_year)
+    self.update_attribute('anniversary', new_anniversary)
     self.update_attribute('active', true)
     send_payment_confirmation
     "Thank's for renewing!  Your payment has been processed successfully!"

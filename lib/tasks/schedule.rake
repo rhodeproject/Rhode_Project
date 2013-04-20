@@ -6,8 +6,8 @@ namespace :user do
     end
 
     task :event_reminders, [:trace] => :environment do |t, args|
-      check_events(args.trace)
-      UserMailer.rake_task_complete("user:event_reminders").deliver
+      count = check_events(args.trace)
+      UserMailer.rake_task_complete("user:event_reminders - Reminders Sent: #{count.to_s}").deliver
     end
 
     def check_events(trace)
@@ -18,20 +18,21 @@ namespace :user do
 
       #loop through all events
       events.each do |e|
-         puts "checking event #{e.title}" if trace.downcase == "console"
+         puts "checking event #{e.title}" if trace.downcase == "trace"
 
         #get all users for the event
         users = e.users
 
         #loop through all users
         users.each do |u|
-          puts "user #{u.name} is signed up for #{e.title}... sending mail now" if trace.downcase == "console"
+          puts "user #{u.name} is signed up for #{e.title}... sending mail now" if trace.downcase == "trace"
           count += 1
           UserMailer.event_reminder(u, e).deliver
         end
+
      end
 
-
+      count
     end
 
     def check_users(trace)

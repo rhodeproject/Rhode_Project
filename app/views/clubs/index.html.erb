@@ -1,2 +1,26 @@
-<h1>Clubs#index</h1>
-<p>Find me in app/views/clubs/index.html.erb</p>
+<h1 class="text-shadow">all rhodeproject clubs</h1>
+<table id="tblClubs" class="table">
+  <thead>
+    <th>id</th>
+    <th>club name</th>
+    <th>sub_domain</th>
+    <th>active</th>
+    <th>fee</th>
+    <th>stripe pk</th>
+    <th>stripe api</th>
+  </thead>
+  <tbody>
+  <% @clubs.each do |c| %>
+  <tr>
+      <td><%= c.id %></td>
+      <td><%= c.name %></td>
+      <td><%= c.sub_domain %></td>
+      <td><%= c.active %></td>
+      <td><%= c.fee %></td>
+      <td><%= c.stripe_publishable_key %></td>
+      <td><%= c.stripe_api_key %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+

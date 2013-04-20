@@ -23,7 +23,7 @@ class Notice < ActiveRecord::Base
       end
     end
     #send email pass in email array
-    UserMailer.delay.notice_email(emails, self.content)
+    UserMailer.delay.notice_email(emails, self.content,club.name)
   end
 
 

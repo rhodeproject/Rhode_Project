@@ -12,7 +12,7 @@
     <div class="row">
       <div class="span2"><%= select_month(default_month) %></div>
       <div class="span1"><%= select_day(default_day) %></div>
-      <div class="span1"><%= select_year(default_year,{:start_year => Time.now.year-50}) %></div>
+      <div class="span1"><%= select_year(default_year,{:start_year => Time.now.year-50,:end_year => Time.now.year}) %></div>
     </div>
 
     <%= f.label :shirt_size %>

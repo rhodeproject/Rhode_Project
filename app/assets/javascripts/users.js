@@ -55,8 +55,9 @@ $(document).ready(function(){
     });
 
     $(".stripe_payment").click(function(){
-        getCharge($(this).text());
+
         $("#show_charge").dialog('open');
+        getCharge($(this).text());
         return false;
     });
 
@@ -155,10 +156,12 @@ function getCharge(chargeId){
         url: '/club/charge',
         data: {charge:chargeId},
         error: function(e){
+            //$("#loading").remove();
             $("#show_charge").empty();
             $("#show_charge").append('<div>'+e["responseText"]+'</div><hr class="shadow">').css('color','red');
         },
         success: function(data){
+           // $("#loading").remove();
             showPaymentInfo(data,chargeId);
         },
         dataType: "JSON",

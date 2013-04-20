@@ -16,8 +16,8 @@
 //= require dataTables/jquery.dataTables
 //= require bootstrap
 //= require_tree .
-
 $(document).ready(function() {
+
     $("#flash_message").delay(7000).fadeOut(1000);
     $("#edit_topic").submit(function(){
         $('#commit').attr("disabled", "disabled");
