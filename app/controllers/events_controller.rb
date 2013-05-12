@@ -12,7 +12,7 @@ class EventsController < ApplicationController
     @events = @events.before(params['end']) if (params['end'])
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html {render :html => @events }# index.html.erb
       format.xml  { render :xml => @events }
       format.js  { render :json => @events }
       format.atom
@@ -122,7 +122,7 @@ class EventsController < ApplicationController
       @event.destroy
 
       respond_to do |format|
-        format.html { redirect_to(events_url) }
+        format.html { redirect_to '/calendar' }
         format.xml  { head :ok }
       end
     else
