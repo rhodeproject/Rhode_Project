@@ -119,6 +119,13 @@ class ClubsController < ApplicationController
     end
   end
 
+  def stripesubscription
+    @subscription = current_club.stripesubscription(params[:subscription])
+    respond_to do |format|
+      format.js {render :json => @subscription}
+    end
+  end
+
   private
 
   def god_check

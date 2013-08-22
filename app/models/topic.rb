@@ -23,6 +23,12 @@ class Topic < ActiveRecord::Base
   def to_param
     "#{id} #{name}".parameterize
   end
+
+  def responses
+    offset = self.posts.count - 1
+    self.posts.last(offset).reverse
+  end
+
 end
 
 

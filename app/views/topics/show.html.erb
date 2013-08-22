@@ -7,18 +7,9 @@
 <div class="row" id="replyTopic">
   <div class="span12">
     <%= form_for(@topic, :remote => false, :id => 'edit_topic') do |f| %>
-
-        <!--Posts for topic-->
-
             <%= render 'topic' %>
-
-
-        <!--Place Holder for Ajax Update-->
-        <div id="showPosts">
-        </div>
-
         <%= render 'reply_post', :f => f %>
-    <% end %>  <!--form end-->
+    <% end %>
  </div>
 </div>
 

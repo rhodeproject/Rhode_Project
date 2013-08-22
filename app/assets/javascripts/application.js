@@ -17,7 +17,9 @@
 //= require bootstrap
 //= require_tree .
 $(document).ready(function() {
-
+    $("#loading").hide();
+    $("#jsFlash").hide();
+    $("#imgLoading").hide();
     $("#flash_message").delay(7000).fadeOut(1000);
     $("#edit_topic").submit(function(){
         $('#commit').attr("disabled", "disabled");
@@ -27,6 +29,15 @@ $(document).ready(function() {
         return false;
     });
 
+});
+
+$(document).ajaxStart(function(){
+    ajaxLoad();
+});
+
+$(document).ajaxStop(function(){
+   AjaxUnLoad();
+    $("#loading").html("loading...");
 });
 
 $(document).ready(function () {
@@ -83,3 +94,18 @@ function convertTimeStamp(sdate){
     return month +'/'+day+'/'+year;
 }
 
+function ajaxLoad(){
+    $("#body").css({
+        opacity: 0.5
+    });
+    $("#loading").css({
+        position: "absolute",
+        top: "50%",
+        left: "45%"
+    }).fadeIn();
+}
+
+function AjaxUnLoad(){
+    $("#body").css({opacity: 1.0});
+    $("#loading").fadeOut();
+}

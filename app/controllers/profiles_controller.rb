@@ -7,8 +7,10 @@ class ProfilesController < ApplicationController
   end
 
   def create
+    dob = Date.parse(params[:date][:day] + "/" + params[:date][:month] + "/" + params[:date][:year])
     @profile = Profile.new(params[:profile])
     @profile.update_attribute('user_id', current_user.id)
+    @profile.update_attribute('dob', dob)
     if @profile.save
       flash[:success] = "Profile created!"
       redirect_to current_user

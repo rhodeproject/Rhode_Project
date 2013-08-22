@@ -13,12 +13,15 @@ class TopicsController < ApplicationController
     @post = @topic.posts.build(:content => params[:post][:content])
     @post.user_id = current_user.id
     @post.club_id = current_user.club_id
+
     respond_to do |format|
       if @post.save
-        flash[:success] = "Post Added to #{@topic.name}"
-        @post.delay.create_email_list(@topic)
+        #flash[:success] = "Post Added to #{@topic.name}"
+        #change this to not delay on ajax
+        @post.create_email_list(@topic)
+        #@post.delay.create_email_list(@topic)
         format.html {redirect_to("/topics/#{params[:id]}")}
-        format.js
+        format.js {render :json => @topic,:json => @post, :include => :user}
       else
         format.html{render :action => "index"}
         format.js
@@ -37,7 +40,8 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
     add_breadcrumb "#{@topic.forum.name}", "/forums/#{@topic.forum_id}"
     if current_user.club_id == @topic.forum.club_id
-      @posts = @topic.posts.paginate(:page => params[:page], :per_page => 10).order('created_at DESC').includes(:user)
+      @posts = @topic.responses.paginate(:page => params[:page], :per_page => 10)#.includes(:user)
+
     else
       flash[:warning] = "You can't view this topic"
       redirect_to '/forums'
@@ -46,25 +50,33 @@ class TopicsController < ApplicationController
 
   def create
     forum = Forum.find(params[:topic][:forum_id])
+    #forum = Forum.find(params[:forum])
     @topic = forum.topics.build(:name => params[:topic][:name],
                          :last_poster_id => current_user.id,
                          :last_post_at => Time.now)
 
-    @topic.user_id = current_user.id
-      if @topic.save
-        @post = current_user.posts.build(:content => params[:post][:content],
-                                         :topic_id => @topic.id,
-                                          :club_id => current_user.club_id)
-        if @post.save
-          forum = @topic.forum
-          forum.email_followers(@topic, @post)
-            flash[:success] = "Successfully created topic."
-            redirect_to "/forums/#{@topic.forum_id}", :only_path => true
-        else
-          render :action => 'new'
-        end
-    else
-      render :action => 'new'
+    respond_to do |format|
+      @topic.user_id = current_user.id
+        if @topic.save
+          @post = current_user.posts.build(:content => params[:post][:content],
+                                           :topic_id => @topic.id,
+                                            :club_id => current_user.club_id)
+
+          if @post.save
+            forum = @topic.forum
+            forum.email_followers(@topic, @post)
+              format.html{
+                flash[:success] = "Successfully created topic."
+                redirect_to "/forums/#{@topic.forum_id}", :only_path => true
+              }
+              format.js { format.js {render :json => @topic,:json => @post, :include => :user}}
+          else
+            format.html{render :action => 'new'}
+            format.js
+          end
+      else
+        render :action => 'new'
+      end
     end
   end
 end

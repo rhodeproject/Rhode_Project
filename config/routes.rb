@@ -46,6 +46,9 @@ RhodeProject::Application.routes.draw do
   match '/club/payments', :to => 'clubs#payments'
   match 'club/charge', :to => 'clubs#charge'
   match 'club/refund', :to => 'clubs#refund'
+  match 'club/stripesubscription', :to => 'clubs#stripesubscription'
+  match 'topics/ajax', :to => 'topics#update'
+  match 'topics/addtopic', :to => 'topics#create'
 
   #validation
   match 'user/validation', :to => 'users#validation', :via => :get

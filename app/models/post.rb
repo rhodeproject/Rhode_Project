@@ -18,6 +18,8 @@ class Post < ActiveRecord::Base
   belongs_to  :topic
   belongs_to  :club
 
+  scope :responses, {:order => ["created_at DESC"]}
+
   def self.text_search(query)
     if query.present?
       where("content @@ :q", :q => "%#{query}%")

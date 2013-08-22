@@ -36,7 +36,7 @@ class PostsController < ApplicationController
     @remove = Post.find(params[:id])
     @remove.destroy
     flash[:danger] = "post removed"
-    redirect_to "/forums"
+    redirect_to @remove.topic
   end
 
   private

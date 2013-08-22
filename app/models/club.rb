@@ -65,6 +65,25 @@ class Club < ActiveRecord::Base
     Stripe::Charge.all(:count => 100,:created => {:gte => start_date, :lte => end_date})
   end
 
+  def subscription_token(id)
+    unless id.nil?
+      subscription = Subscription.find(id)
+      subscription.stripe_customer_token
+    end
+  end
+
+  def stripesubscription(token)
+  #retrieve the stripe customer information
+    begin
+      #API Key for the site owner, not the club
+      Stripe.api_key = Figaro.env.stripe_api_key
+      ret_val = Stripe::Customer.retrieve(token)
+    rescue => e
+      ret_val = e.message
+    end
+    ret_val
+  end
+
   def charge(charge)
     begin
       Stripe.api_key = self.stripe_api_key

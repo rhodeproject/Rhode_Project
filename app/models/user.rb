@@ -91,6 +91,10 @@ class User < ActiveRecord::Base
     self.admin
   end
 
+  def md5_email
+    Digest::MD5::hexdigest(self.email.downcase)
+  end
+
   def send_password_reset
     self.update_attribute('reset_token', generate_token)
     self.update_attribute('password_reset_sent_at', Time.zone.now)
@@ -204,6 +208,15 @@ class User < ActiveRecord::Base
   def real_name
     unless self.profile.full_name.nil?
       self.profile.full_name
+    end
+  end
+
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << column_names
+      all.each do |user|
+        csv << user.attributes.values_at(*column_names)
+      end
     end
   end
 

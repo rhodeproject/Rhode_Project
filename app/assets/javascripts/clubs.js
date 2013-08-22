@@ -22,6 +22,53 @@ $(document).ready(function(){
         "sDom": "<'row-fluid'<'span10'T>r>t<'row-fluid'<'span6'i<'btn btn-mini'p>>>"
     });
 
+    //BEGIN club subscription stuff
+    //Here's the modal
+    $("#show_subscription").dialog({
+        title: "subscription details",
+        autoOpen: false,
+        height: 100,
+        width: 350,
+        modal: true,
+        open: {
+            effect: "fadeIn",
+            duration: 500
+        },
+        hide: {
+            effect: "fadeOut",
+            duration: 500
+        },
+        beforeClose: function(){
+            $("#show_subscription").empty();
+        }
+    });
+
+    $(".customer_token").click(function(){
+        //get the customer info
+        $.ajax({
+            type: "POST",
+            url: '/club/stripesubscription',
+            data: {subscription:$(this).text()},
+            error: function(e){
+                alert("You have trapped an error with message " + e.statusText)
+            },
+            success: function(data){
+                if (data.subscription != null){
+                    //alert(data.subscription.plan.name + " | " + data.subscription.plan.amount)
+                    //append a dialoge and then activate it
+                    showClubSubscription(data);
+
+                } else {
+                    //alert ("no subscription!")
+                }
+            },
+            dataType: "JSON",
+            async: false
+        });
+        return false;
+    });
+    //END club subscrition stuff
+
     //payments_table
     $("#tblPayments").dataTable({
         "bRetrieve": true,
@@ -37,6 +84,7 @@ $(document).ready(function(){
     });
 
     //disable stripe key inputs, unless the fee is greater than 0
+    //TODO: this is being disabled on the club edit page as well... need to make sure it's not
     $('#club_stripe_api_key').attr('disabled', 'disabled');
     $('#club_stripe_publishable_key').attr('disabled', 'disabled');
 
@@ -261,4 +309,19 @@ function cleanURL(url){
     suggestion = suggestion.replace(/\>+/g, "");
     suggestion = suggestion.replace(/\*+/g, "");
     return suggestion.toLowerCase();
+}
+
+function showClubSubscription(data){
+    $("#show_subscription").empty();
+    $("#show_subscription").dialog('option','title','club subscription detail');
+    $('#show_subscription').append(
+        '<table class="table-condensed">' +
+            '<thead><th>Subscrition Name</th><th>amount</th><th>CC last 4</th></thead>' +
+            '<tbody><tr>' +
+            '<td>'+data.subscription.plan.name + '</td>' +
+            '<td>'+(data.subscription.plan.amount/100).toFixed(2)+'</td>' +
+            '<td>'+data.active_card.last4+'</td>' +
+            '</tr>' +
+            '</table>'
+    ).dialog("open");
 }

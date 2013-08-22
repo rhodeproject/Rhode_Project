@@ -6,6 +6,7 @@
     <th>sub_domain</th>
     <th>active</th>
     <th>fee</th>
+    <th>subscription token</th>
     <th>stripe pk</th>
     <th>stripe api</th>
   </thead>
@@ -17,10 +18,12 @@
       <td><%= c.sub_domain %></td>
       <td><%= c.active %></td>
       <td><%= c.fee %></td>
+      <td class="customer_token"><%= link_to c.subscription_token(c.subscription_id),"" %></td>
       <td><%= c.stripe_publishable_key %></td>
       <td><%= c.stripe_api_key %></td>
   </tr>
   <% end %>
   </tbody>
 </table>
+<div id="show_subscription"></div>
 
