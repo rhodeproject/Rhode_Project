@@ -1,6 +1,6 @@
 
 Forum: <%= @forum.name %>
-Post Topic: <%= @post.topic.name %>
+Post Topic: <%= (@post.topic.name).html_safe %>
 Posted By: <%= @post.user.name%>
 Original Poster: <%= @post.topic.user.name %>
 Reply To link: <%= @link %>

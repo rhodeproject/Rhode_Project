@@ -18,8 +18,8 @@ class TopicsController < ApplicationController
       if @post.save
         #flash[:success] = "Post Added to #{@topic.name}"
         #change this to not delay on ajax
-        @post.create_email_list(@topic)
-        #@post.delay.create_email_list(@topic)
+        #@post.create_email_list(@topic)
+        @post.delay.create_email_list(@topic)
         format.html {redirect_to("/topics/#{params[:id]}")}
         format.js {render :json => @topic,:json => @post, :include => :user}
       else
