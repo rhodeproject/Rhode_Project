@@ -1,0 +1,12 @@
+<% @events.each do |e| %>
+    <span class="content">
+      <h3><div><%= link_to e.title, e  %></div></h3>
+      <div><%= show_day(e.starts_at) %></div>
+      <%= e.description %>
+    </span>
+    <span class="timestamp">
+        <%= time_ago_in_words(e.created_at) %> ago
+    </span>
+
+    <hr>
+<% end %>

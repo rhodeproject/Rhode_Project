@@ -17,7 +17,7 @@ class TopicsController < ApplicationController
     respond_to do |format|
       if @post.save
         #flash[:success] = "Post Added to #{@topic.name}"
-        #change this to not delay on ajax
+        #change this to not delay on ajax -- keeping the delay for now... this may be too much waiting for the user
         #@post.create_email_list(@topic)
         @post.delay.create_email_list(@topic)
         format.html {redirect_to("/topics/#{params[:id]}")}

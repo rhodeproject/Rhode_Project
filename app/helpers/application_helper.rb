@@ -32,4 +32,8 @@ module ApplicationHelper
   def show_date_with_time(date_time)
     date_time.in_time_zone("Eastern Time (US & Canada)").strftime("%m/%d/%Y %I:%M:%S %p") unless date_time.nil?
   end
+
+  def show_day(sdate)
+    DateTime.strptime(sdate.to_s, '%Y-%m-%d %H:%M:%S' ).strftime('%A %m/%d/%Y %l:%M %p')
+  end
 end
