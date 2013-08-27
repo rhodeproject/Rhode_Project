@@ -1,5 +1,5 @@
 <% if current_user.club.has_sponsors? %>
-<h5><%= link_to current_club.name.downcase + ' sponors', '/sponsors' %></h5><br>
+
 <div class="span2" id="sponsors">
   <% @sponsors.each do |s| %>
       <% if s.image_name? %>

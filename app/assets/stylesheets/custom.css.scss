@@ -139,6 +139,7 @@ footer ul li {
   }
 }
 aside {
+
   section {
     padding: 10px 0;
     border-top: 1px solid $grayLighter;
@@ -361,4 +362,16 @@ img.sponsor{
   font-size: 1.7em
 }
 
+.event-when{
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-style: italic;
+}
 
+.event-description{
+  padding-bottom: 3px;
+}
+
+.event-title{
+  padding-top: 10px;
+}
