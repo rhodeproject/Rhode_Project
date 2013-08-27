@@ -124,8 +124,10 @@ $(document).ready(function(){
                 $('td:eq(1)',nRow).css('color','red'); //Joined
                 $('td:eq(2)',nRow).css('color','red'); //Email
                 $('td:eq(3)',nRow).css('color','red'); //Active
-                $('td:eq(4)',nRow).css('color','red'); //Expiry
-                $('td:eq(5)',nRow).css('color','red'); //Posts
+                $('td:eq(4)',nRow).css('color','red'); //Payment_id
+                $('td:eq(5)',nRow).css('color','red'); //Expiry Date
+                $('td:eq(6)',nRow).css('color','red'); //Referrals
+                $('td:eq(7)',nRow).css('color','red'); //Posts
             }
             return nRow;
         }
