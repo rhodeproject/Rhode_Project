@@ -2,7 +2,7 @@
     <span class="content">
       <h3><div class="event-title"><%= link_to e.title, e  %></div></h3>
       <div class="event-when">When: <%= show_day(e.starts_at) %></div>
-      <div class="event-description"><%= e.description %> </div>
+      <div class="event-description"><%= e.description[0..500] %> </div>
     </span>
     <span class="timestamp">
         added <%= time_ago_in_words(e.created_at) %> ago

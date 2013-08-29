@@ -5,8 +5,6 @@ class EventsController < ApplicationController
   # GET /events.xml
 
   def index
-
-    #@events = Event.scoped_by_club_id(current_user.club_id)
     @events = Event.scoped_by_club_id(current_club.id).order('starts_at ASC')
     @events = @events.after(params['start']) if (params['start'])
     @events = @events.before(params['end']) if (params['end'])
