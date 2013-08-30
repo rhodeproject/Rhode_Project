@@ -58,6 +58,10 @@ class Event < ActiveRecord::Base
     self.lists.where(:state => RhodeProject::WAITING).count
   end
 
+  def signed_up
+    self.lists.where(:state => RhodeProject::SIGNED_UP).count
+  end
+
   def add_user(user)
     if self.limit.nil?
       state = RhodeProject::SIGNED_UP

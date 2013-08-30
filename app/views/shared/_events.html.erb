@@ -5,6 +5,9 @@
       <div class="event-description"><%= e.description[0..500] %> </div>
     </span>
     <span class="timestamp">
-        added <%= time_ago_in_words(e.created_at) %> ago
+      <%= pluralize(e.signed_up, 'member')  %> signed up
+      <%= render_signedup(e) %>
+      <%= render_waiting(e) %>
     </span>
+
 <% end %>
