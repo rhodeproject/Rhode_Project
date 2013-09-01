@@ -37,11 +37,10 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topic = Topic.find(params[:id])
+    @topic = Topic.find(params[:id], :order => 'created_at DESC')
     add_breadcrumb "#{@topic.forum.name}", "/forums/#{@topic.forum_id}"
     if current_user.club_id == @topic.forum.club_id
       @posts = @topic.responses.paginate(:page => params[:page], :per_page => 10)#.includes(:user)
-
     else
       flash[:warning] = "You can't view this topic"
       redirect_to '/forums'
