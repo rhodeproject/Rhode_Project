@@ -8,14 +8,14 @@
     Last Updated: <%= distance_of_time_in_words_to_now @topic.last_post_at %> ago<br>
     Topic: <%= @topic.name %> <br>
     <br>
-    Original Post:<br> <%= markdown.render(@topic.posts.first.content).html_safe %>
+    Original Post:<br> <%= markdown.render(@original.content).html_safe %>
   </th>
   <th></th>
 
   </thead>
   <tbody id="tblPosts">
-  <% unless @posts.nil? || @posts.count == 0%>
-  <% @posts.each do |post| %>
+  <% unless @responses.nil? || @responses.count == 0%>
+  <% @responses.each do |post| %>
 
       <tr>
         <td width="70%"><div style="word-wrap: break-word"><p><%= markdown.render(post.content).html_safe %></p></div></td>
@@ -39,7 +39,4 @@
   </tbody>
   <% end %>
 </table>
-  <%= will_paginate @posts,
-                    :style => 'font-size: small',
-                    :next_label => ">>",
-                    :previous_label => "<<"%>
+
