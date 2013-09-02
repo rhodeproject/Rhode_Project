@@ -18,6 +18,7 @@
           <small><%= forum.topics.count %> topics</small><br />
           <%=h forum.description %><br>
           <% if current_user.admin? %>
+            <div class="timestamp event-where"> <%= pluralize(forum.users.count, "user") %> following  </div>
             <%= link_to 'Edit', edit_forum_path(forum) %> |
             <%= link_to 'Delete', forum, :confirm => 'Are you sure?', :method => :delete %>
           <% end %>

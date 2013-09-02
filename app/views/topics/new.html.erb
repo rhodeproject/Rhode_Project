@@ -1,16 +1,22 @@
 <% provide(:title, @topic.name) %>
 <H1>new topic</H1>
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span10 offset1">
     <%= form_for (@topic) do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
+        <%= render 'shared/error_messages', :object => f.object %>
         <% if params[:forum] %><input type="hidden" id="topic_forum_id" name="topic[forum_id]" value="<%= params[:forum] %>" /><% end %>
-        <%= f.label :name %><br />
-        <%= f.text_field :name %>
+        <div class="span10">
+            <p>
+            <%= f.label :name, "Topic Title:" %>
+            <%= f.text_field :name %>
+            </p>
+        </div>
+        <div class="span10">
+        <%= f.label :content, "Content:" %>
+        <textarea name="post[content]" cols="120" rows="20"><%= params[:content] %></textarea>
 
-        <textarea name="post[content]" cols="80" rows="10"><%= params[:content] %></textarea>
-
-        <%= f.submit "Create Post", class: "btn btn-large btn-primary" %>
+        <%= f.submit "Create Post", :class => "btn btn-large btn-primary" %>
+        </div>
     <% end %>
   </div>
 </div>

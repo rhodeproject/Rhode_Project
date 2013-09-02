@@ -1,3 +1,8 @@
+<% if @events.count < 1 %>
+<span class="event-when">
+  There are no upcoming events for <%= current_club.name %>
+</span>
+<% end %>
 <% @events.each do |e| %>
     <span class="content">
       <h3><div class="event-title"><%= link_to e.title, e  %></div></h3>
