@@ -8,7 +8,7 @@
     Last Updated: <%= distance_of_time_in_words_to_now @topic.last_post_at %> ago<br>
     Topic: <%= @topic.name %> <br>
     <br>
-    Original Post:<br> <%= markdown.render(@topic.posts.first.content).html_safe %>
+    Original Post:<br> <%= markdown.render(@topic.original.content).html_safe %>
   </th>
   <th></th>
 

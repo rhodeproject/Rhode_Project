@@ -29,6 +29,10 @@ class Topic < ActiveRecord::Base
     self.posts.order('created_at asc').last(offset).reverse
   end
 
+  def original
+    self.posts.order('created_at asc').first
+  end
+
 end
 
 
