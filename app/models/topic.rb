@@ -26,7 +26,7 @@ class Topic < ActiveRecord::Base
 
   def responses
     offset = self.posts.count - 1
-    self.posts.last(offset).reverse
+    self.posts.order('created_at asc').last(offset).reverse
   end
 
 end
