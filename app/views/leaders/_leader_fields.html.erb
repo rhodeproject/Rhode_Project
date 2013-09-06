@@ -1,0 +1,8 @@
+<%= l.label :title %>
+<%= l.text_field :title %>
+
+<%= l.label :user_id, "user" %>
+<%= collection_select(:all, :users, User.scoped_by_club_id(current_user.club_id).by_name, :id, :name, :selected => selected_default(@leader)) %>
+
+<%= l.label :rank %>
+<%= l.select :rank, (0..99) %>

@@ -1,0 +1,30 @@
+<h3><%= current_club.name %> leaders</h3>
+<table class="table table-striped">
+  <thead>
+  <th></th>
+  <th>title</th>
+  <th>name</th>
+  <th>bio</th>
+  </thead>
+  <tbody>
+  <% @leaders.each do |leader| %>
+      <tr>
+        <td><%= gravatar_for(leader.user, :size => 100) %></td>
+        <td><%= leader.title %></td>
+        <td><%= leader.user.real_name %></td>
+        <td><%= render_bio(leader.user) %></td>
+        <td>
+          <% if current_user.admin?%>
+              <%= link_to raw('<i class="icon-pencil icon-white"></i>'), edit_leader_path(leader), :class => "btn btn-mini btn-primary"%>
+              <%= link_to raw('<i class="icon-trash icon-white"></i>'), leader, :class => "btn btn-mini btn-danger", :confirm => 'Are you sure?', :method => :delete %>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+<% if current_user.admin? %>
+    <p><%= link_to "New Leader", new_leader_path, :class => "btn btn-mini btn-info" %></p>
+<% end %>

@@ -39,6 +39,7 @@ class Club < ActiveRecord::Base
   has_many :posts
   has_one  :token
   has_many :sponsors
+  has_many :leaders
   belongs_to :subscription
 
   validates :name, :presence => true, :length => {:maximum => 50}

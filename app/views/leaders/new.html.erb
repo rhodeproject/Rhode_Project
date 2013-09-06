@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="span4 offset 2">
+    <%= form_for @leader do |l| %>
+    <%= render 'leader_fields', :l => l %>
+    <%= l.submit "Add Leader", :class => "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

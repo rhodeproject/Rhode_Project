@@ -1,0 +1,18 @@
+<div class="span 8">
+    <% @leaders.each do |l| %>
+        <div class="container">
+            <h5><%= l.user.name %> - <%= l.title %></h5><br>
+            <div class="floatleft"><%= gravatar_for(l.user, {:size => 55, :class_name => "gravatar gravatar-leader"}) %></div>
+            <%= markdown.render(l.user.profile.bio).html_safe unless l.user.profile.nil? %>
+        </div>
+      <% if current_user.admin?%>
+          <%= link_to raw('<i class="icon-pencil icon-white"></i>'), edit_leader_path(l), :class => "btn btn-mini btn-primary"%>
+          <%= link_to raw('<i class="icon-trash icon-white"></i>'), l, :class => "btn btn-mini btn-danger", :confirm => 'Are you sure?', :method => :delete %>
+      <% end %>
+      <hr class="shadow">
+    <% end %>
+</div>
+
+<% if current_user.admin? %>
+    <p><%= link_to "New Leader", new_leader_path, :class => "btn btn-mini btn-info" %></p>
+<% end %>

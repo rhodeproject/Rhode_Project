@@ -1,6 +1,8 @@
 RhodeProject::Application.routes.draw do
 
 
+  get "leaders/index"
+
   get "subscriptions/new"
 
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
@@ -22,6 +24,8 @@ RhodeProject::Application.routes.draw do
   resources :notices
   resources :sponsors
   resources :renew_users
+  resources :leaders
+
 
   root :to => 'static_pages#home'
   match '/home', :to => 'static_pages#home'

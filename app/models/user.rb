@@ -32,6 +32,8 @@ class User < ActiveRecord::Base
   has_one :profile
   has_many :lists, :dependent => :destroy
   has_many :events, :through => :lists
+  has_many :leaders
+
 
   #reverse relationship
   has_many :reverse_relationships, :foreign_key => "followed_id",
@@ -206,9 +208,17 @@ class User < ActiveRecord::Base
   end
 
   def real_name
-    unless self.profile.full_name.nil?
-      self.profile.full_name
+    unless profile.nil?
+      unless self.profile.full_name.nil?
+        name = self.profile.full_name
+      else
+        name = self.name
+      end
+    else
+      name = self.name
     end
+
+    name
   end
 
   def self.to_csv

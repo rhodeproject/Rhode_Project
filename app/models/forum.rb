@@ -41,10 +41,6 @@ class Forum < ActiveRecord::Base
     self.users.where(:id => user.id).present?
   end
 
-  def add_user(user)
-    self.users << user
-  end
-
   def toggle_user(user,val)
     if self.users.where(:id => user.id).present? && val == RhodeProject::FORUM_UNFOLLOW
       self.users.delete(user)
@@ -53,9 +49,6 @@ class Forum < ActiveRecord::Base
     end
   end
 
-  def remove_user(user)
-    self.users.delete(user)
-  end
 end
 
 

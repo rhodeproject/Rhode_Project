@@ -11,6 +11,17 @@ FactoryGirl.define do
     admin true
   end
 
+  factory :club_leader do
+    name "Test Club"
+    sequence(:sub_domain){|d| "www#{d}"}
+  end
+
+  factory :leader do
+    user
+    club_leader
+    title "president"
+  end
+
   factory :event do
     description "event description"
     title "this event"

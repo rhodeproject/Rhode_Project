@@ -17,9 +17,7 @@ class ForumsController < ApplicationController
   def update
     @forum = Forum.find(params[:id])
     follow_val = params[:commit]
-    @forum.add_user(current_user) if follow_val == "follow"
-    @forum.remove_user(current_user) if follow_val == "unfollow"
-    #@forum.toggle_user(current_user,follow_val)
+    @forum.toggle_user(current_user,follow_val)
     @forum.update_attributes(params[:forum])
 
     respond_to do |format|
