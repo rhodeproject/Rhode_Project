@@ -1,7 +1,7 @@
 <div class="span 8">
     <% @leaders.each do |l| %>
         <div class="container">
-            <h5><%= l.user.name %> - <%= l.title %></h5><br>
+            <h3><%= l.user.name %> - <%= l.title %></h3><br>
             <div class="floatleft"><%= gravatar_for(l.user, {:size => 150, :class_name => "gravatar gravatar-leader"}) %></div>
             <%= markdown.render(l.user.profile.bio).html_safe unless l.user.profile.nil? %>
         </div>
