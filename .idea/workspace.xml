@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="234762da-acdd-4c83-a46b-8127d698b72e" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/renew_user/new.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
     </list>
     <ignored path="Rhode_Project.iws" />
@@ -61,7 +59,7 @@
       <file leaf-file-name="_header.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="609" selection-end="609" vertical-scroll-proportion="0.13725491">
+            <state line="12" column="42" selection-start="734" selection-end="734" vertical-scroll-proportion="-1.1960784">
               <folding />
             </state>
           </provider>
@@ -877,7 +875,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="609" selection-end="609" vertical-scroll-proportion="0.13725491">
+        <state line="12" column="42" selection-start="734" selection-end="734" vertical-scroll-proportion="-1.1960784">
           <folding />
         </state>
       </provider>
