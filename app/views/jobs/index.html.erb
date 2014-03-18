@@ -1,0 +1,20 @@
+<h2>Jobs in Queue <%= @delayedjob.count %></h2>
+
+<table class="table table-striped">
+  <thead>
+  <th>job id</th>
+  <th>created</th>
+  <th>job</th>
+  <th>last error</th>
+  </thead>
+  <tbody>
+  <% @delayedjob.each do |dj| %>
+      <tr>
+        <td><%= dj.id %></td>
+        <td><%= dj.created_at %></td>
+        <td><%= dj.handler %></td>
+        <td><%= dj.last_error %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

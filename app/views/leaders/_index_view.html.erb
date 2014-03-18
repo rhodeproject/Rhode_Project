@@ -2,6 +2,7 @@
     <% @leaders.each do |l| %>
         <div class="container">
             <div class="event-title"><hr></div>
+            <!--replace with a helper-->
             <h3><%= l.user.real_name %> - <%= l.title %></h3><br>
             <div class="floatleft"><%= gravatar_for(l.user, {:size => 150, :class_name => "gravatar gravatar-leader"}) %></div>
             <%= markdown.render(l.user.profile.bio).html_safe unless l.user.profile.nil? %>

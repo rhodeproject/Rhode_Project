@@ -5,4 +5,10 @@ module LeadersHelper
       leader.user.id
     end
   end
+
+  def render_title(leader)
+    content_tag(:h3, "#{leader.real_name} - #{leader.title}")
+  end
 end
+
+

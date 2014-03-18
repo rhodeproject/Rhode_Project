@@ -39,4 +39,17 @@
           <%= club_url(request.subdomain).message3 %>
         </div><!--/span-->
       </div><!--/row-->
+  <% unless @notices.count < 1 %>
+
+      <h3 class="event-title"><i class="icon-star"></i><%= current_club.name %> Notes</h3>
+
+      <% @notices.each do |n| %>
+          <span class="content">
+            <div class="notice"><%= n.content %></div>
+          </span>
+          <span class="timestamp">
+            <div><%= n.created_at.in_time_zone("Eastern Time (US & Canada)") %></div>
+          </span>
+      <% end %>
+  <% end %>
 

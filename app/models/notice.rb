@@ -3,7 +3,7 @@ class Notice < ActiveRecord::Base
 
   belongs_to :club
   validates :content, :presence => true
-
+  scope :after, lambda {|start_time| {:conditions => ["created_at > ?", start_time] }}
 
   def send_tweet(club)
     #set_tokens

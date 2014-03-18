@@ -57,7 +57,7 @@ class EventsController < ApplicationController
     @event.club_id = current_user.club_id
     respond_to do |format|
       if @event.save
-        add_event_notice(@event)
+        #add_event_notice(@event)
         format.html { redirect_to(calendar_path, :notice => 'Event was successfully created.') }
         format.xml  { render :xml => @event, :status => :created, :location => @event }
       else

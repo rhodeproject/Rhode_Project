@@ -5,21 +5,22 @@ class StaticPagesController < ApplicationController
     #btnText and id
     @btntext = "create my account"
     @btnid = "btnNewUser"
-    @user = User.new
-
-    if signed_in?
-      @sponsors = Sponsor.scoped_by_club_id(current_club.id)
-      @notices = Notice.scoped_by_club_id(current_user.club_id).order('created_at DESC').first(3)
-      @events = Event.scoped_by_club_id(current_user.club_id).order("starts_at ASC").after((Time.now).yesterday).first(2)
-    end
-
     sub_domain = request.subdomain
+
     if sub_domain.nil?
       @club = Club.find_by_sub_domain(sub_domain)
     else
       @club = Club.find_by_sub_domain('www')
     end
 
+    @user = User.new
+    @events = Event.scoped_by_club_id(@club.id).order("starts_at ASC").after((Time.now).yesterday).first(2)
+    @posts = Post.scoped_by_club_id(@club.id).order("created_at DESC").first(2)
+    if signed_in?
+      @sponsors = Sponsor.scoped_by_club_id(current_club.id)
+      @notices = Notice.scoped_by_club_id(current_user.club_id).after(Date.today - 7)
+
+    end
   end
 
   def help

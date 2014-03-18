@@ -1,0 +1,11 @@
+<% if @posts.count < 1 %>
+    <span class="event-when">
+  There are no posts for <%= current_club.name %>
+</span>
+<% end %>
+<% @posts.each do |p| %>
+    <span class="content">
+      <h3><div class="event-title"><%= link_to p.topic.name, p.topic  %></div></h3>
+      <div class="event-when"><%= p.content %></div>
+    </span>
+<% end %>

@@ -1,6 +1,10 @@
 RhodeProject::Application.routes.draw do
 
 
+  get "jobs/index"
+
+  get "job/index"
+
   get "leaders/index"
 
   get "subscriptions/new"
@@ -25,6 +29,7 @@ RhodeProject::Application.routes.draw do
   resources :sponsors
   resources :renew_users
   resources :leaders
+  resources :jobs
 
 
   root :to => 'static_pages#home'

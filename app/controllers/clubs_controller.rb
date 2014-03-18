@@ -128,12 +128,6 @@ class ClubsController < ApplicationController
 
   private
 
-  def god_check
-    unless current_user.email == Figaro.env.god_account
-      redirect_to root_path
-    end
-  end
-
   def admin_check
     unless current_user.admin?
       flash[:warning] = "you are not permitted to take this action"
