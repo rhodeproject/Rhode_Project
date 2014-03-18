@@ -79,6 +79,15 @@ class User < ActiveRecord::Base
     self.active
   end
 
+  def active_css_class
+    if self.active
+      result = "active"
+    else
+      result = "inactive"
+    end
+    result
+  end
+
   def active_yes_no
 
     if self.active

@@ -107,7 +107,16 @@ $(document).ready(function(){
         stripePayment();
         return false;
     });
-
+    /**
+     * Show/Hide rows
+     **/
+    var inActiveRows = $('#tblUsers tr.inactive');
+    var activeRows = $('table tr.active');
+    var toggle_users = $("#toggle_users");
+    toggle_users.click(function(event){
+        inActiveRows.toggle();
+    });
+    inActiveRows.hide();
     $('#tblUsers').dataTable({
         "bRetrieve": true,
         "bStateSave": true,
@@ -132,6 +141,7 @@ $(document).ready(function(){
             return nRow;
         }
     });
+
 });
 function refundCharge(chargeId){
     $.ajax({

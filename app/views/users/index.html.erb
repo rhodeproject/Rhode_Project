@@ -1,5 +1,9 @@
 <% provide(:title, 'All Users')%>
 <h4><%= current_user.club.name %> Members <i class="icon-user"></i></h4><hr class="shadow">
+<% if current_user.admin? %>
+    <%= check_box_tag(:toggle_users) %>
+    <%= label_tag(:toggle_users, "show inactive users", :style => "display:inline") %>
+<% end %>
 
         <table id="tblUsers" class="table table-condensed table-striped">
           <thead>
@@ -16,7 +20,7 @@
           </thead>
           <tbody>
           <% @users.each do |user|%>
-            <tr>
+            <tr class=<%= user.active_css_class %>>
               <td><%= link_to user.name, user %><br>
                 <% if current_user.admin? %>
                 <%= link_to "Edit", edit_user_path(user)%> |
@@ -42,6 +46,7 @@
             <th></th>
           </tfoot>
         </table>
+
        <div id="show_charge"></div>
 
 
