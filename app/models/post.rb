@@ -33,18 +33,23 @@ class Post < ActiveRecord::Base
     topic_dl = []
     forum = topic.forum
     forum.users.each do |f|
-      topic_dl.push(f)
+      if f.active? #don't add users that are not active
+        topic_dl.push(f)
+      else
+        forum.toggle_user(f,RhodeProject::FORUM_UNFOLLOW) #remove the user from following the forum if they are inactive
+      end
     end
 
     #add to array of emails addresses not included in the above array
     #and have already responded to the topic
     topic.posts.each do |p|
       u = User.find(p.user_id)
-      topic_dl.push(u) unless topic_dl.include?(u)
+      topic_dl.push(u) unless topic_dl.include?(u) if u.active?
     end
 
     topic_dl.each do |u|
       UserMailer.post_forum_notice(forum,u.email,self,u.club.sub_domain).deliver
+      #UserMailer.delay.post_forum_notice(forum,u.email,self,u.club.sub_domain)
     end
   end
 

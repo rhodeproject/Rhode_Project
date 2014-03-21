@@ -19,3 +19,7 @@ WARNING:  corrupted statistics file "pg_stat_tmp/pgstat.stat"
 ERROR:  column "starts_at" does not exist at character 74
 STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE "posts"."club_id" IS NULL ORDER BY starts_at ASC LIMIT 2
 WARNING:  corrupted statistics file "pg_stat_tmp/pgstat.stat"
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down

@@ -56,7 +56,7 @@ class UserMailer < ActionMailer::Base
   def notice_email(emails, content, club_name)
     @content = content
     @club_name = club_name
-    mail(:bcc => emails, :subject => "update from #{club_name}")
+    mail(:to => emails, :subject => "#{club_name} Update")
   end
 
   def contact_email(content,sender_email,sender_name, club_email)

@@ -15,15 +15,11 @@ class Notice < ActiveRecord::Base
 
   def send_email(club)
     #send email to all active club members
-    emails = []
     club.users.each do |u|
       if u.active?
-        #create array of emails
-        emails << u.email
+        UserMailer.delay.notice_email(u.email, self.content,club.name)
       end
     end
-    #send email pass in email array
-    UserMailer.delay.notice_email(emails, self.content,club.name)
   end
 
 
