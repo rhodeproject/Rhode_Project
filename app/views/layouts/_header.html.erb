@@ -47,6 +47,7 @@
                   <li><%= link_to raw('<i class="icon-user"></i> Members'), users_path %></li>
                   <% if current_user.email == Figaro.env.god_account %>
                    <li><%= link_to raw('<i class="icon-road"></i> Clubs'), clubs_path %></li>
+                   <li><%= link_to raw('<i class="icon-list"></i> Jobs Queue'), jobs_path %></li>
                   <% end %>
                 </ul>
               </li>
