@@ -1,5 +1,5 @@
 <h2>Jobs in Queue <%= @delayedjob.count %></h2>
-
+<%= link_to "Delete All Jobs", 'jobs/remove', :confirm => 'Are you sure?', :method => :delete%>
 <table class="table table-striped">
   <thead>
   <th>job id</th>

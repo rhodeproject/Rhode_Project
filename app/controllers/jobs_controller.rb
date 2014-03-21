@@ -3,4 +3,9 @@ class JobsController < ApplicationController
   def index
     @delayedjob = Delayed::Job.all
   end
+
+  def destroy
+    Delayed::Job.delete_all
+    redirect_to jobs_path
+  end
 end

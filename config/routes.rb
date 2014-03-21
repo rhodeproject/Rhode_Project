@@ -29,7 +29,7 @@ RhodeProject::Application.routes.draw do
   resources :sponsors
   resources :renew_users
   resources :leaders
-  resources :jobs
+  resources :jobs, :only => [:index, :destroy]
 
 
   root :to => 'static_pages#home'
@@ -58,6 +58,7 @@ RhodeProject::Application.routes.draw do
   match 'club/stripesubscription', :to => 'clubs#stripesubscription'
   match 'topics/ajax', :to => 'topics#update'
   match 'topics/addtopic', :to => 'topics#create'
+  match 'jobs/remove', :to => 'jobs#destroy'
 
   #validation
   match 'user/validation', :to => 'users#validation', :via => :get
