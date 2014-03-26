@@ -45,6 +45,7 @@
                   <li><%= link_to raw('<i class="icon-info-sign"></i> Club Settings'), current_user.club %></li>
                   <li><%= link_to raw('<i class="icon-cog"></i> Edit Club'), edit_club_path(current_user.club_id) %></li>
                   <li><%= link_to raw('<i class="icon-user"></i> Members'), users_path %></li>
+                  <li><%= link_to raw('<i class="icon-usd"></i> Payments'), 'club/payments' %></li>
                   <% if current_user.email == Figaro.env.god_account %>
                    <li><%= link_to raw('<i class="icon-road"></i> Clubs'), clubs_path %></li>
                    <li><%= link_to raw('<i class="icon-list"></i> Jobs Queue'), jobs_path %></li>

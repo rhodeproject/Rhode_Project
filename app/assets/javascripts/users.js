@@ -20,6 +20,33 @@ $(document).ready(function(){
         }
         return false;
     });
+    //forum users class on hover
+    $(".forum-users").click(function(){
+       $("#show_forum_users").dialog('open');
+
+        return false;
+    });
+    //users following a Forum Modal
+    /**$("#show_forum_users").dialog({
+        title: "users following",
+        autoOpen: false,
+        open: {
+            affect: "fadeIn",
+            duration: 500
+        },
+        hide:{
+            effect: "fadeOut",
+            duration: 500
+        },
+        height: 250,
+        width: 500,
+        modal: true,
+        beforClose: function(){
+            $("#show_forum_users").empty();
+        }
+    });
+    **/
+    //end users following a Forum Modal
 
     //charges modal
     $("#show_charge").dialog({
