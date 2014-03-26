@@ -68,7 +68,6 @@
         <% if current_user.admin? %>-or- <%= link_to "add/remove a member","#", :id => "btnAdminAddUser", :class => "btn btn-primary"  %><% end %>
     <% end %>
     <% if current_user.admin? %><%= render 'admin_add_user'%><% end %>
-<%= render 'shared/addthis_share' %>
 
 
 

@@ -20,9 +20,6 @@ class StaticPagesController < ApplicationController
       @sponsors = Sponsor.scoped_by_club_id(current_club.id)
       @notices = Notice.scoped_by_club_id(current_user.club_id).after(Date.today - 7)
     end
-
-    @feed ||= facebook_feed
-
   end
 
   def help
@@ -38,10 +35,5 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def facebook_feed
-    oauth = Koala::Facebook::OAuth.new(Figaro.env.fb_app_id, Figaro.env.fb_app_secret)
-    authentication_token = oauth.get_app_access_token
-    graph = Koala::Facebook::API.new(authentication_token)
-    graph.get_connections("trinewengland", "feed")
-  end
+
 end
