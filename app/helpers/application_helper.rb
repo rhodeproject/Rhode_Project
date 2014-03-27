@@ -37,7 +37,11 @@ module ApplicationHelper
     DateTime.strptime(sdate.to_s, '%Y-%m-%d %H:%M:%S' ).strftime('%A %m/%d/%Y %l:%M %p')
   end
 
-  def render_addthis
+  def render_addthis_follow
     render(:template => 'shared/_addthis_follow.html.erb')
+  end
+
+  def render_addthis_share
+    render(:template => 'shared/_addthis_share.html.erb')
   end
 end

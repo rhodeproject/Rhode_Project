@@ -4,18 +4,12 @@
 <script type="text/javascript">
     addthis.layers({
         'theme' : 'transparent',
-        'share' : {
-            'position' : 'left',
-            'numPreferredServices' : 5
-        },
         'follow' : {
             'services' : [
                 {'service': 'facebook', 'id': "<%= current_club.facebook_id %>"},
                 {'service': 'twitter', 'id': "<%= current_club.twitter_id %>"}
             ]
-        },
-        'whatsnext' : {},
-        'recommended' : {}
+        }
     });
 </script>
 <!-- AddThis Smart Layers END -->
