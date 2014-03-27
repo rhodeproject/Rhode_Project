@@ -44,4 +44,5 @@ module ApplicationHelper
   def render_addthis_share
     render(:template => 'shared/_addthis_share.html.erb')
   end
+
 end

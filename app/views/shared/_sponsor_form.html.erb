@@ -18,6 +18,12 @@
       <%= f.label :url %>
       <%= f.text_field :url%>
 
+      <%= f.label :twitter_id %>
+      <%= f.text_field :twitter_id %>
+
+      <%= f.label :facebook_id %>
+      <%= f.text_field :facebook_id %>
+
       <%= f.label :description %>
       <%= f.text_area :description, :cols => '80', :rows => '10' %><br>
       <% if params[:action] == "index" %>

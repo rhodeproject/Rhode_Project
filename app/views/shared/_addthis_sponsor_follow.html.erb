@@ -1,0 +1,9 @@
+<!-- AddThis Follow BEGIN -->
+
+<div class="addthis_toolbox addthis_default_style">
+  <% unless object.facebook_id.nil? %><a class="addthis_button_facebook_follow" addthis:userid="<%= object.facebook_id %>"></a> <% end %>
+  <% unless object.twitter_id.nil? %><a class="addthis_button_twitter_follow" addthis:userid="<%= object.twitter_id %>"></a> <% end %>
+  <% unless object.facebook_id.nil? && object.twitter_id.nil? %><p>follow <%= object.name %></p> <% end %>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5333399c1ddcbddb"></script>
+<!-- AddThis Follow END -->
