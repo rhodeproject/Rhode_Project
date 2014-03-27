@@ -9,7 +9,6 @@
     Topic: <%= @topic.name %> <br>
     <br>
     Original Post:<br> <%= markdown.render(@topic.original.content).html_safe %>
-<%= render 'shared/addthis_share' %>
   </th>
   <th></th>
 
