@@ -4,7 +4,7 @@ module ApplicationHelper
     if signed_in?
       base_title = "#{current_user.club.name} | #{current_user.name.html_safe}"#current_user.club.name
     else
-      base_title = "The Rhode Project"
+      base_title = "#{current_club.name}"
     end
 
     if page_title.empty?
