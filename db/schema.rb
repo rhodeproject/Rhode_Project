@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130906222909) do
+ActiveRecord::Schema.define(:version => 20140327002507) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(:version => 20130906222909) do
     t.string   "stripe_api_key"
     t.string   "contact_email"
     t.text     "terms_and_conditions"
+    t.string   "facebook_id"
+    t.string   "twitter_id"
   end
 
   create_table "delayed_jobs", :force => true do |t|

@@ -31,7 +31,9 @@ class Club < ActiveRecord::Base
                   :fee,
                   :stripe_api_key,
                   :stripe_publishable_key,
-                  :terms_and_conditions
+                  :terms_and_conditions,
+                  :facebook_id,
+                  :twitter_id
   has_many :users
   has_many :forums
   has_many :events

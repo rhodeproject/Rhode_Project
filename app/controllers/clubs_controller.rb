@@ -14,6 +14,8 @@ class ClubsController < ApplicationController
     @club.fee = params[:club][:fee]
     @club.stripe_api_key = params[:club][:stripe_api_key]
     @club.stripe_publishable_key = params[:club][:stripe_publishable_key]
+    @club.facebook_id = params[:clubs][:facebook_id]
+    @club.twitter_id = params[:club][:twitter_id]
     @club.contact_email = params[:club][:user][:email]
     if @club.save
       user = @club.users.build(params[:club][:user])#.club_id = @club.id
